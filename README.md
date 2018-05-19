@@ -5,7 +5,8 @@ McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 Winston S. Churchill - 'We shall never surrender'
 
 ![FWHT](fwht.png)
-![McKernel](mrbf.png)
+![McKernel](mrbf_mnist.png)
+![KMNG](mrbf_mnist2.png)
 
 For more information about the library, visit the website:
 
