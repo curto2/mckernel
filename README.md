@@ -10,11 +10,11 @@ Winston S. Churchill - 'We shall never surrender'
 
 For more information about the library, visit the website:
 
-  http://www.tinet.cat/~curto/publication/mckernel/
+  http://www.curto.hk/publication/mckernel/
 
 If you use McKernel in a publication, please cite the paper below:
 
-Curtó, J. D., Zarza, I. C., Yang, F., Smola, A. J., De La Torre, F., Ngo, C. W., Van Gool, L.
+Curtó, J. D., Zarza, I. C., Yang, F., Smola, A., De La Torre, F., Ngo, C. W., Van Gool, L.
 McKernel: A Library for Approximate Kernel Expansions in Log-linear Time. 2017.
 
 --------------------------------------------------------
