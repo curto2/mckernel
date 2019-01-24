@@ -2,8 +2,10 @@
 
 McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization.
 
-![FWH](fwh.png)
-![Matérn](matern.png)
+<p align="center">
+<img src="fwh.png" width="400">
+<img src="matern.png" width="400">
+</p>
 
 For more information about the library, visit the website:
 
@@ -19,6 +21,7 @@ Change Log
 --------------------------------------------------------
 
 Version 1.1, released on 24/01/2019
+
 Version 1.0, released on 12/05/2018
 
 --------------------------------------------------------
