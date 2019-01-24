@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #include <ctime>
 #include <iostream>
@@ -18,23 +17,23 @@ int main()
 	unsigned long dn = 512;
 	unsigned long D = 2 * dn;
 	unsigned long l = nv * dn;
+	unsigned long t = 5;
 	float sigma = 1.0;
 
 	float* data_in = new float[l];
 
 	//Generate random data
 	srand((unsigned)time(NULL)); 
-	for (unsigned long i = 0; i < l; i++)
-		data_in[i] = rand() % 9;
+	for (unsigned long z = 0; z < l; z++)
+		data_in[z] = rand() % 9;
 
 	//McKernel
 	startTime = clock();
-	McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::RBF, data_in, nv, dn, D, sigma);
+	McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, data_in, nv, dn, D, sigma, t);
 	mckernel->McFeatures();
 	mckernel->McEvaluate();
 	endTime = clock();
-
-	cout << "RBF Gaussian took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
+	cout << "RBF MATERN took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
 
 	return 0;
 }

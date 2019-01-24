@@ -1,15 +1,14 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */		             				     
+   {curto,zarza}@estudiants.urv.cat 						    */		             				     
 					             				     
 README
 
 To run the examples, enter to the given folders and run make as follows:
-		$ cd /examples/fwht	
+		$ cd /examples/fwh	
 		$ make
-		$ ./FWHT
+		$ ./FWH
 
 To include the library in your code, follow the next instructions or see the reference make files.	 
 							 
@@ -19,24 +18,24 @@ Use g++-4.8 or above versions and activate the next flags:
 
 add #include "hpp/Factory_McKernel.hpp" in your test file.
 
-RBF Gaussian, here is a compilation example:
+RBF GAUSSIAN. Here is a compilation example:
 
-	$ g++-4.8 -o Factory_McKernel examples/RBF_Gaussian_Test.cpp src/Factory_McKernel.cpp src/hash.cpp -msse2 -mavx -O3 -std=c++11 -USE_SSE2
+	$ g++-4.8 -o Factory_McKernel examples/RBF_Test.cpp src/Factory_McKernel.cpp src/hash.cpp -msse2 -mavx -O3 -std=c++11 -USE_SSE2
 	$ ./Factory_McKernel
 
-RBF Matern, here is a compilation example:
+RBF MATÉRN. Here is a compilation example:
 
-	$ g++-4.8 -o Factory_McKernel examples/RBF_Matern_Test.cpp src/Factory_McKernel.cpp src/hash.cpp -msse2 -mavx -O3 -std=c++11 -USE_SSE2
+	$ g++-4.8 -o Factory_McKernel examples/RBF_MATERN_Test.cpp src/Factory_McKernel.cpp src/hash.cpp -msse2 -mavx -O3 -std=c++11 -USE_SSE2
 	$ ./Factory_McKernel
 
-If you want to use FWHT, add #include "hpp/McKernel.hpp" in your test file and compile with flags 
+If you want to use FWH, add #include "hpp/McKernel.hpp" in your test file and compile with flags 
 
 	-msse2 (-mavx) -O3 -std=c++11
 
-FWHT, here is a compilation example:
+FWH. Here is a compilation example:
 
-	$ g++-4.8 -o FWHT_Test FWHT_Test.cpp -msse2 -mavx -O3 -std=c++11
-	$ ./FWHT_Test
+	$ g++-4.8 -o FWH_Test FWH_Test.cpp -msse2 -mavx -O3 -std=c++11
+	$ ./FWH_Test
 
 
 *Note: if -mavx is not compatible with your computer, please remove the flag.

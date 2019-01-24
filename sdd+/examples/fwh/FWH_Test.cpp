@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #include <ctime>
 #include <iostream>
@@ -19,14 +18,14 @@ int main( int argc, char ** argv )
 	srand((unsigned)time(NULL)); 
 
 	//Generate random data
-	for (int i = 0; i < lt; i++)
-		data[i] = rand() % 9 ;
+	for (int z = 0; z < lt; z++)
+		data[z] = rand() % 9 ;
 
-	//FWHT
+	//FWH
 	startTime = clock();
-	fwht(data, log2(lt));
+	fwh(data, log2(lt));
 	endTime = clock();
-	cout << "FWHT lenght " << lt << " took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
+	cout << "FWH lenght " << lt << " took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
 
 	return 0;
 }

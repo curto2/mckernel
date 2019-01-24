@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #include <math.h>
 #include "../hpp/hash.hpp"
@@ -60,35 +59,35 @@ unsigned int MurmurHash2 ( const void * key, int lt, unsigned int seed )
     return h;
 }
 
-//PRNG Uniform, Hash Class 
-U_PNG::U_PNG()
+//PN Uniform, Hash Class 
+U_PN::U_PN()
 {
     m_seed = 0;
 }
 
-float U_PNG::GetUniform(unsigned long index)
+float U_PN::GetUniform(unsigned long index)
 {
     return MurmurHash2(&index, sizeof(index), m_seed) / (float)( 1UL << 32 );
 }
 
-void U_PNG::GetState(unsigned long &seed)
+void U_PN::GetState(unsigned long &seed)
 {
     seed = m_seed;
 }
 
-void U_PNG::SetState(unsigned long seed)
+void U_PN::SetState(unsigned long seed)
 {
     m_seed = seed;
 }
 
-//PRNG Normal and Chi^2, Hash Class 
-NC_PNG::NC_PNG()
+//PN Normal and Chi^2, Hash Class 
+NC_PN::NC_PN()
 {
     m_seed1 = 0;
     m_seed2 = 0;
 }
 
-float NC_PNG::GetNormal(unsigned long index)
+float NC_PN::GetNormal(unsigned long index)
 {
       float a = MurmurHash2(&index, sizeof(index), m_seed1) / (float)( 1UL << 32 );
       float b = MurmurHash2(&index, sizeof(index), m_seed2) / (float)( 1UL << 32 );
@@ -96,7 +95,7 @@ float NC_PNG::GetNormal(unsigned long index)
       return cos(2. * M_PI * b) * sqrt(-2. * log(a));
 }
 
-float NC_PNG::GetChiSquared(unsigned long index, unsigned long dfreedom)
+float NC_PN::GetChiSquared(unsigned long index, unsigned long dfreedom)
 {
       float a = MurmurHash2(&index, sizeof(index), m_seed1) / (float)( 1UL << 32 );
       float b = MurmurHash2(&index, sizeof(index), m_seed2) / (float)( 1UL << 32 );
@@ -105,13 +104,13 @@ float NC_PNG::GetChiSquared(unsigned long index, unsigned long dfreedom)
       return dfreedom * pow( sqrt(2./ (9 * dfreedom)) * cos(2. * M_PI * b) * sqrt(-2. * log(a)) + (1 - 2./(9 * dfreedom)) , 3 );
 }
 
-void NC_PNG::GetState(unsigned long &seed1, unsigned long &seed2)
+void NC_PN::GetState(unsigned long &seed1, unsigned long &seed2)
 {
     seed1 = m_seed1;
     seed2 = m_seed2;
 }
 
-void NC_PNG::SetState(unsigned long seed1, unsigned long seed2)
+void NC_PN::SetState(unsigned long seed1, unsigned long seed2)
 {
     m_seed1 = seed1;
     m_seed2 = seed2;

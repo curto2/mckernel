@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #ifndef MCKERNEL_H
 #define MCKERNEL_H
@@ -11,7 +10,7 @@
 #include <math.h>
 #include <random>
 #include <emmintrin.h>
-#include "FWHT_Routines.hpp"
+#include "FWH_Routines.hpp"
 
 using namespace std;
 
@@ -20,12 +19,12 @@ template <typename Dtype>
 inline void dproduct(Dtype* data_in, const Dtype* dl, const unsigned long nv, const unsigned long D, 
   const unsigned long dn, const unsigned long dn_D) {
 
-  for (unsigned long i = 0; i < nv; ++i){
+  for (unsigned long z = 0; z < nv; ++z){
     for(unsigned long k = 0; k < D; ++k){
-      for (unsigned long j = 0; j < dn; j += 8){
+      for (unsigned long c = 0; c < dn; c += 8){
 
-        unsigned long t = j + k * dn;
-        unsigned long t1 = i * dn_D + t;
+        unsigned long t = c + k * dn;
+        unsigned long t1 = z * dn_D + t;
         unsigned long t2 = t1 + 4;
 
         const __m128 src0 = _mm_loadu_ps((float *)&data_in[t1]);
@@ -49,19 +48,19 @@ template <typename Dtype>
 inline void dproductB( Dtype* data_in, vector<long>& dl, const unsigned long nv, const unsigned long dn, 
   const unsigned long dnpg, const unsigned long dn_D, Dtype* data_out)
 {
-  for(unsigned long i = 0; i < nv; ++i)
+  for(unsigned long z = 0; z < nv; ++z)
   {
-    for(unsigned long j = 0; j < dn_D; ++j)
+    for(unsigned long c = 0; c < dn_D; ++c)
     {
-      unsigned long index = j % dnpg;
+      unsigned long index = c % dnpg;
       if(index < dn){
-        if(dl[j] == 1)
-          data_out[i * dn_D + j] = data_in[i * dn + index];
+        if(dl[c] == 1)
+          data_out[z * dn_D + c] = data_in[z * dn + index];
         else
-          data_out[i * dn_D + j] = (-1) * data_in[i * dn + index];
+          data_out[z * dn_D + c] = (-1) * data_in[z * dn + index];
       }
       else
-        data_out[j + i * dn_D] = (Dtype)0;
+        data_out[c + z * dn_D] = (Dtype)0;
     }
   }
 }
@@ -70,16 +69,16 @@ inline void dproductB( Dtype* data_in, vector<long>& dl, const unsigned long nv,
 template <typename Dtype>
 inline void dlproduct(Dtype* data_in, const Dtype* dl, const unsigned long nv, const unsigned long dn)
 {
-  for (unsigned long i = 0; i < nv; ++i)
-    for (unsigned long j = 0; j < dn; ++j)
-      data_in[i * dn + j] = dl[j] * data_in[i * dn + j];
+  for (unsigned long z = 0; z < nv; ++z)
+    for (unsigned long c = 0; c < dn; ++c)
+      data_in[z * dn + c] = dl[c] * data_in[z * dn + c];
 }
 
-//In-place Fast Walsh Hadamard Transform
+//In-place Fast Walsh Hadamard
 template <typename DType>
-inline void fwht(DType* data, unsigned long lgn)
+inline void fwh(DType* data, unsigned long lgn)
 {
-  /* The algorithm is based on the Fast Fourier Transform, first 
+  /* The algorithm is based on the FAST FOURIER Transform, first 
   it goes down in deep and solves iteratively half of the computation */
 
   if(lgn < 4)
@@ -87,13 +86,13 @@ inline void fwht(DType* data, unsigned long lgn)
     switch ( lgn )
     {
       case 3:
-        fwht8(data);
+        fwh8(data);
         break;
       case 2:
-        fwht4(data);
+        fwh4(data);
         break;
       case 1:
-        fwht2(data);
+        fwh2(data);
         break;
     }
     return void();
@@ -163,12 +162,12 @@ inline void fwht(DType* data, unsigned long lgn)
   data[2] = a0 + a1;
   data[3] = a0 - a1; 
 
-  fwht4(data + 4);
-  fwht8(data + 8);
+  fwh4(data + 4);
+  fwh8(data + 8);
  
   /* This for() is intended to solve the remaining computation till (last level) - 1. 
-  It computes recursively until it uses an existing FWHT routine. It
-  can be adapted to use different FWHT routines, e.g. here it uses length 8 */
+  It computes recursively until it uses an existing FWH routine. It
+  can be adapted to use different FWH routines, e.g. here it uses length 8 */
 
     for(unsigned long lgs = 4; lgs < lgn; ++lgs){ 
 
@@ -181,13 +180,13 @@ inline void fwht(DType* data, unsigned long lgn)
 		    const unsigned long g = (1UL << lg);
 		    const unsigned long hg = (g >> 1);
 
-		    for(unsigned long j = 0; j < n; j += g)
+		    for(unsigned long c = 0; c < n; c += g)
 		    {
 
 		        if(lg > 3)
 		        {
 
-		            for(unsigned long r1 = j, r2 = j + hg; r1 < j + hg; r1 += 8, r2 += 8)
+		            for(unsigned long r1 = c, r2 = c + hg; r1 < c + hg; r1 += 8, r2 += 8)
 		            {
 
 			            const unsigned long r3 = r1 + 4;
@@ -213,45 +212,45 @@ inline void fwht(DType* data, unsigned long lgn)
 		            }
 
 	            }else{
-	                fwht8(tmp + j);
+	                fwh8(tmp + c);
 	         	}
 	        }
 	    }
     }
 }
 
-//Fisher Yates Shuffle
+//FISHER YATES Shuffle
 template <typename Dtype>
-inline void fys(Dtype* data_in, const unsigned long d) 
+inline void fy(Dtype* data_in, const unsigned long d) 
 {
   random_device rd;
   mt19937 gr(rd());
 
-  for (unsigned long i = 0; i < d - 1; ++i)
+  for (unsigned long z = 0; z < d - 1; ++z)
   {
-    uniform_int_distribution<> uid(i, d - 1);
+    uniform_int_distribution<> uid(z, d - 1);
     unsigned long b = uid(gr);
-    Dtype axr = data_in[i];
-    data_in[i] = data_in[(unsigned long)b];
+    Dtype axr = data_in[z];
+    data_in[z] = data_in[(unsigned long)b];
     data_in[(unsigned long)b] = axr;      
   }
 }
 
-//In-place random permutation (with Fisher Yates Shuffle)
+//In-place random permutation (with FISHER YATES Shuffle)
 template <typename Dtype>
 inline void pn(Dtype* data_in, unsigned long* p, const unsigned long nv, const unsigned long D, 
   const unsigned long dn, const unsigned long dn_D)
 {
   Dtype* data_out = new Dtype[dn_D * nv];
 
-  for (unsigned long i = 0; i < nv; ++i)
+  for (unsigned long z = 0; z < nv; ++z)
     for (unsigned long k = 0; k < D; ++k)
-      for (unsigned long j = 0; j < dn; ++j)
-        data_out[i * dn_D + k * dn + j] = data_in[i * dn_D + k * dn + (unsigned long)(p[j + k * dn])];   
+      for (unsigned long c = 0; c < dn; ++c)
+        data_out[z * dn_D + k * dn + c] = data_in[z * dn_D + k * dn + (unsigned long)(p[c + k * dn])];   
 
-  for (unsigned long i = 0; i < nv; ++i)
-    for (unsigned long j = 0; j < dn_D; ++j)
-      data_in[i * dn_D + j] = data_out[i * dn_D + j];
+  for (unsigned long z = 0; z < nv; ++z)
+    for (unsigned long c = 0; c < dn_D; ++c)
+      data_in[z * dn_D + c] = data_out[z * dn_D + c];
     
   delete[] data_out;
 }

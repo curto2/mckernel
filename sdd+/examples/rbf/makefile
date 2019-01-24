@@ -1,9 +1,9 @@
-CPP_FILES := $(wildcard ../../src/*.cpp) RBF_Gaussian_Test.cpp
+CPP_FILES := $(wildcard ../../src/*.cpp) RBF_Test.cpp
 O_FILES = $(addprefix o/, $(notdir $(CPP_FILES:.cpp=.o)))
 CC = g++
 FLAGS = -std=c++11 -Wall -O3 -msse2 -mavx -USE_SSE2
 LIBS = 
-E_NAME = RBF_Gaussian_Test
+E_NAME = RBF_Test
 
 all: makedirs main
 

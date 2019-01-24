@@ -1,21 +1,20 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
-#ifndef PNG_H
-#define PNG_H
+#ifndef PN_H
+#define PN_H
 
 //Murmurhash is a hash function developed by Austin Appleby
 //The author disclaims all copyright to their code. 
 unsigned int MurmurHash2 (const void * key, int lt, unsigned int seed);
 
-//PRNG Uniform, Hash Class 
-class U_PNG
+//PN Uniform, Hash Class 
+class U_PN
 {
 public:
-    U_PNG();
+    U_PN();
 
     float GetUniform(unsigned long index);
  
@@ -27,11 +26,11 @@ private:
     unsigned long m_seed;
 };
 
-//PRNG Normal and Chi^2, Hash Class
-class NC_PNG
+//PN Normal and Chi^2, Hash Class
+class NC_PN
 {
 public:
-    NC_PNG();
+    NC_PN();
 
     float GetNormal(unsigned long index);
 

@@ -1,14 +1,13 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
-#ifndef FWHT_H
-#define FWHT_H
+#ifndef FWH_H
+#define FWH_H
 
 template <typename DType>
-inline void fwht8(DType *data)
+inline void fwh8(DType *data)
 {
 
 	const __m128 m3e0 = _mm_loadu_ps((float *)&data[0]);
@@ -61,7 +60,7 @@ inline void fwht8(DType *data)
 }
 
 template <typename DType>
-inline void fwht4(DType *data)
+inline void fwh4(DType *data)
 {
 
 	float m2g0 = (float)data[0];
@@ -86,7 +85,7 @@ inline void fwht4(DType *data)
 }
 
 template <typename DType>
-inline void fwht2(DType *data)
+inline void fwh2(DType *data)
 {
 
 	float m1h0 = (float)data[0];

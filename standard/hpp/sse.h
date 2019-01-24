@@ -349,7 +349,7 @@ v4sf sin_ps(v4sf x) { // any x
 #ifdef USE_SSE2
   /* store the integer part of y in mm0 */
   emm2 = _mm_cvttps_epi32(y);
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   emm2 = _mm_add_epi32(emm2, *(v4si*)_pi32_1);
   emm2 = _mm_and_si128(emm2, *(v4si*)_pi32_inv1);
   y = _mm_cvtepi32_ps(emm2);
@@ -375,7 +375,7 @@ v4sf sin_ps(v4sf x) { // any x
   xmm2 = _mm_movehl_ps(xmm2, y);
   mm2 = _mm_cvttps_pi32(y);
   mm3 = _mm_cvttps_pi32(xmm2);
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   mm2 = _mm_add_pi32(mm2, *(v2si*)_pi32_1);
   mm3 = _mm_add_pi32(mm3, *(v2si*)_pi32_1);
   mm2 = _mm_and_si64(mm2, *(v2si*)_pi32_inv1);
@@ -462,7 +462,7 @@ v4sf cos_ps(v4sf x) { // any x
 #ifdef USE_SSE2
   /* store the integer part of y in mm0 */
   emm2 = _mm_cvttps_epi32(y);
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   emm2 = _mm_add_epi32(emm2, *(v4si*)_pi32_1);
   emm2 = _mm_and_si128(emm2, *(v4si*)_pi32_inv1);
   y = _mm_cvtepi32_ps(emm2);
@@ -484,7 +484,7 @@ v4sf cos_ps(v4sf x) { // any x
   mm2 = _mm_cvttps_pi32(y);
   mm3 = _mm_cvttps_pi32(xmm2);
 
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   mm2 = _mm_add_pi32(mm2, *(v2si*)_pi32_1);
   mm3 = _mm_add_pi32(mm3, *(v2si*)_pi32_1);
   mm2 = _mm_and_si64(mm2, *(v2si*)_pi32_inv1);
@@ -585,7 +585,7 @@ void sincos_ps(v4sf x, v4sf *s, v4sf *c) {
   /* store the integer part of y in emm2 */
   emm2 = _mm_cvttps_epi32(y);
 
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   emm2 = _mm_add_epi32(emm2, *(v4si*)_pi32_1);
   emm2 = _mm_and_si128(emm2, *(v4si*)_pi32_inv1);
   y = _mm_cvtepi32_ps(emm2);
@@ -607,7 +607,7 @@ void sincos_ps(v4sf x, v4sf *s, v4sf *c) {
   mm2 = _mm_cvttps_pi32(y);
   mm3 = _mm_cvttps_pi32(xmm3);
 
-  /* j=(j+1) & (~1) (see the cephes sources) */
+  /* k=(k+1) & (~1) (see the cephes sources) */
   mm2 = _mm_add_pi32(mm2, *(v2si*)_pi32_1);
   mm3 = _mm_add_pi32(mm3, *(v2si*)_pi32_1);
   mm2 = _mm_and_si64(mm2, *(v2si*)_pi32_inv1);

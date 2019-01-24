@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #ifndef FM_H
 #define FM_H
@@ -36,23 +35,23 @@ class McKernel
 		virtual ~McKernel(){};
 };
 
-//RBF Gaussian 
-class RBF_Gaussian : public McKernel
+//RBF GAUSSIAN 
+class RBF_GAUSSIAN : public McKernel
 {
 	public:
-		RBF_Gaussian(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma = 1.0);
+		RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma = 1.0);
 
-		virtual ~RBF_Gaussian(){};
+		virtual ~RBF_GAUSSIAN(){};
 };
 
-//RBF Matern
-class RBF_Matern : public McKernel
+//RBF MATÉRN
+class RBF_MATERN : public McKernel
 {
 	public:
-		RBF_Matern(float* data, const unsigned long nv, const unsigned long dn, 
+		RBF_MATERN(float* data, const unsigned long nv, const unsigned long dn, 
 			const unsigned long D, const unsigned long seed, const float sigma = 1.0, const unsigned long t = 5);
 
-		virtual ~RBF_Matern(){};
+		virtual ~RBF_MATERN(){};
 };
 
 //Factory McKernel
@@ -61,8 +60,8 @@ class FactoryMcKernel
 	public: 
 		enum TypeMcKernel 
 		{
-			RBF, //RBF Gaussian
-			MRBF  //RBF Matern
+			RBF, //RBF GAUSSIAN
+			MRBF  //RBF MATÉRN
 		};
 
 		static McKernel* createMcKernel(TypeMcKernel typemckernel, float* data, const unsigned long nv, 

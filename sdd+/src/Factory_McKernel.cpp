@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #include "../hpp/Factory_McKernel.hpp"
 #include "../hpp/sse.h"
@@ -15,13 +14,13 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	unsigned int u1_seed = MurmurHash2(&seed, sizeof(seed), 0x1337beef);
 	unsigned int u2_seed = MurmurHash2(&seed, sizeof(seed), 0x1337face);
 
-	//PRNG Declaration
-	U_PNG u1_png;
-	U_PNG u2_png;
+	//PN Declaration
+	U_PN u1_pn;
+	U_PN u2_pn;
 
-	//PRNG Seed
-  	u1_png.SetState(u1_seed);
-    	u2_png.SetState(u2_seed);
+	//PN Seed
+  	u1_pn.SetState(u1_seed);
+    	u2_pn.SetState(u2_seed);
 		
 	//Compute padding dimension 
 	if((M_dn & (M_dn - 1)) != 0) //Test if power of 2
@@ -47,18 +46,18 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	M_features = new float[2 * M_dn_D * M_nv];
 
 	//Generate B from uniform(0,1)
-	for (unsigned long i = 0; i < M_dn_D; ++i)
-		if(u1_png.GetUniform(i) < 0.5)
-			dlv_B[i] = -1; 
+	for (unsigned long c = 0; c < M_dn_D; ++c)
+		if(u1_pn.GetUniform(c) < 0.5)
+			dlv_B[c] = -1; 
 		else
-			dlv_B[i] = 1;
+			dlv_B[c] = 1;
 
 	//Generate Pi using Reservoir Sampling
-	for (unsigned long j = 0; j < M_dn_D; ++j)
-	   p[j] = j % M_dnpg;
+	for (unsigned long z = 0; z < M_dn_D; ++z)
+	   p[z] = z % M_dnpg;
 
-	for(unsigned long i = 0; i < M_D; ++i)
-		fys(p + i * M_dnpg, M_dnpg, u2_png);
+	for(unsigned long c = 0; c < M_D; ++c)
+		fy(p + c * M_dnpg, M_dnpg, u2_pn);
 
 	dlv_B = NULL;
  	p = NULL;
@@ -77,9 +76,9 @@ void McKernel::McFeatures()
   	dproductB(M_data, dl_B, M_nv, M_dn, M_dnpg, M_dn_D, M_data_out);
 
   	//HBx
-  	for (unsigned long i = 0; i < M_nv; ++i)
-  		for(unsigned long j = 0; j < M_D; ++j)
-    			fwht(M_data_out + i * M_dn_D + j * M_dnpg, log2(M_dnpg));
+  	for (unsigned long c = 0; c < M_nv; ++c)
+  		for(unsigned long z = 0; z < M_D; ++z)
+    			fwh(M_data_out + c * M_dn_D + z * M_dnpg, log2(M_dnpg));
 
   	//PiHBx
   	pn(M_data_out, p, M_nv, M_D, M_dnpg, M_dn_D);
@@ -88,9 +87,9 @@ void McKernel::McFeatures()
         dproduct(M_data_out, dlv_G, M_nv, M_D, M_dnpg, M_dn_D);
 
   	//HGPiHBx
-    	for (unsigned long i = 0; i < M_nv; ++i)
-  		for(unsigned long j = 0; j < M_D; ++j)
-    			fwht(M_data_out + i * M_dn_D + j * M_dnpg, log2(M_dnpg));
+    	for (unsigned long c = 0; c < M_nv; ++c)
+  		for(unsigned long z = 0; z < M_D; ++z)
+    			fwh(M_data_out + c * M_dn_D + z * M_dnpg, log2(M_dnpg));
 
   	//SHGPiHBx
         dproduct(M_data_out, dlv_S, M_nv, M_D, M_dnpg, M_dn_D);
@@ -107,14 +106,14 @@ void McKernel::McEvaluate()
 	//const float c = 1.0 / sqrt( M_dn_D );
 	const __m128 vc = _mm_set1_ps(c);
 	
-	for (unsigned long i = 0; i < M_nv; ++i){
+	for (unsigned long c = 0; c < M_nv; ++c){
 
-        unsigned long j;
-        for(j = 0; j <= M_dn_D - 4; j += 4)
+        unsigned long z;
+        for(z = 0; z <= M_dn_D - 4; z += 4)
         {
 
-    	 	unsigned long index = j + i * M_dn_D;
-    		unsigned long index_features = j + 2 * i * M_dn_D;
+    	 	unsigned long index = z + c * M_dn_D;
+    		unsigned long index_features = z + 2 * c * M_dn_D;
 
     		const __m128 src0 = _mm_loadu_ps((float *)&M_data_out[index]);
 			__m128 a0, a1;
@@ -129,10 +128,10 @@ void McKernel::McEvaluate()
 
         }
 
-       	for(unsigned long k = j; k < M_dn_D; ++k )
+       	for(unsigned long k = z; k < M_dn_D; ++k )
        	{
-           unsigned long index = k + i * M_dn_D;
-           unsigned long index_features = k + 2 * i * M_dn_D;
+           unsigned long index = k + c * M_dn_D;
+           unsigned long index_features = k + 2 * c * M_dn_D;
 
            M_features[index_features] = c * cos(M_data_out[index]);
            M_features[index_features + M_dn_D] = c * sin(M_data_out[index]);
@@ -142,8 +141,8 @@ void McKernel::McEvaluate()
 
 }
 
-//RBF Gaussian 
-RBF_Gaussian::RBF_Gaussian(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma)
+//RBF GAUSSIAN 
+RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma)
 :McKernel(data, nv, dn, D, seed, sigma)
 {
 	//Generate seeds
@@ -152,13 +151,13 @@ RBF_Gaussian::RBF_Gaussian(float* data, const unsigned long nv, const unsigned l
 	unsigned int c1_seed = MurmurHash2(&seed, sizeof(seed), 0x1337abcd);
 	unsigned int c2_seed = MurmurHash2(&seed, sizeof(seed), 0x1337eadf);
 
-	//PRNG Declaration
-	NC_PNG n_png;
-	NC_PNG c_png;
+	//PN Declaration
+	NC_PN n_pn;
+	NC_PN c_pn;
 
-	//PRNG Seed
-        n_png.SetState(n1_seed, n2_seed);
-        c_png.SetState(c1_seed, c2_seed);
+	//PN Seed
+        n_pn.SetState(n1_seed, n2_seed);
+        c_pn.SetState(c1_seed, c2_seed);
 
     	vector<float> scalar_S(M_D);
     
@@ -166,30 +165,30 @@ RBF_Gaussian::RBF_Gaussian(float* data, const unsigned long nv, const unsigned l
 	float* dlv_S = &dl_S[0];
 	float* sv_S = &scalar_S[0];
 
-	//Generate G using N(0,1) and compute Frobenius Norm
+	//Generate G using N(0,1) and compute FROBENIUS Norm
 	fill(scalar_S.begin(), scalar_S.end(), 0.0);
-	for (unsigned long i = 0; i < M_dn_D; ++i)
+	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
-		dlv_G[i] = n_png.GetNormal(i);
-		sv_S[i / M_dnpg] += dlv_G[i] * dlv_G[i]; 
+		dlv_G[c] = n_pn.GetNormal(c);
+		sv_S[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
-	for(unsigned long i = 0; i < M_D; ++i)
-		sv_S[i] = 1.0 / sqrt(sv_S[i]);
+	for(unsigned long c = 0; c < M_D; ++c)
+		sv_S[c] = 1.0 / sqrt(sv_S[c]);
 
 	//Generate S using Chi Distribution
 	float sigma_factor = 1.0 / (sigma * sqrt(M_dnpg)); 
     	for (unsigned long k = 0; k < M_D; ++k)
-		for (unsigned long i = 0; i < M_dnpg; ++i)
-	 	       dlv_S[i + k * M_dnpg] = sigma_factor * sv_S[k] * sqrt(c_png.GetChiSquared(i + k * M_dnpg, M_dnpg));
+		for (unsigned long c = 0; c < M_dnpg; ++c)
+	 	       dlv_S[c + k * M_dnpg] = sigma_factor * sv_S[k] * sqrt(c_pn.GetChiSquared(c + k * M_dnpg, M_dnpg));
 
 	dlv_G = NULL;
     	dlv_S = NULL;
     	sv_S = NULL;
 }
 
-//RBF Matern
-RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, 
+//RBF MATÉRN
+RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, 
 	const float sigma, const unsigned long t):McKernel(data, nv, dn, D, seed, sigma)
 {
 	//Generate seeds
@@ -199,15 +198,15 @@ RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long 
 	unsigned int n4_seed = MurmurHash2(&seed, sizeof(seed), 0x1337eadf);
 	unsigned int u3_seed = MurmurHash2(&seed, sizeof(seed), 0x1337baca);
 
-	//PRNG Declaration
-	NC_PNG n1_png;
-	NC_PNG n2_png;
-	U_PNG u3_png;
+	//PN Declaration
+	NC_PN n1_pn;
+	NC_PN n2_pn;
+	U_PN u3_pn;
 
-	//PRNG Seed
-    	n1_png.SetState(n1_seed, n2_seed);
-    	n2_png.SetState(n3_seed, n4_seed);
-    	u3_png.SetState(u3_seed);
+	//PN Seed
+    	n1_pn.SetState(n1_seed, n2_seed);
+    	n2_pn.SetState(n3_seed, n4_seed);
+    	u3_pn.SetState(u3_seed);
 
     	vector<float> scalar_S(M_D);
 
@@ -215,26 +214,26 @@ RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long 
 	float* dlv_S = &dl_S[0];
 	float* sv_S = &scalar_S[0];	
 
-	//Generate G using N(0,1) and compute Frobenius Norm 
+	//Generate G using N(0,1) and compute FROBENIUS Norm 
 	fill(scalar_S.begin(), scalar_S.end(), 0.0);
-	for (unsigned long i = 0; i < M_dn_D; ++i)
+	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
-		dlv_G[i] = n1_png.GetNormal(i);
-		sv_S[i / M_dnpg] += dlv_G[i] * dlv_G[i]; 
+		dlv_G[c] = n1_pn.GetNormal(c);
+		sv_S[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
-	for(unsigned long i = 0; i < M_D; ++i)
-		sv_S[i] = 1.0 / sqrt(sv_S[i]);
+	for(unsigned long c = 0; c < M_D; ++c)
+		sv_S[c] = 1.0 / sqrt(sv_S[c]);
 
-	//Generate S for Matern Kernel
+	//Generate S for MATÉRN Kernel
 	float sigma_factor = 1.0 / (sigma * sqrt(M_dnpg));
     	for (unsigned long k = 0; k < M_D; ++k)
 	{
-		for (unsigned long i = 0; i < M_dnpg; ++i)
+		for (unsigned long c = 0; c < M_dnpg; ++c)
 		{
     			float norm_psi;
-			unsigned long ix = k * M_dnpg + i;
-	    		//Draw t iid samples psi_i uniformly from Sd
+			unsigned long ix = k * M_dnpg + c;
+	    		//Draw t iid samples psi_c uniformly from Sd
 			vector<float> psi_n(M_dnpg);
 		    	for (unsigned long n = 0; n < t; ++n)
 			{
@@ -245,7 +244,7 @@ RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long 
 			        //Generate sample z from n-dimensional standard normal distribution
 			        for(unsigned long r = 0; r < M_dnpg; ++r)
 			        {
-			    		psi[r] = n2_png.GetNormal(r + n * M_dnpg + ix);
+			    		psi[r] = n2_pn.GetNormal(r + n * M_dnpg + ix);
 			    		norm_psi += psi[r] * psi[r];
 			    	}
 
@@ -253,7 +252,7 @@ RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long 
 			        norm_psi = sqrt(norm_psi);
 			    
 			        //Generate sample from uniform distribution U^1/n
-			        float u = pow(u3_png.GetUniform(n + ix), (1.0/M_dn_D)); 
+			        float u = pow(u3_pn.GetUniform(n + ix), (1.0/M_dn_D)); 
 
 			        //Return r * U^1/n * z/||z||
 			        for(unsigned long m = 0; m < M_dnpg; ++m)
@@ -266,7 +265,7 @@ RBF_Matern::RBF_Matern(float* data, const unsigned long nv, const unsigned long 
 			for(unsigned long r = 0; r < M_dnpg; ++r)
 			    norm_psi += psi_n[r] * psi_n[r];
 			
-			//Assign to S_ii   
+			//Assign to S_cc   
 			dlv_S[ix] = sigma_factor * sv_S[k] * sqrt(norm_psi); 
 		}
 	}
@@ -283,9 +282,9 @@ McKernel* FactoryMcKernel::createMcKernel(TypeMcKernel typemckernel, float* data
 	switch(typemckernel)
 	{
 		case RBF:
-			return new RBF_Gaussian(data, nv, dn, D, seed, sigma);
+			return new RBF_GAUSSIAN(data, nv, dn, D, seed, sigma);
 		case MRBF:
-			return new RBF_Matern(data, nv, dn, D, seed, sigma, t);
+			return new RBF_MATERN(data, nv, dn, D, seed, sigma, t);
 		//You can include a new one here
 	}
 	throw "Invalid Type McKernel.";

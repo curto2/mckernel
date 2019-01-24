@@ -1,8 +1,7 @@
-/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time 
-   Curtó, Zarza, Yang, Smola, De La Torre, Ngo, and Van Gool 		    
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@tinet.cat 						    */
+   {curto,zarza}@estudiants.urv.cat 						    */
 
 #include <iostream>
 #include <iterator>
@@ -23,7 +22,7 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
 			TS_ASSERT_EQUALS(data_in[0], data_out[0]);
 			TS_ASSERT_EQUALS(data_in[1], data_out[1]);
@@ -38,7 +37,7 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
 			TS_ASSERT_EQUALS(data_in[0], data_out[0]);
 			TS_ASSERT_EQUALS(data_in[1], data_out[1]);
@@ -53,7 +52,7 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 			
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
   
 			TS_ASSERT_DELTA(data_in[0], data_out[0], 0.01);
 			TS_ASSERT_DELTA(data_in[1], data_out[1], 0.01);
@@ -68,10 +67,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 
 		}
 
@@ -84,10 +83,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 
 		}
 
@@ -100,10 +99,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01);
 
 		}
 
@@ -116,10 +115,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 
 		}
 
@@ -132,10 +131,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 
 		}
 
@@ -148,10 +147,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01);
 
 		}
 
@@ -164,10 +163,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -180,10 +179,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -198,10 +197,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01);
 
 		}
 
@@ -214,10 +213,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -231,10 +230,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 
 		}
 
@@ -255,10 +254,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01); 
 
 		}
 
@@ -271,10 +270,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -292,10 +291,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]); 
 
 		}
 
@@ -322,10 +321,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 										99.2147, -63.4058, -40.0124, 72.4622}; 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01); 
 
 		}
 
@@ -338,10 +337,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -364,10 +363,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 										-33, -5, -5, 19, -29, 103, -33, 7, -9, -33, 19, 11, -9, 19, -17, -33, 11}; 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]); 
 
 		}
 
@@ -407,10 +406,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 										115.318, -70.3583, 34.8869, 44.5915, 140.534, -9.97193, -41.8563, -94.2452}; 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01); 
 
 		}
 
@@ -423,10 +422,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i] , data_out[i]);
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z] , data_out[z]);
 
 		}
 
@@ -460,10 +459,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 										-32, 44, -64, 0, 0, -82, 14, 34, -18, 30, 6, -26, 42}; 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]); 
 
 		}
 
@@ -529,10 +528,10 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			float* data = &data_in[0];
 
-			fwht(data, log2(lt));
+			fwh(data, log2(lt));
 
-			for(unsigned long i = 0; i < lt; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01); 
+			for(unsigned long z = 0; z < lt; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01); 
 
 		}
 		
@@ -553,8 +552,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			dproduct(data, dl, nv, D, dn, dn_D);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 		}
 
 		void test_dproduct2( void )
@@ -580,8 +579,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			dproduct(data, dl, nv, D, dn, dn_D);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 		}
 
 		void test_dproduct3( void )
@@ -687,8 +686,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			dproduct(data, dl, nv, D, dn, dn_D);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_DELTA(data_in[i], data_out[i], 0.01);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_DELTA(data_in[z], data_out[z], 0.01);
 		}
 
 		void test_padding_dproductB( void )
@@ -710,8 +709,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 
 			dproductB(data, dt, nv, dn, dnpg, dn_D, data_out);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_out1[i], data_out2[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_out1[z], data_out2[z]);
 		}
 
 		void test_dproductB( void )
@@ -735,8 +734,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 			
 			dproductB(data, dt, nv, dn, dnpg, dn_D, data_out);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_out1[i], data_out2[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_out1[z], data_out2[z]);
 		}
 
 		void test_float_dproductB( void )
@@ -759,8 +758,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 			
 			dproductB(data, dt, nv, dn, dnpg, dn_D, data_out);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_out1[i], data_out2[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_out1[z], data_out2[z]);
 		}
 
 		void test_pn( void )
@@ -783,8 +782,8 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 			
 			pn(data, p, nv, D, dnpg, dn_D);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 		}
 
 		void test_float_pn( void )
@@ -817,7 +816,7 @@ class TestSuite_McKernel : public CxxTest::TestSuite
 			
 			pn(data, p, nv, D, dnpg, dn_D);
 
-			for(unsigned long i = 0; i < dn_D * nv; ++i)
-				TS_ASSERT_EQUALS(data_in[i], data_out[i]);
+			for(unsigned long z = 0; z < dn_D * nv; ++z)
+				TS_ASSERT_EQUALS(data_in[z], data_out[z]);
 		}		
 };
