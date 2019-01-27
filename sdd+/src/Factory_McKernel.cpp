@@ -232,7 +232,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 		for (unsigned long c = 0; c < M_dnpg; ++c)
 		{
     			float norm_psi;
-			unsigned long ix = k * M_dnpg + c;
+			unsigned long ptn = k * M_dnpg + c;
 	    		//Draw t iid samples psi_c uniformly from Sd
 			vector<float> psi_n(M_dnpg);
 		    	for (unsigned long n = 0; n < t; ++n)
@@ -244,7 +244,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			        //Generate sample z from n-dimensional standard normal distribution
 			        for(unsigned long r = 0; r < M_dnpg; ++r)
 			        {
-			    		psi[r] = n2_pn.GetNormal(r + n * M_dnpg + ix);
+			    		psi[r] = n2_pn.GetNormal(r + n * M_dnpg + ptn);
 			    		norm_psi += psi[r] * psi[r];
 			    	}
 
@@ -252,7 +252,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			        norm_psi = sqrt(norm_psi);
 			    
 			        //Generate sample from uniform distribution U^1/n
-			        float u = pow(u3_pn.GetUniform(n + ix), (1.0/M_dn_D)); 
+			        float u = pow(u3_pn.GetUniform(n + ptn), (1.0/M_dn_D)); 
 
 			        //Return r * U^1/n * z/||z||
 			        for(unsigned long m = 0; m < M_dnpg; ++m)
@@ -266,13 +266,13 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			    norm_psi += psi_n[r] * psi_n[r];
 			
 			//Assign to C_cc   
-			dlv_C[ix] = sigma_factor * sv_C[k] * sqrt(norm_psi); 
+			dlv_C[ptn] = sigma_factor * sv_C[k] * sqrt(norm_psi); 
 		}
 	}
 
 	dlv_G = NULL;
-        dlv_C = NULL;
-        sv_C = NULL;
+	dlv_C = NULL;
+	sv_C = NULL;
 }
 
 //Factory McKernel

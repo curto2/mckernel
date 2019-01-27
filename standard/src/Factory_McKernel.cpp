@@ -243,8 +243,8 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 	}
 
 	dlv_G = NULL;
-        dlv_C = NULL;
-        sv_C = NULL;
+	dlv_C = NULL;
+	sv_C = NULL;
 }
 
 //Factory McKernel
