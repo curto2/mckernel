@@ -23,12 +23,12 @@ class McKernel
 
        		vector<unsigned long> dl_Pi;
         	vector<float> dl_G;
-        	vector<float> dl_S;
+        	vector<float> dl_C;
         	vector<long> dl_B; 
 
-		McKernel( float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma = 1.0);
+		McKernel( float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma);
 
-		virtual void McFeatures(); //Vx computation
+		virtual void McFeatures(); //Zx computation
 
 		virtual void McEvaluate(); //Feature complex mapping
 
@@ -39,7 +39,7 @@ class McKernel
 class RBF_GAUSSIAN : public McKernel
 {
 	public:
-		RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma = 1.0);
+		RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma = 10.0);
 
 		virtual ~RBF_GAUSSIAN(){};
 };
@@ -49,7 +49,7 @@ class RBF_MATERN : public McKernel
 {
 	public:
 		RBF_MATERN(float* data, const unsigned long nv, const unsigned long dn, 
-			const unsigned long D, const float sigma = 1.0, const unsigned long t = 5);
+			const unsigned long D, const float sigma = 1.0, const unsigned long t = 40);
 
 		virtual ~RBF_MATERN(){};
 };
@@ -65,7 +65,7 @@ class FactoryMcKernel
 		};
 
 		static McKernel* createMcKernel(TypeMcKernel typemckernel, float* data, const unsigned long nv, 
-			const unsigned long dn, const unsigned long D, const float sigma = 1.0, const unsigned long t = 5);
+			const unsigned long dn, const unsigned long D, const float sigma = 1.0, const unsigned long t = 40);
 };
 
 #endif

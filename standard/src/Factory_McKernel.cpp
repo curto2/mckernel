@@ -24,10 +24,10 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	M_D = D / M_dn;	
 	M_dn_D = M_dnpg * M_D; 
 
-	//Initializing G,S,Pi,B
+	//Initializing G,C,Pi,B
 	dl_G.resize(M_dn_D);
 	dl_Pi.resize(M_dn_D);
-	dl_S.resize(M_dn_D);
+	dl_C.resize(M_dn_D);
 	dl_B.resize(M_dn_D);
 
 	long* dlv_B = &dl_B[0];
@@ -60,9 +60,9 @@ void McKernel::McFeatures()
 {
   	unsigned long* p = &dl_Pi[0]; 
   	float* dlv_G = &dl_G[0];
-  	float* dlv_S = &dl_S[0];
+  	float* dlv_C = &dl_C[0];
 
-	//Computing McKernel: 1/(sigma * sqrt(d)) * S * H * G * Pi * HB * x
+	//Computing McKernel: 1/(sigma * sqrt(d)) * C * H * G * Pi * HB * x
 
   	//Bx and padding
   	dproductB(M_data, dl_B, M_nv, M_dn, M_dnpg, M_dn_D, M_data_out);
@@ -83,11 +83,11 @@ void McKernel::McFeatures()
   		for(unsigned long z = 0; z < M_D; ++z)
     			fwh(M_data_out + c * M_dn_D + z * M_dnpg, log2(M_dnpg));
 
-  	//SHGPiHBx
-        dproduct(M_data_out, dlv_S, M_nv, M_D, M_dnpg, M_dn_D);
+  	//CHGPiHBx
+        dproduct(M_data_out, dlv_C, M_nv, M_D, M_dnpg, M_dn_D);
   
   	dlv_G = NULL;
-  	dlv_S = NULL;
+  	dlv_C = NULL;
   	p = NULL;
 }
 
@@ -110,7 +110,7 @@ void McKernel::McEvaluate()
     		const __m128 src0 = _mm_loadu_ps((float *)&M_data_out[index]);
 			__m128 a0, a1;
 
-		//Complex mapping [c * sin(data) , c * cos(data)]
+		//Complex mapping [c * sin(Zx) , c * cos(Zx)]
 		sincos_ps(src0, &a0, &a1);	
 		const __m128 v0 = _mm_mul_ps(vc, a0);
 		const __m128 v1 = _mm_mul_ps(vc, a1);
@@ -140,34 +140,34 @@ RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned l
     	random_device rd;
     	mt19937 gr(rd());
 
-    	vector<float> scalar_S(M_D);
+    	vector<float> scalar_C(M_D);
     
     	float* dlv_G = &dl_G[0];
-	float* dlv_S = &dl_S[0];
-	float* sv_S = &scalar_S[0];
+	float* dlv_C = &dl_C[0];
+	float* sv_C = &scalar_C[0];
 
 	//Generate G using N(0,1) and compute FROBENIUS Norm
 	normal_distribution<> nd(0, 1);
-	fill(scalar_S.begin(), scalar_S.end(), 0.0);
+	fill(scalar_C.begin(), scalar_C.end(), 0.0);
 	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
 		dlv_G[c] = nd(gr);
-		sv_S[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
+		sv_C[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
 	for(unsigned long c = 0; c < M_D; ++c)
-		sv_S[c] = 1.0 / sqrt(sv_S[c]);
+		sv_C[c] = 1.0 / sqrt(sv_C[c]);
 
-	//Generate S using Chi Distribution
+	//Generate C using Chi Distribution
 	float sigma_factor = 1.0 / (sigma * sqrt(M_dnpg));
     	chi_squared_distribution<> csd(M_dnpg); 
     	for (unsigned long k = 0; k < M_D; ++k)
 		for (unsigned long c = 0; c < M_dnpg; ++c)
-	 	       dlv_S[c + k * M_dnpg] = sigma_factor * sv_S[k] * sqrt(csd(gr));
+	 	       dlv_C[c + k * M_dnpg] = sigma_factor * sv_C[k] * sqrt(csd(gr));
 
 	dlv_G = NULL;
-    	dlv_S = NULL;
-    	sv_S = NULL;
+    	dlv_C = NULL;
+    	sv_C = NULL;
 }
 
 //RBF MATÉRN
@@ -177,27 +177,27 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 	random_device rd;
     	mt19937 gr(rd());
 
-    	vector<float> scalar_S(M_D);
+    	vector<float> scalar_C(M_D);
 
    	float* dlv_G = &dl_G[0];
-	float* dlv_S = &dl_S[0];
-	float* sv_S = &scalar_S[0];	
+	float* dlv_C = &dl_C[0];
+	float* sv_C = &scalar_C[0];	
 
 	uniform_real_distribution<> urd(0, 1);
 	normal_distribution<> nd(0, 1);
 
 	//Generate G using N(0,1) and compute FROBENIUS Norm 
-	fill(scalar_S.begin(), scalar_S.end(), 0.0);
+	fill(scalar_C.begin(), scalar_C.end(), 0.0);
 	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
 		dlv_G[c] = nd(gr);
-		sv_S[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
+		sv_C[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
 	for(unsigned long c = 0; c < M_D; ++c)
-		sv_S[c] = 1.0 / sqrt(sv_S[c]);
+		sv_C[c] = 1.0 / sqrt(sv_C[c]);
 
-	//Generate S for MATÉRN Kernel
+	//Generate C for MATÉRN Kernel
 	float sigma_factor = 1.0 / (sigma * sqrt(M_dnpg));
     	for (unsigned long k = 0; k < M_D; ++k)
 	{
@@ -237,14 +237,14 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			for(unsigned long r = 0; r < M_dnpg; ++r)
 			    norm_psi += psi_n[r] * psi_n[r];
 			
-			//Assign to S_cc   
-			dlv_S[c + k * M_dnpg] = sigma_factor * sv_S[k] * sqrt(norm_psi); 
+			//Assign to C_cc   
+			dlv_C[c + k * M_dnpg] = sigma_factor * sv_C[k] * sqrt(norm_psi); 
 		}
 	}
 
 	dlv_G = NULL;
-        dlv_S = NULL;
-        sv_S = NULL;
+        dlv_C = NULL;
+        sv_C = NULL;
 }
 
 //Factory McKernel
