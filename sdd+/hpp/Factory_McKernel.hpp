@@ -21,10 +21,10 @@ class McKernel
 		float* M_data_out;
 		float* M_features;
 
-       		vector<unsigned long> dl_Pi;
-        	vector<float> dl_G;
-        	vector<float> dl_C;
-        	vector<long> dl_B; 
+		vector<unsigned long> dl_Pi;
+		vector<float> dl_G;
+		vector<float> dl_C;
+		vector<long> dl_B; 
 
 		McKernel( float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma);
 

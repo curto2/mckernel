@@ -40,9 +40,9 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	dl_B.resize(M_dn_D);
 
 	long* dlv_B = &dl_B[0];
-        unsigned long* p = &dl_Pi[0];
+	unsigned long* p = &dl_Pi[0];
 
-        M_data_out = new float[M_dn_D * M_nv];
+	M_data_out = new float[M_dn_D * M_nv];
 	M_features = new float[2 * M_dn_D * M_nv];
 
 	//Generate B from uniform(0,1)
