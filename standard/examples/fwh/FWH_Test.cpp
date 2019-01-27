@@ -13,8 +13,8 @@ int main( int argc, char ** argv )
 	clock_t startTime, endTime;
 
 	//Initialize variables
-        long lt = 1UL << 21; 
-        float* data = new float[lt];
+	long lt = 1UL << 21; 
+	float* data = new float[lt];
 	srand((unsigned)time(NULL)); 
 
 	//Generate random data
