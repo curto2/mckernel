@@ -13,7 +13,7 @@ For more information about the library, visit the website:
 
 If you use McKernel in a publication, please cite the paper below:
 
-Curtó, J. D. and Zarza, I. C.
+Curtó, J. D. and Zarza, H. C.
 McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization. 2019.
 
 --------------------------------------------------------
