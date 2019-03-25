@@ -5,7 +5,7 @@
 					             				     
 README
 
-To run the examples, enter to the given folders and run make as follows:
+To run the examples, enter the given folder and run make as follows:
 		$ cd /examples/fwh	
 		$ make
 		$ ./FWH
