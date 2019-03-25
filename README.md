@@ -32,7 +32,7 @@ Version 1.0, released on 12/05/2018
 File Information
 --------------------------------------------------------
 
-- Standard (standard/mckernel)
+- Standard (mckernel/standard)
        Library McKernel.
-- Standard+ (sdd+/mckernel)
+- Standard+ (mckernel/sdd+)
        Library McKernel. Pseudo-random numbers generated with hash functions. Suitable for distributed applications. Recommended.
