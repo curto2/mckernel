@@ -35,8 +35,8 @@ File Information
 --------------------------------------------------------
 
 - Standard (mckernel/standard)
-       Library McKernel.
+  - Library McKernel.
 - Standard+ (mckernel/sdd+)
-       Library McKernel. Pseudo-random numbers generated with hash functions. Suitable for distributed applications. Recommended.
+  - Library McKernel. Pseudo-random numbers generated with hash functions. Suitable for distributed applications. Recommended.
 - Learning (mckernel/lg)
-       DL framework to reproduce experiments in the paper.
+  - DL framework to reproduce experiments in the paper.
