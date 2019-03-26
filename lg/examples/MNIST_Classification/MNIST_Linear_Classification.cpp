@@ -19,10 +19,10 @@ int main(int argc, const char *argv[])
 	//Load training set
   	ai::Tensor_float trainingset, training_targets, testingset, testing_targets;
   	ai::MNIST_Load_Binary(
-		"../../../data/mnist/train-images-idx3-ubyte",
-		"../../../data/mnist/t10k-images-idx3-ubyte",
-		"../../../data/mnist/train-labels-idx1-ubyte",
-		"../../../data/mnist/t10k-labels-idx1-ubyte",
+		"../../../data/mnist/train-images.idx3-ubyte",
+		"../../../data/mnist/t10k-images.idx3-ubyte",
+		"../../../data/mnist/train-labels.idx1-ubyte",
+		"../../../data/mnist/t10k-labels.idx1-ubyte",
 		trainingset, training_targets, testingset, testing_targets);
 
 	printf("%d\n", testingset.height());

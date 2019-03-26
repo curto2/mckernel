@@ -5,14 +5,14 @@
 					             				     
 README					     					 
 
-Download MNIST dataset into ../data/mnist
+Download MNIST dataset into ../data/mnist and decompress
 
 wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
 wget http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
 wget http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
 wget http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
 
-Download FASHION-MNIST dataset into ../data/fashion_mnist
+Download FASHION-MNIST dataset into ../data/fashion_mnist and decompress
 
 wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
 wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
