@@ -1,7 +1,7 @@
 /* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@estudiants.urv.cat 						    */
+   {curto,zarza}.2@my.cityu.edu.hk 						    */
 
 #ifndef FWH_H
 #define FWH_H

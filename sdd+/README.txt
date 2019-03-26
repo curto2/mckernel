@@ -1,11 +1,11 @@
 /* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
 
    Authors: Curtó and Zarza
-   {curto,zarza}@estudiants.urv.cat 						    */		             				     
+   {curto,zarza}.2@my.cityu.edu.hk 						    */	             				     
 					             				     
 README
 
-To run the examples, enter the given folder and run make as follows:
+To run the examples, enter the given folders and run make as follows:
 		$ cd /examples/fwh	
 		$ make
 		$ ./FWH

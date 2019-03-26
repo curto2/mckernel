@@ -1,0 +1,25 @@
+/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
+
+   Authors: Curtó and Zarza
+   {curto,zarza}.2@my.cityu.edu.hk 						    */            				     
+					             				     
+README					     					 
+
+Download MNIST dataset into ../data/mnist
+
+wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+
+Download FASHION-MNIST dataset into ../data/fashion_mnist
+
+wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+
+To run the examples, enter the given folders and run make as follows:
+		$ cd /examples/MNIST_Classification	
+		$ make
+		$ ./MNIST_Classification
