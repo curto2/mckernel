@@ -1,4 +1,4 @@
-CPP_FILES := $(wildcard ../../src/AI/*/*.cpp ../../../sdd+/src/*.cpp) FASHION_MNIST_Classification.cpp
+CPP_FILES := $(wildcard ../../src/*/*.cpp ../../../sdd+/src/*.cpp) FASHION_MNIST_Classification.cpp
 O_FILES = $(addprefix o/, $(notdir $(CPP_FILES:.cpp=.o)))
 CC = g++
 FLAGS = -std=c++11 -Wall -O3 -msse2 -mavx -USE_SSE2
@@ -10,7 +10,7 @@ all: makedirs main
 clear:
 	rm -r o/
 
-o/%.o : ../../src/AI/*/%.cpp
+o/%.o : ../../src/*/%.cpp
 	$(CC) $(FLAGS) -c $< -o $@ $(LIBS)
 
 o/%.o : ../../../sdd+/src/%.cpp

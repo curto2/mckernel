@@ -7,10 +7,9 @@
 // https://github.com/Flowx08/artificial_intelligence
 // Modified by Curtó & Zarza
 
-
-#include "../../src/AI/deeplearning/Neural_Network.hpp"
-#include "../../src/AI/deeplearning/SGD_Optimizer.hpp"
-#include "../../src/AI/datasets/MNIST_loader.hpp"
+#include "../../src/deep_learning/Neural_Network.hpp"
+#include "../../src/deep_learning/SGD_Optimizer.hpp"
+#include "../../src/datasets/MNIST_loader.hpp"
 #include "../../../sdd+/hpp/Factory_McKernel.hpp"
 
 int main(int argc, const char *argv[])
@@ -19,10 +18,10 @@ int main(int argc, const char *argv[])
 	//Load training set
   	ai::Tensor_float trainingset, training_targets, testingset, testing_targets;
   	ai::MNIST_Load_Binary(
-		"../../../data/fashion_mnist/train-images-idx3-ubyte",
-		"../../../data/fashion_mnist/t10k-images-idx3-ubyte",
-		"../../../data/fashion_mnist/train-labels-idx1-ubyte",
-		"../../../data/fashion_mnist/t10k-labels-idx1-ubyte",
+		"../../../data/mnist/train-images.idx3-ubyte",
+		"../../../data/mnist/t10k-images.idx3-ubyte",
+		"../../../data/mnist/train-labels.idx1-ubyte",
+		"../../../data/mnist/t10k-labels.idx1-ubyte",
 		trainingset, training_targets, testingset, testing_targets);
 
 
