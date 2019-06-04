@@ -3,8 +3,7 @@
    Authors: Curtó and Zarza
    {curto,zarza}.2@my.cityu.edu.hk						    */
 
-// Original Source Code by Meroni,
-// https://github.com/Flowx08/artificial_intelligence
+// Original Source Code by Meroni (https://github.com/Flowx08/)
 // Modified by Curtó & Zarza
 
 #include "../../src/deep_learning/Neural_Network.hpp"

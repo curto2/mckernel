@@ -1,4 +1,4 @@
-// Original Source Code by Meroni,
+// Original Source Code by Meroni
 // https://github.com/Flowx08/artificial_intelligence
 // Modified by Curtó & Zarza
 // {curto,zarza}.2@my.cityu.edu.hk
@@ -28,7 +28,7 @@ Operations for Deep Learning
 NN optimizers
 --------------
 1. Stochastic gradient descent with minibatch and momentum
-2. Direct Feedback Alignment
+2. Direct feedback alignment
 
 Other ML algorithms
 ------------
@@ -38,7 +38,7 @@ Other ML algorithms
 Visualization
 -----------
 1. Bitmap class for loading, saving and processing multiple image formats
-2. Fast Visualization namespace for data
+2. Fast visualization namespace for data
 
 License
 ======
