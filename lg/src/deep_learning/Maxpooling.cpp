@@ -66,9 +66,9 @@ namespace lg
 		_size = _output_size * _input_count;
 
 		//Outputs and deltas
-        _outputs.setshape(_output_width, _output_height, _input_count);
+        	_outputs.setshape(_output_width, _output_height, _input_count);
 		_outputs.fill(0);
-        _errors.setshape(_output_width, _output_height, _input_count);
+        	_errors.setshape(_output_width, _output_height, _input_count);
 		_errors.fill(0);
 		
 		//Max input
@@ -107,10 +107,10 @@ namespace lg
 		_size = _output_size * _input_count;
 
 		//Initialize variables and buffers
-        _outputs.setshape(_output_width, _output_height, _input_count);
-        _outputs.fill(0);
-        _errors.setshape(_output_width, _output_height, _input_count);
-        _errors.fill(0);
+        	_outputs.setshape(_output_width, _output_height, _input_count);
+        	_outputs.fill(0);
+        	_errors.setshape(_output_width, _output_height, _input_count);
+        	_errors.fill(0);
 		
 		//Max input
 		#ifdef CUDA_BACKEND

@@ -54,10 +54,10 @@ int main(int argc, const char *argv[])
 
 	//Train
 	double error = 0;
-        const int nepochs = 20;
-        const int samples = trainingset.height();
+	const int nepochs = 20;
+	const int samples = trainingset.height();
 	const int tsamples = testingset.height();
-        const int cycles = nepochs * samples;
+	const int cycles = nepochs * samples;
 	
 	const int restarts = 1;
 	int best = 6000;

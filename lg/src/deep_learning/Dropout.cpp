@@ -50,7 +50,7 @@ namespace lg
 		height->get(_height);
 		depth->get(_depth);
 		drop_probty->get(_drop_probability);
-        _outputs.setshape(_width, _height, _depth);
+        	_outputs.setshape(_width, _height, _depth);
 		_outputs.fill(0);
 		_errors.setshape(_size);
 		_outputs.fill(0);
@@ -74,10 +74,10 @@ namespace lg
 		_depth = inputs[0]->_outputs.depth();
 
 		//Initialize vectors
-        _outputs.setshape(_width, _height, _depth);
-        _outputs.fill(0);
-        _errors.setshape(_size);
-        _errors.fill(0);
+        	_outputs.setshape(_width, _height, _depth);
+        	_outputs.fill(0);
+        	_errors.setshape(_size);
+        	_errors.fill(0);
 		
 		#ifdef CUDA_BACKEND
 		_state_buffer.setshape(_cuda_dropout.getStatesSize() / sizeof(float) + 1);

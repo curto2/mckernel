@@ -42,7 +42,7 @@ namespace lg
 		width->get(_width);
 		height->get(_height);
 		depth->get(_depth);
-        _outputs.setshape(_width, _height, _depth);
+        	_outputs.setshape(_width, _height, _depth);
 		_outputs.fill(0);
 		_errors.setshape(_size);
 		_outputs.fill(0);
@@ -63,7 +63,7 @@ namespace lg
 		_depth = inputs[0]->_outputs.depth();
 
 		//Initialize vectors
-        _outputs.setshape(_width, _height, _depth);
+        	_outputs.setshape(_width, _height, _depth);
 		_outputs.fill(0);
 		_errors.setshape(_size);
 		_outputs.fill(0);

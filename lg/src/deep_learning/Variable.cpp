@@ -39,7 +39,7 @@ namespace lg
 		_height = 1;
 		_depth = 1;
 		_outputs.setshape(_size);
-        _outputs.fill(0);
+        	_outputs.fill(0);
 	}
 	
 	////////////////////////////////////////////////////////////
@@ -50,7 +50,7 @@ namespace lg
 		_height = height;
 		_depth = 1;
 		_outputs.setshape(width, height);
-        _outputs.fill(0);
+        	_outputs.fill(0);
 	}
 
 	////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ namespace lg
 		_height = height;
 		_depth = depth;
 		_outputs.setshape(width, height, depth);
-        _outputs.fill(0);
+        	_outputs.fill(0);
 	}
 
 	////////////////////////////////////////////////////////////
@@ -80,7 +80,7 @@ namespace lg
 		height->get(_height);
 		depth->get(_depth);
 		_outputs.setshape(_width, _height, _depth);
-        _outputs.fill(0);
+        	_outputs.fill(0);
 	}
 	
 	////////////////////////////////////////////////////////////

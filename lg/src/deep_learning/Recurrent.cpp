@@ -298,16 +298,16 @@ namespace lg
 		node.initialize(input_size);
 		
 		//random input
-        Tensor_float input(input_size);
-        input.fill(0.5, 0.5);
+        	Tensor_float input(input_size);
+        	input.fill(0.5, 0.5);
 		
 		//out errors
-        Tensor_float out_errors(input_size);
+        	Tensor_float out_errors(input_size);
 		out_errors.fill(0);
 
 		//random target
 		Tensor_float target(size);
-        target.fill(0.5, 0.5);
+        	target.fill(0.5, 0.5);
 
 		//cost function
 		Cost costfun(Cost::SquaredError);

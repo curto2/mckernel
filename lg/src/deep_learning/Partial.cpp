@@ -49,11 +49,11 @@ namespace lg
 		}
 		
 		_outputs.setshape(_size);
-        _outputs.fill(0);
+        	_outputs.fill(0);
 		_errors.setshape(_size);
-        _errors.fill(0);
+        	_errors.fill(0);
 		_deltas.setshape(_outputs.size() * (_input_size + 1));
-        _deltas.fill(0);
+        	_deltas.fill(0);
 		_weights.load(file);
 		_bias.load(file);
 		*/
@@ -91,12 +91,12 @@ namespace lg
 			_input_size += inputs[z]->_outputs.size();
 		
 		//Initialize variables and buffers
-        _outputs.setshape(_size);
-        _outputs.fill(0);
-        _errors.setshape(_size);
-        _errors.fill(0);
-        _deltas.setshape(_outputs.size() * (_input_size + 1));
-        _deltas.fill(0);
+        	_outputs.setshape(_size);
+        	_outputs.fill(0);
+        	_errors.setshape(_size);
+        	_errors.fill(0);
+        	_deltas.setshape(_outputs.size() * (_input_size + 1));
+        	_deltas.fill(0);
 		_forward_map = std::vector< std::vector< int > >(_input_size);
 		/*
 		for (int z = 0; z < _input_size; z++) {
@@ -113,9 +113,9 @@ namespace lg
 		}
 
 		//Initialize weights
-        _weights.setshape(_size, _input_size);
-        _weights.fill(0.0, 6.0 / sqrt(_input_size + _size));
-        _bias.setshape(_size);
+        	_weights.setshape(_size, _input_size);
+        	_weights.fill(0.0, 6.0 / sqrt(_input_size + _size));
+        	_bias.setshape(_size);
 		_bias.fill(0.0, 6.0 / sqrt(_input_size + _size));
 	}
 	
