@@ -15,9 +15,9 @@
 #include "../util/Point.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Convolution : public Operation
 	{
@@ -25,13 +25,13 @@ namespace ai
 			Convolution(const int filter_size, const int filter_count, const int stride,
 						const int padding = 0, const float gradient_clipping = 0, const float l1_regularization = 0.f,
 						const float l2_regularization = 0.f);
-			Convolution(const ai::Point filter_size, const int filter_count,
+			Convolution(const lg::Point filter_size, const int filter_count,
 						const int stride, const int padding = 0, const float gradient_clipping = 0, const float l1_regularization = 0.f,
 						const float l2_regularization = 0.f);
-			Convolution(ai::IOData& data);
+			Convolution(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void initialize(const int input_width, const int input_height, const int input_count);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -46,7 +46,7 @@ namespace ai
 			static std::shared_ptr<Operation> make(const int filter_size, const int filter_count,
 						const int stride, const int padding = 0, const float gradient_clipping = 0,
 						const float l1_regularization = 0.f, const float l2_regularization = 0.f);
-			static std::shared_ptr<Operation> make(const ai::Point filter_size, const int filter_count,
+			static std::shared_ptr<Operation> make(const lg::Point filter_size, const int filter_count,
 						const int stride, const int padding = 0, const float gradient_clipping = 0, 
 						const float l1_regularization = 0.f, const float l2_regularization = 0.f);
 		
@@ -56,7 +56,7 @@ namespace ai
 			void backprop(CUDA_Tensor_float &out_errors);
 			void accumulate_deltas(const CUDA_Tensor_float &input);
 			
-			ai::cudnn::Convolution cudaconv;
+			lg::cudnn::Convolution cudaconv;
 			CUDA_Tensor_float _weights;
 			CUDA_Tensor_float _bias;
 			CUDA_Tensor_float _bias_deltas;
@@ -98,7 +98,7 @@ namespace ai
 			std::vector<std::vector< int >> _convmap;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: CONVOLUTION_HPP */
 

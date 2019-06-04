@@ -13,19 +13,19 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Autoencoder : public Operation
 	{
 		public:
 			Autoencoder();
 			Autoencoder(const int size, const float noise);
-			Autoencoder(ai::IOData& data);
+			Autoencoder(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void initialize(int input_size);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -46,8 +46,8 @@ namespace ai
 			void backprop(CUDA_Tensor_float& out_errors);
 			void accumulate_deltas(const CUDA_Tensor_float& input);
 			
-			ai::CUDA_Tensor_float _weights, _bias, _w_deltas, _b_deltas, _prediction, _prediction_error, _hidden_errors, _noise_mask;
-			ai::CUDA_Tensor_int _activations;
+			lg::CUDA_Tensor_float _weights, _bias, _w_deltas, _b_deltas, _prediction, _prediction_error, _hidden_errors, _noise_mask;
+			lg::CUDA_Tensor_int _activations;
 
 			#else
 			
@@ -55,8 +55,8 @@ namespace ai
 			void backprop(Tensor_float out_errors);
 			void accumulate_deltas(const Tensor_float input);
 			
-			ai::Tensor_float _weights, _bias, _w_deltas, _b_deltas, _prediction, _prediction_error, _hidden_errors, _noise_mask;
-			ai::Tensor_int _activations;
+			lg::Tensor_float _weights, _bias, _w_deltas, _b_deltas, _prediction, _prediction_error, _hidden_errors, _noise_mask;
+			lg::Tensor_int _activations;
 
 			#endif
 			float _error;
@@ -66,7 +66,7 @@ namespace ai
 			int _input_size;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: AUTOENCODER_HPP */
 

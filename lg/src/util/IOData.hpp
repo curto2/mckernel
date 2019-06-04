@@ -9,9 +9,9 @@
 #include <memory>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class IOData
 	{
@@ -65,7 +65,7 @@ namespace ai
 			std::vector<IOData> _subnodes;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: IODATA_HPP */
 

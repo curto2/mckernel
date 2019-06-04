@@ -16,9 +16,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Dropout::make(const double drop_probability)
@@ -33,17 +33,17 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	Dropout::Dropout(ai::IOData& data)
+	Dropout::Dropout(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
-		ai::IOData* drop_probty = data.findNode("drop_probty");
+		lg::IOData* drop_probty = data.findNode("drop_probty");
 		ensure(drop_probty != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -89,7 +89,7 @@ namespace ai
     }
 	
 	////////////////////////////////////////////////////////////
-	void Dropout::save(ai::IOData& data)
+	void Dropout::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -112,8 +112,8 @@ namespace ai
 
 		//==== TESTING DROPOUT ====
 		/*
-		ai::Tensor_float t_in(inputs[0]->_outputs.size());
-		ai::Tensor_float t_out(_outputs.size());
+		lg::Tensor_float t_in(inputs[0]->_outputs.size());
+		lg::Tensor_float t_out(_outputs.size());
 		inputs[0]->_outputs.copyToHost(&t_in[0], t_in.size());
 		_outputs.copyToHost(&t_out[0], t_out.size());
 		int in_zero_count = 0;
@@ -129,7 +129,7 @@ namespace ai
 		if (training == true)
 		{
 			for (int z = 0; z < (int)inputs[0]->_outputs.size(); z++)
-				_outputs[z] = (ai::util::randf() < _drop_probability) ? 0 : inputs[0]->_outputs[z];
+				_outputs[z] = (lg::util::randf() < _drop_probability) ? 0 : inputs[0]->_outputs[z];
 		}
 		else
 		{
@@ -184,4 +184,4 @@ namespace ai
 		printf("Type: Dropout, Size: %d, Drop_probability: %f", _size, _drop_probability);
 	}
 	
-} /* namespace ai */
+} /* namespace lg */

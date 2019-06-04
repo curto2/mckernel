@@ -16,9 +16,9 @@
 #include "Cost.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> ResidualBlock::make(const int filter_size, const int filter_count, const int stride, const int padding, const unsigned int blocks_count)
@@ -38,13 +38,13 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	ResidualBlock::ResidualBlock(ai::IOData& data)
+	ResidualBlock::ResidualBlock(lg::IOData& data)
 	{
 		//TODO
 	}
 	
 	////////////////////////////////////////////////////////////
-	void ResidualBlock::save(ai::IOData& data)
+	void ResidualBlock::save(lg::IOData& data)
 	{
 		//TODO
 	}
@@ -85,28 +85,28 @@ namespace ai
 			//printf("Conv 1\n");
 			if (c == 0) _layers_connections.push_back(inputs);
 			else _layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Convolution>(new ai::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
+			_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
 			_layers.back().get()->initialize(_layers_connections.back());
 			
 			//printf("Norm 1\n");
 			//printf("%d %d %d\n", _layers.back().get()->_outputs.width(), _layers.back().get()->_outputs.height(), _layers.back().get()->_outputs.depth());
 			_layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Normalization>(new ai::Normalization()));
+			_layers.push_back(std::unique_ptr<lg::Normalization>(new lg::Normalization()));
 			_layers.back().get()->initialize(_layers_connections.back());
 			
 			//printf("Relu 1\n");
 			_layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Relu>(new ai::Relu()));
+			_layers.push_back(std::unique_ptr<lg::Relu>(new lg::Relu()));
 			_layers.back().get()->initialize(_layers_connections.back());
 			
 			//printf("Conv 2\n");
 			_layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Convolution>(new ai::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
+			_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
 			_layers.back().get()->initialize(_layers_connections.back());
 			
 			//printf("Norm 2\n");
 			_layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Normalization>(new ai::Normalization()));
+			_layers.push_back(std::unique_ptr<lg::Normalization>(new lg::Normalization()));
 			_layers.back().get()->initialize(_layers_connections.back());
 			mid_output_id = _layers.size() -1;
 			
@@ -115,31 +115,31 @@ namespace ai
 				//printf("Conv 3\n");
 				//We must have the same number of filters, we use 1x1 convolution to do this
 				_layers_connections.push_back(inputs);
-				_layers.push_back(std::unique_ptr<ai::Convolution>(new ai::Convolution(1, _filter_count, 1, 0, 1)));
+				_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(1, _filter_count, 1, 0, 1)));
 				_layers.back().get()->initialize(_layers_connections.back());
 
 				//printf("Norm 3\n");
 				_layers_connections.push_back(link_layers(_layers.back().get()));
-				_layers.push_back(std::unique_ptr<ai::Normalization>(new ai::Normalization()));
+				_layers.push_back(std::unique_ptr<lg::Normalization>(new lg::Normalization()));
 				_layers.back().get()->initialize(_layers_connections.back());
 				
 				//printf("Add 1\n");
 				//Add results together
 				_layers_connections.push_back(link_layers(_layers.back().get(), _layers[mid_output_id].get()));
-				_layers.push_back(std::unique_ptr<ai::Addition>(new ai::Addition()));
+				_layers.push_back(std::unique_ptr<lg::Addition>(new lg::Addition()));
 				_layers.back().get()->initialize(_layers_connections.back());
 			}
 			else
 			{
 				//printf("Add 1\n");
 				_layers_connections.push_back(link_layers(_layers.back().get(), _layers[last_block_output_id].get()));
-				_layers.push_back(std::unique_ptr<ai::Addition>(new ai::Addition()));
+				_layers.push_back(std::unique_ptr<lg::Addition>(new lg::Addition()));
 				_layers.back().get()->initialize(_layers_connections.back());
 			}
 			
 			//printf("Relu 2\n");
 			_layers_connections.push_back(link_layers(_layers.back().get()));
-			_layers.push_back(std::unique_ptr<ai::Relu>(new ai::Relu()));
+			_layers.push_back(std::unique_ptr<lg::Relu>(new lg::Relu()));
 			_layers.back().get()->initialize(_layers_connections.back());
 			last_block_output_id = _layers.size() - 1;
 		}
@@ -214,4 +214,4 @@ namespace ai
 			_blocks_count, _size, _input_width, _input_height, _input_count, _filter_width, _filter_height, _stride, _padding);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

@@ -16,15 +16,15 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	
 	////////////////////////////////////////////////////////////
 	///	NAMESPACE WEIGHTREGULARIZATION
 	////////////////////////////////////////////////////////////
-	namespace weightreg
+	namespace wrn
 	{
 		
 		#ifdef CUDA_BACKEND
@@ -39,9 +39,9 @@ namespace ai
 		
 		#endif
 
-	} /* namespace weightregularization */
+	} /* namespace wrn */
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: WEIGHTREGULARIZATION_HPP */
 

@@ -33,9 +33,9 @@
 #include "Selu.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	
 	class Neural_Network;
@@ -45,7 +45,7 @@ namespace ai
 		public:
 			Node_Network(std::string node_name, std::vector<std::string> input_names,
 				Neural_Network* network, std::shared_ptr<Operation> operation);
-			Node_Network(ai::IOData& data, Neural_Network* network);
+			Node_Network(lg::IOData& data, Neural_Network* network);
 			
 			void run(bool training = false);
 			void backprop();
@@ -53,7 +53,7 @@ namespace ai
 			void update_parameters(const float learningrate);
 			void reset_errors();
 			void reset_deltas(const float momentum);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			const std::string getName() const;
 			const std::vector<std::string> getInputsNames();
 			const std::vector<int> getInputsIndicies();
@@ -69,7 +69,7 @@ namespace ai
 			Operation* getOperation();
 
 		private:
-			void load(ai::IOData& data);
+			void load(lg::IOData& data);
 			void checkInvalidInputNames();	
 			void initInputsIndiciesVector();
 			void initInputsOperationsVector();
@@ -82,7 +82,7 @@ namespace ai
 			std::vector<Operation*> _input_operations;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: NETWORKNODE_HPP */
 

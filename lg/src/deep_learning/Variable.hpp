@@ -12,9 +12,9 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class Variable : public Operation
@@ -24,8 +24,8 @@ namespace ai
 			Variable(int width);
 			Variable(int width, int height);
 			Variable(int width, int height, int depth);
-			Variable(ai::IOData& data);
-			void save(ai::IOData& data);
+			Variable(lg::IOData& data);
+			void save(lg::IOData& data);
 			void print();
 			const Operation::Type get_type() const;
 			static std::shared_ptr<Operation> make(int width);
@@ -37,7 +37,7 @@ namespace ai
 
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 
 #endif /* end of include guard: VARIABLE_HPP */

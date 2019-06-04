@@ -12,9 +12,9 @@
 #include "../visualization/Bitmap.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	void MNIST_Load(std::string folder_path, Tensor_float& trainingset, Tensor_float& training_labels,
@@ -28,12 +28,12 @@ namespace ai
 		int trainingset_size = 0, testingset_size = 0;
 		std::vector< std::vector<std::string> > training_files(digits_count);
 		for (int c = 0; c < digits_count; c++) {
-			training_files[c] = ai::files::listdir(folder_path + "/training/" + std::to_string(c) + "/");
+			training_files[c] = lg::files::listdir(folder_path + "/training/" + std::to_string(c) + "/");
 			trainingset_size += (int)training_files[c].size();
 		}
 		std::vector< std::vector<std::string> > testing_files(digits_count);
 		for (int c = 0; c < digits_count; c++) {
-			testing_files[c] = ai::files::listdir(folder_path + "/testing/" + std::to_string(c) + "/");
+			testing_files[c] = lg::files::listdir(folder_path + "/testing/" + std::to_string(c) + "/");
 			testingset_size += (int)testing_files[c].size();
 		}
 		
@@ -118,4 +118,4 @@ namespace ai
 			testing_labels.at(c, (int)mnist.get_test_labels()[c]) = 1.f;
 	}
 
-} /* namespace ai */
+} /* namespace lg */

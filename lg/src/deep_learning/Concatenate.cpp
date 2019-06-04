@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	////////////////////////////////////////////////////////////
@@ -29,15 +29,15 @@ namespace ai
 	Concatenate::Concatenate() {}
 	
 	////////////////////////////////////////////////////////////
-	Concatenate::Concatenate(ai::IOData& data)
+	Concatenate::Concatenate(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -114,7 +114,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Concatenate::save(ai::IOData& data)
+	void Concatenate::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -201,4 +201,4 @@ namespace ai
 		printf("Type: Concatenate, Output: (%dx%dx%d)", _width, _height, _depth);
 	}
 	
-} /* namespace ai */
+} /* namespace lg */

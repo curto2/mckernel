@@ -12,9 +12,9 @@
 #include "../util/ensure.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Partial::make(const int size, const double connectivity)
@@ -30,7 +30,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	Partial::Partial(ai::IOData& data)
+	Partial::Partial(lg::IOData& data)
 	{
 		/*
 		TODO
@@ -60,7 +60,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Partial::save(ai::IOData& data)
+	void Partial::save(lg::IOData& data)
 	{
 		/*
 		TODO
@@ -102,7 +102,7 @@ namespace ai
 		for (int z = 0; z < _input_size; z++) {
 			_forward_map[z] = std::vector<int>();
 			for (int k = 0; k < _size; k++)
-				if (ai::util::randf() < _connectivity)
+				if (lg::util::randf() < _connectivity)
 					_forward_map[z].push_back(k);
 		}
 		*/
@@ -277,4 +277,4 @@ namespace ai
 		printf("Type: Partial, Size: %d, Input_Size: %d, Connectivity: %f, Weights: %d", _size, _input_size, _connectivity, _size * (_input_size + 1));
 	}
 
-} /* namespace ai */
+} /* namespace lg */

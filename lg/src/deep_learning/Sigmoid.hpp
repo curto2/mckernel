@@ -14,16 +14,16 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Sigmoid : public Operation
 	{
 		public:
 			Sigmoid();
-			Sigmoid(ai::IOData& data);
-			void save(ai::IOData& data);
+			Sigmoid(lg::IOData& data);
+			void save(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
@@ -38,14 +38,14 @@ namespace ai
 			static void forward(const Tensor_float input, Tensor_float output);
 			static void backward(const Tensor_float errors, const Tensor_float outputs, Tensor_float out_errors);
 			#else
-			ai::cudnn::Activation _cudnnactivation;
+			lg::cudnn::Activation _cudnnactivation;
 			#endif
 		
 		private:
 			int _width, _height, _depth;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: SIGMOID_HPP */
 

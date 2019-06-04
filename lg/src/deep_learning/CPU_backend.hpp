@@ -7,9 +7,9 @@
 #define CPU_BACKEND_HPP
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	void conv_forward(float* weights, float* bias, float* inputs, float* outputs, int* out_in_map, int input_width, int input_height, int input_count, int stride, int output_width, int output_height, int filters_count, int filter_area);
 	void conv_backward(float* weights, float* out_errors, float* errors, int* in_weight_map, int* in_out_map, int input_count, int output_size, int input_width, int input_height, int filter_area, int filters_count);
@@ -48,7 +48,7 @@ namespace ai
 	void l1_regularization(float* weights, const float l1_factor, const float learningrate, int size);
 	void l2_regularization(float* weights, const float l2_factor, const float learningrate, int size);
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: CPU_BACKEND_HPP */
 

@@ -14,16 +14,16 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Normalization : public Operation
 	{
 		public:
 			Normalization(float momentum = 0.1);
-			Normalization(ai::IOData& data);
-			void save(ai::IOData& data);
+			Normalization(lg::IOData& data);
+			void save(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
@@ -57,7 +57,7 @@ namespace ai
 			float _d_gamma;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: NORMALIZATION_HPP */
 

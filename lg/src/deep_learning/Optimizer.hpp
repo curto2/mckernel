@@ -16,9 +16,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {	
 	
 	class Neural_Network;
@@ -43,7 +43,7 @@ namespace ai
 			Cost _costfunction;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: OPTIMIZER_HPP */
 

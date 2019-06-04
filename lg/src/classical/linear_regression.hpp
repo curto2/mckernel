@@ -9,9 +9,9 @@
 #include "../util/Tensor.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class linear_regression
@@ -32,7 +32,7 @@ namespace ai
 			Tensor_float _errors;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: LINEAR_REGRESSION_HPP */
 

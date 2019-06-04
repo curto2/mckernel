@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Sigmoid::make()
@@ -28,15 +28,15 @@ namespace ai
 	Sigmoid::Sigmoid() {}
 	
 	////////////////////////////////////////////////////////////
-	Sigmoid::Sigmoid(ai::IOData& data)
+	Sigmoid::Sigmoid(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -48,7 +48,7 @@ namespace ai
 		_errors.fill(0);
 		
 		#ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_SIGMOID);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_SIGMOID);
 		#endif
 	}
 	
@@ -71,12 +71,12 @@ namespace ai
         _errors.fill(0);
 		
 		#ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_SIGMOID);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_SIGMOID);
 		#endif
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Sigmoid::save(ai::IOData& data)
+	void Sigmoid::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -163,4 +163,4 @@ namespace ai
 
 	#endif
 	
-} /* namespace ai */
+} /* namespace lg */

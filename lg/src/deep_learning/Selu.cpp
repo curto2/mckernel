@@ -17,9 +17,9 @@ static const double _alpha = 1.6732632423543772;
 static const double _scale = 1.0507009873554804;
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Selu::make()
@@ -31,15 +31,15 @@ namespace ai
 	Selu::Selu() {}
 
 	////////////////////////////////////////////////////////////
-	Selu::Selu(ai::IOData& data)
+	Selu::Selu(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -51,7 +51,7 @@ namespace ai
 		_outputs.fill(0);
 
 #ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_RELU);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_RELU);
 #endif
 	}
 
@@ -74,12 +74,12 @@ namespace ai
 		_outputs.fill(0);
 
 #ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_RELU);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_RELU);
 #endif
 	}
 
 	////////////////////////////////////////////////////////////
-	void Selu::save(ai::IOData& data)
+	void Selu::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -175,4 +175,4 @@ namespace ai
 
 #endif
 
-} /* namespace ai */
+} /* namespace lg */

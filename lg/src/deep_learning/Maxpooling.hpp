@@ -14,17 +14,17 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Maxpooling : public Operation
 	{
 		public:
 			Maxpooling(const int filter_size, const int stride);
-			Maxpooling(ai::IOData& data);
+			Maxpooling(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void print();
@@ -42,13 +42,13 @@ namespace ai
 			int _input_size;
 			
 			#ifdef CUDA_BACKEND
-			ai::cudnn::Pooling _cuda_pooling;
+			lg::cudnn::Pooling _cuda_pooling;
 			#else
 			std::vector<int> _maxin;
 			#endif
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: MAXPOOLING_HPP */
 

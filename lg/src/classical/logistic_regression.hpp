@@ -10,9 +10,9 @@
 #include <fstream>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class logistic_regression
@@ -39,7 +39,7 @@ namespace ai
 			Tensor_float _errors;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: LOGISTIC_REGRESSION_HPP */
 

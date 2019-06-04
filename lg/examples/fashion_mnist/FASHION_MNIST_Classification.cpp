@@ -17,8 +17,8 @@ int main(int argc, const char *argv[])
 {    
 	
 	//Load training set
-  	ai::Tensor_float trainingset, training_targets, testingset, testing_targets;
-  	ai::MNIST_Load_Binary(
+  	lg::Tensor_float trainingset, training_targets, testingset, testing_targets;
+  	lg::MNIST_Load_Binary(
 		"../../../data/fashion_mnist/train-images-idx3-ubyte",
 		"../../../data/fashion_mnist/t10k-images-idx3-ubyte",
 		"../../../data/fashion_mnist/train-labels-idx1-ubyte",
@@ -51,14 +51,14 @@ int main(int argc, const char *argv[])
 
 	//SGD Optimizer
 	const int batch_size = 10;
-	ai::SGD_Optimizer sgd(batch_size, 0.001, 0.4, ai::Cost::CrossEntropy);
+	lg::SGD_Optimizer sgd(batch_size, 0.001, 0.4, lg::Cost::CrossEntropy);
 
 	//Train
 	double error = 0;
         const int nepochs = 20;
         const int samples = trainingset.height();
 	const int tsamples = testingset.height();
-        const int cicles = nepochs * samples;
+        const int cycles = nepochs * samples;
 	
 	const int restarts = 1;
 	int best = 6000;
@@ -68,8 +68,8 @@ int main(int argc, const char *argv[])
 		float baselr = 0.001;
 		sgd.setLearningrate(baselr);
 		
-		ai::Tensor_float input;
-		ai::Tensor_float tinput;
+		lg::Tensor_float input;
+		lg::Tensor_float tinput;
 		input.copy(trainingset.ptr(0, 0));
 		tinput.copy(testingset.ptr(0, 0));
 
@@ -87,24 +87,24 @@ int main(int argc, const char *argv[])
 		McKernel* tmckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, tinput, tnv, tdn, tD, seed, sigma, t);	
 		
 		//Initialize variables
-		ai::Tensor_float trainingset_McKernel(2 * mckernel->M_dn_D, input.height());
-		ai::Tensor_float testingset_McKernel(2 * tmckernel->M_dn_D, tinput.height());
+		lg::Tensor_float trainingset_McKernel(2 * mckernel->M_dn_D, input.height());
+		lg::Tensor_float testingset_McKernel(2 * tmckernel->M_dn_D, tinput.height());
 		trainingset_McKernel.fill(0);
 		testingset_McKernel.fill(0);
 
 		//Linear Classifier (1-layer Neural Network)
-		ai::Neural_Network nn;
-		nn.push("INPUT",		"",				ai::Variable::make(2 * tmckernel->M_dn_D));
-		nn.push("LINEAR",		"INPUT",			ai::Linear::make(10));
-		nn.push("OUTPUT",		"LINEAR",			ai::Sigmoid::make());
+		lg::Neural_Network nn;
+		nn.push("INPUT",		"",				lg::Variable::make(2 * tmckernel->M_dn_D));
+		nn.push("LINEAR",		"INPUT",			lg::Linear::make(10));
+		nn.push("OUTPUT",		"LINEAR",			lg::Sigmoid::make());
 
 		//Print Network 
 		nn.printstack();
 	
-		for (int c = 0; c <= cicles; c++) {
+		for (int c = 0; c <= cycles; c++) {
 
 			//Update learning rate
-			sgd.setLearningrate(sgd.getLearningrate() - baselr / (double)cicles);
+			sgd.setLearningrate(sgd.getLearningrate() - baselr / (double)cycles);
 
 			//Optimize neural network with random sample
 			int random_sample_id = rand() % samples;
@@ -130,7 +130,7 @@ int main(int argc, const char *argv[])
 			error += nn.optimize(trainingset_McKernel, training_targets.ptr(0, random_sample_id), &sgd);
 
 			if (c % 10000 == 0 && c != 0) {
-				printf("Cicle: %d Error: %f Learning rate: %f\n", c, error / 10000.f, sgd.getLearningrate());
+				printf("Cycle: %d Error: %f Learning rate: %f\n", c, error / 10000.f, sgd.getLearningrate());
 				error = 0;
 			}
 

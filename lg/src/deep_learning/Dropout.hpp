@@ -14,16 +14,16 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Dropout : public Operation
 	{
 		public:
 			Dropout(const double drop_probability);
-			Dropout(ai::IOData& data);
-			void save(ai::IOData& data);
+			Dropout(lg::IOData& data);
+			void save(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
@@ -34,13 +34,13 @@ namespace ai
 			float _drop_probability;
 		private:
 			#ifdef CUDA_BACKEND
-			ai::cudnn::Dropout _cuda_dropout;
-			ai::CUDA_Tensor_float _state_buffer, _reserve_space_buffer;
+			lg::cudnn::Dropout _cuda_dropout;
+			lg::CUDA_Tensor_float _state_buffer, _reserve_space_buffer;
 			#endif
 			int _width, _height, _depth;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: DROPOUT_HPP */
 

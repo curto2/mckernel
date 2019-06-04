@@ -17,9 +17,9 @@
 #include "Cost.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Autoencoder::make(const int size, const float noise)
@@ -46,11 +46,11 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Autoencoder::Autoencoder(ai::IOData& data)
+	Autoencoder::Autoencoder(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* input_size = data.findNode("input_size");
+		lg::IOData* input_size = data.findNode("input_size");
 		ensure(input_size != NULL);
 		size->get(_size);
 		input_size->get(_input_size);
@@ -80,7 +80,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Autoencoder::save(ai::IOData& data)
+	void Autoencoder::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("input_size", _input_size);
@@ -237,7 +237,7 @@ namespace ai
 		}
 
 		//Apply activation function
-		ai::Relu::forward(_outputs, _outputs);
+		lg::Relu::forward(_outputs, _outputs);
 		
 		//Store activations
 		int p = 0;
@@ -282,7 +282,7 @@ namespace ai
 				_hidden_errors[out_index] += _weights.at(k, out_index) * _prediction_error[k]; //bias
 			}
 		}
-		ai::Relu::backward(_hidden_errors, _outputs, _hidden_errors);
+		lg::Relu::backward(_hidden_errors, _outputs, _hidden_errors);
 
 		//Compute deltas
 		out_index = 0;
@@ -332,4 +332,4 @@ namespace ai
 		printf("Type: Autoencoder, Size: %d, Input_Size: %d, Weights: %d", _size, _input_size, _size * (_input_size + 1) * 2);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

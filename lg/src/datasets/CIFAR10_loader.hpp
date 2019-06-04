@@ -13,14 +13,14 @@
 #include "../util/Tensor.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	void CIFAR10_Load(std::string folder_path, Tensor_float& trainingset, Tensor_float& training_labels,
 		Tensor_float& testingset, Tensor_float& testing_labels);
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: LCIFAR_HPP */
 

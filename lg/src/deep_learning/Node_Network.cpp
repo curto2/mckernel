@@ -12,9 +12,9 @@
 #include <stdlib.h>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	Node_Network::Node_Network(std::string node_name, std::vector<std::string> input_names,
@@ -38,7 +38,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	Node_Network::Node_Network(ai::IOData& data, Neural_Network* network)
+	Node_Network::Node_Network(lg::IOData& data, Neural_Network* network)
 	{
 		_network = network;
 		load(data);
@@ -87,13 +87,13 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Node_Network::load(ai::IOData& data)
+	void Node_Network::load(lg::IOData& data)
 	{
-		ai::IOData* node_name = data.findNode("node_name");
+		lg::IOData* node_name = data.findNode("node_name");
 		ensure(node_name != NULL);
-		ai::IOData* inputs = data.findNode("inputs");
+		lg::IOData* inputs = data.findNode("inputs");
 		ensure(inputs != NULL);
-		ai::IOData* operation = data.findNode("operation");
+		lg::IOData* operation = data.findNode("operation");
 		ensure(operation != NULL);
 		node_name->get(_name);
 		_input_names.clear();
@@ -107,15 +107,15 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Node_Network::save(ai::IOData& data)
+	void Node_Network::save(lg::IOData& data)
 	{
 		data.pushNode("node_name", _name);
 		data.pushNode("inputs");
-		ai::IOData& inputs = *data.findNode("inputs");
+		lg::IOData& inputs = *data.findNode("inputs");
 		for (int z = 0; z < (int)_input_names.size(); z++)
 			inputs.pushNode(_input_names[z], _input_indicies[z]);
 		data.pushNode("operation");
-		ai::IOData& operation_data = *data.findNode("operation");
+		lg::IOData& operation_data = *data.findNode("operation");
 		Operation::saveToFile(_operation, operation_data);
 	}
 	
@@ -233,4 +233,4 @@ namespace ai
 		}
 	}
 	
-} /* namespace ai */
+} /* namespace lg */

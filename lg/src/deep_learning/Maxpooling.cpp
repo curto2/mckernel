@@ -15,9 +15,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Maxpooling::make(const int filter_size, const int stride)
@@ -36,21 +36,21 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	Maxpooling::Maxpooling(ai::IOData& data)
+	Maxpooling::Maxpooling(lg::IOData& data)
 	{
-		ai::IOData* input_width = data.findNode("input_width");
+		lg::IOData* input_width = data.findNode("input_width");
 		ensure(input_width != NULL);
-		ai::IOData* input_height = data.findNode("input_height");
+		lg::IOData* input_height = data.findNode("input_height");
 		ensure(input_height != NULL);
-		ai::IOData* input_count = data.findNode("input_count");
+		lg::IOData* input_count = data.findNode("input_count");
 		ensure(input_count != NULL);
-		ai::IOData* output_width = data.findNode("output_width");
+		lg::IOData* output_width = data.findNode("output_width");
 		ensure(output_width != NULL);
-		ai::IOData* output_height = data.findNode("output_height");
+		lg::IOData* output_height = data.findNode("output_height");
 		ensure(output_height != NULL);
-		ai::IOData* stride = data.findNode("stride");
+		lg::IOData* stride = data.findNode("stride");
 		ensure(stride != NULL);
-		ai::IOData* filter_size = data.findNode("filter_size");
+		lg::IOData* filter_size = data.findNode("filter_size");
 		ensure(filter_size != NULL);
 		
 		input_width->get(_input_width); 
@@ -74,7 +74,7 @@ namespace ai
 		//Max input
 		#ifdef CUDA_BACKEND
 		_cuda_pooling.create(_input_width, _input_height, _input_count, 1,
-			_filter_size, _filter_size, ai::cudnn::POOLING_MAX);
+			_filter_size, _filter_size, lg::cudnn::POOLING_MAX);
 		#else
 		_maxin = std::vector<int>(_size);
 		#endif
@@ -115,14 +115,14 @@ namespace ai
 		//Max input
 		#ifdef CUDA_BACKEND
 		_cuda_pooling.create(_input_width, _input_height, _input_count, 1,
-			_filter_size, _filter_size, ai::cudnn::POOLING_MAX);
+			_filter_size, _filter_size, lg::cudnn::POOLING_MAX);
 		#else
 		_maxin = std::vector<int>(_size);
 		#endif
     }
 	
 	////////////////////////////////////////////////////////////
-	void Maxpooling::save(ai::IOData& data)
+	void Maxpooling::save(lg::IOData& data)
 	{
 		data.pushNode("input_width", _input_width);
 		data.pushNode("input_height", _input_height);
@@ -145,9 +145,9 @@ namespace ai
 
 		//==== TESTING CUDA =====
 		/*
-		ai::Tensor_float t_input(inputs[0]->_outputs.size());
+		lg::Tensor_float t_input(inputs[0]->_outputs.size());
 		inputs[0]->_outputs.copyToHost(&t_input[0], t_input.size());
-		ai::Tensor_float t_out(_outputs.size());
+		lg::Tensor_float t_out(_outputs.size());
 		_outputs.copyToHost(&t_out[0], t_out.size());
 		std::vector<int> t_maxids(_maxin.size());
 		_maxin.copyToHost(&t_maxids[0], t_maxids.size());
@@ -284,7 +284,7 @@ namespace ai
 	////////////////////////////////////////////////////////////
 	const Operation::Type Maxpooling::get_type() const
 	{
-		return ai::Operation::Maxpooling;
+		return lg::Operation::Maxpooling;
 	}
 	
 	////////////////////////////////////////////////////////////
@@ -295,4 +295,4 @@ namespace ai
 			_filter_size, _stride);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

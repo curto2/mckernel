@@ -16,9 +16,9 @@
 #include "Cost.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Linear::make(const int size, bool use_bias,
@@ -51,26 +51,26 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Linear::Linear(ai::IOData& data)
+	Linear::Linear(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* input_size = data.findNode("input_size");
+		lg::IOData* input_size = data.findNode("input_size");
 		ensure(input_size != NULL);
-		ai::IOData* use_bias = data.findNode("use_bias");
+		lg::IOData* use_bias = data.findNode("use_bias");
 		ensure(use_bias != NULL);
 		size->get(_size);
 		input_size->get(_input_size);
 		use_bias->get(_use_bias);
 
-		ai::IOData* l1 = data.findNode("l1_regularization");
-		ai::IOData* l2 = data.findNode("l2_regularization");
+		lg::IOData* l1 = data.findNode("l1_regularization");
+		lg::IOData* l2 = data.findNode("l2_regularization");
 		if (l1 != NULL) l1->get(_l1_regularization);
 		else _l1_regularization = 0; //default value
 		if (l2 != NULL) l1->get(_l2_regularization);
 		else _l2_regularization = 0; //default value
 
-		ai::IOData* g_clipping = data.findNode("gradient_clipping");
+		lg::IOData* g_clipping = data.findNode("gradient_clipping");
 		if (g_clipping != NULL) g_clipping->get(_gradient_clipping);
 
 		_weights.load(data, "weights");
@@ -85,7 +85,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Linear::save(ai::IOData& data)
+	void Linear::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("input_size", _input_size);
@@ -162,8 +162,8 @@ namespace ai
 				learningrate, _input_size, _size);
 		
 		//Regularization penalty
-		if (_l1_regularization != 0) ai::weightreg::l1_regularization(_weights, _l1_regularization, learningrate);
-		else if (_l2_regularization != 0) ai::weightreg::l2_regularization(_weights, _l2_regularization, learningrate);
+		if (_l1_regularization != 0) lg::wrn::l1_regularization(_weights, _l1_regularization, learningrate);
+		else if (_l2_regularization != 0) lg::wrn::l2_regularization(_weights, _l2_regularization, learningrate);
 
 #else
 		
@@ -184,8 +184,8 @@ namespace ai
 		}
 
 		//Regularization penalty
-		if (_l1_regularization != 0) ai::weightreg::l1_regularization(_weights, _l1_regularization, learningrate);
-		else if (_l2_regularization != 0) ai::weightreg::l2_regularization(_weights, _l2_regularization, learningrate);
+		if (_l1_regularization != 0) lg::wrn::l1_regularization(_weights, _l1_regularization, learningrate);
+		else if (_l2_regularization != 0) lg::wrn::l2_regularization(_weights, _l2_regularization, learningrate);
 
 #endif
 	}
@@ -395,4 +395,4 @@ namespace ai
 				_size, _input_size, _size * (_input_size + 1), (int)_use_bias, _l1_regularization, _l2_regularization);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

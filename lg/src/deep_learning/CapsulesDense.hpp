@@ -13,19 +13,19 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class CapsulesDense : public Operation
 	{
 		public:
 			CapsulesDense();
 			CapsulesDense(const int size, bool use_bias = true, const float gradient_clipping = 0, float l1_regularization = 0, float l2_regularization = 0);
-			CapsulesDense(ai::IOData& data);
+			CapsulesDense(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void initialize(int input_size);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -74,7 +74,7 @@ namespace ai
 			float _l2_regularization;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: CAPSULESDENSE_HPP */
 

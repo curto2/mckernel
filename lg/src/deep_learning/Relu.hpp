@@ -14,17 +14,17 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Relu : public Operation
 	{
 		public:
 			Relu();
-			Relu(ai::IOData& data);
+			Relu(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			const Operation::Type get_type() const;
@@ -38,14 +38,14 @@ namespace ai
 			static void forward(const Tensor_float input, Tensor_float output);
 			static void backward(const Tensor_float errors, const Tensor_float outputs, Tensor_float out_errors);
 			#else
-			ai::cudnn::Activation _cudnnactivation;
+			lg::cudnn::Activation _cudnnactivation;
 			#endif
 		
 		private:
 			int _width, _height, _depth;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: RELU_HPP */
 

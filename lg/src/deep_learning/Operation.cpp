@@ -29,9 +29,9 @@
 #include "CapsulesDense.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	
 	////////////////////////////////////////////////////////////
@@ -41,7 +41,7 @@ namespace ai
 	void Operation::initialize(std::vector<Operation*> &inputs) {}
 	
 	////////////////////////////////////////////////////////////
-	void Operation::save(ai::IOData& data) {}
+	void Operation::save(lg::IOData& data) {}
 	
 	////////////////////////////////////////////////////////////
 	void Operation::run(std::vector<Operation*>& inputs, const bool training) {}
@@ -86,46 +86,46 @@ namespace ai
 	const Operation::Type Operation::get_type() const { return Operation::Unknown; }
 	
 	////////////////////////////////////////////////////////////
-	std::shared_ptr<Operation> Operation::loadFromFile(ai::IOData& data)
+	std::shared_ptr<Operation> Operation::loadFromFile(lg::IOData& data)
 	{
-		ai::IOData* op_type = data.findNode("operation_type");
+		lg::IOData* op_type = data.findNode("operation_type");
 		ensure(op_type != NULL);
-		ai::IOData* op = data.findNode("operation_data");
+		lg::IOData* op = data.findNode("operation_data");
 		ensure(op != NULL);
 		int operation_type;
 		op_type->get(operation_type);
 		switch (operation_type) {
 			case Unknown: return std::shared_ptr<Operation>(NULL);
-			case Variable: return std::shared_ptr<Operation>(new ai::Variable(*op));
-			case Linear: return std::shared_ptr<Operation>(new ai::Linear(*op));
-			case Linear_Freeze: return std::shared_ptr<Operation>(new ai::Linear_Freeze(*op));
-			case Sigmoid: return std::shared_ptr<Operation>(new ai::Sigmoid(*op));
-			case Relu: return std::shared_ptr<Operation>(new ai::Relu(*op));
-			case Tanh: return std::shared_ptr<Operation>(new ai::Tanh(*op));
-			case Softmax: return std::shared_ptr<Operation>(new ai::Softmax(*op));
-			case Recurrent: return std::shared_ptr<Operation>(new ai::Recurrent(*op));
-			case Partial: return std::shared_ptr<Operation>(new ai::Partial(*op));
-			case Dropout: return std::shared_ptr<Operation>(new ai::Dropout(*op));
-			case Convolution: return std::shared_ptr<Operation>(new ai::Convolution(*op));
-			case Normalization: return std::shared_ptr<Operation>(new ai::Normalization(*op));
-			case Addition: return std::shared_ptr<Operation>(new ai::Addition(*op));
-			case Concatenate: return std::shared_ptr<Operation>(new ai::Concatenate(*op));
-			case Maxpooling: return std::shared_ptr<Operation>(new ai::Maxpooling(*op));
-			case Averagepooling: return std::shared_ptr<Operation>(new ai::Averagepooling(*op));
-			case Selu: return std::shared_ptr<Operation>(new ai::Selu(*op));
-			case Autoencoder: return std::shared_ptr<Operation>(new ai::Autoencoder(*op));
-			case ResidualBlock: return std::shared_ptr<Operation>(new ai::ResidualBlock(*op));
+			case Variable: return std::shared_ptr<Operation>(new lg::Variable(*op));
+			case Linear: return std::shared_ptr<Operation>(new lg::Linear(*op));
+			case Linear_Freeze: return std::shared_ptr<Operation>(new lg::Linear_Freeze(*op));
+			case Sigmoid: return std::shared_ptr<Operation>(new lg::Sigmoid(*op));
+			case Relu: return std::shared_ptr<Operation>(new lg::Relu(*op));
+			case Tanh: return std::shared_ptr<Operation>(new lg::Tanh(*op));
+			case Softmax: return std::shared_ptr<Operation>(new lg::Softmax(*op));
+			case Recurrent: return std::shared_ptr<Operation>(new lg::Recurrent(*op));
+			case Partial: return std::shared_ptr<Operation>(new lg::Partial(*op));
+			case Dropout: return std::shared_ptr<Operation>(new lg::Dropout(*op));
+			case Convolution: return std::shared_ptr<Operation>(new lg::Convolution(*op));
+			case Normalization: return std::shared_ptr<Operation>(new lg::Normalization(*op));
+			case Addition: return std::shared_ptr<Operation>(new lg::Addition(*op));
+			case Concatenate: return std::shared_ptr<Operation>(new lg::Concatenate(*op));
+			case Maxpooling: return std::shared_ptr<Operation>(new lg::Maxpooling(*op));
+			case Averagepooling: return std::shared_ptr<Operation>(new lg::Averagepooling(*op));
+			case Selu: return std::shared_ptr<Operation>(new lg::Selu(*op));
+			case Autoencoder: return std::shared_ptr<Operation>(new lg::Autoencoder(*op));
+			case ResidualBlock: return std::shared_ptr<Operation>(new lg::ResidualBlock(*op));
 			default: return std::shared_ptr<Operation>(NULL);
 		}
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Operation::saveToFile(std::shared_ptr<Operation>& operation, ai::IOData& data)
+	void Operation::saveToFile(std::shared_ptr<Operation>& operation, lg::IOData& data)
 	{
 		data.pushNode("operation_type", (int)operation.get()->get_type());
 		data.pushNode("operation_data");
-		ai::IOData* operation_data = data.findNode("operation_data");
+		lg::IOData* operation_data = data.findNode("operation_data");
 		operation.get()->save(*operation_data);		
 	}
 
-} /* namespace ai */
+} /* namespace lg */

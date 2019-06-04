@@ -15,9 +15,9 @@
 #include "../util/Tensor.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	///	NAMESPACE VISUALIZATION
@@ -28,30 +28,30 @@ namespace ai
 		/// \brief	Save vector to image	
 		///
 		////////////////////////////////////////////////////////////
-		void save_vec(std::string path, const ai::Tensor_float& vector);
+		void save_vec(std::string path, const lg::Tensor_float& vector);
 		
 		////////////////////////////////////////////////////////////
 		/// \brief	Save vectors to image	
 		///
 		////////////////////////////////////////////////////////////
-		void save_multiple_vec(std::string path, const ai::Tensor_float vector);
+		void save_multiple_vec(std::string path, const lg::Tensor_float vector);
 		
 		////////////////////////////////////////////////////////////
 		/// \brief	Save vectors to image, all the vectors must be
 		/// of the same size
 		///
 		////////////////////////////////////////////////////////////
-		void save_multiple_vec(std::string path, const ai::Tensor_float vector, int table_width, int table_height);
+		void save_multiple_vec(std::string path, const lg::Tensor_float vector, int table_width, int table_height);
 
 		////////////////////////////////////////////////////////////
 		/// \brief Save vector to image using a specific width and
 		/// height for the image
 		///
 		////////////////////////////////////////////////////////////
-		void save_vec(std::string path, const ai::Tensor_float& vector, int width, int height);
+		void save_vec(std::string path, const lg::Tensor_float& vector, int width, int height);
 
 	} //namespace visualization
 
-} //namespace ai
+} //namespace lg
 
 #endif /* end of include guard: VISUALIZATION_HPP */

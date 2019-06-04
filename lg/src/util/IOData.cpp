@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	IOData::IOData(std::string name, const char* data, unsigned int size)
@@ -288,4 +288,4 @@ namespace ai
 		return _subnodes;
 	}
 
-} /* namespace ai */
+} /* namespace lg */

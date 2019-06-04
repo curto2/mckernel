@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Normalization::make(float momentum)
@@ -37,23 +37,23 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Normalization::Normalization(ai::IOData& data)
+	Normalization::Normalization(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
-		ai::IOData* gamma = data.findNode("gamma");
+		lg::IOData* gamma = data.findNode("gamma");
 		ensure(gamma != NULL);
-		ai::IOData* beta = data.findNode("beta");
+		lg::IOData* beta = data.findNode("beta");
 		ensure(beta != NULL);
-		ai::IOData* epsilon = data.findNode("epsilon");
+		lg::IOData* epsilon = data.findNode("epsilon");
 		ensure(epsilon != NULL);
-		ai::IOData* momentum = data.findNode("momentum");
+		lg::IOData* momentum = data.findNode("momentum");
 		ensure(momentum != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -126,7 +126,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Normalization::save(ai::IOData& data)
+	void Normalization::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -147,7 +147,7 @@ namespace ai
 
 #ifdef CUDA_BACKEND
 
-		ai::cuda::normalization_forward(inputs[0]->_outputs.pointer(), _deviation.pointer(), _normalized.pointer(),
+		lg::cuda::normalization_forward(inputs[0]->_outputs.pointer(), _deviation.pointer(), _normalized.pointer(),
 				_outputs.pointer(), &_params.pointer()[0], &_params.pointer()[1], &_params.pointer()[2], _epsilon, _size);
 
 
@@ -197,7 +197,7 @@ namespace ai
 
 #ifdef CUDA_BACKEND
 
-		ai::cuda::normalization_backward(_errors.pointer(), inputs[0]->_errors.pointer(), _deviation.pointer(),
+		lg::cuda::normalization_backward(_errors.pointer(), inputs[0]->_errors.pointer(), _deviation.pointer(),
 				&_params.pointer()[0], &_params.pointer()[1], &_params.pointer()[2], _epsilon, _size);
 
 #else
@@ -230,7 +230,7 @@ namespace ai
 	{
 #ifdef CUDA_BACKEND
 
-		ai::cuda::normalization_accumulate_deltas(_errors.pointer(), _deviation.pointer(), &_params.pointer()[0],
+		lg::cuda::normalization_accumulate_deltas(_errors.pointer(), _deviation.pointer(), &_params.pointer()[0],
 				&_params.pointer()[3], &_params.pointer()[4], _epsilon, _size);
 
 #else
@@ -249,7 +249,7 @@ namespace ai
 	{
 #ifdef CUDA_BACKEND
 
-		ai::cuda::normalization_update_parameters(&_params.pointer()[1], &_params.pointer()[2], &_params.pointer()[3],
+		lg::cuda::normalization_update_parameters(&_params.pointer()[1], &_params.pointer()[2], &_params.pointer()[3],
 				&_params.pointer()[4], _momentum, _size, learningrate);
 
 #else
@@ -272,4 +272,4 @@ namespace ai
 		printf("Type: Normalization, Size: %d, Momentum: %f", _size, _momentum);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Tanh::make()
@@ -28,15 +28,15 @@ namespace ai
 	Tanh::Tanh() {} 
 	
 	////////////////////////////////////////////////////////////
-	Tanh::Tanh(ai::IOData& data)
+	Tanh::Tanh(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -48,7 +48,7 @@ namespace ai
 		_outputs.fill(0);
 		
 		#ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_TANH);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_TANH);
 		#endif
 	}
 	
@@ -71,12 +71,12 @@ namespace ai
         _outputs.fill(0);
 		
 		#ifdef CUDA_BACKEND
-		_cudnnactivation.create(_size, 1, ai::cudnn::ACTIVATION_TANH);
+		_cudnnactivation.create(_size, 1, lg::cudnn::ACTIVATION_TANH);
 		#endif
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Tanh::save(ai::IOData& data)
+	void Tanh::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -160,4 +160,4 @@ namespace ai
 	
 	#endif
 	
-} /* namespace ai */
+} /* namespace lg */

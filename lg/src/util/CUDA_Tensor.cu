@@ -13,9 +13,9 @@
 #include <memory>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	///	ERROR HANDLING
@@ -194,7 +194,7 @@ namespace ai
 	
 	////////////////////////////////////////////////////////////
 	template <typename T>
-	void CUDA_Tensor<T>::load(ai::IOData& data, std::string dataname)
+	void CUDA_Tensor<T>::load(lg::IOData& data, std::string dataname)
 	{
 		clear();
 		IOData* node_width = data.findNode(dataname + "_width");	
@@ -233,7 +233,7 @@ namespace ai
 	
 	////////////////////////////////////////////////////////////
 	template <typename T>
-	void CUDA_Tensor<T>::save(ai::IOData& data, std::string dataname)
+	void CUDA_Tensor<T>::save(lg::IOData& data, std::string dataname)
 	{
 		std::unique_ptr<T> tmp_safe = std::unique_ptr<T>(new T[_size]);
 		T* tmp = tmp_safe.get();
@@ -501,4 +501,4 @@ namespace ai
 	////////////////////////////////////////////////////////////
 	
 
-} //namespace ai
+} //namespace lg

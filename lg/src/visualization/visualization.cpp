@@ -13,9 +13,9 @@
 #include <math.h>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@ namespace ai
 				double min, max;
 
 				//find min and max for normalization
-				const ai::Tensor_float tmp = vector.ptr(0, z);
+				const lg::Tensor_float tmp = vector.ptr(0, z);
 				findvecrange(tmp.pointer(), vector.width(), &min, &max);
 
 				//store and normalize data into a bitmap
@@ -127,7 +127,7 @@ namespace ai
 				double min, max;
 
 				//find min and max for normalization
-				const ai::Tensor_float tmp = vector.ptr(0, z);
+				const lg::Tensor_float tmp = vector.ptr(0, z);
 				findvecrange(tmp.pointer(), vector.width(), &min, &max);
 
 				//store and normalize data into a bitmap
@@ -164,4 +164,4 @@ namespace ai
 
 	} //namespace visualization
 
-} //namespace AI
+} //namespace lg

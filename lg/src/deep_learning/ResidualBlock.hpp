@@ -19,18 +19,18 @@
 #include <memory>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class ResidualBlock : public Operation
 	{
 		public:
 			ResidualBlock(const int filter_size, const int filer_count, const int stride, const int padding, const unsigned int blocks_count);
-			ResidualBlock(ai::IOData& data);
+			ResidualBlock(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void initialize(const int input_width, const int input_height, const int input_count);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -43,7 +43,7 @@ namespace ai
 			
 			static std::shared_ptr<Operation> make(const int filter_size, const int filter_count, const int stride, const int padding, const unsigned int blocks_count);
 			
-			std::vector< std::unique_ptr< ai::Operation > > _layers;
+			std::vector< std::unique_ptr< lg::Operation > > _layers;
 			std::vector< std::vector< Operation* > > _layers_connections;
 
 			std::vector< Operation* > link_layers(Operation* op);
@@ -61,7 +61,7 @@ namespace ai
 			unsigned int _blocks_count;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: RESIDUALBLOCK_HPP */
 

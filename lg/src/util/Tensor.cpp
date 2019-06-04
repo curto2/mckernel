@@ -15,9 +15,9 @@
 #include <cmath>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	////////////////////////////////////////////////////////////
@@ -172,7 +172,7 @@ namespace ai
 
 	////////////////////////////////////////////////////////////
 	template <typename T>
-		void Tensor<T>::save(ai::IOData& data, std::string dataname)
+		void Tensor<T>::save(lg::IOData& data, std::string dataname)
 		{
 			data.pushNode(dataname + "_width", _width);	
 			data.pushNode(dataname + "_height", _height);	
@@ -182,7 +182,7 @@ namespace ai
 
 	////////////////////////////////////////////////////////////
 	template <typename T>
-		void Tensor<T>::load(ai::IOData& data, std::string dataname)
+		void Tensor<T>::load(lg::IOData& data, std::string dataname)
 		{
 			IOData* node_width = data.findNode(dataname + "_width");	
 			IOData* node_height = data.findNode(dataname + "_height");	
@@ -508,4 +508,4 @@ namespace ai
 	template class Tensor<float>;
 	template class Tensor<int>;
 
-} /* namespace ai */
+} /* namespace lg */

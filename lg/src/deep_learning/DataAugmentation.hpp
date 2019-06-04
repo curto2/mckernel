@@ -18,9 +18,9 @@
 #include <string>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	
 	////////////////////////////////////////////////////////////
@@ -51,7 +51,7 @@ namespace ai
 
 	} /* namespace augmentation */
 	
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: DATAUGMENTATION_HPP */
 

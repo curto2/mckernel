@@ -17,9 +17,9 @@
 #define AUGMENTATION_MAX_GENERABLE_IMAGES 1000000
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	////////////////////////////////////////////////////////////
@@ -36,8 +36,8 @@ namespace ai
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
 			
-			ai::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
-			ai::cuda::image_translate(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, tx,ty);
+			lg::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
+			lg::cuda::image_translate(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, tx,ty);
 			t.copy(working_buf);
 		}
 		
@@ -47,8 +47,8 @@ namespace ai
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
 			
-			ai::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
-			ai::cuda::image_rotate(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, degrees);
+			lg::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
+			lg::cuda::image_rotate(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, degrees);
 			t.copy(working_buf);
 		}
 		
@@ -57,7 +57,7 @@ namespace ai
 		{
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
-			ai::cuda::image_add_noise(t.pointer(), image_width, image_height, image_channels, noise);
+			lg::cuda::image_add_noise(t.pointer(), image_width, image_height, image_channels, noise);
 		}
 		
 		////////////////////////////////////////////////////////////
@@ -65,7 +65,7 @@ namespace ai
 		{
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
-			ai::cuda::image_vertical_flip(t.pointer(), image_width, image_height, image_channels);
+			lg::cuda::image_vertical_flip(t.pointer(), image_width, image_height, image_channels);
 		}
 		
 		////////////////////////////////////////////////////////////
@@ -73,7 +73,7 @@ namespace ai
 		{
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
-			ai::cuda::image_horizontal_flip(t.pointer(), image_width, image_height, image_channels);
+			lg::cuda::image_horizontal_flip(t.pointer(), image_width, image_height, image_channels);
 		}
 		
 		////////////////////////////////////////////////////////////
@@ -82,8 +82,8 @@ namespace ai
 			//Check errors
 			ensure(t.size() == image_width * image_height * image_channels);
 			
-			ai::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
-			ai::cuda::image_scale(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, scale_factor);
+			lg::CUDA_Tensor_float working_buf(t.width(), t.height(), t.depth());
+			lg::cuda::image_scale(t.pointer(), working_buf.pointer(), image_width, image_height, image_channels, scale_factor);
 			t.copy(working_buf);
 		}
 		
@@ -200,7 +200,7 @@ namespace ai
 		{
 			ensure(t.size() == image_width * image_height * image_channels);
 			for (int z = 0; z < image_width * image_height; z++) {
-				if (ai::util::randf() < noise)
+				if (lg::util::randf() < noise)
 					for (int c = 0; c < image_channels; c++) 
 						t[image_width * image_height * c + z] = 1 - t[image_width * image_height * c + z];
 			}
@@ -238,4 +238,4 @@ namespace ai
 
 	} /* namespace augmentation */
 	
-} /* namespace ai */
+} /* namespace lg */

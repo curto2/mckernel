@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Addition::make()
@@ -28,15 +28,15 @@ namespace ai
 	Addition::Addition() {}
 	
 	////////////////////////////////////////////////////////////
-	Addition::Addition(ai::IOData& data)
+	Addition::Addition(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* width = data.findNode("width");
+		lg::IOData* width = data.findNode("width");
 		ensure(width != NULL);
-		ai::IOData* height = data.findNode("height");
+		lg::IOData* height = data.findNode("height");
 		ensure(height != NULL);
-		ai::IOData* depth = data.findNode("depth");
+		lg::IOData* depth = data.findNode("depth");
 		ensure(depth != NULL);
 		size->get(_size);
 		width->get(_width);
@@ -70,7 +70,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Addition::save(ai::IOData& data)
+	void Addition::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("width", _width);
@@ -141,4 +141,4 @@ namespace ai
 		printf("Type: Addition, Size: %d", _size);
 	}
 	
-} /* namespace ai */
+} /* namespace lg */

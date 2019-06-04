@@ -13,9 +13,9 @@
 #include "../util/Tensor.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	void MNIST_Load(std::string folder_path, Tensor_float& trainingset, Tensor_float& training_labels,
 		Tensor_float& testingset, Tensor_float& testing_labels);
@@ -24,7 +24,7 @@ namespace ai
 		const std::string train_labels_path, const std::string test_labels_path, 
 		Tensor_float& trainingset, Tensor_float& training_labels, Tensor_float& testingset, Tensor_float& testing_labels);
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: LMNIST_HPP */
 

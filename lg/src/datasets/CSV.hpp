@@ -10,9 +10,9 @@
 #include <string>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	/// \brief	Load comma-separated values file in a 2D vector
@@ -21,7 +21,7 @@ namespace ai
 	////////////////////////////////////////////////////////////
 	std::vector< std::vector<std::string> > CSV_Load(std::string CSV_filepath);
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: CSV_HPP */
 

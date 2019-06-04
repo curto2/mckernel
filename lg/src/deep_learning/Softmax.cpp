@@ -14,9 +14,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Softmax::make(double input_scale)
@@ -32,13 +32,13 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Softmax::Softmax(ai::IOData& data)
+	Softmax::Softmax(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* input_scale = data.findNode("input_scale");
+		lg::IOData* input_scale = data.findNode("input_scale");
 		ensure(input_scale != NULL);
-		ai::IOData* epsilon = data.findNode("epsilon");
+		lg::IOData* epsilon = data.findNode("epsilon");
 		ensure(epsilon != NULL);
 		size->get(_size);
 		input_scale->get(_input_scale);
@@ -66,7 +66,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Softmax::save(ai::IOData& data)
+	void Softmax::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("input_scale", _input_scale);
@@ -135,4 +135,4 @@ namespace ai
 		printf("Type: Softmax, Size: %d, Input_Scale: %f", _size, _input_scale);
 	}
 
-} /* namespace ai */
+} /* namespace lg */

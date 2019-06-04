@@ -17,8 +17,8 @@ int main(int argc, const char *argv[])
 {    
 	
 	//Load training set
-  	ai::Tensor_float trainingset, training_targets, testingset, testing_targets;
-  	ai::MNIST_Load_Binary(
+  	lg::Tensor_float trainingset, training_targets, testingset, testing_targets;
+  	lg::MNIST_Load_Binary(
 		"../../../data/mnist/train-images.idx3-ubyte",
 		"../../../data/mnist/t10k-images.idx3-ubyte",
 		"../../../data/mnist/train-labels.idx1-ubyte",
@@ -36,13 +36,13 @@ int main(int argc, const char *argv[])
 
 	//SGD Optimizer
 	const int batch_size = 10;
-	ai::SGD_Optimizer sgd(batch_size, 0.01, 0.5, ai::Cost::CrossEntropy);
+	lg::SGD_Optimizer sgd(batch_size, 0.01, 0.5, lg::Cost::CrossEntropy);
 
 	//Train
 	double error = 0;
         const int nepochs = 20;
         const int samples = trainingset.height();
-        const int cicles = nepochs * samples;
+        const int cycles = nepochs * samples;
 	
 	const int restarts = 1;
 	int best = 9000;
@@ -52,22 +52,22 @@ int main(int argc, const char *argv[])
 		float baselr = 0.01;
 		sgd.setLearningrate(baselr);
 		
-		ai::Tensor_float input;
-		ai::Tensor_float tinput;
+		lg::Tensor_float input;
+		lg::Tensor_float tinput;
 
 		//Logistic Regression
-		ai::Neural_Network nn;
-		nn.push("INPUT",		"",				ai::Variable::make(28,28));
-		nn.push("LINEAR",		"INPUT",			ai::Linear::make(10));
-		nn.push("OUTPUT",		"LINEAR",			ai::Sigmoid::make());
+		lg::Neural_Network nn;
+		nn.push("INPUT",		"",				lg::Variable::make(28,28));
+		nn.push("LINEAR",		"INPUT",			lg::Linear::make(10));
+		nn.push("OUTPUT",		"LINEAR",			lg::Sigmoid::make());
 
 		//Print Network 
 		nn.printstack();
 	
-		for (int c = 0; c <= cicles; c++) {
+		for (int c = 0; c <= cycles; c++) {
 
 		//Update learning rate
-		sgd.setLearningrate(sgd.getLearningrate() - baselr / (double)cicles);
+		sgd.setLearningrate(sgd.getLearningrate() - baselr / (double)cycles);
 
 		//Optimize neural network with random sample
 		int random_sample_id = rand() % samples;
@@ -76,7 +76,7 @@ int main(int argc, const char *argv[])
 			error += nn.optimize(input, training_targets.ptr(0, random_sample_id), &sgd);
 
 			if (c % 10000 == 0 && c != 0) {
-				printf("Cicle: %d Error: %f Learning rate: %f\n", c, error / 10000.f, sgd.getLearningrate());
+				printf("Cycle: %d Error: %f Learning rate: %f\n", c, error / 10000.f, sgd.getLearningrate());
 				error = 0;
 			}
 

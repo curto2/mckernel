@@ -13,9 +13,9 @@
 #include "../util/Macros.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class SGD_Optimizer : public Optimizer
@@ -37,7 +37,7 @@ namespace ai
 			CUDA_Tensor_float _targets;
 			#endif
 	};
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: SGD_Optimizer_HPP */
 

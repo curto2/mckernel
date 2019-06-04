@@ -17,9 +17,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 
 	////////////////////////////////////////////////////////////
@@ -44,28 +44,28 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	Recurrent::Recurrent(ai::IOData& data)
+	Recurrent::Recurrent(lg::IOData& data)
 	{
-		ai::IOData* size = data.findNode("size");
+		lg::IOData* size = data.findNode("size");
 		ensure(size != NULL);
-		ai::IOData* input_size = data.findNode("input_size");
+		lg::IOData* input_size = data.findNode("input_size");
 		ensure(input_size != NULL);
-		ai::IOData* btt_steps = data.findNode("btt_steps");
+		lg::IOData* btt_steps = data.findNode("btt_steps");
 		ensure(btt_steps != NULL);
 		size->get(_size);
 		input_size->get(_input_size);
 		btt_steps->get(_btt_steps);
 		
 		//Dense connections
-		ai::IOData* node_x = data.findNode("node_x");
+		lg::IOData* node_x = data.findNode("node_x");
 		ensure(node_x != NULL);
-		ai::IOData* node_rec = data.findNode("node_rec");
+		lg::IOData* node_rec = data.findNode("node_rec");
 		ensure(node_rec != NULL);
-		ai::IOData* node_out = data.findNode("node_out");
+		lg::IOData* node_out = data.findNode("node_out");
 		ensure(node_out != NULL);
-		_x = ai::Linear(*node_x);
-		_rec = ai::Linear(*node_rec);
-		_out = ai::Linear(*node_out);
+		_x = lg::Linear(*node_x);
+		_rec = lg::Linear(*node_rec);
+		_out = lg::Linear(*node_out);
 		
 		#ifdef CUDA_BACKEND
 
@@ -98,7 +98,7 @@ namespace ai
 	}
 	
 	////////////////////////////////////////////////////////////
-	void Recurrent::save(ai::IOData& data)
+	void Recurrent::save(lg::IOData& data)
 	{
 		data.pushNode("size", _size);
 		data.pushNode("input_size", _input_size);
@@ -128,11 +128,11 @@ namespace ai
 		_input_size = input_size;	
 
 		//Dense connections
-		_x = ai::Linear(_size);
+		_x = lg::Linear(_size);
 		_x.initialize(_input_size);
-		_rec = ai::Linear(_size);
+		_rec = lg::Linear(_size);
 		_rec.initialize(_size);
-		_out = ai::Linear(_size);
+		_out = lg::Linear(_size);
 		_out.initialize(_size);
 		
 		#ifdef CUDA_BACKEND
@@ -384,4 +384,4 @@ namespace ai
 		printf("Type: Recurrent, Size: %d, Input_Size: %d, Weights: %d", _size, _input_size, _size * (_input_size + 1));
 	}
 
-} /* namespace ai */
+} /* namespace lg */

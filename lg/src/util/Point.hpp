@@ -2,9 +2,9 @@
 #define POINT_HPP
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class Point
@@ -16,7 +16,7 @@ namespace ai
 			int x, y;	
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: POINT_HPP */
 

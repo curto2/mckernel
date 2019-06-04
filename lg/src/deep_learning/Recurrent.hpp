@@ -14,18 +14,18 @@
 #include "Linear.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Recurrent : public Operation
 	{
 		public:
 			Recurrent(const int size, int btt_steps = 3);
-			Recurrent(ai::IOData& data);
+			Recurrent(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
 			void initialize(const int input_size);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -38,9 +38,9 @@ namespace ai
 			static std::shared_ptr<Operation> make(const int size, int btt_steps = 3);
 			
 			//Weights and bias
-			ai::Linear _x;
-			ai::Linear _rec;
-			ai::Linear _out;
+			lg::Linear _x;
+			lg::Linear _rec;
+			lg::Linear _out;
 		
 			#ifdef CUDA_BACKEND
 			
@@ -71,7 +71,7 @@ namespace ai
 			int _input_size;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: RECURRENT_HPP */
 

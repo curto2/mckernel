@@ -18,9 +18,9 @@
 #include <stdlib.h>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai 
+namespace lg 
 {
 	////////////////////////////////////////////////////////////
 	std::shared_ptr<Operation> Convolution::make(const int filter_size, const int filter_count,
@@ -32,7 +32,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	std::shared_ptr<Operation> Convolution::make(const ai::Point filter_size, const int filter_count,
+	std::shared_ptr<Operation> Convolution::make(const lg::Point filter_size, const int filter_count,
 			const int stride, const int padding, const float gradient_clipping, const float l1_regularization,
 			const float l2_regularization)
 	{
@@ -59,7 +59,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Convolution::Convolution(const ai::Point filter_size, const int filter_count,
+	Convolution::Convolution(const lg::Point filter_size, const int filter_count,
 			const int stride, const int padding, const float gradient_clipping, const float l1_regularization,
 			const float l2_regularization)
 	{
@@ -78,37 +78,37 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	Convolution::Convolution(ai::IOData& data)
+	Convolution::Convolution(lg::IOData& data)
 	{
-		ai::IOData* input_width = data.findNode("input_width");
+		lg::IOData* input_width = data.findNode("input_width");
 		ensure(input_width != NULL);
-		ai::IOData* input_height = data.findNode("input_height");
+		lg::IOData* input_height = data.findNode("input_height");
 		ensure(input_height != NULL);
-		ai::IOData* input_count = data.findNode("input_count");
+		lg::IOData* input_count = data.findNode("input_count");
 		ensure(input_count != NULL);
-		ai::IOData* output_width = data.findNode("output_width");
+		lg::IOData* output_width = data.findNode("output_width");
 		ensure(output_width != NULL);
-		ai::IOData* output_height = data.findNode("output_height");
+		lg::IOData* output_height = data.findNode("output_height");
 		ensure(output_height != NULL);
-		ai::IOData* stride = data.findNode("stride");
+		lg::IOData* stride = data.findNode("stride");
 		ensure(stride != NULL);
-		ai::IOData* filter_width = data.findNode("filter_width");
+		lg::IOData* filter_width = data.findNode("filter_width");
 		ensure(filter_width != NULL);
-		ai::IOData* filter_height = data.findNode("filter_height");
+		lg::IOData* filter_height = data.findNode("filter_height");
 		ensure(filter_height != NULL);
-		ai::IOData* filter_count = data.findNode("filter_count");
+		lg::IOData* filter_count = data.findNode("filter_count");
 		ensure(filter_count != NULL);
-		ai::IOData* padding = data.findNode("padding");
+		lg::IOData* padding = data.findNode("padding");
 		ensure(padding != NULL);
 
-		ai::IOData* l1 = data.findNode("l1_regularization");
-		ai::IOData* l2 = data.findNode("l2_regularization");
+		lg::IOData* l1 = data.findNode("l1_regularization");
+		lg::IOData* l2 = data.findNode("l2_regularization");
 		if (l1 != NULL) l1->get(_l1_regularization);
 		else _l1_regularization = 0; //default value
 		if (l2 != NULL) l1->get(_l2_regularization);
 		else _l2_regularization = 0; //default value
 		
-		ai::IOData* g_clipping = data.findNode("gradient_clipping");
+		lg::IOData* g_clipping = data.findNode("gradient_clipping");
 		if (g_clipping != NULL) g_clipping->get(_gradient_clipping);
 
 		input_width->get(_input_width); 
@@ -333,7 +333,7 @@ namespace ai
 	}
 
 	////////////////////////////////////////////////////////////
-	void Convolution::save(ai::IOData& data)
+	void Convolution::save(lg::IOData& data)
 	{
 		data.pushNode("input_width", _input_width);
 		data.pushNode("input_height", _input_height);
@@ -393,8 +393,8 @@ namespace ai
 				_bias_deltas.pointer(), learningrate);
 		
 		//Regularization penalty
-		if (_l1_regularization != 0) ai::weightreg::l1_regularization(_weights, _l1_regularization, learningrate);
-		else if (_l2_regularization != 0) ai::weightreg::l2_regularization(_weights, _l2_regularization, learningrate);
+		if (_l1_regularization != 0) lg::wrn::l1_regularization(_weights, _l1_regularization, learningrate);
+		else if (_l2_regularization != 0) lg::wrn::l2_regularization(_weights, _l2_regularization, learningrate);
 
 #else
 
@@ -424,8 +424,8 @@ namespace ai
 		}
 
 		//Regularization penalty
-		if (_l1_regularization != 0) ai::weightreg::l1_regularization(_weights, _l1_regularization, learningrate);
-		else if (_l2_regularization != 0) ai::weightreg::l2_regularization(_weights, _l2_regularization, learningrate);
+		if (_l1_regularization != 0) lg::wrn::l1_regularization(_weights, _l1_regularization, learningrate);
+		else if (_l2_regularization != 0) lg::wrn::l2_regularization(_weights, _l2_regularization, learningrate);
 
 #endif
 	}
@@ -480,7 +480,7 @@ namespace ai
 	////////////////////////////////////////////////////////////
 	const Operation::Type Convolution::get_type() const
 	{
-		return ai::Operation::Convolution;
+		return lg::Operation::Convolution;
 	}
 
 	////////////////////////////////////////////////////////////
@@ -718,4 +718,4 @@ namespace ai
 
 #endif
 
-} /* namespace ai */
+} /* namespace lg */

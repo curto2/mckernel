@@ -14,17 +14,17 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Softmax : public Operation
 	{
 		public:
 			Softmax(double input_scale = 1.f);
-			Softmax(ai::IOData& data);
+			Softmax(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			const Operation::Type get_type() const;
@@ -37,7 +37,7 @@ namespace ai
 			float _epsilon;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: SOFTMAX_HPP */
 

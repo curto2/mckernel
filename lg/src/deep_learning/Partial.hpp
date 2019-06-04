@@ -13,17 +13,17 @@
 #include "Operation.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	class Partial : public Operation
 	{
 		public:
 			Partial(const int size, const double connectivity);
-			Partial(ai::IOData& data);
+			Partial(lg::IOData& data);
 			void initialize(std::vector<Operation*> &inputs);
-			void save(ai::IOData& data);
+			void save(lg::IOData& data);
 			void run(std::vector<Operation*> &inputs, const bool training);
 			void backprop(std::vector<Operation*> &inputs);
 			void accumulate_deltas(std::vector<Operation*> &inputs);
@@ -49,7 +49,7 @@ namespace ai
 			double _connectivity;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: PARTIAL_HPP */
 

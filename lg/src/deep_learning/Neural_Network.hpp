@@ -18,9 +18,9 @@
 #include <memory>
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class Neural_Network
@@ -54,7 +54,7 @@ namespace ai
 			std::vector<Node_Network> _nodes;
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: NEURALNETWORK_HPP */
 

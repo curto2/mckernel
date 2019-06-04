@@ -19,9 +19,9 @@
 //#define TENSOR_CHECK_BADACCESS
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	template < typename T >
 	class Tensor
@@ -33,9 +33,9 @@ namespace ai
 			Tensor(const int width, const int height);
 			Tensor(const int width, const int height, const int depth);
 
-			void load(ai::IOData& data, std::string dataname);
+			void load(lg::IOData& data, std::string dataname);
 			void load(std::ifstream& file);
-			void save(ai::IOData& data, std::string dataname);
+			void save(lg::IOData& data, std::string dataname);
 			void save(std::ofstream& file);
 			void setshape(const int width);
 			void setshape(const int width, const int height);
@@ -135,6 +135,6 @@ namespace ai
 	typedef Tensor<float> Tensor_float;
 	typedef Tensor<int> Tensor_int;
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif //TENSOR_HPP

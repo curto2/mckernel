@@ -21,9 +21,9 @@
 #endif
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class Operation
@@ -70,8 +70,8 @@ namespace ai
 			virtual void reset_deltas(const double momentum);
 			virtual void reset_errors();
 
-			static std::shared_ptr<Operation> loadFromFile(ai::IOData& data);
-			static void saveToFile(std::shared_ptr<Operation>& operation, ai::IOData& data);
+			static std::shared_ptr<Operation> loadFromFile(lg::IOData& data);
+			static void saveToFile(std::shared_ptr<Operation>& operation, lg::IOData& data);
 			
 			int _size;
 			#ifdef CUDA_BACKEND
@@ -83,10 +83,10 @@ namespace ai
 			#endif
 
 		private:
-			virtual void save(ai::IOData& data);
+			virtual void save(lg::IOData& data);
 	};
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: OPERATION_HPP */
 

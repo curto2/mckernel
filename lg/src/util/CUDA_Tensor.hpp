@@ -13,9 +13,9 @@
 #include "IOData.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 	template < typename T >
 	class CUDA_Tensor
@@ -28,9 +28,9 @@ namespace ai
 			CUDA_Tensor(int width, int height, int depth);
 			~CUDA_Tensor();
 
-			void load(ai::IOData& data, std::string dataname);
+			void load(lg::IOData& data, std::string dataname);
 			void load(std::ifstream& file);
-			void save(ai::IOData& data, std::string dataname);
+			void save(lg::IOData& data, std::string dataname);
 			void save(std::ofstream& file);
             void setshape(const int width);
             void setshape(const int width, const int height);
@@ -76,6 +76,6 @@ namespace ai
 	void CUDA_Tensor_float_sum(CUDA_Tensor_float& t, CUDA_Tensor_float& tout);
 	void CUDA_Tensor_float_copy(CUDA_Tensor_float& t, CUDA_Tensor_float& tout);
 
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: TENSORCUDA_HPP */

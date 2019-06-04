@@ -13,9 +13,9 @@
 #include "../util/Macros.hpp"
 
 ////////////////////////////////////////////////////////////
-///	NAMESPACE AI
+///	NAMESPACE LG
 ////////////////////////////////////////////////////////////
-namespace ai
+namespace lg
 {
 
 	class DFA_Optimizer : public Optimizer
@@ -42,7 +42,7 @@ namespace ai
 			Tensor_float _feedback_errors;
 			#endif
 	};
-} /* namespace ai */
+} /* namespace lg */
 
 #endif /* end of include guard: OPTIMIZERDFA_HPP */
 
