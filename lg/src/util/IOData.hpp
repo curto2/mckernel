@@ -1,3 +1,8 @@
+// Original Source Code by Meroni,
+// https://github.com/Flowx08/artificial_intelligence
+// Modified by Curtó & Zarza
+// {curto,zarza}.2@my.cityu.edu.hk
+
 #ifndef IODATA_HPP
 #define IODATA_HPP
 
