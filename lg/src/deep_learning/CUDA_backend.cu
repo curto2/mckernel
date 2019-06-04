@@ -737,7 +737,7 @@ namespace lg
 		__constant__ float _selu_scale = 1.0507009873554804;
 		
 		////////////////////////////////////////////////////////////
-		__global__ void knl_conv_forward(float* weights, float* bias, float* inputs, float* outputs,
+		__global__ void knl_convn_forward(float* weights, float* bias, float* inputs, float* outputs,
 			int* out_in_map, int input_count, int output_size, int input_size, int filter_area, int filters_count)
 		{
 			extern __shared__ float cache[]; //size of blockDim.x
@@ -771,7 +771,7 @@ namespace lg
 		
 		/*
 		////////////////////////////////////////////////////////////
-		__global__ void knl_conv_forward(float* weights, float* bias, float* inputs, float* outputs,
+		__global__ void knl_convn_forward(float* weights, float* bias, float* inputs, float* outputs,
 			int* out_in_map, int input_count, int output_size, int input_size, int filter_area, int filters_count)
 		{
 			extern __shared__ float cache[]; //size of blockDim.x
@@ -814,7 +814,7 @@ namespace lg
 		*/
 		
 		////////////////////////////////////////////////////////////
-		__global__ void knl_conv_backward(float* weights, float* out_errors, float* errors,
+		__global__ void knl_convn_backward(float* weights, float* out_errors, float* errors,
 			int* in_weight_map, int* in_out_map, int input_count, int output_size, int input_width,
 			int input_height, int filter_area, int filters_count)
 		{
@@ -859,7 +859,7 @@ namespace lg
 		}
 		
 		////////////////////////////////////////////////////////////
-		__global__ void knl_conv_accumulate_deltas(float* weights_deltas, float* bias_deltas,
+		__global__ void knl_convn_accumulate_deltas(float* weights_deltas, float* bias_deltas,
 			float* errors, float* inputs, float* outputs, int* out_in_map, int input_count,
 			int input_size, int output_size, int filter_area, int filters_count)
 		{
@@ -924,7 +924,7 @@ namespace lg
 		}
 		
 		////////////////////////////////////////////////////////////
-		__global__ void knl_conv_update_parameters(float* weights, float* bias, float* weights_deltas,
+		__global__ void knl_convn_update_parameters(float* weights, float* bias, float* weights_deltas,
 				float* bias_deltas, int filter_area, int input_count, int filter_count, float learningrate)
 		{
 			//Update weights
@@ -1911,14 +1911,14 @@ namespace lg
 		}
 		
 		////////////////////////////////////////////////////////////
-		void conv_forward(float* weights, float* bias, float* inputs, float* outputs,
+		void convn_forward(float* weights, float* bias, float* inputs, float* outputs,
 			int* out_in_map, int input_width, int input_height, int input_count, int stride,
 			int output_width, int output_height, int filters_count, int filter_area)
 		{
 			dim3 numBlocks(output_width * output_height, filters_count);	
 			threads = min((int)bestmatch_pow2(filter_area * input_count), CUDA_MAX_THREADS) / 4;
 			if (threads < 2) threads = 2;
-			knl_conv_forward<<<numBlocks, threads, threads * sizeof(float)>>>(weights, bias,
+			knl_convn_forward<<<numBlocks, threads, threads * sizeof(float)>>>(weights, bias,
 				inputs, outputs, out_in_map, input_count, output_width * output_height,
 				input_width * input_height, filter_area, filters_count);
 			
@@ -1929,14 +1929,14 @@ namespace lg
 				blocks = (output_width * output_height * filters_count) / threads;
 			else
 				blocks = (output_width * output_height * filters_count) / threads + 1;
-			knl_conv_forward<<<blocks, threads, threads * sizeof(float)>>>(weights, bias,
+			knl_convn_forward<<<blocks, threads, threads * sizeof(float)>>>(weights, bias,
 				inputs, outputs, out_in_map, input_count, output_width * output_height,
 				input_width * input_height, filter_area, filters_count);
 			*/
 		}
 		
 		////////////////////////////////////////////////////////////
-		void conv_backward(float* weights, float* out_errors, float* errors,
+		void convn_backward(float* weights, float* out_errors, float* errors,
 			int* in_weight_map, int* in_out_map, int input_count, int output_size, int input_width,
 			int input_height, int filter_area, int filters_count)
 		{
@@ -1944,31 +1944,31 @@ namespace lg
 			dim3 numBlocks(input_width, input_height, input_count);	
 			threads = min((int)bestmatch_pow2(filter_area * filters_count), CUDA_MAX_THREADS) / 4;
 			if (threads < 2) threads = 2;
-			knl_conv_backward<<<numBlocks, threads, threads * sizeof(float)>>>(weights, out_errors,
+			knl_convn_backward<<<numBlocks, threads, threads * sizeof(float)>>>(weights, out_errors,
 				errors, in_weight_map, in_out_map, input_count, output_size, input_width, input_height,
 				filter_area, filters_count);
 		}
 		
 		////////////////////////////////////////////////////////////
-		void conv_accumulate_deltas(float* weights_deltas, float* bias_deltas, float* errors,
+		void convn_accumulate_deltas(float* weights_deltas, float* bias_deltas, float* errors,
 			float* inputs, float* outputs, int* out_in_map, int input_count, int input_width,
 			int input_height, int output_size, int filter_area, int filters_count)
 		{
 			dim3 numBlocks(filters_count, filter_area * input_count + 1);	
 			threads = min((int)bestmatch_pow2(output_size), CUDA_MAX_THREADS) / 4;
 			if (threads < 2) threads = 2;
-			knl_conv_accumulate_deltas<<<numBlocks, threads, threads * sizeof(float)>>>(weights_deltas,
+			knl_convn_accumulate_deltas<<<numBlocks, threads, threads * sizeof(float)>>>(weights_deltas,
 				bias_deltas, errors, inputs, outputs, out_in_map, input_count, input_width * input_height,
 				output_size, filter_area, filters_count);
 		}
 		
 		////////////////////////////////////////////////////////////
-		void conv_update_parameters(float* weights, float* bias, float* weights_deltas, float* bias_deltas,
+		void convn_update_parameters(float* weights, float* bias, float* weights_deltas, float* bias_deltas,
 			int filter_area, int input_count, int filter_count, float learningrate)
 		{
 			threads = min((int)low_pow2((filter_area * input_count + 1) * filter_count), CUDA_MAX_THREADS);
 			blocks = min((filter_area * input_count + 1) * filter_count / threads + 1, CUDA_MAX_CORES);
-			knl_conv_update_parameters<<<blocks, threads>>>(weights, bias, weights_deltas, 
+			knl_convn_update_parameters<<<blocks, threads>>>(weights, bias, weights_deltas, 
 				bias_deltas, filter_area, input_count, filter_count, learningrate);
 		}
 		

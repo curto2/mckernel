@@ -82,7 +82,7 @@ namespace lg
 		for (int c = 0; c < (int)_blocks_count; c++) {
 			//printf("Block: %d\n", c);
 
-			//printf("Conv 1\n");
+			//printf("Convolution 1\n");
 			if (c == 0) _layers_connections.push_back(inputs);
 			else _layers_connections.push_back(link_layers(_layers.back().get()));
 			_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
@@ -99,7 +99,7 @@ namespace lg
 			_layers.push_back(std::unique_ptr<lg::Relu>(new lg::Relu()));
 			_layers.back().get()->initialize(_layers_connections.back());
 			
-			//printf("Conv 2\n");
+			//printf("Convolution 2\n");
 			_layers_connections.push_back(link_layers(_layers.back().get()));
 			_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(_filter_width, _filter_count, _stride, _padding, 1)));
 			_layers.back().get()->initialize(_layers_connections.back());
@@ -112,7 +112,7 @@ namespace lg
 			
 			if (c == 0)
 			{
-				//printf("Conv 3\n");
+				//printf("Convolution 3\n");
 				//We must have the same number of filters, we use 1x1 convolution to do this
 				_layers_connections.push_back(inputs);
 				_layers.push_back(std::unique_ptr<lg::Convolution>(new lg::Convolution(1, _filter_count, 1, 0, 1)));

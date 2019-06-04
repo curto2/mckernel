@@ -162,16 +162,16 @@ namespace lg
 		////////////////////////////////////////////////////////////
 		///	CUDA DEEPLEARNING INTERFACE
 		////////////////////////////////////////////////////////////
-		void conv_forward(float* weights, float* bias, float* inputs, float* outputs,
+		void convn_forward(float* weights, float* bias, float* inputs, float* outputs,
 				int* out_in_map, int input_width, int input_height, int input_count, int stride,
 				int output_width, int output_height, int filters_count, int filter_area);
-		void conv_backward(float* weights, float* out_errors, float* errors,
+		void convn_backward(float* weights, float* out_errors, float* errors,
 				int* in_weight_map, int* in_out_map, int input_count, int output_size, int input_width,
 				int input_height, int filter_area, int filters_count);
-		void conv_accumulate_deltas(float* weights_deltas, float* bias_deltas, float* errors, float* inputs, float* outputs,
+		void convn_accumulate_deltas(float* weights_deltas, float* bias_deltas, float* errors, float* inputs, float* outputs,
 				int* out_in_map, int input_count, int input_width, int input_height, int output_size,
 				int filter_area, int filters_count);
-		void conv_update_parameters(float* weights, float* bias, float* weights_deltas, float* bias_deltas, int filter_area, 
+		void convn_update_parameters(float* weights, float* bias, float* weights_deltas, float* bias_deltas, int filter_area, 
 				int input_count, int filter_count, float learningrate);
 		void maxpooling_forward(float* inputs, float* outputs, int* maxbuffer, int input_width, int input_height,
 				int input_count, int stride, int filter_size, int output_width, int output_height);
