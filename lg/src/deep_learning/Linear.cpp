@@ -65,9 +65,9 @@ namespace lg
 		lg::IOData* l1 = data.findNode("l1_regularization");
 		lg::IOData* l2 = data.findNode("l2_regularization");
 		if (l1 != NULL) l1->get(_l1_regularization);
-		else _l1_regularization = 0; //default value
+		else _l1_regularization = 0; //Default value
 		if (l2 != NULL) l1->get(_l2_regularization);
-		else _l2_regularization = 0; //default value
+		else _l2_regularization = 0; //Default value
 
 		lg::IOData* g_clipping = data.findNode("gradient_clipping");
 		if (g_clipping != NULL) g_clipping->get(_gradient_clipping);
@@ -311,27 +311,27 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void Linear::gradient_check()
 	{
-		//params
+		//Params
 		const int size = 100;
 		const int input_size = 100;
 		const float epsilon = 10e-4;
 
-		//test node
+		//Test node
 		Linear node(size);
 		node.initialize(input_size);
 
-		//random input
+		//Random input
 		Tensor_float input(size);
 		input.fill(0.5, 0.5);
 
-		//random target
+		//Random target
 		Tensor_float target(size);
 		target.fill(0.5, 0.5);
 
 		//Cost function
 		Cost costfun(Cost::SquaredError);
 
-		//computed numerical gradients
+		//Computed numerical gradients
 		Tensor_float numgrad(node._weights.width(), node._weights.height());
 
 		//For each parameter
@@ -350,7 +350,7 @@ namespace lg
 			node._weights[c] = init_param;
 		}
 
-		//compute gradients with backprop code
+		//Compute gradients with backprop code
 		node.reset_deltas(0);
 		node.run(input, false);
 		costfun.getDelta(node._outputs, target, node._errors);
@@ -368,7 +368,7 @@ namespace lg
 					max = distances.at(k, c); 
 				d++;
 			}
-			d++; //bias
+			d++; //Bias
 		}
 		medium_delta_size /= node._deltas.size();
 

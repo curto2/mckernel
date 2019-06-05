@@ -273,7 +273,7 @@ bool Bitmap::save(std::string filepath)
 	if (fileformat == "png") fmt = Formats::PNG;
 	else if (fileformat == "bmp") fmt = Formats::BMP;
 	else if (fileformat == "tga") fmt = Formats::TGA;
-	else //check for errors
+	else //Check for errors
 	{
 		ERROR("Unknown fileformat, can't save the Bitmap");
 		return 0;

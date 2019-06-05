@@ -9,7 +9,7 @@
 
 int main( int argc, char ** argv ) 
 {
-	// Initialize timing counter
+	//Initialize timing counter
 	clock_t startTime, endTime;
 
 	//Initialize variables

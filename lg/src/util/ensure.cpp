@@ -19,7 +19,7 @@ void __print_trace() {
 	name_buf[readlink("/proc/self/exe", name_buf, 511)]=0;
 	int child_pid = fork();
 	if (!child_pid) {           
-		dup2(2,1); // redirect output to stderr
+		dup2(2,1); // Redirect output to stderr
 		fprintf(stdout,"stack trace for %s pid=%s\n",name_buf,pid_buf);
 		execlp("gdb", "gdb", "--batch", "-n", "-ex", "thread", "-ex", "bt", name_buf, pid_buf, NULL);
 		abort(); /* If gdb failed to start */
@@ -40,6 +40,6 @@ void __error_exit(const char* str_condition, const char* file, const int line)
 	__print_trace();
 	#endif
 
-	//terminate program
+	//Terminate program
 	exit(-1);
 }

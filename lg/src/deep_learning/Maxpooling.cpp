@@ -60,7 +60,7 @@ namespace lg
 		stride->get(_stride); 
 		filter_size->get(_filter_size);
 		
-		_output_size = _output_width * _output_height; //output size of one filter
+		_output_size = _output_width * _output_height; //Output size of one filter
 		_input_size = _input_width * _input_height * _input_count; 
 		_size = _output_size * _input_count;
 
@@ -202,8 +202,8 @@ namespace lg
 					for (sx = 0; sx < stopX; sx++) {
 						for (sy = 0; sy < stopY; sy++) {
 
-							//Store value and check if it's greater, we must do all the calculus
-							//because 'data' my be a tensor pointer and have wrong dimensions
+							//Store value and check if it's greater, we must do all the computation
+							//because 'data' may be a tensor pointer and has wrong dimensions
 							tmp = data[f * _input_width * _input_height + _input_width * (inputy + sy) + inputx + sx];
 							if (tmp > max) {
 								max = tmp;

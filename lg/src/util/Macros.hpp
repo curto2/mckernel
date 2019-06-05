@@ -4,7 +4,7 @@
 //Uncomment to use nvdia gpu with cuda
 //#define CUDA_BACKEND
 
-//We most use cuda if we compile the source code using the nvcc compiler
+//We must use cuda if we compile the source code using the nvcc compiler
 #ifdef __NVCC__
 #define CUDA_BACKEND
 #endif

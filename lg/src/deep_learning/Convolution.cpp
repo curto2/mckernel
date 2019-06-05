@@ -520,13 +520,13 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void Convolution::gradient_check()
 	{
-		//parameters
+		//Parameters
 		const int input_width = 8;
 		const int input_height = 8;
 		const int input_depth = 3;
 		const double epsilon = 10e-4;
 
-		//test node
+		//Test node
 		const int filter_size = 4;
 		const int filter_count = 10;
 		const int stride = 1;
@@ -534,18 +534,18 @@ namespace lg
 		Convolution node(filter_size, filter_count, stride, padding);
 		node.initialize(input_width, input_height, input_depth);
 
-		//random input
+		//Random input
 		Tensor_float input(input_width, input_height, input_depth);
 		input.fill(0.5, 0.5);
 
-		//random target
+		//Random target
 		Tensor_float target(node._outputs.size());
 		target.fill(0.5, 0.5);
 
 		//Cost function
 		Cost costfun(Cost::SquaredError);
 
-		//computed numerical gradients
+		//Computed numerical gradients
 		Tensor_float numgrad(node._weights.width(), node._weights.height(), node._weights.depth());
 
 		//For each parameter
@@ -564,7 +564,7 @@ namespace lg
 			node._weights[z] = init_param;
 		}
 
-		//compute gradients with backprop code
+		//Compute gradients with backprop code
 		node.reset_deltas(0);
 		node.run(input, false);
 		costfun.getDelta(node._outputs, target, node._errors);
@@ -590,7 +590,7 @@ namespace lg
 				}
 			}
 
-			d++; //bias
+			d++; //Bias
 		}
 		medium_delta_size /= node._weights_deltas.size();
 
@@ -629,11 +629,11 @@ namespace lg
 						_outputs[out_index] += in[_convmap[o][w]] * _weights.at(f, k, w);
 					}
 
-				} // for each output
+				} // For each output
 
 				out_index++;
-			} // for each input group
-		} // for each filter
+			} // For each input group
+		} // For each filter
 	}
 
 	////////////////////////////////////////////////////////////
@@ -667,11 +667,11 @@ namespace lg
 						leaving_errors[_convmap[o][w]] += _weights.at(f, k, w) * _errors[upcomming_errors_index];
 					}
 
-				} // for each output
+				} // For each output
 
 				upcomming_errors_index++;
-			} // for each input group
-		} // for each filter
+			} // For each input group
+		} // For each filter
 	}
 
 	////////////////////////////////////////////////////////////
@@ -706,13 +706,13 @@ namespace lg
 						filter_deltas[w] += in[_convmap[o][w]] * upcomming_errors[o];
 					}
 
-				} // for each output
+				} // For each output
 
 				//Bias
 				_bias_deltas[f] += upcomming_errors[o];
 
-			} // for each input group
-		} // for each filter
+			} // For each input group
+		} // For each filter
 	}
 
 #endif

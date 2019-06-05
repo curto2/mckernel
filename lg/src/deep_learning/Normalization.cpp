@@ -76,11 +76,11 @@ namespace lg
 
 #ifdef CUDA_BACKEND
 		float* tmp = new float[5];
-		tmp[0] = 0; //variance
-		tmp[1] = _gamma; //gamma
-		tmp[2] = _beta; //beta
-		tmp[3] = 0; //gamma delta
-		tmp[4] = 0; //beta delta
+		tmp[0] = 0; //Variance
+		tmp[1] = _gamma; //Gamma
+		tmp[2] = _beta; //Beta
+		tmp[3] = 0; //Gamma delta
+		tmp[4] = 0; //Beta delta
 		_params.setshape(5);
 		_params.copyToDevice(tmp, 5);
 		delete[] tmp;
@@ -113,11 +113,11 @@ namespace lg
 
 #ifdef CUDA_BACKEND
 		float* tmp = new float[5];
-		tmp[0] = 0; //variance
-		tmp[1] = _gamma; //gamma
-		tmp[2] = _beta; //beta
-		tmp[3] = 0; //gamma delta
-		tmp[4] = 0; //beta delta
+		tmp[0] = 0; //Variance
+		tmp[1] = _gamma; //Gamma
+		tmp[2] = _beta; //Beta
+		tmp[3] = 0; //Gamma delta
+		tmp[4] = 0; //Beta delta
 		_params.setshape(5);
 		_params.copyToDevice(tmp, 5);
 		delete[] tmp;
@@ -233,11 +233,11 @@ namespace lg
 				&_params.pointer()[3], &_params.pointer()[4], _epsilon, _size);
 
 #else
-		//calculate beta delta
+		//Calculate beta delta
 		for (int c = 0; c < _errors.size(); c++)
 			_d_beta += _errors[c];
 
-		//calculate gamma delta
+		//Calculate gamma delta
 		for (int c = 0; c < _errors.size(); c++)
 			_d_gamma += _deviation[c] * sqrt(_variance + _epsilon) * _errors[c];
 #endif

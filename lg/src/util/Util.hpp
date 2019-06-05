@@ -25,10 +25,10 @@ namespace lg
 		//Xorshift 32bit
 		uint32_t xorshift32();
 		
-		//random number between 0 and 2^32
+		//Random number between 0 and 2^32
 		int randint();
 		
-		//random number between 0 and 1
+		//Random number between 0 and 1
 		float randf();
 
 		//Random number in range (mean - deviation) to (mean + deviation)

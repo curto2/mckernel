@@ -206,11 +206,11 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void normalization_accumulate_deltas(float* errors, float* deviation, float* variance, float* d_gamma, float* d_beta, float epsilon, int size)
 	{
-		//calculate beta delta
+		//Calculate beta delta
 		for (int c = 0; c < size; c++)
 			*d_beta += errors[c];
 
-		//calculate gamma delta
+		//Calculate gamma delta
 		for (int c = 0; c < size; c++)
 			*d_gamma += deviation[c] * sqrt(*variance + epsilon) * errors[c];
 	}
@@ -470,14 +470,14 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void capsule_squashing_forward(float* inputs, float* outputs, int size)
 	{
-		double lenght = 0.f;
+		double length = 0.f;
 		for (int c = 0; c < size; c++)
-			lenght += inputs[c] * inputs[c];
-		lenght = sqrt(lenght);
+			length += inputs[c] * inputs[c];
+		length = sqrt(length);
 		
-		const float multiplier = (lenght * lenght) / (1.f + lenght * lenght);
+		const float multiplier = (length * length) / (1.f + length * length);
 		for (int c = 0; c < size; c++)
-			outputs[c] = multiplier * (inputs[c] / lenght);
+			outputs[c] = multiplier * (inputs[c] / length);
 	}
 
 	////////////////////////////////////////////////////////////

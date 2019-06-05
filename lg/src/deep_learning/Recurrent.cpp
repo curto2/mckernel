@@ -222,7 +222,7 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void Recurrent::run(const Tensor_float input, bool accumulate)
 	{
-		//update btt position
+		//Update btt position
 		int btt_oldpos = _btt_pos;
 		_btt_pos = (_btt_pos + 1) % _btt_steps;
 		
@@ -287,31 +287,31 @@ namespace lg
 	////////////////////////////////////////////////////////////
 	void Recurrent::gradient_check()
 	{
-		//parameters
+		//Parameters
 		const int size = 20;
 		const int input_size = 10;
 		const float epsilon = 10e-4;
 		
-		//test node
+		//Test node
 		Recurrent node(size);
 		node.initialize(input_size);
 		
-		//random input
+		//Random input
         	Tensor_float input(input_size);
         	input.fill(0.5, 0.5);
 		
-		//out errors
+		//Out errors
         	Tensor_float out_errors(input_size);
 		out_errors.fill(0);
 
-		//random target
+		//Random target
 		Tensor_float target(size);
         	target.fill(0.5, 0.5);
 
-		//cost function
+		//Cost function
 		Cost costfun(Cost::SquaredError);
 
-		//computed numerical gradients
+		//Computed numerical gradients
 		Tensor_float& node_weights = node._x._weights;
 		Tensor_float numgrad(node_weights.width(), node_weights.height(), node_weights.depth());
 
@@ -333,7 +333,7 @@ namespace lg
 			node_weights[z] = init_param;
        }
 		
-		//compute gradients with backprop code
+		//Compute gradients with backprop code
 		node._x.reset_deltas(0);
 		node.reset_hidden_state();
 		node.run(input, false);
@@ -351,7 +351,7 @@ namespace lg
 					max = distances.at(k, z); 
 				d++;
 			}
-			d++; //bias
+			d++; //Bias
 		}
 
 		const float tollerance = 3 * 1e-3;

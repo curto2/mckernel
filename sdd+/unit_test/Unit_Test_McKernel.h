@@ -9,7 +9,7 @@
 #include <cxxtest/TestSuite.h>
 #include "../hpp/McKernel.hpp"
 
-// Unit Test McKernel
+//Unit Test McKernel
 class TestSuite_McKernel : public CxxTest::TestSuite 
 {
 	public:

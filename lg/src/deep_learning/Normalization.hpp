@@ -39,7 +39,7 @@ namespace lg
 			float _epsilon;
 			float _momentum;
 			
-			//forward informations
+			//Information forward
 			double _mean;
 			double _variance;
 			#ifdef CUDA_BACKEND
@@ -51,7 +51,7 @@ namespace lg
 			Tensor_float _normalized;
 			#endif
 
-			//Backward informations
+			//Information backward
 			float _d_beta;
 			float _d_gamma;
 	};

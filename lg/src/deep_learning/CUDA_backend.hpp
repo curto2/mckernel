@@ -213,7 +213,7 @@ namespace lg
 		void l1_regularization(float* weights, const float l1_factor, const float learningrate, int size);
 		void l2_regularization(float* weights, const float l2_factor, const float learningrate, int size);
 
-		//Image data augumentation
+		//Image data augmentation
 		void image_translate(float* image, float* result_buffer, const int width, const int height, const int channels, const int by_x, const int by_y);
 		void image_vertical_flip(float* image, const int width, const int height, const int channels);
 		void image_horizontal_flip(float* image, const int width, const int height, const int channels);

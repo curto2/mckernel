@@ -299,7 +299,7 @@ namespace lg
 			_weights_size = filter_width * filter_height * filter_count * input_depth;
 			_bias_size = filter_count;
 			
-			//forward algorithm
+			//Forward algorithm
 			checkcudnn(cudnnGetConvolutionForwardAlgorithm(cudnnHandle,
 					*(cudnnTensorDescriptor_t*)_input_description.get(),
 					*(cudnnFilterDescriptor_t*)_filter_description,
@@ -894,7 +894,7 @@ namespace lg
 				//Finally, store the single delta value in buffer of deltas
 				if (threadIdx.x == 0) bias_deltas[__DELTAS_BIAS_OFFSET] += cache[0];
 			}
-			else //normal weight
+			else //Normal weight
 			{
 				//Shortcuts
 				#define __INPUT_OFFSET (y / filter_area) * input_size //Where my input begins
@@ -949,11 +949,11 @@ namespace lg
 		{
 			extern __shared__ float cache[]; //size of blockDim.x
 			
-			//output id
+			//Output id
 			int tid = blockIdx.x * blockDim.x + threadIdx.x;
 			if (tid >= output_width * output_height * input_count) return;
 			
-			cache[threadIdx.x] = -0x7FFE; //clear my cache position
+			cache[threadIdx.x] = -0x7FFE; //Clear my cache position
 
 			const int z = tid / (output_width * output_height);
 			const int x = tid % output_width;
@@ -990,13 +990,13 @@ namespace lg
 			int input_width, int input_height, int input_count, int stride, int filter_size,
 			int output_width, int output_height)
 		{
-			extern __shared__ float cache[]; //size of blockDim.x
+			extern __shared__ float cache[]; //Size of blockDim.x
 			
-			//output id
+			//Output id
 			int tid = blockIdx.x * blockDim.x + threadIdx.x;
 			if (tid >= output_width * output_height * input_count) return;
 			
-			cache[threadIdx.x] = 0; //clear my cache position
+			cache[threadIdx.x] = 0; //Clear my cache position
 
 			const int z = tid / (output_width * output_height);
 			const int x = tid % output_width;
@@ -1237,7 +1237,7 @@ namespace lg
 
 			if (drop_probability != 0 && training == true) 
 			{
-				//pseudo random number, or magic for short
+				//Pseudo random number, or magic for short
 				tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 13;
 				tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 17;
 				tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 5;
@@ -1329,7 +1329,7 @@ namespace lg
 			int tid = blockIdx.x * blockDim.x + threadIdx.x;
 			int k;
 
-			//calculate mean
+			//Calculate mean
 			while (tid < size) {
 				cache[threadIdx.x] += inputs[tid];
 				tid += blockDim.x * gridDim.x;
@@ -1355,7 +1355,7 @@ namespace lg
 			int tid = threadIdx.x;
 			int k;
 
-			//calculate mean
+			//Calculate mean
 			while (tid < knl_tmp_int_buf[0]) {
 				cache[threadIdx.x] += knl_tmp_float_buf[tid];
 				tid += blockDim.x;
@@ -1405,7 +1405,7 @@ namespace lg
 			int tid = threadIdx.x;
 			int k;
 
-			//calculate mean
+			//Calculate mean
 			while (tid < knl_tmp_int_buf[0]) {
 				cache[threadIdx.x] += knl_tmp_float_buf[tid];
 				tid += blockDim.x;
@@ -1461,7 +1461,7 @@ namespace lg
 			//Store results
 			if (threadIdx.x == 0) knl_tmp_float_buf[blockIdx.x] = cache[0];
 			
-			//reset cache
+			//Reset cache
 			cache[threadIdx.x] = 0;
 
 			//Sum all errors deviations
@@ -1570,7 +1570,7 @@ namespace lg
 			if (threadIdx.x == 0) *d_beta += cache[0];
 			__syncthreads();
 
-			//reset cache
+			//Reset cache
 			cache[threadIdx.x] = 0;
 			
 			//Calculate d_gamma delta
@@ -1605,7 +1605,7 @@ namespace lg
 		{
 			extern __shared__ unsigned int temp[];
 
-			//clear counters
+			//Clear counters
 			temp[threadIdx.x * 2] = 0;
 			temp[threadIdx.x * 2 + 1] = 0;
 
@@ -1626,15 +1626,15 @@ namespace lg
 			}
 			__syncthreads();
 
-			//calculate offset
+			//Calculate offset
 			for (tid = 0; tid < threadIdx.x; tid++)
 				temp[threadIdx.x * 2 + 1] += temp[tid * 2];
 
-			//store indices
+			//Store indices
 			for (tid = 0; tid < temp[threadIdx.x * 2]; tid++)
 				indices[temp[threadIdx.x * 2 + 1] + tid] = tmp_indices[CHUNK_OFFSET + tid];
 
-			//store indices count
+			//Store indices count
 			if (threadIdx.x == blockDim.x -1) 
 				*indices_count = temp[threadIdx.x * 2 + 1] + temp[threadIdx.x * 2];	
 		}
@@ -1851,10 +1851,10 @@ namespace lg
 			int tid = blockIdx.x * blockDim.x + threadIdx.x;
 			if (tid >= width * height * channels) return;
 			
-			//randomize system with seed
+			//Randomize system with seed
 			tseeds[threadIdx.x] += seed * (tid + 1);
 			
-			//pseudo random number, or magic for short
+			//Pseudo random number, or magic for short
 			tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 13;
 			tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 17;
 			tseeds[threadIdx.x] ^= tseeds[threadIdx.x] << 5;

@@ -28,13 +28,13 @@ namespace lg
 			return y;
 		}
 		
-		//random number between 0 and 2^32
+		//Random number between 0 and 2^32
 		int randint()
 		{
 			return xorshift32();
 		}
 
-		//random number between 0 and 1
+		//Random number between 0 and 1
 		float randf()
 		{ 
 			return (double)xorshift32() / (double)UINT_MAX; 

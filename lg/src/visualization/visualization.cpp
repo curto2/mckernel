@@ -61,15 +61,15 @@ namespace lg
 			const int img_size = findminsquare(vector.size());
 			double min, max;
 			
-			//find min and max for normalization
+			//Find min and max for normalization
 			findvecrange(vector.pointer(), vector.size(), &min, &max);
 			
-			//store and normalize data into a bitmap
+			//Store and normalize data into a bitmap
 			Bitmap bm(img_size, img_size, Bitmap::MONO, 0x000000);
 			for (int c = 0; c < (int)vector.size(); c++)
 				bm.m_data[c] = ((vector[c] - min) / (max - min)) * 255;
 
-			//save bitmap
+			//Save bitmap
 			bm.save(path);
 		}
 		
@@ -93,16 +93,16 @@ namespace lg
 				const int img_size = findminsquare(vector.width());
 				double min, max;
 
-				//find min and max for normalization
+				//Find min and max for normalization
 				const lg::Tensor_float tmp = vector.ptr(0, z);
 				findvecrange(tmp.pointer(), vector.width(), &min, &max);
 
-				//store and normalize data into a bitmap
+				//Store and normalize data into a bitmap
 				Bitmap bm(img_size, img_size, Bitmap::MONO, 0x000000);
 				for (int c = 0; c < (int)vector.width(); c++)
 					bm.m_data[c] = ((vector.at(z, c) - min) / (max - min)) * 255;
 				
-				//copy block to final bitmap
+				//Copy block to final bitmap
 				bm.copyToRegion(img, 0, 0, img_size, img_size, pos, 0, img_size, img_size);
 				pos += img_size + 1;
 			}
@@ -125,16 +125,16 @@ namespace lg
 			for (int z = 0; z < (int)vector.size(); z++) {
 				double min, max;
 
-				//find min and max for normalization
+				//Find min and max for normalization
 				const lg::Tensor_float tmp = vector.ptr(0, z);
 				findvecrange(tmp.pointer(), vector.width(), &min, &max);
 
-				//store and normalize data into a bitmap
+				//Store and normalize data into a bitmap
 				Bitmap bm(img_width, img_height, Bitmap::MONO, 0x000000);
 				for (int c = 0; c < (int)vector.width(); c++)
 					bm.m_data[c] = ((vector.at(z, c) - min) / (max - min)) * 255;
 				
-				//copy block to final bitmap
+				//Copy block to final bitmap
 				bm.copyToRegion(img, 0, 0, img_width, img_height, (z % table_width) * img_width,
 								(z / table_width) * img_height, img_width, img_height);
 			}
@@ -145,19 +145,19 @@ namespace lg
 		////////////////////////////////////////////////////////////
 		void save_vec(std::string path, const Tensor_float& vector, int width, int height)
 		{
-			//check if the size of the vector is correct
+			//Check if the size of the vector is correct
 			assert(vector.size() <= width * height);
 
-			//find min and max for normalization
+			//Find min and max for normalization
 			double min, max;
 			findvecrange(vector.pointer(), vector.size(), &min, &max);
 			
-			//store and normalize data into a bitmap
+			//Store and normalize data into a bitmap
 			Bitmap bm(width, height, Bitmap::MONO, 0x000000);
 			for (int c = 0; c < (int)vector.size(); c++)
 				bm.m_data[c] = ((vector[c] - min) / (max - min)) * 255;
 
-			//save bitmap
+			//Save bitmap
 			bm.save(path);
 		}
 

@@ -101,21 +101,21 @@ namespace lg
 
 			for (int c = 0; c < (int)inputs.height(); c++) {
 				
-				//compute learning rate
+				//Compute learning rate
 				learning_rate = starting_learningrate * (1.f - (double)(e * inputs.height() + c) / (double)(epochs * inputs.height()));
 				
 				int indx = shuffle_idx[c];
 				
-				//calculate output
+				//Calculate output
 				predict(inputs.ptr(0, indx));
 
-				//calculate prediction errors
+				//Calculate prediction errors
 				for (unsigned int z = 0; z < _output_size; z++) {
 					_errors[z] = targets.at(indx, z) - _outputs[z];
 					medium_error += fabs(_errors[z]);
 				}
 
-				//update weights
+				//Update weights
 				for (unsigned int z = 0; z < _output_size; z++) {
 					_bias[z] += _errors[z] * learning_rate;
 					for (unsigned int k = 0; k < _input_size; k++)
