@@ -59,7 +59,7 @@ unsigned int MurmurHash2 ( const void * key, int lt, unsigned int seed )
     return h;
 }
 
-//PN Uniform, Hash Class 
+//PN Uniform
 U_PN::U_PN()
 {
     m_seed = 0;
@@ -80,7 +80,7 @@ void U_PN::SetState(unsigned long seed)
     m_seed = seed;
 }
 
-//PN Normal and Chi^2, Hash Class 
+//PN Normal and Chi^2 
 NC_PN::NC_PN()
 {
     m_seed1 = 0;
