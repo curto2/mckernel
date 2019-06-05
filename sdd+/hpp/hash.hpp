@@ -10,7 +10,7 @@
 //The author disclaims all copyright to their code. 
 unsigned int MurmurHash2 (const void * key, int lt, unsigned int seed);
 
-//PN Uniform, Hash Class 
+//PN Uniform 
 class U_PN
 {
 public:
@@ -26,7 +26,7 @@ private:
     unsigned long m_seed;
 };
 
-//PN Normal and Chi^2, Hash Class
+//PN Normal and Chi^2
 class NC_PN
 {
 public:
