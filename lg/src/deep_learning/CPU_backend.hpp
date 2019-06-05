@@ -41,8 +41,7 @@ namespace lg
 	void softmax_forward(float* inputs, float* outputs, float scale, int size, float epsilon);
 	void softmax_backward(float* errors, float* out_errors, float* outputs, int size);
 	void capsule_squashing_forward(float* inputs, float* outputs, int size);
-	void capsule_squashing_backward(float* errors, float* out_errors, float* outputs, int size);
-	
+	void capsule_squashing_backward(float* errors, float* out_errors, float* outputs, int size);	
 	void gradient_clipping(float* deltas, int size, const float clipping_deviation);
 	void l1_regularization(float* weights, const float l1_factor, const float learningrate, int size);
 	void l2_regularization(float* weights, const float l2_factor, const float learningrate, int size);

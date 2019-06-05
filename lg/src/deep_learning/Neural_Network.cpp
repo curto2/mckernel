@@ -47,7 +47,7 @@ namespace lg
 			_nodes[z].save(*node);
 		}
 		if (!data.writeToFile(filepath)) {
-			printf("Error in NeuralNework.cpp: can't save network to filepath %s\n", filepath.c_str());
+			printf("Error in Neural_Network.cpp: can't save network to filepath %s\n", filepath.c_str());
 		}
 	}
 
@@ -56,7 +56,7 @@ namespace lg
 	{
 		lg::IOData data("");
 		if (!data.loadFromFile(filepath)) {
-			printf("Error in NeuralNework.cpp: can't load network from filepath %s\n", filepath.c_str());
+			printf("Error in Neural_Network.cpp: can't load network from filepath %s\n", filepath.c_str());
 			return;
 		}
 
