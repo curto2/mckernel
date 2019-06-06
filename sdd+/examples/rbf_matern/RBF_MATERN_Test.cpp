@@ -37,7 +37,7 @@ int main()
 	mckernel->McFeatures();
 	mckernel->McEvaluate();
 	endTime = clock();
-	cout << "RBF MATÉRN took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
+	cout << "RBF MATÉRN took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << " ms." << endl;
 
 	return 0;
 }

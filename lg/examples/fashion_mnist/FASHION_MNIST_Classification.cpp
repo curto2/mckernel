@@ -33,17 +33,26 @@ int main(int argc, const char *argv[])
 	//Kernel Expansions
 	int expansions = 3;
 
-	//RBF
+	//RBF MATÉRN
 	unsigned long t = 40;
 	float sigma = 1.0;
+
+	//RBF
 	//float sigma = 10.0;
 
-    	//Seed random distributions    	
+    	//Seed random distributions
+	unsigned long seed = 1398239763; //We use here a constant seed to induce a reproducible behavior
+
+	//Sdd+
 	//random_device rd;
     	//unsigned long seed = (unsigned long)rd();
-	//McKernel
-	//printf("Seed: %lu...\n",seed);
-	unsigned long seed = 1398239763;
+	
+	//Standard
+	//random_device rd;
+	//mt19937 seed(rd());
+
+	//Seed
+	printf("Seed: %lu.\n",seed);
 
 	//McKernel
 	printf("McKernel...\n");
@@ -118,7 +127,6 @@ int main(int argc, const char *argv[])
 			mckernel->McFeatures();
 
 			//McEvaluate
-			//data_features = mckernel->McEvaluate();
 			mckernel->McEvaluate();
 
 			//Tensor Float
@@ -135,6 +143,7 @@ int main(int argc, const char *argv[])
 
 
 			if (c % samples == 0 && c != 0) {
+
 				//Test
 				printf("Epoch: %d Testing...\n", c / samples);
 			
@@ -172,13 +181,13 @@ int main(int argc, const char *argv[])
 
 				if (errors < best) {
 					best = errors;
-					nn.save("MNIST.nn");
-					printf("Network saved!\n");
+					nn.save("FASHION_MNIST.nn");
+					printf("Saved network!\n");
 				}
 			}
 		}
 	}
 	
-	printf("Complete Learning\n");
+	printf("Complete Learning.\n");
 	return 0;
 }

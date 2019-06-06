@@ -233,7 +233,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 		{
     			float norm_psi;
 			unsigned long ptn = k * M_dnpg + c;
-	    		//Draw t iid samples psi_c uniformly from Sd
+	    		//Draw t i.i.d. samples psi_c uniformly from Sd
 			vector<float> psi_n(M_dnpg);
 		    	for (unsigned long n = 0; n < t; ++n)
 			{

@@ -15,7 +15,7 @@
 
 using namespace std;
 
-//In-place diagonal product 
+//In-place product diagonal 
 template <typename Dtype>
 inline void dproduct(Dtype* data_in, const Dtype* dl, const unsigned long nv, const unsigned long D, 
   const unsigned long dn, const unsigned long dn_D) {
@@ -44,7 +44,7 @@ inline void dproduct(Dtype* data_in, const Dtype* dl, const unsigned long nv, co
   }
 }
 
-//Diagonal product B (with padding)
+//Product Diagonal B (with padding)
 template <typename Dtype>
 inline void dproductB( Dtype* data_in, vector<long>& dl, const unsigned long nv, const unsigned long dn, 
   const unsigned long dnpg, const unsigned long dn_D, Dtype* data_out)
@@ -66,7 +66,7 @@ inline void dproductB( Dtype* data_in, vector<long>& dl, const unsigned long nv,
   }
 }
 
-//In-place diagonal product 
+//In-place product diagonal 
 template <typename Dtype>
 inline void dlproduct(Dtype* data_in, const Dtype* dl, const unsigned long nv, const unsigned long dn)
 {

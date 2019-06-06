@@ -10,7 +10,6 @@
 #include "../../src/deep_learning/Neural_Network.hpp"
 #include "../../src/deep_learning/SGD_Optimizer.hpp"
 #include "../../src/datasets/MNIST_loader.hpp"
-#include "../../../sdd+/hpp/Factory_McKernel.hpp"
 
 int main(int argc, const char *argv[])
 {    
@@ -28,10 +27,6 @@ int main(int argc, const char *argv[])
 	printf("%d\n", testingset.width());
 	printf("%d\n", trainingset.height());
 	printf("%d\n", trainingset.width());
-
-
-	//McKernel
-	printf("McKernel...\n");
 
 	//SGD Optimizer
 	const int batch_size = 10;
@@ -81,6 +76,7 @@ int main(int argc, const char *argv[])
 
 
 			if (c % samples == 0 && c != 0) {
+
 				//Test
 				printf("Epoch: %d Testing...\n", c / samples);
 				
@@ -102,13 +98,13 @@ int main(int argc, const char *argv[])
 
 				if (errors < best) {
 					best = errors;
-					nn.save("MNIST.nn");
-					printf("Network saved!\n");
+					nn.save("FASHION_MNIST.nn");
+					printf("Saved network!\n");
 				}
 			}
 		}
 	}
 	
-	printf("Complete Learning\n");
+	printf("Complete Learning.\n");
 	return 0;
 }

@@ -27,13 +27,17 @@ int main()
 	for (unsigned long z = 0; z < l; z++)
 		data_in[z] = rand() % 9;
 
+    	//Seed random distributions    	
+	random_device rd;
+	mt19937 seed(rd());
+
 	//McKernel
 	startTime = clock();
-	McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, data_in, nv, dn, D, sigma, t);
+	McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, data_in, nv, dn, D, seed, sigma, t);
 	mckernel->McFeatures();
 	mckernel->McEvaluate();
 	endTime = clock();
-	cout << "RBF MATÉRN took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
+	cout << "RBF MATÉRN took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << " ms." << endl;
 
 	return 0;
 }

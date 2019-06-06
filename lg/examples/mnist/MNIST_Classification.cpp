@@ -32,17 +32,26 @@ int main(int argc, const char *argv[])
 	//Kernel Expansions
 	int expansions = 3;
 
-	//RBF
+	//RBF MATÉRN
 	unsigned long t = 40;
 	float sigma = 1.0;
+
+	//RBF
 	//float sigma = 10.0;
 
-    	//Seed random distributions    	
+    	//Seed random distributions
+	unsigned long seed = 1398239763; //We use here a constant seed to induce a reproducible behavior
+
+	//Sdd+
 	//random_device rd;
     	//unsigned long seed = (unsigned long)rd();
-	//McKernel
-	//printf("Seed: %lu...\n",seed);
-	unsigned long seed = 1398239763;
+	
+	//Standard
+	//random_device rd;
+	//mt19937 seed(rd());
+
+	//Seed
+	printf("Seed: %lu.\n",seed);
 
 	//McKernel
 	printf("McKernel...\n");
@@ -80,9 +89,10 @@ int main(int argc, const char *argv[])
 		unsigned long tdn = tinput.width();
 		unsigned long tD = expansions * tdn;
 
-		//Initialize McKernel
+		//Initialize McKernel	
 		McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, input, nv, dn, D, seed, sigma, t);
 		McKernel* tmckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, tinput, tnv, tdn, tD, seed, sigma, t);	
+	
 		
 		//Initialize variables
 		lg::Tensor_float trainingset_McKernel(2 * mckernel->M_dn_D, input.height());
@@ -117,7 +127,6 @@ int main(int argc, const char *argv[])
 			mckernel->McFeatures();
 
 			//McEvaluate
-			//data_features = mckernel->McEvaluate();
 			mckernel->McEvaluate();
 
 			//Tensor Float
@@ -134,6 +143,7 @@ int main(int argc, const char *argv[])
 
 
 			if (c % samples == 0 && c != 0) {
+
 				//Test
 				printf("Epoch: %d Testing...\n", c / samples);
 			
@@ -172,12 +182,12 @@ int main(int argc, const char *argv[])
 				if (errors < best) {
 					best = errors;
 					nn.save("MNIST.nn");
-					printf("Network saved!\n");
+					printf("Saved network!\n");
 				}
 			}
 		}
 	}
 	
-	printf("Complete Learning\n");
+	printf("Complete Learning.\n");
 	return 0;
 }

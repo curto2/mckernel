@@ -7,11 +7,9 @@
 #include "../hpp/sse.h"
 
 //McKernel  
-McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma)
+McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma)
 :M_data(data), M_nv(nv), M_dn(dn)
 {
-	random_device rd;
-	mt19937 gr(rd());
 		
 	//Compute padding dimension 
 	if((M_dn & (M_dn - 1)) != 0) //Test if power of 2
@@ -39,7 +37,7 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	//Generate B from uniform(0,1)
 	uniform_real_distribution<> urd(0, 1);
 	for (unsigned long c = 0; c < M_dn_D; ++c)
-		if(urd(gr) < 0.5)
+		if(urd(seed) < 0.5)
 			dlv_B[c] = -1; 
 		else
 			dlv_B[c] = 1;
@@ -49,7 +47,7 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
 	   p[z] = z % M_dnpg;
 
 	for(unsigned long c = 0; c < M_D; ++c)
-		fy(p + c * M_dnpg, M_dnpg);
+		fy(p + c * M_dnpg, M_dnpg, seed);
 
 	dlv_B = NULL;
  	p = NULL;
@@ -134,11 +132,9 @@ void McKernel::McEvaluate()
 }
 
 //RBF GAUSSIAN 
-RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, const float sigma)
-:McKernel(data, nv, dn, D, sigma)
+RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma)
+:McKernel(data, nv, dn, D, seed, sigma)
 {
-    	random_device rd;
-    	mt19937 gr(rd());
 
     	vector<float> scalar_C(M_D);
     
@@ -151,7 +147,7 @@ RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned l
 	fill(scalar_C.begin(), scalar_C.end(), 0.0);
 	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
-		dlv_G[c] = nd(gr);
+		dlv_G[c] = nd(seed);
 		sv_C[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
@@ -163,7 +159,7 @@ RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned l
     	chi_squared_distribution<> csd(M_dnpg); 
     	for (unsigned long k = 0; k < M_D; ++k)
 		for (unsigned long c = 0; c < M_dnpg; ++c)
-	 	       dlv_C[c + k * M_dnpg] = sigma_factor * sv_C[k] * sqrt(csd(gr));
+	 	       dlv_C[c + k * M_dnpg] = sigma_factor * sv_C[k] * sqrt(csd(seed));
 
 	dlv_G = NULL;
     	dlv_C = NULL;
@@ -171,11 +167,9 @@ RBF_GAUSSIAN::RBF_GAUSSIAN(float* data, const unsigned long nv, const unsigned l
 }
 
 //RBF MATÉRN
-RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, 
-	const float sigma, const unsigned long t):McKernel(data, nv, dn, D, sigma)
+RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, 
+	const float sigma, const unsigned long t):McKernel(data, nv, dn, D, seed, sigma)
 {
-	random_device rd;
-    	mt19937 gr(rd());
 
     	vector<float> scalar_C(M_D);
 
@@ -190,7 +184,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 	fill(scalar_C.begin(), scalar_C.end(), 0.0);
 	for (unsigned long c = 0; c < M_dn_D; ++c)
 	{
-		dlv_G[c] = nd(gr);
+		dlv_G[c] = nd(seed);
 		sv_C[c / M_dnpg] += dlv_G[c] * dlv_G[c]; 
 	}
 
@@ -205,7 +199,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 		{
     			float norm_psi;
 
-	    		//Draw t iid samples psi_c uniformly from Sd
+	    		//Draw t i.i.d. samples psi_c uniformly from Sd
 			vector<float> psi_n(M_dnpg);
 		    	for (unsigned long n = 0; n < t; ++n)
 			{
@@ -216,7 +210,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			        //Generate sample z from n-dimensional standard normal distribution
 			        for(unsigned long r = 0; r < M_dnpg; ++r)
 			        {
-			    		psi[r] = nd(gr);
+			    		psi[r] = nd(seed);
 			    		norm_psi += psi[r] * psi[r];
 			    	}
 
@@ -224,7 +218,7 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 			        norm_psi = sqrt(norm_psi);
 			    
 			        //Generate sample from uniform distribution U^1/n
-			        float u = pow(urd(gr), (1.0/M_dn_D)); 
+			        float u = pow(urd(seed), (1.0/M_dn_D)); 
 
 			        //Return r * U^1/n * z/||z||
 			        for(unsigned long m = 0; m < M_dnpg; ++m)
@@ -249,14 +243,14 @@ RBF_MATERN::RBF_MATERN(float* data, const unsigned long nv, const unsigned long 
 
 //Factory McKernel
 McKernel* FactoryMcKernel::createMcKernel(TypeMcKernel typemckernel, float* data, const unsigned long nv, 
-	const unsigned long dn, const unsigned long D, const float sigma, const unsigned long t)
+	const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma, const unsigned long t)
 {
 	switch(typemckernel)
 	{
 		case RBF:
-			return new RBF_GAUSSIAN(data, nv, dn, D, sigma);
+			return new RBF_GAUSSIAN(data, nv, dn, D, seed, sigma);
 		case MRBF:
-			return new RBF_MATERN(data, nv, dn, D, sigma, t);
+			return new RBF_MATERN(data, nv, dn, D, seed, sigma, t);
 		//You can include a new one here
 	}
 	throw "Invalid Type McKernel.";

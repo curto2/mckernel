@@ -25,7 +25,7 @@ int main( int argc, char ** argv )
 	startTime = clock();
 	fwh(data, log2(lt));
 	endTime = clock();
-	cout << "FWH length " << lt << " took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << "ms" << endl;
+	cout << "FWH length " << lt << " took " << double( endTime - startTime ) / double( CLOCKS_PER_SEC ) * 1000.0 << " ms." << endl;
 
 	return 0;
 }
