@@ -9,6 +9,15 @@
 
 int main( int argc, char ** argv ) 
 {
+	printf(R"EOF(                                                                            
+_|      _|            _|    _|                                          _|  
+_|_|  _|_|    _|_|_|  _|  _|      _|_|    _|  _|_|  _|_|_|      _|_|    _|  
+_|  _|  _|  _|        _|_|      _|_|_|_|  _|_|      _|    _|  _|_|_|_|  _|  
+_|      _|  _|        _|  _|    _|        _|        _|    _|  _|        _|  
+_|      _|    _|_|_|  _|    _|    _|_|_|  _|        _|    _|    _|_|_|  _|
+
+)EOF");
+
 	//Initialize timing counter
 	clock_t startTime, endTime;
 

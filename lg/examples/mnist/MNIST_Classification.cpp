@@ -14,7 +14,15 @@
 
 int main(int argc, const char *argv[])
 {    
-	
+	printf(R"EOF(                                                                            
+_|      _|            _|    _|                                          _|  
+_|_|  _|_|    _|_|_|  _|  _|      _|_|    _|  _|_|  _|_|_|      _|_|    _|  
+_|  _|  _|  _|        _|_|      _|_|_|_|  _|_|      _|    _|  _|_|_|_|  _|  
+_|      _|  _|        _|  _|    _|        _|        _|    _|  _|        _|  
+_|      _|    _|_|_|  _|    _|    _|_|_|  _|        _|    _|    _|_|_|  _|
+
+)EOF");
+
 	//Load training set
   	lg::Tensor_float trainingset, training_targets, testingset, testing_targets;
   	lg::MNIST_Load_Binary(
@@ -27,7 +35,7 @@ int main(int argc, const char *argv[])
 	printf("# Samples Test: %d.\n", testingset.height());
 	printf("Dimension Features: %d.\n", testingset.width());
 	printf("# Samples Train: %d.\n", trainingset.height());
-	printf("Dimension Features: %d.\n", trainingset.width());
+	printf("Dimension Features: %d.\n\n", trainingset.width());
 
 	//Kernel Expansions
 	int expansions = 3;
@@ -92,7 +100,6 @@ int main(int argc, const char *argv[])
 		//Initialize McKernel	
 		McKernel* mckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, input, nv, dn, D, seed, sigma, t);
 		McKernel* tmckernel = FactoryMcKernel::createMcKernel(FactoryMcKernel::MRBF, tinput, tnv, tdn, tD, seed, sigma, t);	
-	
 		
 		//Initialize variables
 		lg::Tensor_float trainingset_McKernel(2 * mckernel->M_dn_D, input.height());

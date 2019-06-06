@@ -26,7 +26,7 @@ int main(int argc, const char *argv[])
 	printf("# Samples Test: %d.\n", testingset.height());
 	printf("Dimension Features: %d.\n", testingset.width());
 	printf("# Samples Train: %d.\n", trainingset.height());
-	printf("Dimension Features: %d.\n", trainingset.width());
+	printf("Dimension Features: %d.\n\n", trainingset.width());
 
 	//SGD Optimizer
 	const int batch_size = 10;
