@@ -24,6 +24,8 @@ If you use McKernel in a publication, please cite the paper below:
 Change Log
 --------------------------------------------------------
 
+Version 2.2, released on 06/06/2019
+
 Version 2.1, released on 04/06/2019
 
 Version 2.0, released on 26/03/2019

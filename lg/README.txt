@@ -26,6 +26,7 @@ wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3
 wget http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
 
 To run the examples, enter the given folders and run make as follows:
-		$ cd /examples/mnist	
-		$ make
-		$ ./MNIST_Classification
+
+	$ cd /examples/mnist	
+	$ make
+	$ ./MNIST_Classification
