@@ -6,6 +6,7 @@
 // Original Source Code by Meroni (https://github.com/Flowx08/)
 // Modified by Curtó & Zarza
 
+
 #include "../../src/deep_learning/Neural_Network.hpp"
 #include "../../src/deep_learning/SGD_Optimizer.hpp"
 #include "../../src/datasets/MNIST_loader.hpp"
@@ -23,11 +24,10 @@ int main(int argc, const char *argv[])
 		"../../../data/mnist/t10k-labels.idx1-ubyte",
 		trainingset, training_targets, testingset, testing_targets);
 
-
-	printf("# Samples Test: %d\n", testingset.height());
-	printf("Dimension Features: %d\n", testingset.width());
-	printf("# Samples Train: %d\n", trainingset.height());
-	printf("Dimension Features: %d\n", trainingset.width());
+	printf("# Samples Test: %d.\n", testingset.height());
+	printf("Dimension Features: %d.\n", testingset.width());
+	printf("# Samples Train: %d.\n", trainingset.height());
+	printf("Dimension Features: %d.\n", trainingset.width());
 
 	//Kernel Expansions
 	int expansions = 3;

@@ -24,11 +24,10 @@ int main(int argc, const char *argv[])
 		"../../../data/fashion_mnist/t10k-labels-idx1-ubyte",
 		trainingset, training_targets, testingset, testing_targets);
 
-
-	printf("# Samples Test: %d\n", testingset.height());
-	printf("Dimension Features: %d\n", testingset.width());
-	printf("# Samples Train: %d\n", trainingset.height());
-	printf("Dimension Features: %d\n", trainingset.width());
+	printf("# Samples Test: %d.\n", testingset.height());
+	printf("Dimension Features: %d.\n", testingset.width());
+	printf("# Samples Train: %d.\n", trainingset.height());
+	printf("Dimension Features: %d.\n", trainingset.width());
 
 	//Kernel Expansions
 	int expansions = 3;
