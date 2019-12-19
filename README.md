@@ -13,7 +13,7 @@ For more information about the library, visit the website:
 
 If you use McKernel in a publication, please cite the paper below:
 
-        @article{Curto19,
+        @article{Curto17,
           author = "J. D. Curt\'o and I. C. Zarza and F. Yang and A. Smola and F. Torre and C. W. Ngo and L. Gool",
           title = "{McKernel}: A Library for Approximate Kernel Expansions in Log-linear Time",
           journal = "arXiv:1702.08159v10",
