@@ -1,7 +1,7 @@
-/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
+/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
-   Authors: Curtó and Zarza
-   {curto,zarza}.2@my.cityu.edu.hk 						    */
+   Authors: Curtó and Zarza.
+   c@decurto.ch z@dezarza.ch 						    */
 
 #ifndef FM_H
 #define FM_H

@@ -1,6 +1,6 @@
-// Original Source Code by Meroni (https://github.com/Flowx08/)
-// Modified by Curtó & Zarza
-// {curto,zarza}.2@my.cityu.edu.hk
+// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Modified by Curtó & Zarza.
+// c@decurto.ch z@dezarza.ch
 
 #ifndef NEURAL_NETWORK_HPP
 #define NEURAL_NETWORK_HPP

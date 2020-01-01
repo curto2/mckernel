@@ -1,10 +1,10 @@
-/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
+/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
-   Authors: Curtó and Zarza
-   {curto,zarza}.2@my.cityu.edu.hk 						    */
+   Authors: Curtó and Zarza.
+   c@decurto.ch z@dezarza.ch 						    */
 
-// Original Source Code by Meroni (https://github.com/Flowx08/)
-// Modified by Curtó & Zarza
+// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Modified by Curtó & Zarza.
 
 
 #include "../../src/deep_learning/Neural_Network.hpp"

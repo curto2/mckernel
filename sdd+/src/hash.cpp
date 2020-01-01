@@ -1,12 +1,12 @@
-/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
+/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
-   Authors: Curtó and Zarza
-   {curto,zarza}.2@my.cityu.edu.hk 						    */
+   Authors: Curtó and Zarza.
+   c@decurto.ch z@dezarza.ch 						    */
 
 #include <math.h>
 #include "../hpp/hash.hpp"
 
-//Murmurhash is a hash function developed by Austin Appleby
+//Murmurhash is a function of hashing developed by Appleby.
 //The author disclaims all copyright to their code. 
 unsigned int MurmurHash2 ( const void * key, int lt, unsigned int seed )
 {

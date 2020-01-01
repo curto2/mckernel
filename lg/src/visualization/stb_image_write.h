@@ -1,6 +1,6 @@
-// Original Source Code by Meroni (https://github.com/Flowx08/)
-// Modified by Curtó & Zarza
-// {curto,zarza}.2@my.cityu.edu.hk
+// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Modified by Curtó & Zarza.
+// c@decurto.ch z@dezarza.ch
 
 /* stb_image_write - v0.98 - public domain - http://nothings.org/stb/stb_image_write.h
    writes out PNG/BMP/TGA images to C stdio - Sean Barrett 2010

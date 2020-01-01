@@ -1,6 +1,6 @@
-// Original Source Code by Meroni (https://github.com/Flowx08/)
-// Modified by Curtó & Zarza
-// {curto,zarza}.2@my.cityu.edu.hk
+// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Modified by Curtó & Zarza.
+// c@decurto.ch z@dezarza.ch
 
 #include "TextRendering.hpp"
 #include "font8x8_basic.h"

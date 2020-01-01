@@ -1,6 +1,6 @@
 # McKernel
 
-McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization.
+McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 
 <p align="center">
 <img src="fwh.png" width="400">
@@ -9,7 +9,7 @@ McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization
 
 For more information about the library, visit the website:
 
-  http://curto.hk/publication/mckernel/
+  http://decurto.ch
 
 If you use McKernel in a publication, please cite the paper below:
 

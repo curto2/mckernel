@@ -1,7 +1,7 @@
-// Original Source Code by Meroni
+// Original Source Code by Meroni.
 // https://github.com/Flowx08/artificial_intelligence
-// Modified by Curtó & Zarza
-// {curto,zarza}.2@my.cityu.edu.hk
+// Modified by Curtó & Zarza.
+// c@decurto.ch z@dezarza.ch
 
 Deep Learning
 ========================

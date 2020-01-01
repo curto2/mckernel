@@ -1,7 +1,7 @@
-/* McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization		    
+/* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
-   Authors: Curtó and Zarza
-   {curto,zarza}.2@my.cityu.edu.hk 						    */
+   Authors: Curtó and Zarza.
+   c@decurto.ch z@dezarza.ch 						    */
 
 #include "../hpp/Factory_McKernel.hpp"
 #include "../hpp/sse.h"
@@ -22,7 +22,7 @@ McKernel::McKernel( float* data, const unsigned long nv, const unsigned long dn,
   	u1_pn.SetState(u1_seed);
     	u2_pn.SetState(u2_seed);
 		
-	//Compute padding dimension 
+	//Compute dimension of padding 
 	if((M_dn & (M_dn - 1)) != 0) //Test if power of 2
 	{	           
   		unsigned long p2 = ceil(log2(M_dn));
