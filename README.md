@@ -4,7 +4,7 @@ McKernel: Approximate Kernel Expansions in Log-linear Time through Randomization
 
 <p align="center">
 <img src="fwh.png" width="400">
-<img src="matern.png" width="400">
+<img src="rbfmatern.png" width="400">
 </p>
 
 For more information about the library, visit the website:
@@ -16,7 +16,7 @@ If you use McKernel in a publication, please cite the paper below:
         @article{Curto17,
           author = "J. D. Curt\'o and I. C. Zarza and F. Yang and A. Smola and F. Torre and C. W. Ngo and L. Gool",
           title = "{McKernel}: A Library for Approximate Kernel Expansions in Log-linear Time",
-          journal = "arXiv:1702.08159v10",
+          journal = "arXiv:1702.08159",
           year = "2017",
         }
 
@@ -41,6 +41,6 @@ File Information
 - Standard (mckernel/standard)
   - Library McKernel.
 - Standard+ (mckernel/sdd+)
-  - Library McKernel. Pseudo-random numbers generated with hash functions. Suitable for distributed applications. Recommended.
+  - Library McKernel. Pseudo-random numbers generated with functions of hashing. Suitable for distributed applications. Recommended.
 - Learning (mckernel/lg)
   - DL framework to reproduce experiments in the paper.
