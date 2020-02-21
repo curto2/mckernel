@@ -38,9 +38,9 @@ Version 1.0, released on 12/05/2018.
 File Information
 --------------------------------------------------------
 
-- Standard (mckernel/standard)
+- Standard (mckernel/standard).
   - Library McKernel.
-- Standard+ (mckernel/sdd+)
+- Standard+ (mckernel/sdd+).
   - Library McKernel. Pseudo-random numbers generated with functions of hashing. Suitable for distributed applications. Recommended.
-- Learning (mckernel/lg)
+- Learning (mckernel/lg).
   - DL framework to reproduce experiments in the paper.
