@@ -1,7 +1,7 @@
 /* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
    Authors: Curtó and Zarza.
-   c@decurto.ch z@dezarza.ch 						    */
+   c@decurto.tw z@dezarza.tw 						    */
 
 #ifndef PN_H
 #define PN_H

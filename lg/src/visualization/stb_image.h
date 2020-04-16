@@ -1,6 +1,6 @@
-// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Original Source Code by Meroni (https://www.github.com/Flowx08/).
 // Modified by Curtó & Zarza.
-// c@decurto.ch z@dezarza.ch
+// c@decurto.tw z@dezarza.tw
 
 /* stb_image - v2.12 - public domain image loader - http://nothings.org/stb_image.h
                                      no warranty implied; use at your own risk

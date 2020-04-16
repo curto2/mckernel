@@ -9,7 +9,7 @@ McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 
 For more information about the library, visit the website:
 
-  http://decurto.ch
+  www.decurto.tw
 
 If you use McKernel in a publication, please cite the paper below:
 

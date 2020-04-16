@@ -1,9 +1,9 @@
 /* McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.		    
 
    Authors: Curtó and Zarza.
-   c@decurto.ch z@dezarza.ch 						    */
+   c@decurto.tw z@dezarza.tw 						    */
 
-// Original Source Code by Meroni (https://github.com/Flowx08/).
+// Original Source Code by Meroni (https://www.github.com/Flowx08/).
 // Modified by Curtó & Zarza.
 
 #include "../../src/deep_learning/Neural_Network.hpp"
