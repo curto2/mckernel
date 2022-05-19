@@ -7,18 +7,8 @@ McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 <img src="rbfmatern.png" width="400">
 </p>
 
-For more information about the library, visit the website:
 
-  www.decurto.tw
-
-If you use McKernel in a publication, please cite the paper below:
-
-        @article{Curto17,
-          author = "J. D. Curt\'o and I. C. Zarza and F. Yang and A. Smola and F. Torre and C. W. Ngo and L. Gool",
-          title = "{McKernel}: A Library for Approximate Kernel Expansions in Log-linear Time",
-          journal = "arXiv:1702.08159",
-          year = "2017",
-        }
+J. de Curtò, I. de Zarzà, Hong Yan, Carlos T. Calafate (2022) On the applicability of the Hadamard as an input modulator for problems of classification [Source Code]. https://doi.org/10.24433/CO.3851581.v1
 
 --------------------------------------------------------
 Change Log
