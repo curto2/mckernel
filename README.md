@@ -8,7 +8,7 @@ McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 </p>
 
 
-J. de Curtò, I. de Zarzà, Hong Yan, Carlos T. Calafate (2022) On the applicability of the Hadamard as an input modulator for problems of classification [Source Code]. https://doi.org/10.24433/CO.3851581.v1
+J. de Curtò, I. de Zarzà, Hong Yan, Carlos T. Calafate. On the applicability of the Hadamard as an input modulator for problems of classification. Software Impacts. 2022. https://doi.org/10.24433/CO.3851581.v1
 
 --------------------------------------------------------
 Change Log
