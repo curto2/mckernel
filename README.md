@@ -63,7 +63,7 @@ Documentation (automatically generated with Doxygen)
 --------------------------------------------------------
 Acknowledgements
 --------------------------------------------------------
-The authors are with the Research Group on [Unmanned Aerial Vehicles](https://grc.webs.upv.es/members/default.html) at Universitat Politècnica de València, the [Department of Electrical Engineering](https://www.ee.cityu.edu.hk/) at City University of Hong Kong and with the [Centre for Intelligent Multidimensional Data Analysis](https://www.innocimda.com/), a private research center at City University of Hong Kong. 
+The authors are with the [Research Group on Unmanned Aerial Vehicles](https://grc.webs.upv.es/members/default.html) at Universitat Politècnica de València, the [Department of Electrical Engineering](https://www.ee.cityu.edu.hk/) at City University of Hong Kong and with the [Centre for Intelligent Multidimensional Data Analysis](https://www.innocimda.com/), a private research center at City University of Hong Kong. 
 
 This work is supported by HK Innovation and Technology Commission (InnoHK Project CIMDA) and HK Research Grants Council (Project CityU 11204821).
 
