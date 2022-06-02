@@ -7,7 +7,7 @@ McKernel: A Library for Approximate Kernel Expansions in Log-linear Time.
 <img src="rbfmatern.png" width="400">
 </p>
 
-In order to reproduce the code, please enter the folder lg, sdd+ or standard and follow the instructions on the README. For compilation it is only necessary to invoke make (and therefore run the makefile) on the given example folder and then run the executable. For an example on how to run the experiments, see the capsule on Code Ocean (link below) where Datasets MNIST and FASHION-MNIST have already been loaded.
+In order to reproduce the code, please enter the folder lg, sdd+ or standard and follow the instructions on the README. For compilation it is only necessary to invoke make (and therefore run the makefile) on the given example folder and then run the executable. For an example on how to run the experiments, see the capsule on Code Ocean (link below) where MNIST and FASHION-MNIST have already been loaded and a main script to compile and test all examples is given; output of the compilation can be seen on the folder results.
 
 J. de Curtò, I. de Zarzà, Hong Yan, Carlos T. Calafate. On the applicability of the Hadamard as an input modulator for problems of classification. Software Impacts. 2022. https://doi.org/10.24433/CO.3851581.v1
 
