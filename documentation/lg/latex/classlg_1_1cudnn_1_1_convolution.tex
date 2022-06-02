@@ -1,0 +1,107 @@
+\hypertarget{classlg_1_1cudnn_1_1_convolution}{}\doxysection{lg\+::cudnn\+::Convolution Class Reference}
+\label{classlg_1_1cudnn_1_1_convolution}\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+
+
+{\ttfamily \#include $<$C\+U\+D\+A\+\_\+backend.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a0611a6abf187ead5b6c38cfede9059ed}{Convolution}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_af8b607dfac34999c3b7c8ffdb7cc33ee}{Convolution}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+depth, const int batch\+\_\+size, const int filter\+\_\+width, const int filter\+\_\+height, const int filter\+\_\+count, const int padding\+\_\+w, const int padding\+\_\+h, const int stride\+\_\+u, const int stride\+\_\+v, const bool backward\+\_\+errors)
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_aa0224d51c8124d8d7c30e39fdcd2c35f}{$\sim$\+Convolution}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a4ab49c60c2dee793a5b90523244c500f}{create}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+depth, const int batch\+\_\+size, const int filter\+\_\+width, const int filter\+\_\+height, const int filter\+\_\+count, const int padding\+\_\+w, const int padding\+\_\+h, const int stride\+\_\+u, const int stride\+\_\+v, const bool backward\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a3ea25c32ef0ea5ae6e221f5ef490f293}{forward}} (void $\ast$input, void $\ast$output, void $\ast$weights, void $\ast$bias, void $\ast$workspace)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a4b00db764114c64c6d2ddef7cfde6656}{backward}} (void $\ast$errors, void $\ast$output\+\_\+errors, void $\ast$weights, void $\ast$workspace)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_ad4f81402d0770c413f0d79027bf39644}{accumulate\+\_\+deltas}} (void $\ast$input, void $\ast$output, void $\ast$errors, void $\ast$filter\+\_\+deltas, void $\ast$bias\+\_\+deltas, void $\ast$workspace)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_ae33a537b7b7d30dec571287161487319}{update\+\_\+weights}} (void $\ast$weights, void $\ast$filter\+\_\+deltas, void $\ast$bias, void $\ast$bias\+\_\+deltas, const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a9ed1ccaebfd9431a459187c2964e805b}{get\+Output\+Size}} (int $\ast$output\+\_\+width, int $\ast$output\+\_\+height, int $\ast$output\+\_\+depth)
+\item 
+int \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution_a4ff6bc869cfb20fcd30321e346a46466}{get\+Workspace\+Size}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 78 of file C\+U\+D\+A\+\_\+backend.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a0611a6abf187ead5b6c38cfede9059ed}\label{classlg_1_1cudnn_1_1_convolution_a0611a6abf187ead5b6c38cfede9059ed}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!Convolution@{Convolution}}
+\index{Convolution@{Convolution}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{Convolution()}{Convolution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Convolution\+::\+Convolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_af8b607dfac34999c3b7c8ffdb7cc33ee}\label{classlg_1_1cudnn_1_1_convolution_af8b607dfac34999c3b7c8ffdb7cc33ee}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!Convolution@{Convolution}}
+\index{Convolution@{Convolution}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{Convolution()}{Convolution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Convolution\+::\+Convolution (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+depth,  }\item[{const int}]{batch\+\_\+size,  }\item[{const int}]{filter\+\_\+width,  }\item[{const int}]{filter\+\_\+height,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{padding\+\_\+w,  }\item[{const int}]{padding\+\_\+h,  }\item[{const int}]{stride\+\_\+u,  }\item[{const int}]{stride\+\_\+v,  }\item[{const bool}]{backward\+\_\+errors }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_aa0224d51c8124d8d7c30e39fdcd2c35f}\label{classlg_1_1cudnn_1_1_convolution_aa0224d51c8124d8d7c30e39fdcd2c35f}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!````~Convolution@{$\sim$Convolution}}
+\index{````~Convolution@{$\sim$Convolution}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{$\sim$Convolution()}{~Convolution()}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Convolution\+::$\sim$\+Convolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_ad4f81402d0770c413f0d79027bf39644}\label{classlg_1_1cudnn_1_1_convolution_ad4f81402d0770c413f0d79027bf39644}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{void $\ast$}]{input,  }\item[{void $\ast$}]{output,  }\item[{void $\ast$}]{errors,  }\item[{void $\ast$}]{filter\+\_\+deltas,  }\item[{void $\ast$}]{bias\+\_\+deltas,  }\item[{void $\ast$}]{workspace }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a4b00db764114c64c6d2ddef7cfde6656}\label{classlg_1_1cudnn_1_1_convolution_a4b00db764114c64c6d2ddef7cfde6656}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!backward@{backward}}
+\index{backward@{backward}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::backward (\begin{DoxyParamCaption}\item[{void $\ast$}]{errors,  }\item[{void $\ast$}]{output\+\_\+errors,  }\item[{void $\ast$}]{weights,  }\item[{void $\ast$}]{workspace }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a4ab49c60c2dee793a5b90523244c500f}\label{classlg_1_1cudnn_1_1_convolution_a4ab49c60c2dee793a5b90523244c500f}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!create@{create}}
+\index{create@{create}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::create (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+depth,  }\item[{const int}]{batch\+\_\+size,  }\item[{const int}]{filter\+\_\+width,  }\item[{const int}]{filter\+\_\+height,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{padding\+\_\+w,  }\item[{const int}]{padding\+\_\+h,  }\item[{const int}]{stride\+\_\+u,  }\item[{const int}]{stride\+\_\+v,  }\item[{const bool}]{backward\+\_\+errors }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a3ea25c32ef0ea5ae6e221f5ef490f293}\label{classlg_1_1cudnn_1_1_convolution_a3ea25c32ef0ea5ae6e221f5ef490f293}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!forward@{forward}}
+\index{forward@{forward}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::forward (\begin{DoxyParamCaption}\item[{void $\ast$}]{input,  }\item[{void $\ast$}]{output,  }\item[{void $\ast$}]{weights,  }\item[{void $\ast$}]{bias,  }\item[{void $\ast$}]{workspace }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a9ed1ccaebfd9431a459187c2964e805b}\label{classlg_1_1cudnn_1_1_convolution_a9ed1ccaebfd9431a459187c2964e805b}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!getOutputSize@{getOutputSize}}
+\index{getOutputSize@{getOutputSize}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{getOutputSize()}{getOutputSize()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::get\+Output\+Size (\begin{DoxyParamCaption}\item[{int $\ast$}]{output\+\_\+width,  }\item[{int $\ast$}]{output\+\_\+height,  }\item[{int $\ast$}]{output\+\_\+depth }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_a4ff6bc869cfb20fcd30321e346a46466}\label{classlg_1_1cudnn_1_1_convolution_a4ff6bc869cfb20fcd30321e346a46466}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!getWorkspaceSize@{getWorkspaceSize}}
+\index{getWorkspaceSize@{getWorkspaceSize}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{getWorkspaceSize()}{getWorkspaceSize()}}
+{\footnotesize\ttfamily int lg\+::cudnn\+::\+Convolution\+::get\+Workspace\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_convolution_ae33a537b7b7d30dec571287161487319}\label{classlg_1_1cudnn_1_1_convolution_ae33a537b7b7d30dec571287161487319}} 
+\index{lg::cudnn::Convolution@{lg::cudnn::Convolution}!update\_weights@{update\_weights}}
+\index{update\_weights@{update\_weights}!lg::cudnn::Convolution@{lg::cudnn::Convolution}}
+\doxysubsubsection{\texorpdfstring{update\_weights()}{update\_weights()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Convolution\+::update\+\_\+weights (\begin{DoxyParamCaption}\item[{void $\ast$}]{weights,  }\item[{void $\ast$}]{filter\+\_\+deltas,  }\item[{void $\ast$}]{bias,  }\item[{void $\ast$}]{bias\+\_\+deltas,  }\item[{const float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_c_u_d_a__backend_8hpp}{C\+U\+D\+A\+\_\+backend.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+\hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp}{}\doxysection{mckernel/sdd+/hpp/\+Mc\+Kernel.hpp File Reference}
+\label{sdd_09_2hpp_2_mc_kernel_8hpp}\index{mckernel/sdd+/hpp/McKernel.hpp@{mckernel/sdd+/hpp/McKernel.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$emmintrin.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}F\+W\+H\+\_\+\+Routines.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash.\+hpp\char`\"{}}\newline
+Include dependency graph for Mc\+Kernel.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sdd_09_2hpp_2_mc_kernel_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sdd_09_2hpp_2_mc_kernel_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Dtype $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a6814c207635f477b13a971b8bcbe8425}{dproduct}} (Dtype $\ast$data\+\_\+in, const Dtype $\ast$dl, const unsigned long nv, const unsigned long D, const unsigned long dn, const unsigned long dn\+\_\+D)
+\item 
+{\footnotesize template$<$typename Dtype $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a9516ca88c3e03f50cfce0c8ac4917f2e}{dproductB}} (Dtype $\ast$data\+\_\+in, vector$<$ long $>$ \&dl, const unsigned long nv, const unsigned long dn, const unsigned long dnpg, const unsigned long dn\+\_\+D, Dtype $\ast$data\+\_\+out)
+\item 
+{\footnotesize template$<$typename Dtype $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a809b2f22807619f9dab8ca24f8e180cb}{dlproduct}} (Dtype $\ast$data\+\_\+in, const Dtype $\ast$dl, const unsigned long nv, const unsigned long dn)
+\item 
+{\footnotesize template$<$typename D\+Type $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a02c7c96ec4218eff373f2b9618564175}{fwh}} (D\+Type $\ast$data, unsigned long lgn)
+\item 
+{\footnotesize template$<$typename Dtype $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a97bfbd9382e0deb423badfc7b2da5595}{fy}} (Dtype $\ast$data\+\_\+in, const unsigned long d, \mbox{\hyperlink{class_u___p_n}{U\+\_\+\+PN}} u\+\_\+pn)
+\item 
+{\footnotesize template$<$typename Dtype $>$ }\\void \mbox{\hyperlink{sdd_09_2hpp_2_mc_kernel_8hpp_a5c9a0358b618323df60d51b9a122357b}{pn}} (Dtype $\ast$data\+\_\+in, unsigned long $\ast$p, const unsigned long nv, const unsigned long D, const unsigned long dn, const unsigned long dn\+\_\+D)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a809b2f22807619f9dab8ca24f8e180cb}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a809b2f22807619f9dab8ca24f8e180cb}} 
+\index{McKernel.hpp@{McKernel.hpp}!dlproduct@{dlproduct}}
+\index{dlproduct@{dlproduct}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{dlproduct()}{dlproduct()}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void dlproduct (\begin{DoxyParamCaption}\item[{Dtype $\ast$}]{data\+\_\+in,  }\item[{const Dtype $\ast$}]{dl,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 71 of file Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a6814c207635f477b13a971b8bcbe8425}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a6814c207635f477b13a971b8bcbe8425}} 
+\index{McKernel.hpp@{McKernel.hpp}!dproduct@{dproduct}}
+\index{dproduct@{dproduct}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{dproduct()}{dproduct()}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void dproduct (\begin{DoxyParamCaption}\item[{Dtype $\ast$}]{data\+\_\+in,  }\item[{const Dtype $\ast$}]{dl,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{D,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{dn\+\_\+D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Mc\+Kernel.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a6814c207635f477b13a971b8bcbe8425_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a9516ca88c3e03f50cfce0c8ac4917f2e}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a9516ca88c3e03f50cfce0c8ac4917f2e}} 
+\index{McKernel.hpp@{McKernel.hpp}!dproductB@{dproductB}}
+\index{dproductB@{dproductB}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{dproductB()}{dproductB()}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void dproductB (\begin{DoxyParamCaption}\item[{Dtype $\ast$}]{data\+\_\+in,  }\item[{vector$<$ long $>$ \&}]{dl,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{dnpg,  }\item[{const unsigned long}]{dn\+\_\+D,  }\item[{Dtype $\ast$}]{data\+\_\+out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 49 of file Mc\+Kernel.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a9516ca88c3e03f50cfce0c8ac4917f2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a02c7c96ec4218eff373f2b9618564175}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a02c7c96ec4218eff373f2b9618564175}} 
+\index{McKernel.hpp@{McKernel.hpp}!fwh@{fwh}}
+\index{fwh@{fwh}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{fwh()}{fwh()}}
+{\footnotesize\ttfamily template$<$typename D\+Type $>$ \\
+void fwh (\begin{DoxyParamCaption}\item[{D\+Type $\ast$}]{data,  }\item[{unsigned long}]{lgn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file Mc\+Kernel.\+hpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a02c7c96ec4218eff373f2b9618564175_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a02c7c96ec4218eff373f2b9618564175_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a97bfbd9382e0deb423badfc7b2da5595}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a97bfbd9382e0deb423badfc7b2da5595}} 
+\index{McKernel.hpp@{McKernel.hpp}!fy@{fy}}
+\index{fy@{fy}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{fy()}{fy()}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void fy (\begin{DoxyParamCaption}\item[{Dtype $\ast$}]{data\+\_\+in,  }\item[{const unsigned long}]{d,  }\item[{\mbox{\hyperlink{class_u___p_n}{U\+\_\+\+PN}}}]{u\+\_\+pn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 225 of file Mc\+Kernel.\+hpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a97bfbd9382e0deb423badfc7b2da5595_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a97bfbd9382e0deb423badfc7b2da5595_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sdd_09_2hpp_2_mc_kernel_8hpp_a5c9a0358b618323df60d51b9a122357b}\label{sdd_09_2hpp_2_mc_kernel_8hpp_a5c9a0358b618323df60d51b9a122357b}} 
+\index{McKernel.hpp@{McKernel.hpp}!pn@{pn}}
+\index{pn@{pn}!McKernel.hpp@{McKernel.hpp}}
+\doxysubsubsection{\texorpdfstring{pn()}{pn()}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void pn (\begin{DoxyParamCaption}\item[{Dtype $\ast$}]{data\+\_\+in,  }\item[{unsigned long $\ast$}]{p,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{D,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{dn\+\_\+D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 239 of file Mc\+Kernel.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{sdd_09_2hpp_2_mc_kernel_8hpp_a5c9a0358b618323df60d51b9a122357b_icgraph}
+\end{center}
+\end{figure}

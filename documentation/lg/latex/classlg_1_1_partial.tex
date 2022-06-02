@@ -1,0 +1,390 @@
+\hypertarget{classlg_1_1_partial}{}\doxysection{lg\+::Partial Class Reference}
+\label{classlg_1_1_partial}\index{lg::Partial@{lg::Partial}}
+
+
+{\ttfamily \#include $<$Partial.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_partial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classlg_1_1_partial__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_partial_a760e242d3b171a5ee9ec54feb3bf11f2}{Partial}} (const int size, const double connectivity)
+\item 
+\mbox{\hyperlink{classlg_1_1_partial_ac01ae56e5cc2f26d01f84c1d6de65375}{Partial}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a15448479baf4f8aec032a54887ae2526}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_afc0490de1cee9bd40cceaa15957bef37}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a31e1ab68249c4631b757a32e4b4eafd7}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a1a96aaf702178f7cf0c78503519caf42}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a8b6501bbf6fc2887d2e034d978c04221}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a9bde00c7063092aa762c8af65b25224c}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_afa8eaf8f3b42e2ae5204f8032190b6ee}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_af0c40e1a76a7a31e53af51d86689a412}{pruning}} (float alpha)
+\item 
+float \mbox{\hyperlink{classlg_1_1_partial_aee9aad675b3d2d496ffd674f6d9c1db3}{pruned\+\_\+percent}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_partial_a4c67ba2a2951a5598873d99d900eeaf8}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_partial_a8ca833409b1f4a95fcc39ef32c567f4e}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_partial_a22286b2667da0ab2232cd33965105f70}{make}} (const int size, const double connectivity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_partial_a99a10474fee15af8e90b04b21253901d}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_partial_af6e7b44cfaa1e40f02a7d9006a8de778}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_partial_a669331391f8026d4e8fe5080a41bf46e}{\+\_\+deltas}}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classlg_1_1_partial_ab9ffb7ab3384c16a695f01bf779c381d}{\+\_\+forward\+\_\+map}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_partial_aad59bf5070ca31c6f633286d390ebba6}{\+\_\+input\+\_\+size}}
+\item 
+double \mbox{\hyperlink{classlg_1_1_partial_a6312ce24e6f166d2f48010e3acf40b4c}{\+\_\+connectivity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Partial.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_partial_a760e242d3b171a5ee9ec54feb3bf11f2}\label{classlg_1_1_partial_a760e242d3b171a5ee9ec54feb3bf11f2}} 
+\index{lg::Partial@{lg::Partial}!Partial@{Partial}}
+\index{Partial@{Partial}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{Partial()}{Partial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Partial\+::\+Partial (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{const double}]{connectivity }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_ac01ae56e5cc2f26d01f84c1d6de65375}\label{classlg_1_1_partial_ac01ae56e5cc2f26d01f84c1d6de65375}} 
+\index{lg::Partial@{lg::Partial}!Partial@{Partial}}
+\index{Partial@{Partial}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{Partial()}{Partial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Partial\+::\+Partial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Partial.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_partial_a8b6501bbf6fc2887d2e034d978c04221}\label{classlg_1_1_partial_a8b6501bbf6fc2887d2e034d978c04221}} 
+\index{lg::Partial@{lg::Partial}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 168 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_partial_a8b6501bbf6fc2887d2e034d978c04221_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_a1a96aaf702178f7cf0c78503519caf42}\label{classlg_1_1_partial_a1a96aaf702178f7cf0c78503519caf42}} 
+\index{lg::Partial@{lg::Partial}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 147 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classlg_1_1_partial_a1a96aaf702178f7cf0c78503519caf42_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_a4c67ba2a2951a5598873d99d900eeaf8}\label{classlg_1_1_partial_a4c67ba2a2951a5598873d99d900eeaf8}} 
+\index{lg::Partial@{lg::Partial}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Partial\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 268 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a15448479baf4f8aec032a54887ae2526}\label{classlg_1_1_partial_a15448479baf4f8aec032a54887ae2526}} 
+\index{lg::Partial@{lg::Partial}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 82 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classlg_1_1_partial_a15448479baf4f8aec032a54887ae2526_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_a22286b2667da0ab2232cd33965105f70}\label{classlg_1_1_partial_a22286b2667da0ab2232cd33965105f70}} 
+\index{lg::Partial@{lg::Partial}!make@{make}}
+\index{make@{make}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Partial\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{const double}]{connectivity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 19 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a8ca833409b1f4a95fcc39ef32c567f4e}\label{classlg_1_1_partial_a8ca833409b1f4a95fcc39ef32c567f4e}} 
+\index{lg::Partial@{lg::Partial}!print@{print}}
+\index{print@{print}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 274 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_aee9aad675b3d2d496ffd674f6d9c1db3}\label{classlg_1_1_partial_aee9aad675b3d2d496ffd674f6d9c1db3}} 
+\index{lg::Partial@{lg::Partial}!pruned\_percent@{pruned\_percent}}
+\index{pruned\_percent@{pruned\_percent}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{pruned\_percent()}{pruned\_percent()}}
+{\footnotesize\ttfamily float lg\+::\+Partial\+::pruned\+\_\+percent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 259 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_af0c40e1a76a7a31e53af51d86689a412}\label{classlg_1_1_partial_af0c40e1a76a7a31e53af51d86689a412}} 
+\index{lg::Partial@{lg::Partial}!pruning@{pruning}}
+\index{pruning@{pruning}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{pruning()}{pruning()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::pruning (\begin{DoxyParamCaption}\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classlg_1_1_partial_af0c40e1a76a7a31e53af51d86689a412_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_afa8eaf8f3b42e2ae5204f8032190b6ee}\label{classlg_1_1_partial_afa8eaf8f3b42e2ae5204f8032190b6ee}} 
+\index{lg::Partial@{lg::Partial}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 244 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classlg_1_1_partial_afa8eaf8f3b42e2ae5204f8032190b6ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_a31e1ab68249c4631b757a32e4b4eafd7}\label{classlg_1_1_partial_a31e1ab68249c4631b757a32e4b4eafd7}} 
+\index{lg::Partial@{lg::Partial}!run@{run}}
+\index{run@{run}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 122 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classlg_1_1_partial_a31e1ab68249c4631b757a32e4b4eafd7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_partial_afc0490de1cee9bd40cceaa15957bef37}\label{classlg_1_1_partial_afc0490de1cee9bd40cceaa15957bef37}} 
+\index{lg::Partial@{lg::Partial}!save@{save}}
+\index{save@{save}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 62 of file Partial.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a9bde00c7063092aa762c8af65b25224c}\label{classlg_1_1_partial_a9bde00c7063092aa762c8af65b25224c}} 
+\index{lg::Partial@{lg::Partial}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Partial\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 196 of file Partial.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classlg_1_1_partial_a9bde00c7063092aa762c8af65b25224c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_partial_af6e7b44cfaa1e40f02a7d9006a8de778}\label{classlg_1_1_partial_af6e7b44cfaa1e40f02a7d9006a8de778}} 
+\index{lg::Partial@{lg::Partial}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Partial\+::\+\_\+bias}
+
+
+
+Definition at line 43 of file Partial.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a6312ce24e6f166d2f48010e3acf40b4c}\label{classlg_1_1_partial_a6312ce24e6f166d2f48010e3acf40b4c}} 
+\index{lg::Partial@{lg::Partial}!\_connectivity@{\_connectivity}}
+\index{\_connectivity@{\_connectivity}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_connectivity}{\_connectivity}}
+{\footnotesize\ttfamily double lg\+::\+Partial\+::\+\_\+connectivity}
+
+
+
+Definition at line 48 of file Partial.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a669331391f8026d4e8fe5080a41bf46e}\label{classlg_1_1_partial_a669331391f8026d4e8fe5080a41bf46e}} 
+\index{lg::Partial@{lg::Partial}!\_deltas@{\_deltas}}
+\index{\_deltas@{\_deltas}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_deltas}{\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Partial\+::\+\_\+deltas}
+
+
+
+Definition at line 44 of file Partial.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_ab9ffb7ab3384c16a695f01bf779c381d}\label{classlg_1_1_partial_ab9ffb7ab3384c16a695f01bf779c381d}} 
+\index{lg::Partial@{lg::Partial}!\_forward\_map@{\_forward\_map}}
+\index{\_forward\_map@{\_forward\_map}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_forward\_map}{\_forward\_map}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ int $>$ $>$ lg\+::\+Partial\+::\+\_\+forward\+\_\+map}
+
+
+
+Definition at line 46 of file Partial.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_aad59bf5070ca31c6f633286d390ebba6}\label{classlg_1_1_partial_aad59bf5070ca31c6f633286d390ebba6}} 
+\index{lg::Partial@{lg::Partial}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Partial\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 47 of file Partial.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_partial_a99a10474fee15af8e90b04b21253901d}\label{classlg_1_1_partial_a99a10474fee15af8e90b04b21253901d}} 
+\index{lg::Partial@{lg::Partial}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::Partial@{lg::Partial}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Partial\+::\+\_\+weights}
+
+
+
+Definition at line 42 of file Partial.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_partial_8hpp}{Partial.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_partial_8cpp}{Partial.\+cpp}}\end{DoxyCompactItemize}

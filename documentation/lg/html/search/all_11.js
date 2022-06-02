@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['tanh_518',['Tanh',['../classlg_1_1_tanh.html',1,'lg::Tanh'],['../classlg_1_1_operation.html#a204bb2a8c1903febe08ea909f1684f4aafdc34df812bca58e27d52c91cf58d493',1,'lg::Operation::Tanh()'],['../classlg_1_1_tanh.html#a1d48eb03ca2b8d2cd39873253cb231c2',1,'lg::Tanh::Tanh()'],['../classlg_1_1_tanh.html#abdc96f730df48de150ab5a4eb699cc66',1,'lg::Tanh::Tanh(lg::IOData &amp;data)']]],
+  ['tanh_2ecpp_519',['Tanh.cpp',['../_tanh_8cpp.html',1,'']]],
+  ['tanh_2ehpp_520',['Tanh.hpp',['../_tanh_8hpp.html',1,'']]],
+  ['tanh_5fbackward_521',['tanh_backward',['../namespacelg.html#a7344bbcdb3813319cb646bf854a0669c',1,'lg::tanh_backward()'],['../namespacelg_1_1cuda.html#a3e0acb2ce86052848da5bbcc6629d56d',1,'lg::cuda::tanh_backward()']]],
+  ['tanh_5fforward_522',['tanh_forward',['../namespacelg.html#a064faea08919845b6f65c66bec6e6582',1,'lg::tanh_forward()'],['../namespacelg_1_1cuda.html#a0fead1b0d84ba90d494c808c9b4c33fe',1,'lg::cuda::tanh_forward()']]],
+  ['tensor_523',['Tensor',['../classlg_1_1_tensor.html',1,'lg::Tensor&lt; T &gt;'],['../classlg_1_1_tensor.html#a164a359972a916cf0da07927ad28564c',1,'lg::Tensor::Tensor()'],['../classlg_1_1_tensor.html#af98328580656fb19cbac0b224daf7770',1,'lg::Tensor::Tensor(const Tensor&lt; T &gt; &amp;t)'],['../classlg_1_1_tensor.html#ab2dae8396fdf5f9f5f087aae03759265',1,'lg::Tensor::Tensor(const int width)'],['../classlg_1_1_tensor.html#a12aa51509f1b4fc80e70c47f3fba2801',1,'lg::Tensor::Tensor(const int width, const int height)'],['../classlg_1_1_tensor.html#a21fb5082edb2e145677eed7c5f6d26dd',1,'lg::Tensor::Tensor(const int width, const int height, const int depth)']]],
+  ['tensor_2ecpp_524',['Tensor.cpp',['../_tensor_8cpp.html',1,'']]],
+  ['tensor_2ehpp_525',['Tensor.hpp',['../_tensor_8hpp.html',1,'']]],
+  ['tensor_3c_20float_20_3e_526',['Tensor&lt; float &gt;',['../classlg_1_1_tensor.html',1,'lg']]],
+  ['tensor_3c_20int_20_3e_527',['Tensor&lt; int &gt;',['../classlg_1_1_tensor.html',1,'lg']]],
+  ['tensor_5fcopy_528',['tensor_copy',['../namespacelg_1_1augmentation.html#ac0ae518aceaff406dfd488e480c5e045',1,'lg::augmentation']]],
+  ['tensor_5ffloat_529',['Tensor_float',['../namespacelg.html#a6373cd7c1bb0e4a0d32b096159496806',1,'lg']]],
+  ['tensor_5fint_530',['Tensor_int',['../namespacelg.html#a15dc94f47fa6432d896c6bfab0683ca6',1,'lg']]],
+  ['tensordescription_531',['TensorDescription',['../classlg_1_1cudnn_1_1_tensor_description.html',1,'lg::cudnn::TensorDescription'],['../classlg_1_1cudnn_1_1_tensor_description.html#a504790fd62796fae5465d432194bdb0a',1,'lg::cudnn::TensorDescription::TensorDescription()'],['../classlg_1_1cudnn_1_1_tensor_description.html#af03cef6835c3e6d3d71e3166cdcf4988',1,'lg::cudnn::TensorDescription::TensorDescription(const int width, const int height, const int depth, const int batch_size, const DataType type)']]],
+  ['test_532',['test',['../classlg_1_1logistic__regression.html#abeb1f45bd3821f6685a2f7a0b4e18184',1,'lg::logistic_regression']]],
+  ['text_5fdraw_533',['text_draw',['../_text_rendering_8cpp.html#a6c9e35194a4069c1dc4032382533fa76',1,'text_draw(float *image_data, const uint image_width, const uint image_height, const uint image_channels, const char *text, const uint x, const uint y, const uint char_size, const long color):&#160;TextRendering.cpp'],['../_text_rendering_8hpp.html#a6c9e35194a4069c1dc4032382533fa76',1,'text_draw(float *image_data, const uint image_width, const uint image_height, const uint image_channels, const char *text, const uint x, const uint y, const uint char_size, const long color):&#160;TextRendering.cpp']]],
+  ['textrendering_2ecpp_534',['TextRendering.cpp',['../_text_rendering_8cpp.html',1,'']]],
+  ['textrendering_2ehpp_535',['TextRendering.hpp',['../_text_rendering_8hpp.html',1,'']]],
+  ['tga_536',['TGA',['../class_bitmap.html#ae11e2aa177ff662c2d429fa297c4308baecdc55a233454a2ff4e60a2ac8d0b502',1,'Bitmap']]],
+  ['tostring_537',['tostring',['../classlg_1_1_tensor.html#aab26323aaa6894fb021205eff278b8af',1,'lg::Tensor']]],
+  ['translate_538',['translate',['../namespacelg_1_1augmentation.html#a93af29c39e1906a93bd767396c6fa133',1,'lg::augmentation']]],
+  ['type_539',['Type',['../classlg_1_1_operation.html#a204bb2a8c1903febe08ea909f1684f4a',1,'lg::Operation']]],
+  ['types_5fcount_540',['Types_Count',['../classlg_1_1_operation.html#a204bb2a8c1903febe08ea909f1684f4aa9e2d3dab712d48dd7f127625cd32120e',1,'lg::Operation']]]
+];

@@ -1,0 +1,140 @@
+\hypertarget{classlg_1_1linear__regression}{}\doxysection{lg\+::linear\+\_\+regression Class Reference}
+\label{classlg_1_1linear__regression}\index{lg::linear\_regression@{lg::linear\_regression}}
+
+
+{\ttfamily \#include $<$linear\+\_\+regression.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1linear__regression_a883eae1bf7a3b2af6dec473860254b22}{linear\+\_\+regression}} (const unsigned int input\+\_\+size, const unsigned int output\+\_\+size)
+\item 
+\mbox{\hyperlink{classlg_1_1linear__regression_af884c6c785ada9565c4ec67707709d74}{linear\+\_\+regression}} (const std\+::string filepath)
+\item 
+const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& \mbox{\hyperlink{classlg_1_1linear__regression_aa1f905225c6a71ecfac2a968d4a4c756}{predict}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\item 
+void \mbox{\hyperlink{classlg_1_1linear__regression_a194fe605449fd9834b6a68038dae6c9d}{fit}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} inputs, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} targets, const float starting\+\_\+learningrate=0.\+01, const unsigned int epochs=20, const bool verbose=true)
+\item 
+const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& \mbox{\hyperlink{classlg_1_1linear__regression_a5909ef421d80eaaabadd336d4c809351}{get\+\_\+output}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1linear__regression_ae3890e0d08289310c42253822687b882}{save}} (const std\+::string filepath)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file linear\+\_\+regression.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1linear__regression_a883eae1bf7a3b2af6dec473860254b22}\label{classlg_1_1linear__regression_a883eae1bf7a3b2af6dec473860254b22}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!linear\_regression@{linear\_regression}}
+\index{linear\_regression@{linear\_regression}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{linear\_regression()}{linear\_regression()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::linear\+\_\+regression\+::linear\+\_\+regression (\begin{DoxyParamCaption}\item[{const unsigned int}]{input\+\_\+size,  }\item[{const unsigned int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file linear\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classlg_1_1linear__regression_a883eae1bf7a3b2af6dec473860254b22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1linear__regression_af884c6c785ada9565c4ec67707709d74}\label{classlg_1_1linear__regression_af884c6c785ada9565c4ec67707709d74}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!linear\_regression@{linear\_regression}}
+\index{linear\_regression@{linear\_regression}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{linear\_regression()}{linear\_regression()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::linear\+\_\+regression\+::linear\+\_\+regression (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file linear\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classlg_1_1linear__regression_af884c6c785ada9565c4ec67707709d74_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1linear__regression_a194fe605449fd9834b6a68038dae6c9d}\label{classlg_1_1linear__regression_a194fe605449fd9834b6a68038dae6c9d}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!fit@{fit}}
+\index{fit@{fit}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily void lg\+::linear\+\_\+regression\+::fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{inputs,  }\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{targets,  }\item[{const float}]{starting\+\_\+learningrate = {\ttfamily 0.01},  }\item[{const unsigned int}]{epochs = {\ttfamily 20},  }\item[{const bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file linear\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1linear__regression_a194fe605449fd9834b6a68038dae6c9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1linear__regression_a5909ef421d80eaaabadd336d4c809351}\label{classlg_1_1linear__regression_a5909ef421d80eaaabadd336d4c809351}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!get\_output@{get\_output}}
+\index{get\_output@{get\_output}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{get\_output()}{get\_output()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& lg\+::linear\+\_\+regression\+::get\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file linear\+\_\+regression.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1linear__regression_aa1f905225c6a71ecfac2a968d4a4c756}\label{classlg_1_1linear__regression_aa1f905225c6a71ecfac2a968d4a4c756}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!predict@{predict}}
+\index{predict@{predict}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& lg\+::linear\+\_\+regression\+::predict (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file linear\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classlg_1_1linear__regression_aa1f905225c6a71ecfac2a968d4a4c756_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1linear__regression_aa1f905225c6a71ecfac2a968d4a4c756_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1linear__regression_ae3890e0d08289310c42253822687b882}\label{classlg_1_1linear__regression_ae3890e0d08289310c42253822687b882}} 
+\index{lg::linear\_regression@{lg::linear\_regression}!save@{save}}
+\index{save@{save}!lg::linear\_regression@{lg::linear\_regression}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::linear\+\_\+regression\+::save (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file linear\+\_\+regression.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/classical/\mbox{\hyperlink{linear__regression_8hpp}{linear\+\_\+regression.\+hpp}}\item 
+lg/src/classical/\mbox{\hyperlink{linear__regression_8cpp}{linear\+\_\+regression.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,320 @@
+\hypertarget{classlg_1_1_c_u_d_a___tensor}{}\doxysection{lg\+::C\+U\+D\+A\+\_\+\+Tensor$<$ T $>$ Class Template Reference}
+\label{classlg_1_1_c_u_d_a___tensor}\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+
+
+{\ttfamily \#include $<$C\+U\+D\+A\+\_\+\+Tensor.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a0f42713b1198c5294605e68f5699666d}{C\+U\+D\+A\+\_\+\+Tensor}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a54c50cbb3fd0f6619942f0c637cac3fe}{C\+U\+D\+A\+\_\+\+Tensor}} (const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&t)
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a9f7569835c96a97809d3c3c80c7dca3f}{C\+U\+D\+A\+\_\+\+Tensor}} (int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}})
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4af9fdcc0ee12a0d3214bf44be317989}{C\+U\+D\+A\+\_\+\+Tensor}} (int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}}, int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}{height}})
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a42096ba23815b271def65f3b31c01a21}{C\+U\+D\+A\+\_\+\+Tensor}} (int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}}, int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}{height}}, int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a1123f5059b63e89ed604d56644abd23a}{depth}})
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_aa3646359d7c7fb81a989b023b2bc7917}{$\sim$\+C\+U\+D\+A\+\_\+\+Tensor}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_aa66310a890150fe57307c31c6550610f}{load}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data, std\+::string dataname)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_aeeb4217037134540d21df56381856c9f}{load}} (std\+::ifstream \&file)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4dd4a6a64ed571c7ab914905b2f394ad}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data, std\+::string dataname)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a0f921fc2ea6ab37ffeb8d09fe9baaef6}{save}} (std\+::ofstream \&file)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae28c51dc5a8882a71babe8d982d04175}{setshape}} (const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}})
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_adc5fba5af009a97a4216871ded434948}{setshape}} (const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}}, const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}{height}})
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a779a98b8d17ad29e9b6134d0754094c0}{setshape}} (const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}}, const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}{height}}, const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a1123f5059b63e89ed604d56644abd23a}{depth}})
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a3be7ec5b3e10b991343bf597540ecd20}{setshape}} (\mbox{\hyperlink{classlg_1_1_tensor}{Tensor}}$<$ T $>$ \&host\+\_\+tensor)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a2486802dd9f313365fbdd1bb7fecad7e}{point}} (const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&t)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ac03fd91497596d17ce49cf70dfa83fd2}{point}} (const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&t, const unsigned int offset\+\_\+d)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4c578731ab1faf1d20a8da410662d8b2}{point}} (const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&t, const unsigned int offset\+\_\+d, const unsigned int offset\+\_\+y)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a37e4146d9ed0b93cf7814c1536dc1eab}{clear}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_afa8e057e6bfacf77797c4acbc74317f4}{copy}} (const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&tensor)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ac81356da759f3812134c4074e0787b30}{copy\+To\+Host}} (T $\ast$arr, int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a0ed5e70343b4986e3d93c2cbe109236c}{size}}) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a138abe4ca282e744b103a8ca54b7ab19}{copy\+To\+Device}} (const T $\ast$arr, int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a0ed5e70343b4986e3d93c2cbe109236c}{size}})
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a984f1bbb77566c2f91ab86bf5bb704fd}{fill}} (T val)
+\item 
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a6aade1ceaf81257891aa525e3bd33a8b}{fill}} (float mean, float dev)
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_afaf9362a873da813820d71c41ddb7e38}{ptr}} (const int d)
+\item 
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a113d914356a5aeae2f1524e64a434423}{ptr}} (const int d, const int y)
+\item 
+T $\ast$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_aa287d49edbb5198d6962cd9e8f121ec8}{pointer}} () const
+\item 
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a0ed5e70343b4986e3d93c2cbe109236c}{size}} () const
+\item 
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}{width}} () const
+\item 
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}{height}} () const
+\item 
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor_a1123f5059b63e89ed604d56644abd23a}{depth}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class lg\+::\+C\+U\+D\+A\+\_\+\+Tensor$<$ T $>$}
+
+
+
+Definition at line 20 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a0f42713b1198c5294605e68f5699666d}\label{classlg_1_1_c_u_d_a___tensor_a0f42713b1198c5294605e68f5699666d}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!CUDA\_Tensor@{CUDA\_Tensor}}
+\index{CUDA\_Tensor@{CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CUDA\_Tensor()}{CUDA\_Tensor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a54c50cbb3fd0f6619942f0c637cac3fe}\label{classlg_1_1_c_u_d_a___tensor_a54c50cbb3fd0f6619942f0c637cac3fe}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!CUDA\_Tensor@{CUDA\_Tensor}}
+\index{CUDA\_Tensor@{CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CUDA\_Tensor()}{CUDA\_Tensor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a9f7569835c96a97809d3c3c80c7dca3f}\label{classlg_1_1_c_u_d_a___tensor_a9f7569835c96a97809d3c3c80c7dca3f}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!CUDA\_Tensor@{CUDA\_Tensor}}
+\index{CUDA\_Tensor@{CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CUDA\_Tensor()}{CUDA\_Tensor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a4af9fdcc0ee12a0d3214bf44be317989}\label{classlg_1_1_c_u_d_a___tensor_a4af9fdcc0ee12a0d3214bf44be317989}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!CUDA\_Tensor@{CUDA\_Tensor}}
+\index{CUDA\_Tensor@{CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CUDA\_Tensor()}{CUDA\_Tensor()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a42096ba23815b271def65f3b31c01a21}\label{classlg_1_1_c_u_d_a___tensor_a42096ba23815b271def65f3b31c01a21}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!CUDA\_Tensor@{CUDA\_Tensor}}
+\index{CUDA\_Tensor@{CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CUDA\_Tensor()}{CUDA\_Tensor()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_aa3646359d7c7fb81a989b023b2bc7917}\label{classlg_1_1_c_u_d_a___tensor_aa3646359d7c7fb81a989b023b2bc7917}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!````~CUDA\_Tensor@{$\sim$CUDA\_Tensor}}
+\index{````~CUDA\_Tensor@{$\sim$CUDA\_Tensor}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CUDA\_Tensor()}{~CUDA\_Tensor()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a37e4146d9ed0b93cf7814c1536dc1eab}\label{classlg_1_1_c_u_d_a___tensor_a37e4146d9ed0b93cf7814c1536dc1eab}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_afa8e057e6bfacf77797c4acbc74317f4}\label{classlg_1_1_c_u_d_a___tensor_afa8e057e6bfacf77797c4acbc74317f4}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!copy@{copy}}
+\index{copy@{copy}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&}]{tensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a138abe4ca282e744b103a8ca54b7ab19}\label{classlg_1_1_c_u_d_a___tensor_a138abe4ca282e744b103a8ca54b7ab19}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!copyToDevice@{copyToDevice}}
+\index{copyToDevice@{copyToDevice}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copyToDevice()}{copyToDevice()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::copy\+To\+Device (\begin{DoxyParamCaption}\item[{const T $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_ac81356da759f3812134c4074e0787b30}\label{classlg_1_1_c_u_d_a___tensor_ac81356da759f3812134c4074e0787b30}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!copyToHost@{copyToHost}}
+\index{copyToHost@{copyToHost}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copyToHost()}{copyToHost()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::copy\+To\+Host (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a1123f5059b63e89ed604d56644abd23a}\label{classlg_1_1_c_u_d_a___tensor_a1123f5059b63e89ed604d56644abd23a}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!depth@{depth}}
+\index{depth@{depth}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a6aade1ceaf81257891aa525e3bd33a8b}\label{classlg_1_1_c_u_d_a___tensor_a6aade1ceaf81257891aa525e3bd33a8b}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!fill@{fill}}
+\index{fill@{fill}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::fill (\begin{DoxyParamCaption}\item[{float}]{mean,  }\item[{float}]{dev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a984f1bbb77566c2f91ab86bf5bb704fd}\label{classlg_1_1_c_u_d_a___tensor_a984f1bbb77566c2f91ab86bf5bb704fd}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!fill@{fill}}
+\index{fill@{fill}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::fill (\begin{DoxyParamCaption}\item[{T}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}\label{classlg_1_1_c_u_d_a___tensor_ae67b86a8ac056910a5482f557ba01828}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!height@{height}}
+\index{height@{height}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_aa66310a890150fe57307c31c6550610f}\label{classlg_1_1_c_u_d_a___tensor_aa66310a890150fe57307c31c6550610f}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!load@{load}}
+\index{load@{load}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data,  }\item[{std\+::string}]{dataname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_aeeb4217037134540d21df56381856c9f}\label{classlg_1_1_c_u_d_a___tensor_aeeb4217037134540d21df56381856c9f}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!load@{load}}
+\index{load@{load}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a2486802dd9f313365fbdd1bb7fecad7e}\label{classlg_1_1_c_u_d_a___tensor_a2486802dd9f313365fbdd1bb7fecad7e}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!point@{point}}
+\index{point@{point}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{point()}{point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_ac03fd91497596d17ce49cf70dfa83fd2}\label{classlg_1_1_c_u_d_a___tensor_ac03fd91497596d17ce49cf70dfa83fd2}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!point@{point}}
+\index{point@{point}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{point()}{point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&}]{t,  }\item[{const unsigned int}]{offset\+\_\+d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a4c578731ab1faf1d20a8da410662d8b2}\label{classlg_1_1_c_u_d_a___tensor_a4c578731ab1faf1d20a8da410662d8b2}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!point@{point}}
+\index{point@{point}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{point()}{point()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$ \&}]{t,  }\item[{const unsigned int}]{offset\+\_\+d,  }\item[{const unsigned int}]{offset\+\_\+y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_aa287d49edbb5198d6962cd9e8f121ec8}\label{classlg_1_1_c_u_d_a___tensor_aa287d49edbb5198d6962cd9e8f121ec8}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pointer()}{pointer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 49 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_afaf9362a873da813820d71c41ddb7e38}\label{classlg_1_1_c_u_d_a___tensor_afaf9362a873da813820d71c41ddb7e38}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!ptr@{ptr}}
+\index{ptr@{ptr}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ptr()}{ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$T$>$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::ptr (\begin{DoxyParamCaption}\item[{const int}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a113d914356a5aeae2f1524e64a434423}\label{classlg_1_1_c_u_d_a___tensor_a113d914356a5aeae2f1524e64a434423}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!ptr@{ptr}}
+\index{ptr@{ptr}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ptr()}{ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{C\+U\+D\+A\+\_\+\+Tensor}}$<$T$>$ \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::ptr (\begin{DoxyParamCaption}\item[{const int}]{d,  }\item[{const int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a4dd4a6a64ed571c7ab914905b2f394ad}\label{classlg_1_1_c_u_d_a___tensor_a4dd4a6a64ed571c7ab914905b2f394ad}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!save@{save}}
+\index{save@{save}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data,  }\item[{std\+::string}]{dataname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a0f921fc2ea6ab37ffeb8d09fe9baaef6}\label{classlg_1_1_c_u_d_a___tensor_a0f921fc2ea6ab37ffeb8d09fe9baaef6}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!save@{save}}
+\index{save@{save}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::save (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_ae28c51dc5a8882a71babe8d982d04175}\label{classlg_1_1_c_u_d_a___tensor_ae28c51dc5a8882a71babe8d982d04175}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!setshape@{setshape}}
+\index{setshape@{setshape}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setshape()}{setshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::setshape (\begin{DoxyParamCaption}\item[{const int}]{width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_adc5fba5af009a97a4216871ded434948}\label{classlg_1_1_c_u_d_a___tensor_adc5fba5af009a97a4216871ded434948}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!setshape@{setshape}}
+\index{setshape@{setshape}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setshape()}{setshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::setshape (\begin{DoxyParamCaption}\item[{const int}]{width,  }\item[{const int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a779a98b8d17ad29e9b6134d0754094c0}\label{classlg_1_1_c_u_d_a___tensor_a779a98b8d17ad29e9b6134d0754094c0}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!setshape@{setshape}}
+\index{setshape@{setshape}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setshape()}{setshape()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::setshape (\begin{DoxyParamCaption}\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{depth }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a3be7ec5b3e10b991343bf597540ecd20}\label{classlg_1_1_c_u_d_a___tensor_a3be7ec5b3e10b991343bf597540ecd20}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!setshape@{setshape}}
+\index{setshape@{setshape}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setshape()}{setshape()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::setshape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_tensor}{Tensor}}$<$ T $>$ \&}]{host\+\_\+tensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a0ed5e70343b4986e3d93c2cbe109236c}\label{classlg_1_1_c_u_d_a___tensor_a0ed5e70343b4986e3d93c2cbe109236c}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!size@{size}}
+\index{size@{size}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}\label{classlg_1_1_c_u_d_a___tensor_a4f3d32d3a10d99d9276658b1044d79a2}} 
+\index{lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}!width@{width}}
+\index{width@{width}!lg::CUDA\_Tensor$<$ T $>$@{lg::CUDA\_Tensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const int \mbox{\hyperlink{classlg_1_1_c_u_d_a___tensor}{lg\+::\+C\+U\+D\+A\+\_\+\+Tensor}}$<$ T $>$\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file C\+U\+D\+A\+\_\+\+Tensor.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/util/\mbox{\hyperlink{_c_u_d_a___tensor_8hpp}{C\+U\+D\+A\+\_\+\+Tensor.\+hpp}}\end{DoxyCompactItemize}

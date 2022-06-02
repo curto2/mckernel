@@ -1,0 +1,16 @@
+<map id="lg::Convolution::gradient_check" name="lg::Convolution::gradient_check">
+<area shape="rect" id="node1" title=" " alt="" coords="5,292,188,333"/>
+<area shape="rect" id="node2" href="$classlg_1_1_convolution.html#aed2303370d85036c5ed6c211660d8fe0" title=" " alt="" coords="236,5,440,47"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tensor.html#ad1e9f63e03d75d255660e69fad104d4d" title="INDEXING." alt="" coords="285,71,391,98"/>
+<area shape="rect" id="node4" href="$classlg_1_1_tensor.html#a4c62f84db9978b1cb0a38b23af493a88" title=" " alt="" coords="273,122,403,149"/>
+<area shape="rect" id="node5" href="$classlg_1_1_tensor.html#a9435567e5204d9edc2a74294f927d265" title=" " alt="" coords="284,173,392,199"/>
+<area shape="rect" id="node6" href="$classlg_1_1_cost.html#a257ad161b425645f97fb5eb5751e6ea5" title="Calculate deltas." alt="" coords="271,223,405,250"/>
+<area shape="rect" id="node7" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="511,299,630,326"/>
+<area shape="rect" id="node8" href="$classlg_1_1_cost.html#a12ca6b5b6131831246fc2844113c78bc" title="Calculate errors." alt="" coords="273,325,403,351"/>
+<area shape="rect" id="node9" href="$classlg_1_1_tensor.html#a3d4bd6ecfb08ce24f37b32b07f5b16ea" title=" " alt="" coords="271,375,405,402"/>
+<area shape="rect" id="node10" href="$classlg_1_1_convolution.html#a652de051570955aacdf01a84ca506c2e" title=" " alt="" coords="246,493,430,519"/>
+<area shape="rect" id="node11" href="$classlg_1_1_tensor.html#a194fc20cbd586946c26138108e411f75" title=" " alt="" coords="507,518,635,545"/>
+<area shape="rect" id="node12" href="$classlg_1_1_convolution.html#ab57b816a301105ed7b543aefde8c13d8" title=" " alt="" coords="257,427,419,468"/>
+<area shape="rect" id="node14" href="$classlg_1_1_convolution.html#a68bc51ace4ba653af2e6b0fc632657ed" title=" " alt="" coords="263,594,413,621"/>
+<area shape="rect" id="node13" href="$namespacelg.html#ac3c94e68ec3e515c366c5384b711e4d5" title=" " alt="" coords="488,427,653,468"/>
+</map>

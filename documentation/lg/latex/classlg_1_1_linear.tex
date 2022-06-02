@@ -1,0 +1,618 @@
+\hypertarget{classlg_1_1_linear}{}\doxysection{lg\+::Linear Class Reference}
+\label{classlg_1_1_linear}\index{lg::Linear@{lg::Linear}}
+
+
+{\ttfamily \#include $<$Linear.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Linear\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_linear__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Linear\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classlg_1_1_linear__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_linear_a8695748c605301634b6179a84c60d7ce}{Linear}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_linear_a20ee4077ecd4e3c680ad5611e1f4d1df}{Linear}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+\mbox{\hyperlink{classlg_1_1_linear_a4b5ebcaf56c2067ca3f0af0d24d82cd6}{Linear}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a7f13a6fabcf7fff4b8d08cbf5db1c41f}{initialize}} (int input\+\_\+size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_add495a1c294a2c57606087a1706e3d1c}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a5c03565a2c002b409138891c1c42c27f}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a75c71cfb2ed4cc62330940f9f7a8a615}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a2fc7a26b334226ea2660d658046551af}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a6d11e1a5353aa708e17ec0503dc86ab1}{reset\+\_\+outputs}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a2700da4789554724b56a5c7e57f11bd1}{set\+Fixed\+Parameters}} (const bool fixedparameters)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_linear_ae501c933b07b07ba4bc9370a913627f2}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_ae090c8f4a509f0b5a5b83369d418efa8}{print}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_ad3288ed3201de3c119acf90d2935a9a0}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, bool accumulate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a235a81bbf3eebc31c1bdbc8ee5e6ba69}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear_a5f16e9b61a041ea53ad1ba77175af967}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_linear_af5e595bbe70d1c910bac46cef8411c6c}{make}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+static void \mbox{\hyperlink{classlg_1_1_linear_a5683e9328a415cf945f1d48fe02dd4d1}{gradient\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear_a2b64cf84fc35ea92c6592af9627fdebb}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear_a181729c8ab5cde0f8a05c8f373a03c87}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear_a93a4a9dc1550cd21802033288e18a191}{\+\_\+deltas}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_linear_acbc24247c98220a437668b38f792af63}{\+\_\+fixed\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_linear_ab70a46ef9fa57540949dabac5d390472}{\+\_\+input\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_linear_a489757e7ddaa673d0c2f58cf88f960c0}{\+\_\+use\+\_\+bias}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear_ad3b4bc09ae9163deeb60334929079c3a}{\+\_\+gradient\+\_\+clipping}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear_ad4ed8366afe754339495d6258b9afe5e}{\+\_\+l1\+\_\+regularization}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear_a5f3aad4dfa17ea481ced33aa66e93880}{\+\_\+l2\+\_\+regularization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Linear.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear_a8695748c605301634b6179a84c60d7ce}\label{classlg_1_1_linear_a8695748c605301634b6179a84c60d7ce}} 
+\index{lg::Linear@{lg::Linear}!Linear@{Linear}}
+\index{Linear@{Linear}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{Linear()}{Linear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+::\+Linear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Linear.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a8695748c605301634b6179a84c60d7ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a20ee4077ecd4e3c680ad5611e1f4d1df}\label{classlg_1_1_linear_a20ee4077ecd4e3c680ad5611e1f4d1df}} 
+\index{lg::Linear@{lg::Linear}!Linear@{Linear}}
+\index{Linear@{Linear}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{Linear()}{Linear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+::\+Linear (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_linear_a20ee4077ecd4e3c680ad5611e1f4d1df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a4b5ebcaf56c2067ca3f0af0d24d82cd6}\label{classlg_1_1_linear_a4b5ebcaf56c2067ca3f0af0d24d82cd6}} 
+\index{lg::Linear@{lg::Linear}!Linear@{Linear}}
+\index{Linear@{Linear}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{Linear()}{Linear()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+::\+Linear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a4b5ebcaf56c2067ca3f0af0d24d82cd6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear_a5f16e9b61a041ea53ad1ba77175af967}\label{classlg_1_1_linear_a5f16e9b61a041ea53ad1ba77175af967}} 
+\index{lg::Linear@{lg::Linear}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 290 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_linear_a5f16e9b61a041ea53ad1ba77175af967_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a2fc7a26b334226ea2660d658046551af}\label{classlg_1_1_linear_a2fc7a26b334226ea2660d658046551af}} 
+\index{lg::Linear@{lg::Linear}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 143 of file Linear.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a2fc7a26b334226ea2660d658046551af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a75c71cfb2ed4cc62330940f9f7a8a615}\label{classlg_1_1_linear_a75c71cfb2ed4cc62330940f9f7a8a615}} 
+\index{lg::Linear@{lg::Linear}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 137 of file Linear.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a75c71cfb2ed4cc62330940f9f7a8a615_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a235a81bbf3eebc31c1bdbc8ee5e6ba69}\label{classlg_1_1_linear_a235a81bbf3eebc31c1bdbc8ee5e6ba69}} 
+\index{lg::Linear@{lg::Linear}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 270 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classlg_1_1_linear_a235a81bbf3eebc31c1bdbc8ee5e6ba69_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_ae501c933b07b07ba4bc9370a913627f2}\label{classlg_1_1_linear_ae501c933b07b07ba4bc9370a913627f2}} 
+\index{lg::Linear@{lg::Linear}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Linear\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 385 of file Linear.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a5683e9328a415cf945f1d48fe02dd4d1}\label{classlg_1_1_linear_a5683e9328a415cf945f1d48fe02dd4d1}} 
+\index{lg::Linear@{lg::Linear}!gradient\_check@{gradient\_check}}
+\index{gradient\_check@{gradient\_check}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{gradient\_check()}{gradient\_check()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::gradient\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 312 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a5683e9328a415cf945f1d48fe02dd4d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a7f13a6fabcf7fff4b8d08cbf5db1c41f}\label{classlg_1_1_linear_a7f13a6fabcf7fff4b8d08cbf5db1c41f}} 
+\index{lg::Linear@{lg::Linear}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::initialize (\begin{DoxyParamCaption}\item[{int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classlg_1_1_linear_a7f13a6fabcf7fff4b8d08cbf5db1c41f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a}\label{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a}} 
+\index{lg::Linear@{lg::Linear}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 100 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_af5e595bbe70d1c910bac46cef8411c6c}\label{classlg_1_1_linear_af5e595bbe70d1c910bac46cef8411c6c}} 
+\index{lg::Linear@{lg::Linear}!make@{make}}
+\index{make@{make}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Linear\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classlg_1_1_linear_af5e595bbe70d1c910bac46cef8411c6c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classlg_1_1_linear_af5e595bbe70d1c910bac46cef8411c6c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_ae090c8f4a509f0b5a5b83369d418efa8}\label{classlg_1_1_linear_ae090c8f4a509f0b5a5b83369d418efa8}} 
+\index{lg::Linear@{lg::Linear}!print@{print}}
+\index{print@{print}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 391 of file Linear.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39}\label{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39}} 
+\index{lg::Linear@{lg::Linear}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 193 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a6d11e1a5353aa708e17ec0503dc86ab1}\label{classlg_1_1_linear_a6d11e1a5353aa708e17ec0503dc86ab1}} 
+\index{lg::Linear@{lg::Linear}!reset\_outputs@{reset\_outputs}}
+\index{reset\_outputs@{reset\_outputs}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{reset\_outputs()}{reset\_outputs()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::reset\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 304 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classlg_1_1_linear_a6d11e1a5353aa708e17ec0503dc86ab1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_ad3288ed3201de3c119acf90d2935a9a0}\label{classlg_1_1_linear_ad3288ed3201de3c119acf90d2935a9a0}} 
+\index{lg::Linear@{lg::Linear}!run@{run}}
+\index{run@{run}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{bool}]{accumulate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classlg_1_1_linear_ad3288ed3201de3c119acf90d2935a9a0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a5c03565a2c002b409138891c1c42c27f}\label{classlg_1_1_linear_a5c03565a2c002b409138891c1c42c27f}} 
+\index{lg::Linear@{lg::Linear}!run@{run}}
+\index{run@{run}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 131 of file Linear.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classlg_1_1_linear_a5c03565a2c002b409138891c1c42c27f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_add495a1c294a2c57606087a1706e3d1c}\label{classlg_1_1_linear_add495a1c294a2c57606087a1706e3d1c}} 
+\index{lg::Linear@{lg::Linear}!save@{save}}
+\index{save@{save}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_add495a1c294a2c57606087a1706e3d1c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classlg_1_1_linear_add495a1c294a2c57606087a1706e3d1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear_a2700da4789554724b56a5c7e57f11bd1}\label{classlg_1_1_linear_a2700da4789554724b56a5c7e57f11bd1}} 
+\index{lg::Linear@{lg::Linear}!setFixedParameters@{setFixedParameters}}
+\index{setFixedParameters@{setFixedParameters}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{setFixedParameters()}{setFixedParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::set\+Fixed\+Parameters (\begin{DoxyParamCaption}\item[{const bool}]{fixedparameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file Linear.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea}\label{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea}} 
+\index{lg::Linear@{lg::Linear}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 149 of file Linear.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear_a181729c8ab5cde0f8a05c8f373a03c87}\label{classlg_1_1_linear_a181729c8ab5cde0f8a05c8f373a03c87}} 
+\index{lg::Linear@{lg::Linear}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+::\+\_\+bias}
+
+
+
+Definition at line 63 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a93a4a9dc1550cd21802033288e18a191}\label{classlg_1_1_linear_a93a4a9dc1550cd21802033288e18a191}} 
+\index{lg::Linear@{lg::Linear}!\_deltas@{\_deltas}}
+\index{\_deltas@{\_deltas}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_deltas}{\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+::\+\_\+deltas}
+
+
+
+Definition at line 64 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_acbc24247c98220a437668b38f792af63}\label{classlg_1_1_linear_acbc24247c98220a437668b38f792af63}} 
+\index{lg::Linear@{lg::Linear}!\_fixed\_parameters@{\_fixed\_parameters}}
+\index{\_fixed\_parameters@{\_fixed\_parameters}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_parameters}{\_fixed\_parameters}}
+{\footnotesize\ttfamily bool lg\+::\+Linear\+::\+\_\+fixed\+\_\+parameters}
+
+
+
+Definition at line 67 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_ad3b4bc09ae9163deeb60334929079c3a}\label{classlg_1_1_linear_ad3b4bc09ae9163deeb60334929079c3a}} 
+\index{lg::Linear@{lg::Linear}!\_gradient\_clipping@{\_gradient\_clipping}}
+\index{\_gradient\_clipping@{\_gradient\_clipping}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_gradient\_clipping}{\_gradient\_clipping}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+::\+\_\+gradient\+\_\+clipping}
+
+
+
+Definition at line 70 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_ab70a46ef9fa57540949dabac5d390472}\label{classlg_1_1_linear_ab70a46ef9fa57540949dabac5d390472}} 
+\index{lg::Linear@{lg::Linear}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Linear\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 68 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_ad4ed8366afe754339495d6258b9afe5e}\label{classlg_1_1_linear_ad4ed8366afe754339495d6258b9afe5e}} 
+\index{lg::Linear@{lg::Linear}!\_l1\_regularization@{\_l1\_regularization}}
+\index{\_l1\_regularization@{\_l1\_regularization}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_l1\_regularization}{\_l1\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+::\+\_\+l1\+\_\+regularization}
+
+
+
+Definition at line 71 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a5f3aad4dfa17ea481ced33aa66e93880}\label{classlg_1_1_linear_a5f3aad4dfa17ea481ced33aa66e93880}} 
+\index{lg::Linear@{lg::Linear}!\_l2\_regularization@{\_l2\_regularization}}
+\index{\_l2\_regularization@{\_l2\_regularization}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_l2\_regularization}{\_l2\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+::\+\_\+l2\+\_\+regularization}
+
+
+
+Definition at line 72 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a489757e7ddaa673d0c2f58cf88f960c0}\label{classlg_1_1_linear_a489757e7ddaa673d0c2f58cf88f960c0}} 
+\index{lg::Linear@{lg::Linear}!\_use\_bias@{\_use\_bias}}
+\index{\_use\_bias@{\_use\_bias}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_use\_bias}{\_use\_bias}}
+{\footnotesize\ttfamily bool lg\+::\+Linear\+::\+\_\+use\+\_\+bias}
+
+
+
+Definition at line 69 of file Linear.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear_a2b64cf84fc35ea92c6592af9627fdebb}\label{classlg_1_1_linear_a2b64cf84fc35ea92c6592af9627fdebb}} 
+\index{lg::Linear@{lg::Linear}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::Linear@{lg::Linear}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+::\+\_\+weights}
+
+
+
+Definition at line 62 of file Linear.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_linear_8hpp}{Linear.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_linear_8cpp}{Linear.\+cpp}}\end{DoxyCompactItemize}

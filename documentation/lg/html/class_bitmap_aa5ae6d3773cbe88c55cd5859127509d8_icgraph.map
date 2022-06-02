@@ -1,0 +1,8 @@
+<map id="Bitmap::getData" name="Bitmap::getData">
+<area shape="rect" id="node1" title="Get bitmap data." alt="" coords="412,81,541,108"/>
+<area shape="rect" id="node2" href="$class_bitmap.html#a16fc99bfd5e25b905cccead687e6118f" title="Load bitmap from another bitmap region." alt="" coords="219,5,343,32"/>
+<area shape="rect" id="node3" href="$namespacelg.html#a54d632a6fa2f5265fefb1a2604de2ead" title=" " alt="" coords="214,56,347,83"/>
+<area shape="rect" id="node4" href="$class_bitmap.html#abe8069c0aa3c528a3cd50b6affd7a6e4" title="Resize bitmap content to the specified dimensions" alt="" coords="197,107,364,133"/>
+<area shape="rect" id="node6" href="$namespacelg.html#a99de40ffdcaf2e7b38bb37c484a7574c" title=" " alt="" coords="219,157,342,184"/>
+<area shape="rect" id="node5" href="$namespacelg_1_1visualization.html#ae965cc2738e09fcbdd1175cf629f57b6" title="Save vectors to image" alt="" coords="5,99,149,141"/>
+</map>

@@ -1,0 +1,284 @@
+\hypertarget{classlg_1_1_selu}{}\doxysection{lg\+::Selu Class Reference}
+\label{classlg_1_1_selu}\index{lg::Selu@{lg::Selu}}
+
+
+{\ttfamily \#include $<$Selu.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Selu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_selu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Selu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_selu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_selu_ad9ab5f63b69b52049c71c6c9c69761e7}{Selu}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_selu_a2e9336e59994ad6775f3b4b00b333b53}{Selu}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_selu_a2206740fb3a6cc086816e3db01840c93}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_selu_a73cd99ea074852203f67303dfbe2d2d5}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_selu_a6712f70c0f412bb18a57e7f972cadeda}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_selu_ad587b4dfcda466abd74404fed23306df}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_selu_ad02079cd56babd57ba71565b49f18f89}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_selu_ab9e1d8cc4efb68de7a7e2676f3e993c6}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_selu_a22bdb13693b60febb7dbf13f9d5c1d63}{make}} ()
+\item 
+static void \mbox{\hyperlink{classlg_1_1_selu_a21f81756083c9bfecd5ae17f6a0f0877}{forward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} output)
+\begin{DoxyCompactList}\small\item\em R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlg_1_1_selu_a79b09e19f4d56041a2c36acd689f3ea0}{backward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} errors, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} outputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Selu.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_selu_ad9ab5f63b69b52049c71c6c9c69761e7}\label{classlg_1_1_selu_ad9ab5f63b69b52049c71c6c9c69761e7}} 
+\index{lg::Selu@{lg::Selu}!Selu@{Selu}}
+\index{Selu@{Selu}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{Selu()}{Selu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Selu\+::\+Selu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Selu.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classlg_1_1_selu_ad9ab5f63b69b52049c71c6c9c69761e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_a2e9336e59994ad6775f3b4b00b333b53}\label{classlg_1_1_selu_a2e9336e59994ad6775f3b4b00b333b53}} 
+\index{lg::Selu@{lg::Selu}!Selu@{Selu}}
+\index{Selu@{Selu}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{Selu()}{Selu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Selu\+::\+Selu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_selu_a2e9336e59994ad6775f3b4b00b333b53_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_selu_ad587b4dfcda466abd74404fed23306df}\label{classlg_1_1_selu_ad587b4dfcda466abd74404fed23306df}} 
+\index{lg::Selu@{lg::Selu}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 113 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_selu_ad587b4dfcda466abd74404fed23306df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_a79b09e19f4d56041a2c36acd689f3ea0}\label{classlg_1_1_selu_a79b09e19f4d56041a2c36acd689f3ea0}} 
+\index{lg::Selu@{lg::Selu}!backward@{backward}}
+\index{backward@{backward}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::backward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{errors,  }\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{outputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 163 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classlg_1_1_selu_a79b09e19f4d56041a2c36acd689f3ea0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_a21f81756083c9bfecd5ae17f6a0f0877}\label{classlg_1_1_selu_a21f81756083c9bfecd5ae17f6a0f0877}} 
+\index{lg::Selu@{lg::Selu}!forward@{forward}}
+\index{forward@{forward}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. 
+
+
+
+Definition at line 150 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classlg_1_1_selu_a21f81756083c9bfecd5ae17f6a0f0877_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_ad02079cd56babd57ba71565b49f18f89}\label{classlg_1_1_selu_ad02079cd56babd57ba71565b49f18f89}} 
+\index{lg::Selu@{lg::Selu}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Selu\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 136 of file Selu.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_selu_a2206740fb3a6cc086816e3db01840c93}\label{classlg_1_1_selu_a2206740fb3a6cc086816e3db01840c93}} 
+\index{lg::Selu@{lg::Selu}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 58 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_selu_a2206740fb3a6cc086816e3db01840c93_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_a22bdb13693b60febb7dbf13f9d5c1d63}\label{classlg_1_1_selu_a22bdb13693b60febb7dbf13f9d5c1d63}} 
+\index{lg::Selu@{lg::Selu}!make@{make}}
+\index{make@{make}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Selu\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 24 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classlg_1_1_selu_a22bdb13693b60febb7dbf13f9d5c1d63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_ab9e1d8cc4efb68de7a7e2676f3e993c6}\label{classlg_1_1_selu_ab9e1d8cc4efb68de7a7e2676f3e993c6}} 
+\index{lg::Selu@{lg::Selu}!print@{print}}
+\index{print@{print}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 142 of file Selu.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_selu_a6712f70c0f412bb18a57e7f972cadeda}\label{classlg_1_1_selu_a6712f70c0f412bb18a57e7f972cadeda}} 
+\index{lg::Selu@{lg::Selu}!run@{run}}
+\index{run@{run}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 90 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlg_1_1_selu_a6712f70c0f412bb18a57e7f972cadeda_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_selu_a73cd99ea074852203f67303dfbe2d2d5}\label{classlg_1_1_selu_a73cd99ea074852203f67303dfbe2d2d5}} 
+\index{lg::Selu@{lg::Selu}!save@{save}}
+\index{save@{save}!lg::Selu@{lg::Selu}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Selu\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 81 of file Selu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_selu_a73cd99ea074852203f67303dfbe2d2d5_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_selu_8hpp}{Selu.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_selu_8cpp}{Selu.\+cpp}}\end{DoxyCompactItemize}

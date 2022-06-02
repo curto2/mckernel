@@ -1,0 +1,156 @@
+\hypertarget{namespacelg_1_1augmentation}{}\doxysection{lg\+::augmentation Namespace Reference}
+\label{namespacelg_1_1augmentation}\index{lg::augmentation@{lg::augmentation}}
+
+
+N\+A\+M\+E\+S\+P\+A\+CE A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+ON.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_ac0ae518aceaff406dfd488e480c5e045}{tensor\+\_\+copy}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&src, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&dst)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd}{hflip}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a80bc7c0a8ebbf0bb2c86ad232e0f0f53}{vflip}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f}{rotate}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float degrees)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133}{translate}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, int tx, int ty)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5}{noise}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float noise)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f}{scaling}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&t, int width, int height, int channel, float scale\+\_\+factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+N\+A\+M\+E\+S\+P\+A\+CE A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+ON. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd}\label{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd}} 
+\index{lg::augmentation@{lg::augmentation}!hflip@{hflip}}
+\index{hflip@{hflip}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{hflip()}{hflip()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::hflip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5}\label{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5}} 
+\index{lg::augmentation@{lg::augmentation}!noise@{noise}}
+\index{noise@{noise}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{noise()}{noise()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::noise (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{image\+\_\+width,  }\item[{int}]{image\+\_\+height,  }\item[{int}]{image\+\_\+channels,  }\item[{float}]{noise }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f}\label{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f}} 
+\index{lg::augmentation@{lg::augmentation}!rotate@{rotate}}
+\index{rotate@{rotate}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{image\+\_\+width,  }\item[{int}]{image\+\_\+height,  }\item[{int}]{image\+\_\+channels,  }\item[{float}]{degrees }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f}\label{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f}} 
+\index{lg::augmentation@{lg::augmentation}!scaling@{scaling}}
+\index{scaling@{scaling}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{scaling()}{scaling()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channel,  }\item[{float}]{scale\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_ac0ae518aceaff406dfd488e480c5e045}\label{namespacelg_1_1augmentation_ac0ae518aceaff406dfd488e480c5e045}} 
+\index{lg::augmentation@{lg::augmentation}!tensor\_copy@{tensor\_copy}}
+\index{tensor\_copy@{tensor\_copy}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{tensor\_copy()}{tensor\_copy()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::tensor\+\_\+copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{src,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{dst }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1augmentation_ac0ae518aceaff406dfd488e480c5e045_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133}\label{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133}} 
+\index{lg::augmentation@{lg::augmentation}!translate@{translate}}
+\index{translate@{translate}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{image\+\_\+width,  }\item[{int}]{image\+\_\+height,  }\item[{int}]{image\+\_\+channels,  }\item[{int}]{tx,  }\item[{int}]{ty }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file Data\+Augmentation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1augmentation_a80bc7c0a8ebbf0bb2c86ad232e0f0f53}\label{namespacelg_1_1augmentation_a80bc7c0a8ebbf0bb2c86ad232e0f0f53}} 
+\index{lg::augmentation@{lg::augmentation}!vflip@{vflip}}
+\index{vflip@{vflip}!lg::augmentation@{lg::augmentation}}
+\doxysubsubsection{\texorpdfstring{vflip()}{vflip()}}
+{\footnotesize\ttfamily void lg\+::augmentation\+::vflip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{t,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Definition at line 119 of file Data\+Augmentation.\+cpp.
+

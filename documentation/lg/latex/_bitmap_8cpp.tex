@@ -1,0 +1,146 @@
+\hypertarget{_bitmap_8cpp}{}\doxysection{lg/src/visualization/\+Bitmap.cpp File Reference}
+\label{_bitmap_8cpp}\index{lg/src/visualization/Bitmap.cpp@{lg/src/visualization/Bitmap.cpp}}
+{\ttfamily \#include \char`\"{}Bitmap.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image\+\_\+write.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Bitmap.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_bitmap_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}{S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_aefe397a94e8feddc652f92ef40ce9597}{S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a158a8c64f24645c7478298399825737f}{L\+OG}}(msg)~printf(\char`\"{}\mbox{[}OK\mbox{]} in \%s l\%d\+: \%s\textbackslash{}n\char`\"{}, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, msg)
+\begin{DoxyCompactList}\small\item\em C\+O\+N\+S\+T\+A\+N\+TS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a435175024ad996b2a45d734fa9eea0e3}{E\+R\+R\+OR}}(msg)~printf(\char`\"{}\mbox{[}E\+R\+R\+OR\mbox{]} in \%s l\%d\+: \%s\textbackslash{}n\char`\"{}, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, msg)
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\item 
+\#define \mbox{\hyperlink{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_bitmap_8cpp_a8df1f51c89a62d6c613a1bf9d5307f06}{getfileformat}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em T\+O\+O\+LS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_bitmap_8cpp_a435175024ad996b2a45d734fa9eea0e3}\label{_bitmap_8cpp_a435175024ad996b2a45d734fa9eea0e3}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~printf(\char`\"{}\mbox{[}E\+R\+R\+OR\mbox{]} in \%s l\%d\+: \%s\textbackslash{}n\char`\"{}, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, msg)}
+
+
+
+Definition at line 19 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+\mbox{\Hypertarget{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+\mbox{\Hypertarget{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+\mbox{\Hypertarget{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+\mbox{\Hypertarget{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_bitmap_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+\mbox{\Hypertarget{_bitmap_8cpp_a158a8c64f24645c7478298399825737f}\label{_bitmap_8cpp_a158a8c64f24645c7478298399825737f}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!LOG@{LOG}}
+\index{LOG@{LOG}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{LOG}{LOG}}
+{\footnotesize\ttfamily \#define L\+OG(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~printf(\char`\"{}\mbox{[}OK\mbox{]} in \%s l\%d\+: \%s\textbackslash{}n\char`\"{}, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, msg)}
+
+
+
+C\+O\+N\+S\+T\+A\+N\+TS. 
+
+
+
+Definition at line 18 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{_bitmap_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}\label{_bitmap_8cpp_a18372412ad2fc3ce1e3240b3cf0efe78}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}}
+\index{STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_IMAGE\_IMPLEMENTATION}{STB\_IMAGE\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}
+
+
+
+I\+N\+C\+L\+U\+D\+ES. 
+
+
+
+Definition at line 9 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{_bitmap_8cpp_aefe397a94e8feddc652f92ef40ce9597}\label{_bitmap_8cpp_aefe397a94e8feddc652f92ef40ce9597}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!STB\_IMAGE\_WRITE\_IMPLEMENTATION@{STB\_IMAGE\_WRITE\_IMPLEMENTATION}}
+\index{STB\_IMAGE\_WRITE\_IMPLEMENTATION@{STB\_IMAGE\_WRITE\_IMPLEMENTATION}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_IMAGE\_WRITE\_IMPLEMENTATION}{STB\_IMAGE\_WRITE\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+I\+M\+A\+G\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}
+
+
+
+Definition at line 11 of file Bitmap.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_bitmap_8cpp_a8df1f51c89a62d6c613a1bf9d5307f06}\label{_bitmap_8cpp_a8df1f51c89a62d6c613a1bf9d5307f06}} 
+\index{Bitmap.cpp@{Bitmap.cpp}!getfileformat@{getfileformat}}
+\index{getfileformat@{getfileformat}!Bitmap.cpp@{Bitmap.cpp}}
+\doxysubsubsection{\texorpdfstring{getfileformat()}{getfileformat()}}
+{\footnotesize\ttfamily std\+::string getfileformat (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+T\+O\+O\+LS. 
+
+Get file fomat from filepath string 
+
+Definition at line 29 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_bitmap_8cpp_a8df1f51c89a62d6c613a1bf9d5307f06_icgraph}
+\end{center}
+\end{figure}

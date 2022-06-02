@@ -1,0 +1,19 @@
+<map id="lg::Recurrent::gradient_check" name="lg::Recurrent::gradient_check">
+<area shape="rect" id="node1" title=" " alt="" coords="5,384,172,425"/>
+<area shape="rect" id="node2" href="$classlg_1_1_recurrent.html#ad0442b9f08c3e812b880742687d0b3cc" title=" " alt="" coords="220,5,409,47"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tensor.html#ad1e9f63e03d75d255660e69fad104d4d" title="INDEXING." alt="" coords="262,71,367,98"/>
+<area shape="rect" id="node4" href="$classlg_1_1_recurrent.html#a378fc8061366973c063cc1090e42a11c" title=" " alt="" coords="228,122,401,149"/>
+<area shape="rect" id="node5" href="$classlg_1_1_tensor.html#a4c62f84db9978b1cb0a38b23af493a88" title=" " alt="" coords="250,173,379,199"/>
+<area shape="rect" id="node6" href="$classlg_1_1_tensor.html#a9435567e5204d9edc2a74294f927d265" title=" " alt="" coords="486,261,594,287"/>
+<area shape="rect" id="node7" href="$classlg_1_1_cost.html#a257ad161b425645f97fb5eb5751e6ea5" title="Calculate deltas." alt="" coords="247,493,382,519"/>
+<area shape="rect" id="node8" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="481,493,599,519"/>
+<area shape="rect" id="node9" href="$classlg_1_1_cost.html#a12ca6b5b6131831246fc2844113c78bc" title="Calculate errors." alt="" coords="249,341,380,367"/>
+<area shape="rect" id="node10" href="$classlg_1_1_tensor.html#a3d4bd6ecfb08ce24f37b32b07f5b16ea" title=" " alt="" coords="248,442,381,469"/>
+<area shape="rect" id="node11" href="$classlg_1_1_recurrent.html#a697cd48ab364f4be2ec6f37eb8ae5ae9" title=" " alt="" coords="230,391,399,418"/>
+<area shape="rect" id="node12" href="$classlg_1_1_linear.html#a63bc9177e0ad28a11c1d91ba05562a39" title=" " alt="" coords="229,594,400,621"/>
+<area shape="rect" id="node14" href="$classlg_1_1_recurrent.html#a189f0dd284081c0e24eac4c0a00391f0" title=" " alt="" coords="241,224,388,265"/>
+<area shape="rect" id="node15" href="$classlg_1_1_recurrent.html#a77f9e39326bb7228831c4da1a28133e8" title=" " alt="" coords="247,645,382,671"/>
+<area shape="rect" id="node16" href="$classlg_1_1_tensor.html#aab26323aaa6894fb021205eff278b8af" title=" " alt="" coords="243,695,386,722"/>
+<area shape="rect" id="node17" href="$classlg_1_1_tensor.html#a194fc20cbd586946c26138108e411f75" title=" " alt="" coords="251,746,379,773"/>
+<area shape="rect" id="node13" href="$namespacelg.html#ac3c94e68ec3e515c366c5384b711e4d5" title=" " alt="" coords="457,587,623,628"/>
+</map>

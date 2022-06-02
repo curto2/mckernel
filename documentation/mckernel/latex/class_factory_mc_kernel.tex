@@ -1,0 +1,131 @@
+\hypertarget{class_factory_mc_kernel}{}\doxysection{Factory\+Mc\+Kernel Class Reference}
+\label{class_factory_mc_kernel}\index{FactoryMcKernel@{FactoryMcKernel}}
+
+
+{\ttfamily \#include $<$Factory\+\_\+\+Mc\+Kernel.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}} \{ \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}{R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}{M\+R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}{R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}{M\+R\+BF}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}} \{ \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}{R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}{M\+R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}{R\+BF}}, 
+\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}{M\+R\+BF}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_mc_kernel}{Mc\+Kernel}} $\ast$ \mbox{\hyperlink{class_factory_mc_kernel_a4e4b762bd8a525f23291ef2d3777150c}{create\+Mc\+Kernel}} (\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}} typemckernel, float $\ast$data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma=1.\+0, const unsigned long t=40)
+\item 
+static \mbox{\hyperlink{class_mc_kernel}{Mc\+Kernel}} $\ast$ \mbox{\hyperlink{class_factory_mc_kernel_a3092502b51f079665bfeb5cea394d56f}{create\+Mc\+Kernel}} (\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}} typemckernel, float $\ast$data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma=1.\+0, const unsigned long t=40)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 58 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}} 
+\index{FactoryMcKernel@{FactoryMcKernel}!TypeMcKernel@{TypeMcKernel}}
+\index{TypeMcKernel@{TypeMcKernel}!FactoryMcKernel@{FactoryMcKernel}}
+\doxysubsubsection{\texorpdfstring{TypeMcKernel}{TypeMcKernel}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Factory\+Mc\+Kernel\+::\+Type\+Mc\+Kernel}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBF@{RBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!RBF@{RBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}} 
+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MRBF@{MRBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!MRBF@{MRBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}} 
+M\+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBF@{RBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!RBF@{RBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}} 
+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MRBF@{MRBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!MRBF@{MRBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}} 
+M\+R\+BF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 61 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}} 
+\index{FactoryMcKernel@{FactoryMcKernel}!TypeMcKernel@{TypeMcKernel}}
+\index{TypeMcKernel@{TypeMcKernel}!FactoryMcKernel@{FactoryMcKernel}}
+\doxysubsubsection{\texorpdfstring{TypeMcKernel}{TypeMcKernel}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Factory\+Mc\+Kernel\+::\+Type\+Mc\+Kernel}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBF@{RBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!RBF@{RBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}} 
+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MRBF@{MRBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!MRBF@{MRBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}} 
+M\+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBF@{RBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!RBF@{RBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ac9682f09a5103a70300e40a7ae9330b3}} 
+R\+BF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MRBF@{MRBF}!FactoryMcKernel@{FactoryMcKernel}}\index{FactoryMcKernel@{FactoryMcKernel}!MRBF@{MRBF}}}\mbox{\Hypertarget{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}\label{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466ad7d51a969f7ca1225225d897acc4dcc9}} 
+M\+R\+BF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 61 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_factory_mc_kernel_a4e4b762bd8a525f23291ef2d3777150c}\label{class_factory_mc_kernel_a4e4b762bd8a525f23291ef2d3777150c}} 
+\index{FactoryMcKernel@{FactoryMcKernel}!createMcKernel@{createMcKernel}}
+\index{createMcKernel@{createMcKernel}!FactoryMcKernel@{FactoryMcKernel}}
+\doxysubsubsection{\texorpdfstring{createMcKernel()}{createMcKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mc_kernel}{Mc\+Kernel}} $\ast$ Factory\+Mc\+Kernel\+::create\+Mc\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}}}]{typemckernel,  }\item[{float $\ast$}]{data,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{D,  }\item[{const unsigned long}]{seed,  }\item[{const float}]{sigma = {\ttfamily 1.0},  }\item[{const unsigned long}]{t = {\ttfamily 40} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 279 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_factory_mc_kernel_a4e4b762bd8a525f23291ef2d3777150c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_factory_mc_kernel_a3092502b51f079665bfeb5cea394d56f}\label{class_factory_mc_kernel_a3092502b51f079665bfeb5cea394d56f}} 
+\index{FactoryMcKernel@{FactoryMcKernel}!createMcKernel@{createMcKernel}}
+\index{createMcKernel@{createMcKernel}!FactoryMcKernel@{FactoryMcKernel}}
+\doxysubsubsection{\texorpdfstring{createMcKernel()}{createMcKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mc_kernel}{Mc\+Kernel}} $\ast$ Factory\+Mc\+Kernel\+::create\+Mc\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_factory_mc_kernel_a868f20532a64e832a5a1c55c6dfc5466}{Type\+Mc\+Kernel}}}]{typemckernel,  }\item[{float $\ast$}]{data,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{D,  }\item[{mt19937}]{seed,  }\item[{const float}]{sigma = {\ttfamily 1.0},  }\item[{const unsigned long}]{t = {\ttfamily 40} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 245 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mckernel/sdd+/hpp/\mbox{\hyperlink{sdd_09_2hpp_2_factory___mc_kernel_8hpp}{Factory\+\_\+\+Mc\+Kernel.\+hpp}}\item 
+mckernel/sdd+/src/\mbox{\hyperlink{sdd_09_2src_2_factory___mc_kernel_8cpp}{Factory\+\_\+\+Mc\+Kernel.\+cpp}}\end{DoxyCompactItemize}

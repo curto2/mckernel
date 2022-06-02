@@ -1,0 +1,207 @@
+\hypertarget{classlg_1_1_optimizer}{}\doxysection{lg\+::Optimizer Class Reference}
+\label{classlg_1_1_optimizer}\index{lg::Optimizer@{lg::Optimizer}}
+
+
+{\ttfamily \#include $<$Optimizer.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classlg_1_1_optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classlg_1_1_optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_optimizer_afae0925869b0f7a25d1243ff50522c88}{fit}} (\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} \&net, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&inputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&targets)
+\item 
+void \mbox{\hyperlink{classlg_1_1_optimizer_ab872a36e34c844400b08f71b838f9ed1}{set\+Learningrate}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_optimizer_a0b631c8fc6eeef0d95f0cd2150142f08}{set\+Momentum}} (const float momentum)
+\item 
+const float \mbox{\hyperlink{classlg_1_1_optimizer_a98dcb1396a1f87ef20615ae8b02a1a05}{get\+Learningrate}} () const
+\item 
+const float \mbox{\hyperlink{classlg_1_1_optimizer_a8dd8335645ce9ddd1869010cd33b4e1b}{get\+Momentum}} () const
+\item 
+const float \mbox{\hyperlink{classlg_1_1_optimizer_a486ff2027132c3945fbd9b1316f6341f}{get\+Error}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classlg_1_1_optimizer_ab4b4614774d90384ce737c34d2f7e707}{\+\_\+learningrate}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_optimizer_abc79def36e87cb1402dadfa725995a99}{\+\_\+momentum}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_optimizer_af3fca6b57fd6c4b2e8dfd2cd29f3baa1}{\+\_\+error}}
+\item 
+\mbox{\hyperlink{classlg_1_1_cost}{Cost}} \mbox{\hyperlink{classlg_1_1_optimizer_ad9510214ac5b117e7dd979b16ce5f4ad}{\+\_\+costfunction}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Optimizer.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_optimizer_afae0925869b0f7a25d1243ff50522c88}\label{classlg_1_1_optimizer_afae0925869b0f7a25d1243ff50522c88}} 
+\index{lg::Optimizer@{lg::Optimizer}!fit@{fit}}
+\index{fit@{fit}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily void lg\+::\+Optimizer\+::fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} \&}]{net,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{inputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_d_f_a___optimizer_abb7a6bac552681ba5dbeb5c66db7b487}{lg\+::\+D\+F\+A\+\_\+\+Optimizer}}, and \mbox{\hyperlink{classlg_1_1_s_g_d___optimizer_a23104cbfff393eba51f21d620d2b97bf}{lg\+::\+S\+G\+D\+\_\+\+Optimizer}}.
+
+
+
+Definition at line 17 of file Optimizer.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_optimizer_afae0925869b0f7a25d1243ff50522c88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_optimizer_a486ff2027132c3945fbd9b1316f6341f}\label{classlg_1_1_optimizer_a486ff2027132c3945fbd9b1316f6341f}} 
+\index{lg::Optimizer@{lg::Optimizer}!getError@{getError}}
+\index{getError@{getError}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily const float lg\+::\+Optimizer\+::get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 37 of file Optimizer.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_optimizer_a486ff2027132c3945fbd9b1316f6341f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_optimizer_a98dcb1396a1f87ef20615ae8b02a1a05}\label{classlg_1_1_optimizer_a98dcb1396a1f87ef20615ae8b02a1a05}} 
+\index{lg::Optimizer@{lg::Optimizer}!getLearningrate@{getLearningrate}}
+\index{getLearningrate@{getLearningrate}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{getLearningrate()}{getLearningrate()}}
+{\footnotesize\ttfamily const float lg\+::\+Optimizer\+::get\+Learningrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 31 of file Optimizer.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classlg_1_1_optimizer_a98dcb1396a1f87ef20615ae8b02a1a05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_optimizer_a8dd8335645ce9ddd1869010cd33b4e1b}\label{classlg_1_1_optimizer_a8dd8335645ce9ddd1869010cd33b4e1b}} 
+\index{lg::Optimizer@{lg::Optimizer}!getMomentum@{getMomentum}}
+\index{getMomentum@{getMomentum}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{getMomentum()}{getMomentum()}}
+{\footnotesize\ttfamily const float lg\+::\+Optimizer\+::get\+Momentum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 34 of file Optimizer.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_optimizer_ab872a36e34c844400b08f71b838f9ed1}\label{classlg_1_1_optimizer_ab872a36e34c844400b08f71b838f9ed1}} 
+\index{lg::Optimizer@{lg::Optimizer}!setLearningrate@{setLearningrate}}
+\index{setLearningrate@{setLearningrate}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{setLearningrate()}{setLearningrate()}}
+{\footnotesize\ttfamily void lg\+::\+Optimizer\+::set\+Learningrate (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Optimizer.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classlg_1_1_optimizer_ab872a36e34c844400b08f71b838f9ed1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_optimizer_a0b631c8fc6eeef0d95f0cd2150142f08}\label{classlg_1_1_optimizer_a0b631c8fc6eeef0d95f0cd2150142f08}} 
+\index{lg::Optimizer@{lg::Optimizer}!setMomentum@{setMomentum}}
+\index{setMomentum@{setMomentum}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{setMomentum()}{setMomentum()}}
+{\footnotesize\ttfamily void lg\+::\+Optimizer\+::set\+Momentum (\begin{DoxyParamCaption}\item[{const float}]{momentum }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Optimizer.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_optimizer_ad9510214ac5b117e7dd979b16ce5f4ad}\label{classlg_1_1_optimizer_ad9510214ac5b117e7dd979b16ce5f4ad}} 
+\index{lg::Optimizer@{lg::Optimizer}!\_costfunction@{\_costfunction}}
+\index{\_costfunction@{\_costfunction}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{\_costfunction}{\_costfunction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_cost}{Cost}} lg\+::\+Optimizer\+::\+\_\+costfunction\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Optimizer.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_optimizer_af3fca6b57fd6c4b2e8dfd2cd29f3baa1}\label{classlg_1_1_optimizer_af3fca6b57fd6c4b2e8dfd2cd29f3baa1}} 
+\index{lg::Optimizer@{lg::Optimizer}!\_error@{\_error}}
+\index{\_error@{\_error}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{\_error}{\_error}}
+{\footnotesize\ttfamily float lg\+::\+Optimizer\+::\+\_\+error\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Optimizer.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_optimizer_ab4b4614774d90384ce737c34d2f7e707}\label{classlg_1_1_optimizer_ab4b4614774d90384ce737c34d2f7e707}} 
+\index{lg::Optimizer@{lg::Optimizer}!\_learningrate@{\_learningrate}}
+\index{\_learningrate@{\_learningrate}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{\_learningrate}{\_learningrate}}
+{\footnotesize\ttfamily float lg\+::\+Optimizer\+::\+\_\+learningrate\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Optimizer.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_optimizer_abc79def36e87cb1402dadfa725995a99}\label{classlg_1_1_optimizer_abc79def36e87cb1402dadfa725995a99}} 
+\index{lg::Optimizer@{lg::Optimizer}!\_momentum@{\_momentum}}
+\index{\_momentum@{\_momentum}!lg::Optimizer@{lg::Optimizer}}
+\doxysubsubsection{\texorpdfstring{\_momentum}{\_momentum}}
+{\footnotesize\ttfamily float lg\+::\+Optimizer\+::\+\_\+momentum\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Optimizer.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_optimizer_8hpp}{Optimizer.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_optimizer_8cpp}{Optimizer.\+cpp}}\end{DoxyCompactItemize}

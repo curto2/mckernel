@@ -1,0 +1,556 @@
+\hypertarget{class_bitmap}{}\doxysection{Bitmap Class Reference}
+\label{class_bitmap}\index{Bitmap@{Bitmap}}
+
+
+I\+N\+C\+L\+U\+D\+ES.  
+
+
+
+
+{\ttfamily \#include $<$Bitmap.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Channels}} \{ \mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9a1319ec28f79e90a69c2bf47fb0055b51}{M\+O\+NO}} = 1, 
+\mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9ab302e0476a3f61548b196a912d4e08c3}{R\+GB}} = 3, 
+\mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9adc6d274a96cec6923b5ee096a5f9d06c}{R\+G\+BA}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_bitmap}{Bitmap}} number of channels ~\newline
+ \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308b}{Formats}} \{ \mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba72aaec4b618a3d3ac9a3c96e4bd86f0d}{B\+MP}}, 
+\mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308baecdc55a233454a2ff4e60a2ac8d0b502}{T\+GA}}, 
+\mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba75b410e7e6cb92988b00fd6d505af598}{P\+NG}}, 
+\mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308bad7c815058de8dfebce46ab2d840c9ea9}{P\+GM}}
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_bitmap}{Bitmap}} formats ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bitmap_a888339c4f23538b69a86bd63d97418aa}{Bitmap}} (std\+::string filepath, \mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Channels}} channels)
+\begin{DoxyCompactList}\small\item\em Load bitmap from image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bitmap_a16fc99bfd5e25b905cccead687e6118f}{Bitmap}} (\mbox{\hyperlink{class_bitmap}{Bitmap}} \&bm\+\_\+source, int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Load bitmap from another bitmap region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bitmap_ae47e041398aa3e4bab698f485623c2cd}{Bitmap}} (int w, int h, \mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Channels}} channels, long color)
+\begin{DoxyCompactList}\small\item\em Create bitmap from size, channels and fill color ~\newline
+ Color example\+: 0x\+F\+F\+F\+F\+FF -\/$>$ White, 0x\+F\+F0000 -\/$>$ Red. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}{$\sim$\+Bitmap}} ()
+\begin{DoxyCompactList}\small\item\em Destructor ~\newline
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bitmap_a5aeabd3034b7bd42557e370ea44aa5d1}{save}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Save bitmap to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_af81136573d0c8df3957d65c97143c365}{fill}} (long color)
+\begin{DoxyCompactList}\small\item\em Fill bitmap with a color Color example\+: 0x\+F\+F\+F\+F\+FF -\/$>$ White, 0x\+F\+F0000 -\/$>$ Red. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_a0cab0b3ad32601a32f88c568cc0b68e0}{convert\+To\+Mono}} ()
+\begin{DoxyCompactList}\small\item\em Convert to mono color channel ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_a6b6a79c266a33a0136bd9e01052848b0}{adjust\+Contrast}} (float contrast)
+\begin{DoxyCompactList}\small\item\em Adjust contrast of the bitmap ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_a94c3e1dafd2c172b337e0355430e09aa}{resize}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Resize bitmap content and canvas to the specified dimensions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_accbdb954b94b112b66bc94f173e355cc}{rotate}} (const unsigned int center\+\_\+x, const unsigned int center\+\_\+y, const float angle, const long fill\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Rotate bitmap around center position by the specified amount of degrees and fill the gaps with the specified color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_abe8069c0aa3c528a3cd50b6affd7a6e4}{copy\+To\+Region}} (\mbox{\hyperlink{class_bitmap}{Bitmap}} \&bm\+\_\+dest, int from\+\_\+x, int from\+\_\+y, int from\+\_\+w, int from\+\_\+h, int to\+\_\+x, int to\+\_\+y, int to\+\_\+w, int to\+\_\+h)
+\begin{DoxyCompactList}\small\item\em Resize bitmap content to the specified dimensions ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_abbd6a3cdc976b21ef1a7b42f010c641d}{filter\+Threshold}} (int threshold)
+\begin{DoxyCompactList}\small\item\em Filter threshold ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_ae4c03f0191a5f8f13c993d66c879c1df}{draw\+Rect}} (const unsigned int x, const unsigned int y, const unsigned int width, const unsigned int height, const long color, const unsigned int border\+\_\+thickness=0)
+\begin{DoxyCompactList}\small\item\em Draw rect, if border\+\_\+thickness = 0 then the rectangle is filled with color otherwise it\textquotesingle{}s not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_aa665a41e001c390a702f41325864de3a}{draw\+Circle}} (const unsigned int x, const unsigned int y, const unsigned int radius, const long color, const unsigned int border\+\_\+tickness=0)
+\begin{DoxyCompactList}\small\item\em Draw circle, if border\+\_\+tickness = 0 then the circle is filled with color, otherwise it\textquotesingle{}s not. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \mbox{\hyperlink{class_bitmap_aa5ae6d3773cbe88c55cd5859127509d8}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get bitmap data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bitmap_a051a04d89370efcbf6b6afc630d83034}{get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Get bitmap with. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bitmap_a15ae9ed5516dd92c42f3fe8a57104549}{get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Get bitmap height. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bitmap_a2b1522af9e663a20fb1860e20e7c0551}{get\+Channels}} ()
+\begin{DoxyCompactList}\small\item\em Get number of color channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{class_bitmap_a56c1c8a55e14e50401aedf35d3683ccb}{m\+\_\+data}}
+\item 
+int \mbox{\hyperlink{class_bitmap_aaae575fa4b6fa491a438c735456deace}{m\+\_\+width}}
+\item 
+int \mbox{\hyperlink{class_bitmap_a3fc98c39c833ba82f076c32314bd8d2f}{m\+\_\+height}}
+\item 
+int \mbox{\hyperlink{class_bitmap_aaf27c3e5f2f9b0d2999b44c8b7031040}{m\+\_\+channels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I\+N\+C\+L\+U\+D\+ES. 
+
+Definition at line 13 of file Bitmap.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_bitmap_a57201bb74eae1038e03043b36cd484e9}\label{class_bitmap_a57201bb74eae1038e03043b36cd484e9}} 
+\index{Bitmap@{Bitmap}!Channels@{Channels}}
+\index{Channels@{Channels}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Channels}{Channels}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Bitmap\+::\+Channels}}}
+
+
+
+\mbox{\hyperlink{class_bitmap}{Bitmap}} number of channels ~\newline
+ 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONO@{MONO}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!MONO@{MONO}}}\mbox{\Hypertarget{class_bitmap_a57201bb74eae1038e03043b36cd484e9a1319ec28f79e90a69c2bf47fb0055b51}\label{class_bitmap_a57201bb74eae1038e03043b36cd484e9a1319ec28f79e90a69c2bf47fb0055b51}} 
+M\+O\+NO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RGB@{RGB}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!RGB@{RGB}}}\mbox{\Hypertarget{class_bitmap_a57201bb74eae1038e03043b36cd484e9ab302e0476a3f61548b196a912d4e08c3}\label{class_bitmap_a57201bb74eae1038e03043b36cd484e9ab302e0476a3f61548b196a912d4e08c3}} 
+R\+GB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RGBA@{RGBA}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!RGBA@{RGBA}}}\mbox{\Hypertarget{class_bitmap_a57201bb74eae1038e03043b36cd484e9adc6d274a96cec6923b5ee096a5f9d06c}\label{class_bitmap_a57201bb74eae1038e03043b36cd484e9adc6d274a96cec6923b5ee096a5f9d06c}} 
+R\+G\+BA&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 21 of file Bitmap.\+hpp.
+
+\mbox{\Hypertarget{class_bitmap_ae11e2aa177ff662c2d429fa297c4308b}\label{class_bitmap_ae11e2aa177ff662c2d429fa297c4308b}} 
+\index{Bitmap@{Bitmap}!Formats@{Formats}}
+\index{Formats@{Formats}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Formats}{Formats}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_bitmap_ae11e2aa177ff662c2d429fa297c4308b}{Bitmap\+::\+Formats}}}
+
+
+
+\mbox{\hyperlink{class_bitmap}{Bitmap}} formats ~\newline
+ 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP@{BMP}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!BMP@{BMP}}}\mbox{\Hypertarget{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba72aaec4b618a3d3ac9a3c96e4bd86f0d}\label{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba72aaec4b618a3d3ac9a3c96e4bd86f0d}} 
+B\+MP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TGA@{TGA}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!TGA@{TGA}}}\mbox{\Hypertarget{class_bitmap_ae11e2aa177ff662c2d429fa297c4308baecdc55a233454a2ff4e60a2ac8d0b502}\label{class_bitmap_ae11e2aa177ff662c2d429fa297c4308baecdc55a233454a2ff4e60a2ac8d0b502}} 
+T\+GA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PNG@{PNG}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!PNG@{PNG}}}\mbox{\Hypertarget{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba75b410e7e6cb92988b00fd6d505af598}\label{class_bitmap_ae11e2aa177ff662c2d429fa297c4308ba75b410e7e6cb92988b00fd6d505af598}} 
+P\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PGM@{PGM}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!PGM@{PGM}}}\mbox{\Hypertarget{class_bitmap_ae11e2aa177ff662c2d429fa297c4308bad7c815058de8dfebce46ab2d840c9ea9}\label{class_bitmap_ae11e2aa177ff662c2d429fa297c4308bad7c815058de8dfebce46ab2d840c9ea9}} 
+P\+GM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 32 of file Bitmap.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bitmap_a888339c4f23538b69a86bd63d97418aa}\label{class_bitmap_a888339c4f23538b69a86bd63d97418aa}} 
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Bitmap()}{Bitmap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Bitmap\+::\+Bitmap (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath,  }\item[{\mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Channels}}}]{channels }\end{DoxyParamCaption})}
+
+
+
+Load bitmap from image. 
+
+B\+I\+T\+M\+AP.
+
+Definition at line 60 of file Bitmap.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_bitmap_a888339c4f23538b69a86bd63d97418aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_a16fc99bfd5e25b905cccead687e6118f}\label{class_bitmap_a16fc99bfd5e25b905cccead687e6118f}} 
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Bitmap()}{Bitmap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Bitmap\+::\+Bitmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bitmap}{Bitmap}} \&}]{bm\+\_\+source,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Load bitmap from another bitmap region. 
+
+
+
+Definition at line 195 of file Bitmap.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_bitmap_a16fc99bfd5e25b905cccead687e6118f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_ae47e041398aa3e4bab698f485623c2cd}\label{class_bitmap_ae47e041398aa3e4bab698f485623c2cd}} 
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\index{Bitmap@{Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{Bitmap()}{Bitmap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Bitmap\+::\+Bitmap (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{class_bitmap_a57201bb74eae1038e03043b36cd484e9}{Channels}}}]{channels,  }\item[{long}]{color }\end{DoxyParamCaption})}
+
+
+
+Create bitmap from size, channels and fill color ~\newline
+ Color example\+: 0x\+F\+F\+F\+F\+FF -\/$>$ White, 0x\+F\+F0000 -\/$>$ Red. 
+
+
+
+Definition at line 221 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}\label{class_bitmap_a72d2a301ec1eb1c8d0f3d64823659a8e}} 
+\index{Bitmap@{Bitmap}!````~Bitmap@{$\sim$Bitmap}}
+\index{````~Bitmap@{$\sim$Bitmap}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{$\sim$Bitmap()}{~Bitmap()}}
+{\footnotesize\ttfamily Bitmap\+::$\sim$\+Bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor ~\newline
+ 
+
+
+
+Definition at line 261 of file Bitmap.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bitmap_a6b6a79c266a33a0136bd9e01052848b0}\label{class_bitmap_a6b6a79c266a33a0136bd9e01052848b0}} 
+\index{Bitmap@{Bitmap}!adjustContrast@{adjustContrast}}
+\index{adjustContrast@{adjustContrast}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{adjustContrast()}{adjustContrast()}}
+{\footnotesize\ttfamily void Bitmap\+::adjust\+Contrast (\begin{DoxyParamCaption}\item[{float}]{contrast }\end{DoxyParamCaption})}
+
+
+
+Adjust contrast of the bitmap ~\newline
+ 
+
+
+
+Definition at line 362 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_a0cab0b3ad32601a32f88c568cc0b68e0}\label{class_bitmap_a0cab0b3ad32601a32f88c568cc0b68e0}} 
+\index{Bitmap@{Bitmap}!convertToMono@{convertToMono}}
+\index{convertToMono@{convertToMono}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{convertToMono()}{convertToMono()}}
+{\footnotesize\ttfamily void Bitmap\+::convert\+To\+Mono (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert to mono color channel ~\newline
+ 
+
+
+
+Definition at line 331 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_bitmap_a0cab0b3ad32601a32f88c568cc0b68e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_abe8069c0aa3c528a3cd50b6affd7a6e4}\label{class_bitmap_abe8069c0aa3c528a3cd50b6affd7a6e4}} 
+\index{Bitmap@{Bitmap}!copyToRegion@{copyToRegion}}
+\index{copyToRegion@{copyToRegion}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{copyToRegion()}{copyToRegion()}}
+{\footnotesize\ttfamily void Bitmap\+::copy\+To\+Region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bitmap}{Bitmap}} \&}]{bm\+\_\+dest,  }\item[{int}]{from\+\_\+x,  }\item[{int}]{from\+\_\+y,  }\item[{int}]{from\+\_\+w,  }\item[{int}]{from\+\_\+h,  }\item[{int}]{to\+\_\+x,  }\item[{int}]{to\+\_\+y,  }\item[{int}]{to\+\_\+w,  }\item[{int}]{to\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Resize bitmap content to the specified dimensions ~\newline
+ 
+
+
+
+Definition at line 454 of file Bitmap.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bitmap_abe8069c0aa3c528a3cd50b6affd7a6e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_bitmap_abe8069c0aa3c528a3cd50b6affd7a6e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_aa665a41e001c390a702f41325864de3a}\label{class_bitmap_aa665a41e001c390a702f41325864de3a}} 
+\index{Bitmap@{Bitmap}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void Bitmap\+::draw\+Circle (\begin{DoxyParamCaption}\item[{const unsigned int}]{x,  }\item[{const unsigned int}]{y,  }\item[{const unsigned int}]{radius,  }\item[{const long}]{color,  }\item[{const unsigned int}]{border\+\_\+tickness = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Draw circle, if border\+\_\+tickness = 0 then the circle is filled with color, otherwise it\textquotesingle{}s not. 
+
+
+
+Definition at line 568 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_ae4c03f0191a5f8f13c993d66c879c1df}\label{class_bitmap_ae4c03f0191a5f8f13c993d66c879c1df}} 
+\index{Bitmap@{Bitmap}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
+{\footnotesize\ttfamily void Bitmap\+::draw\+Rect (\begin{DoxyParamCaption}\item[{const unsigned int}]{x,  }\item[{const unsigned int}]{y,  }\item[{const unsigned int}]{width,  }\item[{const unsigned int}]{height,  }\item[{const long}]{color,  }\item[{const unsigned int}]{border\+\_\+thickness = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Draw rect, if border\+\_\+thickness = 0 then the rectangle is filled with color otherwise it\textquotesingle{}s not. 
+
+
+
+Definition at line 509 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_af81136573d0c8df3957d65c97143c365}\label{class_bitmap_af81136573d0c8df3957d65c97143c365}} 
+\index{Bitmap@{Bitmap}!fill@{fill}}
+\index{fill@{fill}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void Bitmap\+::fill (\begin{DoxyParamCaption}\item[{long}]{color }\end{DoxyParamCaption})}
+
+
+
+Fill bitmap with a color Color example\+: 0x\+F\+F\+F\+F\+FF -\/$>$ White, 0x\+F\+F0000 -\/$>$ Red. 
+
+
+
+Definition at line 299 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_abbd6a3cdc976b21ef1a7b42f010c641d}\label{class_bitmap_abbd6a3cdc976b21ef1a7b42f010c641d}} 
+\index{Bitmap@{Bitmap}!filterThreshold@{filterThreshold}}
+\index{filterThreshold@{filterThreshold}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{filterThreshold()}{filterThreshold()}}
+{\footnotesize\ttfamily void Bitmap\+::filter\+Threshold (\begin{DoxyParamCaption}\item[{int}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Filter threshold ~\newline
+ 
+
+
+
+Definition at line 500 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_a2b1522af9e663a20fb1860e20e7c0551}\label{class_bitmap_a2b1522af9e663a20fb1860e20e7c0551}} 
+\index{Bitmap@{Bitmap}!getChannels@{getChannels}}
+\index{getChannels@{getChannels}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{getChannels()}{getChannels()}}
+{\footnotesize\ttfamily int Bitmap\+::get\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get number of color channels. 
+
+
+
+Definition at line 619 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bitmap_a2b1522af9e663a20fb1860e20e7c0551_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_aa5ae6d3773cbe88c55cd5859127509d8}\label{class_bitmap_aa5ae6d3773cbe88c55cd5859127509d8}} 
+\index{Bitmap@{Bitmap}!getData@{getData}}
+\index{getData@{getData}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Bitmap\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get bitmap data. 
+
+
+
+Definition at line 601 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bitmap_aa5ae6d3773cbe88c55cd5859127509d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_a15ae9ed5516dd92c42f3fe8a57104549}\label{class_bitmap_a15ae9ed5516dd92c42f3fe8a57104549}} 
+\index{Bitmap@{Bitmap}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Bitmap\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get bitmap height. 
+
+
+
+Definition at line 613 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bitmap_a15ae9ed5516dd92c42f3fe8a57104549_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_a051a04d89370efcbf6b6afc630d83034}\label{class_bitmap_a051a04d89370efcbf6b6afc630d83034}} 
+\index{Bitmap@{Bitmap}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Bitmap\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get bitmap with. 
+
+
+
+Definition at line 607 of file Bitmap.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bitmap_a051a04d89370efcbf6b6afc630d83034_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bitmap_a94c3e1dafd2c172b337e0355430e09aa}\label{class_bitmap_a94c3e1dafd2c172b337e0355430e09aa}} 
+\index{Bitmap@{Bitmap}!resize@{resize}}
+\index{resize@{resize}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Bitmap\+::resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Resize bitmap content and canvas to the specified dimensions. 
+
+
+
+Definition at line 382 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_accbdb954b94b112b66bc94f173e355cc}\label{class_bitmap_accbdb954b94b112b66bc94f173e355cc}} 
+\index{Bitmap@{Bitmap}!rotate@{rotate}}
+\index{rotate@{rotate}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Bitmap\+::rotate (\begin{DoxyParamCaption}\item[{const unsigned int}]{center\+\_\+x,  }\item[{const unsigned int}]{center\+\_\+y,  }\item[{const float}]{angle,  }\item[{const long}]{fill\+\_\+color }\end{DoxyParamCaption})}
+
+
+
+Rotate bitmap around center position by the specified amount of degrees and fill the gaps with the specified color. 
+
+
+
+Definition at line 411 of file Bitmap.\+cpp.
+
+\mbox{\Hypertarget{class_bitmap_a5aeabd3034b7bd42557e370ea44aa5d1}\label{class_bitmap_a5aeabd3034b7bd42557e370ea44aa5d1}} 
+\index{Bitmap@{Bitmap}!save@{save}}
+\index{save@{save}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Bitmap\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Save bitmap to file. 
+
+
+
+Definition at line 268 of file Bitmap.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_bitmap_a5aeabd3034b7bd42557e370ea44aa5d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_bitmap_a5aeabd3034b7bd42557e370ea44aa5d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bitmap_aaf27c3e5f2f9b0d2999b44c8b7031040}\label{class_bitmap_aaf27c3e5f2f9b0d2999b44c8b7031040}} 
+\index{Bitmap@{Bitmap}!m\_channels@{m\_channels}}
+\index{m\_channels@{m\_channels}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_channels}{m\_channels}}
+{\footnotesize\ttfamily int Bitmap\+::m\+\_\+channels}
+
+
+
+Definition at line 162 of file Bitmap.\+hpp.
+
+\mbox{\Hypertarget{class_bitmap_a56c1c8a55e14e50401aedf35d3683ccb}\label{class_bitmap_a56c1c8a55e14e50401aedf35d3683ccb}} 
+\index{Bitmap@{Bitmap}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily unsigned char$\ast$ Bitmap\+::m\+\_\+data}
+
+
+
+Definition at line 159 of file Bitmap.\+hpp.
+
+\mbox{\Hypertarget{class_bitmap_a3fc98c39c833ba82f076c32314bd8d2f}\label{class_bitmap_a3fc98c39c833ba82f076c32314bd8d2f}} 
+\index{Bitmap@{Bitmap}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily int Bitmap\+::m\+\_\+height}
+
+
+
+Definition at line 161 of file Bitmap.\+hpp.
+
+\mbox{\Hypertarget{class_bitmap_aaae575fa4b6fa491a438c735456deace}\label{class_bitmap_aaae575fa4b6fa491a438c735456deace}} 
+\index{Bitmap@{Bitmap}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!Bitmap@{Bitmap}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily int Bitmap\+::m\+\_\+width}
+
+
+
+Definition at line 160 of file Bitmap.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/visualization/\mbox{\hyperlink{_bitmap_8hpp}{Bitmap.\+hpp}}\item 
+lg/src/visualization/\mbox{\hyperlink{_bitmap_8cpp}{Bitmap.\+cpp}}\end{DoxyCompactItemize}

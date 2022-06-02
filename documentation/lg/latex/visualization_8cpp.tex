@@ -1,0 +1,38 @@
+\hypertarget{visualization_8cpp}{}\doxysection{lg/src/visualization/visualization.cpp File Reference}
+\label{visualization_8cpp}\index{lg/src/visualization/visualization.cpp@{lg/src/visualization/visualization.cpp}}
+{\ttfamily \#include \char`\"{}visualization.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bitmap.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for visualization.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{visualization_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelg}{lg}}
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacelg_1_1visualization}{lg\+::visualization}}
+\begin{DoxyCompactList}\small\item\em N\+A\+M\+E\+S\+P\+A\+CE V\+I\+S\+U\+A\+L\+I\+Z\+A\+T\+I\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacelg_1_1visualization_aa187d7b02c7f69066e20a0aee0425b9b}{lg\+::visualization\+::findminsquare}} (int num)
+\begin{DoxyCompactList}\small\item\em H\+I\+D\+D\+EN F\+U\+N\+C\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1visualization_aaf36342441658116d83210c24b6a2651}{lg\+::visualization\+::findvecrange}} (float $\ast$data, const int size, double $\ast$min, double $\ast$max)
+\begin{DoxyCompactList}\small\item\em Find the minimum and maximum value in a vector of numbers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1visualization_a8f672f5b8feb9c6d9c3b7dc9eb9d55b8}{lg\+::visualization\+::save\+\_\+vec}} (std\+::string path, const Tensor\+\_\+float \&vector)
+\begin{DoxyCompactList}\small\item\em P\+U\+B\+L\+IC F\+U\+N\+C\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1visualization_ae965cc2738e09fcbdd1175cf629f57b6}{lg\+::visualization\+::save\+\_\+multiple\+\_\+vec}} (std\+::string path, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} vector)
+\begin{DoxyCompactList}\small\item\em Save vectors to image ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1visualization_ae90360de27f9456186d09ed7bd5da7e5}{lg\+::visualization\+::save\+\_\+multiple\+\_\+vec}} (std\+::string path, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} vector, int table\+\_\+width, int table\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Save vectors to image, all the vectors must be of the same size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1visualization_aa281aa939861f891770696b54bac7b16}{lg\+::visualization\+::save\+\_\+vec}} (std\+::string path, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \&vector, int width, int height)
+\begin{DoxyCompactList}\small\item\em Save vector to image using a specific width and height for the image. \end{DoxyCompactList}\end{DoxyCompactItemize}

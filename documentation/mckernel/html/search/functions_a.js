@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['rbf_5fgaussian_161',['RBF_GAUSSIAN',['../class_r_b_f___g_a_u_s_s_i_a_n.html#a8efc9418bf1f4e91b8f4ec17191e41d0',1,'RBF_GAUSSIAN::RBF_GAUSSIAN(float *data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma=10.0)'],['../class_r_b_f___g_a_u_s_s_i_a_n.html#ab9b724ee9352c126eacb5ee73da888bd',1,'RBF_GAUSSIAN::RBF_GAUSSIAN(float *data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma=10.0)']]],
+  ['rbf_5fmatern_162',['RBF_MATERN',['../class_r_b_f___m_a_t_e_r_n.html#a48ff221d90852b6ab8d9ef3eaaad845c',1,'RBF_MATERN::RBF_MATERN(float *data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma=1.0, const unsigned long t=40)'],['../class_r_b_f___m_a_t_e_r_n.html#ac21fd3229bce8805785a294251a01593',1,'RBF_MATERN::RBF_MATERN(float *data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma=1.0, const unsigned long t=40)']]]
+];

@@ -1,0 +1,83 @@
+\hypertarget{classlg_1_1cudnn_1_1_pooling}{}\doxysection{lg\+::cudnn\+::Pooling Class Reference}
+\label{classlg_1_1cudnn_1_1_pooling}\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+
+
+{\ttfamily \#include $<$C\+U\+D\+A\+\_\+backend.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a7ecd9addedd5778e0ecca3dedf7aa15c}{Pooling}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a2ab05230e6ace1232752d5beb080ae88}{Pooling}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+count, const int batch\+\_\+size, const int pooling\+\_\+width, const int pooling\+\_\+height, const \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6}{Pooling\+Type}} type)
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a0130c13ac069fa611bf23cbf258871c1}{$\sim$\+Pooling}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a25c3722354d56b01a5f78435ff2e6bac}{clear}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a08072ec59a01232cef7531876f729f73}{create}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+count, const int batch\+\_\+size, const int pooling\+\_\+width, const int pooling\+\_\+height, const \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6}{Pooling\+Type}} type)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_a27be7fe5650f8c41c28921970d2b9ffe}{forward}} (void $\ast$input, void $\ast$output)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling_abf652f83a4e4e570ee6e43b0913ca759}{backward}} (void $\ast$input, void $\ast$outputs, void $\ast$errors, void $\ast$out\+\_\+errors)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 115 of file C\+U\+D\+A\+\_\+backend.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a7ecd9addedd5778e0ecca3dedf7aa15c}\label{classlg_1_1cudnn_1_1_pooling_a7ecd9addedd5778e0ecca3dedf7aa15c}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!Pooling@{Pooling}}
+\index{Pooling@{Pooling}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{Pooling()}{Pooling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Pooling\+::\+Pooling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a2ab05230e6ace1232752d5beb080ae88}\label{classlg_1_1cudnn_1_1_pooling_a2ab05230e6ace1232752d5beb080ae88}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!Pooling@{Pooling}}
+\index{Pooling@{Pooling}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{Pooling()}{Pooling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Pooling\+::\+Pooling (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+count,  }\item[{const int}]{batch\+\_\+size,  }\item[{const int}]{pooling\+\_\+width,  }\item[{const int}]{pooling\+\_\+height,  }\item[{const \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6}{Pooling\+Type}}}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a0130c13ac069fa611bf23cbf258871c1}\label{classlg_1_1cudnn_1_1_pooling_a0130c13ac069fa611bf23cbf258871c1}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!````~Pooling@{$\sim$Pooling}}
+\index{````~Pooling@{$\sim$Pooling}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pooling()}{~Pooling()}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Pooling\+::$\sim$\+Pooling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_abf652f83a4e4e570ee6e43b0913ca759}\label{classlg_1_1cudnn_1_1_pooling_abf652f83a4e4e570ee6e43b0913ca759}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!backward@{backward}}
+\index{backward@{backward}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Pooling\+::backward (\begin{DoxyParamCaption}\item[{void $\ast$}]{input,  }\item[{void $\ast$}]{outputs,  }\item[{void $\ast$}]{errors,  }\item[{void $\ast$}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a25c3722354d56b01a5f78435ff2e6bac}\label{classlg_1_1cudnn_1_1_pooling_a25c3722354d56b01a5f78435ff2e6bac}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!clear@{clear}}
+\index{clear@{clear}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Pooling\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a08072ec59a01232cef7531876f729f73}\label{classlg_1_1cudnn_1_1_pooling_a08072ec59a01232cef7531876f729f73}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!create@{create}}
+\index{create@{create}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Pooling\+::create (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+count,  }\item[{const int}]{batch\+\_\+size,  }\item[{const int}]{pooling\+\_\+width,  }\item[{const int}]{pooling\+\_\+height,  }\item[{const \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6}{Pooling\+Type}}}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_pooling_a27be7fe5650f8c41c28921970d2b9ffe}\label{classlg_1_1cudnn_1_1_pooling_a27be7fe5650f8c41c28921970d2b9ffe}} 
+\index{lg::cudnn::Pooling@{lg::cudnn::Pooling}!forward@{forward}}
+\index{forward@{forward}!lg::cudnn::Pooling@{lg::cudnn::Pooling}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Pooling\+::forward (\begin{DoxyParamCaption}\item[{void $\ast$}]{input,  }\item[{void $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_c_u_d_a__backend_8hpp}{C\+U\+D\+A\+\_\+backend.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,240 @@
+\hypertarget{classlg_1_1logistic__regression}{}\doxysection{lg\+::logistic\+\_\+regression Class Reference}
+\label{classlg_1_1logistic__regression}\index{lg::logistic\_regression@{lg::logistic\_regression}}
+
+
+{\ttfamily \#include $<$logistic\+\_\+regression.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1logistic__regression_a777a10f9b0a64161465dc9cfc2155598}{logistic\+\_\+regression}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1logistic__regression_a5971bb82bea207082c374f84ea71c82d}{logistic\+\_\+regression}} (const unsigned int input\+\_\+size, const unsigned int output\+\_\+size)
+\item 
+\mbox{\hyperlink{classlg_1_1logistic__regression_a4bb56fa45a386fb75dca1fdc22d1b804}{logistic\+\_\+regression}} (const std\+::string filepath)
+\item 
+const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& \mbox{\hyperlink{classlg_1_1logistic__regression_a68efaf925bd784b2a22e491c3cbd012c}{predict}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\item 
+void \mbox{\hyperlink{classlg_1_1logistic__regression_a5014858105f185f3c3b3f5f5a645bc23}{fit}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} inputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} targets, const float starting\+\_\+learningrate=0.\+01, const unsigned int epochs=20, const bool verbose=true)
+\item 
+void \mbox{\hyperlink{classlg_1_1logistic__regression_abeb1f45bd3821f6685a2f7a0b4e18184}{test}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} inputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} targets)
+\item 
+const float \mbox{\hyperlink{classlg_1_1logistic__regression_a2372e2e27aabe1dadeec41e38b7a2f7a}{fit\+\_\+single\+\_\+sample}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} target, const float learningrate)
+\item 
+const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& \mbox{\hyperlink{classlg_1_1logistic__regression_a5f1fb8b79bd4cf4d16898dc89d061f3b}{get\+\_\+output}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1logistic__regression_a306ef66141d05c42c55f37318415996b}{save}} (const std\+::string filepath)
+\item 
+void \mbox{\hyperlink{classlg_1_1logistic__regression_af6b3ae24739f0c3a53c8c7d9b9fded52}{load}} (std\+::ifstream \&filestream)
+\item 
+void \mbox{\hyperlink{classlg_1_1logistic__regression_af23bdefdf7cf2fecfe72542a3f17fcef}{save}} (std\+::ofstream \&filestream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file logistic\+\_\+regression.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a777a10f9b0a64161465dc9cfc2155598}\label{classlg_1_1logistic__regression_a777a10f9b0a64161465dc9cfc2155598}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!logistic\_regression@{logistic\_regression}}
+\index{logistic\_regression@{logistic\_regression}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{logistic\_regression()}{logistic\_regression()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::logistic\+\_\+regression\+::logistic\+\_\+regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file logistic\+\_\+regression.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a5971bb82bea207082c374f84ea71c82d}\label{classlg_1_1logistic__regression_a5971bb82bea207082c374f84ea71c82d}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!logistic\_regression@{logistic\_regression}}
+\index{logistic\_regression@{logistic\_regression}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{logistic\_regression()}{logistic\_regression()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::logistic\+\_\+regression\+::logistic\+\_\+regression (\begin{DoxyParamCaption}\item[{const unsigned int}]{input\+\_\+size,  }\item[{const unsigned int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a5971bb82bea207082c374f84ea71c82d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a4bb56fa45a386fb75dca1fdc22d1b804}\label{classlg_1_1logistic__regression_a4bb56fa45a386fb75dca1fdc22d1b804}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!logistic\_regression@{logistic\_regression}}
+\index{logistic\_regression@{logistic\_regression}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{logistic\_regression()}{logistic\_regression()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::logistic\+\_\+regression\+::logistic\+\_\+regression (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a4bb56fa45a386fb75dca1fdc22d1b804_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a5014858105f185f3c3b3f5f5a645bc23}\label{classlg_1_1logistic__regression_a5014858105f185f3c3b3f5f5a645bc23}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!fit@{fit}}
+\index{fit@{fit}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily void lg\+::logistic\+\_\+regression\+::fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{inputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{targets,  }\item[{const float}]{starting\+\_\+learningrate = {\ttfamily 0.01},  }\item[{const unsigned int}]{epochs = {\ttfamily 20},  }\item[{const bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a5014858105f185f3c3b3f5f5a645bc23_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a2372e2e27aabe1dadeec41e38b7a2f7a}\label{classlg_1_1logistic__regression_a2372e2e27aabe1dadeec41e38b7a2f7a}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!fit\_single\_sample@{fit\_single\_sample}}
+\index{fit\_single\_sample@{fit\_single\_sample}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{fit\_single\_sample()}{fit\_single\_sample()}}
+{\footnotesize\ttfamily const float lg\+::logistic\+\_\+regression\+::fit\+\_\+single\+\_\+sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{target,  }\item[{const float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a2372e2e27aabe1dadeec41e38b7a2f7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a2372e2e27aabe1dadeec41e38b7a2f7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a5f1fb8b79bd4cf4d16898dc89d061f3b}\label{classlg_1_1logistic__regression_a5f1fb8b79bd4cf4d16898dc89d061f3b}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!get\_output@{get\_output}}
+\index{get\_output@{get\_output}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{get\_output()}{get\_output()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& lg\+::logistic\+\_\+regression\+::get\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file logistic\+\_\+regression.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1logistic__regression_af6b3ae24739f0c3a53c8c7d9b9fded52}\label{classlg_1_1logistic__regression_af6b3ae24739f0c3a53c8c7d9b9fded52}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!load@{load}}
+\index{load@{load}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void lg\+::logistic\+\_\+regression\+::load (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{filestream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_af6b3ae24739f0c3a53c8c7d9b9fded52_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_af6b3ae24739f0c3a53c8c7d9b9fded52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a68efaf925bd784b2a22e491c3cbd012c}\label{classlg_1_1logistic__regression_a68efaf925bd784b2a22e491c3cbd012c}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!predict@{predict}}
+\index{predict@{predict}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& lg\+::logistic\+\_\+regression\+::predict (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classlg_1_1logistic__regression_a68efaf925bd784b2a22e491c3cbd012c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_a68efaf925bd784b2a22e491c3cbd012c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1logistic__regression_a306ef66141d05c42c55f37318415996b}\label{classlg_1_1logistic__regression_a306ef66141d05c42c55f37318415996b}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!save@{save}}
+\index{save@{save}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::logistic\+\_\+regression\+::save (\begin{DoxyParamCaption}\item[{const std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file logistic\+\_\+regression.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1logistic__regression_af23bdefdf7cf2fecfe72542a3f17fcef}\label{classlg_1_1logistic__regression_af23bdefdf7cf2fecfe72542a3f17fcef}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!save@{save}}
+\index{save@{save}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::logistic\+\_\+regression\+::save (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{filestream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file logistic\+\_\+regression.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1logistic__regression_abeb1f45bd3821f6685a2f7a0b4e18184}\label{classlg_1_1logistic__regression_abeb1f45bd3821f6685a2f7a0b4e18184}} 
+\index{lg::logistic\_regression@{lg::logistic\_regression}!test@{test}}
+\index{test@{test}!lg::logistic\_regression@{lg::logistic\_regression}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily void lg\+::logistic\+\_\+regression\+::test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{inputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{targets }\end{DoxyParamCaption})}
+
+
+
+Definition at line 165 of file logistic\+\_\+regression.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1logistic__regression_abeb1f45bd3821f6685a2f7a0b4e18184_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/classical/\mbox{\hyperlink{logistic__regression_8hpp}{logistic\+\_\+regression.\+hpp}}\item 
+lg/src/classical/\mbox{\hyperlink{logistic__regression_8cpp}{logistic\+\_\+regression.\+cpp}}\end{DoxyCompactItemize}

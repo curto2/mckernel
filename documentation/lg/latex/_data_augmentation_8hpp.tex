@@ -1,0 +1,44 @@
+\hypertarget{_data_augmentation_8hpp}{}\doxysection{lg/src/deep\+\_\+learning/\+Data\+Augmentation.hpp File Reference}
+\label{_data_augmentation_8hpp}\index{lg/src/deep\_learning/DataAugmentation.hpp@{lg/src/deep\_learning/DataAugmentation.hpp}}
+{\ttfamily \#include \char`\"{}../util/\+Tensor.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../util/\+Macros.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Data\+Augmentation.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_data_augmentation_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{_data_augmentation_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelg}{lg}}
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacelg_1_1augmentation}{lg\+::augmentation}}
+\begin{DoxyCompactList}\small\item\em N\+A\+M\+E\+S\+P\+A\+CE A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133}{lg\+::augmentation\+::translate}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, int tx, int ty)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f}{lg\+::augmentation\+::rotate}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float degrees)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5}{lg\+::augmentation\+::noise}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float noise)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a80bc7c0a8ebbf0bb2c86ad232e0f0f53}{lg\+::augmentation\+::vflip}} (Tensor\+\_\+float \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd}{lg\+::augmentation\+::hflip}} (Tensor\+\_\+float \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f}{lg\+::augmentation\+::scaling}} (Tensor\+\_\+float \&t, int width, int height, int channel, float scale\+\_\+factor)
+\end{DoxyCompactItemize}

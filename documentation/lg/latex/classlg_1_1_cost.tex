@@ -1,0 +1,163 @@
+\hypertarget{classlg_1_1_cost}{}\doxysection{lg\+::Cost Class Reference}
+\label{classlg_1_1_cost}\index{lg::Cost@{lg::Cost}}
+
+
+A function that returns a number representing how well the neural network performed to map inputs and outputs.  
+
+
+
+
+{\ttfamily \#include $<$Cost.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{Cost\+Type}} \{ \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76ad913a43ba24d17f8651aae283768dc1b}{Squared\+Error}} = 0, 
+\mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76aaf61b732fa8647c6539737d7cbee84cf}{Cross\+Entropy}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_cost_aa8b2f32ecc5da9a260f634b722d5d57c}{Cost}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlg_1_1_cost_a302089bd460368f2dd588a2e1d0e2f18}{Cost}} (const \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{Cost\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Construct from cost function type ~\newline
+ \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlg_1_1_cost_a12ca6b5b6131831246fc2844113c78bc}{get\+Error}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&prediction, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&target)
+\begin{DoxyCompactList}\small\item\em Calculate errors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlg_1_1_cost_a257ad161b425645f97fb5eb5751e6ea5}{get\+Delta}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&prediction, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&target, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&errors)
+\begin{DoxyCompactList}\small\item\em Calculate deltas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function that returns a number representing how well the neural network performed to map inputs and outputs. 
+
+
+
+Definition at line 28 of file Cost.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}\label{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}} 
+\index{lg::Cost@{lg::Cost}!CostType@{CostType}}
+\index{CostType@{CostType}!lg::Cost@{lg::Cost}}
+\doxysubsubsection{\texorpdfstring{CostType}{CostType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{lg\+::\+Cost\+::\+Cost\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SquaredError@{SquaredError}!lg::Cost@{lg::Cost}}\index{lg::Cost@{lg::Cost}!SquaredError@{SquaredError}}}\mbox{\Hypertarget{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76ad913a43ba24d17f8651aae283768dc1b}\label{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76ad913a43ba24d17f8651aae283768dc1b}} 
+Squared\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CrossEntropy@{CrossEntropy}!lg::Cost@{lg::Cost}}\index{lg::Cost@{lg::Cost}!CrossEntropy@{CrossEntropy}}}\mbox{\Hypertarget{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76aaf61b732fa8647c6539737d7cbee84cf}\label{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76aaf61b732fa8647c6539737d7cbee84cf}} 
+Cross\+Entropy&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Cost.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_cost_aa8b2f32ecc5da9a260f634b722d5d57c}\label{classlg_1_1_cost_aa8b2f32ecc5da9a260f634b722d5d57c}} 
+\index{lg::Cost@{lg::Cost}!Cost@{Cost}}
+\index{Cost@{Cost}!lg::Cost@{lg::Cost}}
+\doxysubsubsection{\texorpdfstring{Cost()}{Cost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Cost\+::\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+Definition at line 21 of file Cost.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_cost_a302089bd460368f2dd588a2e1d0e2f18}\label{classlg_1_1_cost_a302089bd460368f2dd588a2e1d0e2f18}} 
+\index{lg::Cost@{lg::Cost}!Cost@{Cost}}
+\index{Cost@{Cost}!lg::Cost@{lg::Cost}}
+\doxysubsubsection{\texorpdfstring{Cost()}{Cost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Cost\+::\+Cost (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{Cost\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Construct from cost function type ~\newline
+ 
+
+
+
+Definition at line 27 of file Cost.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_cost_a257ad161b425645f97fb5eb5751e6ea5}\label{classlg_1_1_cost_a257ad161b425645f97fb5eb5751e6ea5}} 
+\index{lg::Cost@{lg::Cost}!getDelta@{getDelta}}
+\index{getDelta@{getDelta}!lg::Cost@{lg::Cost}}
+\doxysubsubsection{\texorpdfstring{getDelta()}{getDelta()}}
+{\footnotesize\ttfamily void lg\+::\+Cost\+::get\+Delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{prediction,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{target,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{errors }\end{DoxyParamCaption})}
+
+
+
+Calculate deltas. 
+
+
+
+Definition at line 87 of file Cost.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classlg_1_1_cost_a257ad161b425645f97fb5eb5751e6ea5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_cost_a257ad161b425645f97fb5eb5751e6ea5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_cost_a12ca6b5b6131831246fc2844113c78bc}\label{classlg_1_1_cost_a12ca6b5b6131831246fc2844113c78bc}} 
+\index{lg::Cost@{lg::Cost}!getError@{getError}}
+\index{getError@{getError}!lg::Cost@{lg::Cost}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily float lg\+::\+Cost\+::get\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{prediction,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Calculate errors. 
+
+
+
+Definition at line 66 of file Cost.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classlg_1_1_cost_a12ca6b5b6131831246fc2844113c78bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_cost_a12ca6b5b6131831246fc2844113c78bc_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_cost_8hpp}{Cost.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_cost_8cpp}{Cost.\+cpp}}\end{DoxyCompactItemize}

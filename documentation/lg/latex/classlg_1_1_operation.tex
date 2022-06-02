@@ -1,0 +1,453 @@
+\hypertarget{classlg_1_1_operation}{}\doxysection{lg\+::Operation Class Reference}
+\label{classlg_1_1_operation}\index{lg::Operation@{lg::Operation}}
+
+
+{\ttfamily \#include $<$Operation.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Operation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classlg_1_1_operation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Operation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_operation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Type}} \{ \newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabba95372ebaa22af28190b5631ac4f99}{Unknown}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aab3f348e7c2cda9ef0a2954898174d47f}{Variable}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6b78b2e5e1d6bb9ceb2df53fca3d765a}{Linear}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6e3c4a173366187a7b682c427c872836}{Linear\+\_\+\+Freeze}}, 
+\newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa0c92589e337a4a18dfa4fdd11574c5c9}{Sigmoid}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aafdc34df812bca58e27d52c91cf58d493}{Tanh}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa87e93ea55883c410fc82257892ea78ed}{Relu}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaf89a95018af553c2dc9a3dd979d27c8b}{Softmax}}, 
+\newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa718766f2169c9be375d8ca1df808a254}{Recurrent}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae782a7127a1de56bfc2a4e33697db937}{Partial}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6f9ce59fc2a62541a06e841adfd8ff63}{Dropout}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabb062153953fdd9ec622cf91c6d82965}{Convolution}}, 
+\newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6ced42370219cffa18db29b4b1d035a5}{Normalization}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaef67aff81934e9cca6d4c84a3348043a}{Addition}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa77ca2306fe6228e72381531cb6f35b25}{Concatenate}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa2a84b38d9c64d804783a03e1ec2622e3}{Maxpooling}}, 
+\newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae09824724b224b544c0d9bb748d32f30}{Averagepooling}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa44ff55147aa0caf7ac02d09e243d3339}{Selu}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaadb429fb2b2b5cc88dbedc973767d705}{Autoencoder}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6da34efc58f111a46a6acab60a4f7c95}{Residual\+Block}}, 
+\newline
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae348e2c7e12071aa00ca32440d7a1cb2}{Capsules\+Dense}}, 
+\mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa9e2d3dab712d48dd7f127625cd32120e}{Types\+\_\+\+Count}}
+ \}
+\begin{DoxyCompactList}\small\item\em O\+P\+E\+R\+A\+T\+I\+O\+NS T\+Y\+P\+ES A\+V\+A\+I\+L\+A\+B\+LE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlg_1_1_operation_a52e9fb995271632ca168b55c7ac185da}{$\sim$\+Operation}} ()
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{update\+\_\+parameters}} (const float learningrate)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{print}} ()
+\item 
+virtual const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Type}} \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{get\+\_\+type}} () const
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{reset\+\_\+deltas}} (const double momentum)
+\item 
+virtual void \mbox{\hyperlink{classlg_1_1_operation_a6674d6949aa2a3574e2f6a89abeae566}{reset\+\_\+errors}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_operation_a71ed198d3dbf178f37d7abf4bab23c60}{load\+From\+File}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+static void \mbox{\hyperlink{classlg_1_1_operation_a21de7fff525603c94762fbcd9d95b0f7}{save\+To\+File}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \&operation, \mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classlg_1_1_operation_a157d0cb655e1cbb29c5d03f86bff5fd7}{\+\_\+size}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_operation_a30a8544b0be669ab0a57879d5fe0ad74}{\+\_\+outputs}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_operation_ac549ecce07bb6e1c0f54d42a72c81691}{\+\_\+errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 28 of file Operation.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}} 
+\index{lg::Operation@{lg::Operation}!Type@{Type}}
+\index{Type@{Type}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{lg\+::\+Operation\+::\+Type}}}
+
+
+
+O\+P\+E\+R\+A\+T\+I\+O\+NS T\+Y\+P\+ES A\+V\+A\+I\+L\+A\+B\+LE. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Unknown@{Unknown}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabba95372ebaa22af28190b5631ac4f99}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabba95372ebaa22af28190b5631ac4f99}} 
+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Variable@{Variable}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Variable@{Variable}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aab3f348e7c2cda9ef0a2954898174d47f}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aab3f348e7c2cda9ef0a2954898174d47f}} 
+Variable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear@{Linear}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Linear@{Linear}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6b78b2e5e1d6bb9ceb2df53fca3d765a}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6b78b2e5e1d6bb9ceb2df53fca3d765a}} 
+Linear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear\_Freeze@{Linear\_Freeze}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Linear\_Freeze@{Linear\_Freeze}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6e3c4a173366187a7b682c427c872836}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6e3c4a173366187a7b682c427c872836}} 
+Linear\+\_\+\+Freeze&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sigmoid@{Sigmoid}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Sigmoid@{Sigmoid}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa0c92589e337a4a18dfa4fdd11574c5c9}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa0c92589e337a4a18dfa4fdd11574c5c9}} 
+Sigmoid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tanh@{Tanh}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Tanh@{Tanh}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aafdc34df812bca58e27d52c91cf58d493}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aafdc34df812bca58e27d52c91cf58d493}} 
+Tanh&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Relu@{Relu}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Relu@{Relu}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa87e93ea55883c410fc82257892ea78ed}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa87e93ea55883c410fc82257892ea78ed}} 
+Relu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Softmax@{Softmax}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Softmax@{Softmax}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaf89a95018af553c2dc9a3dd979d27c8b}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaf89a95018af553c2dc9a3dd979d27c8b}} 
+Softmax&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Recurrent@{Recurrent}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Recurrent@{Recurrent}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa718766f2169c9be375d8ca1df808a254}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa718766f2169c9be375d8ca1df808a254}} 
+Recurrent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Partial@{Partial}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Partial@{Partial}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae782a7127a1de56bfc2a4e33697db937}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae782a7127a1de56bfc2a4e33697db937}} 
+Partial&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dropout@{Dropout}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Dropout@{Dropout}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6f9ce59fc2a62541a06e841adfd8ff63}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6f9ce59fc2a62541a06e841adfd8ff63}} 
+Dropout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Convolution@{Convolution}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Convolution@{Convolution}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabb062153953fdd9ec622cf91c6d82965}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aabb062153953fdd9ec622cf91c6d82965}} 
+Convolution&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normalization@{Normalization}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Normalization@{Normalization}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6ced42370219cffa18db29b4b1d035a5}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6ced42370219cffa18db29b4b1d035a5}} 
+Normalization&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Addition@{Addition}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Addition@{Addition}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaef67aff81934e9cca6d4c84a3348043a}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaef67aff81934e9cca6d4c84a3348043a}} 
+Addition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Concatenate@{Concatenate}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Concatenate@{Concatenate}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa77ca2306fe6228e72381531cb6f35b25}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa77ca2306fe6228e72381531cb6f35b25}} 
+Concatenate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Maxpooling@{Maxpooling}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Maxpooling@{Maxpooling}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa2a84b38d9c64d804783a03e1ec2622e3}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa2a84b38d9c64d804783a03e1ec2622e3}} 
+Maxpooling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Averagepooling@{Averagepooling}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Averagepooling@{Averagepooling}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae09824724b224b544c0d9bb748d32f30}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae09824724b224b544c0d9bb748d32f30}} 
+Averagepooling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Selu@{Selu}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Selu@{Selu}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa44ff55147aa0caf7ac02d09e243d3339}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa44ff55147aa0caf7ac02d09e243d3339}} 
+Selu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Autoencoder@{Autoencoder}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Autoencoder@{Autoencoder}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaadb429fb2b2b5cc88dbedc973767d705}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aaadb429fb2b2b5cc88dbedc973767d705}} 
+Autoencoder&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ResidualBlock@{ResidualBlock}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!ResidualBlock@{ResidualBlock}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6da34efc58f111a46a6acab60a4f7c95}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa6da34efc58f111a46a6acab60a4f7c95}} 
+Residual\+Block&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CapsulesDense@{CapsulesDense}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!CapsulesDense@{CapsulesDense}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae348e2c7e12071aa00ca32440d7a1cb2}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aae348e2c7e12071aa00ca32440d7a1cb2}} 
+Capsules\+Dense&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Types\_Count@{Types\_Count}!lg::Operation@{lg::Operation}}\index{lg::Operation@{lg::Operation}!Types\_Count@{Types\_Count}}}\mbox{\Hypertarget{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa9e2d3dab712d48dd7f127625cd32120e}\label{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4aa9e2d3dab712d48dd7f127625cd32120e}} 
+Types\+\_\+\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file Operation.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_operation_a52e9fb995271632ca168b55c7ac185da}\label{classlg_1_1_operation_a52e9fb995271632ca168b55c7ac185da}} 
+\index{lg::Operation@{lg::Operation}!````~Operation@{$\sim$Operation}}
+\index{````~Operation@{$\sim$Operation}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Operation()}{~Operation()}}
+{\footnotesize\ttfamily lg\+::\+Operation\+::$\sim$\+Operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 37 of file Operation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}\label{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}} 
+\index{lg::Operation@{lg::Operation}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_aed2303370d85036c5ed6c211660d8fe0}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_afa8cf9be895f5052920a193b50f71146}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_a09ed2da3cf90d954aacccdc6054d02dc}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_ab55710a8cd58d10f78fbd5a3005cebb7}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_a2fc7a26b334226ea2660d658046551af}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_ab7f6b6d44bc26db7c72bb96615b297cb}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_recurrent_ad0442b9f08c3e812b880742687d0b3cc}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_normalization_ae55679ba3619c8f2ca46b39959280fd7}{lg\+::\+Normalization}}, and \mbox{\hyperlink{classlg_1_1_partial_a8b6501bbf6fc2887d2e034d978c04221}{lg\+::\+Partial}}.
+
+
+
+Definition at line 52 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}\label{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}} 
+\index{lg::Operation@{lg::Operation}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_a18b0bdfe375c1fdc2256312ca989ec2a}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_ad3826cd6d8e6dfd83de8e4e00abee20e}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_ad2c3ed9fcb5411bc94a6e384e2557776}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_a19988177360ec80445f610c28fa035aa}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_a75c71cfb2ed4cc62330940f9f7a8a615}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_a821124b6824a6a5ea24d2348d33bbc49}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_recurrent_a378fc8061366973c063cc1090e42a11c}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_addition_aea70e7581853d8dd20ce17236af9ace3}{lg\+::\+Addition}}, \mbox{\hyperlink{classlg_1_1_averagepooling_a436556d0dde713aba93478f5e6417777}{lg\+::\+Averagepooling}}, \mbox{\hyperlink{classlg_1_1_concatenate_aa8c2acec1eecc412e5b3b597e6182d96}{lg\+::\+Concatenate}}, \mbox{\hyperlink{classlg_1_1_dropout_afc64f0408d900dd98b84bdece5b69189}{lg\+::\+Dropout}}, \mbox{\hyperlink{classlg_1_1_maxpooling_a80d99d2e1b918671955f7c206aeab6f7}{lg\+::\+Maxpooling}}, \mbox{\hyperlink{classlg_1_1_normalization_abdfe9c3eff8afe5ce08e4d0ddfbd7dfc}{lg\+::\+Normalization}}, \mbox{\hyperlink{classlg_1_1_relu_ae21d5ae98aaaa1f2e6461adb30837acd}{lg\+::\+Relu}}, \mbox{\hyperlink{classlg_1_1_selu_ad587b4dfcda466abd74404fed23306df}{lg\+::\+Selu}}, \mbox{\hyperlink{classlg_1_1_sigmoid_a2e04afa8ae204852c202f875ed4df806}{lg\+::\+Sigmoid}}, \mbox{\hyperlink{classlg_1_1_softmax_adf6400eada30e83c8bf4200f81fc77a5}{lg\+::\+Softmax}}, \mbox{\hyperlink{classlg_1_1_tanh_af1b06a6636b7b64cf5fedef4c3380408}{lg\+::\+Tanh}}, and \mbox{\hyperlink{classlg_1_1_partial_a1a96aaf702178f7cf0c78503519caf42}{lg\+::\+Partial}}.
+
+
+
+Definition at line 49 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}\label{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}} 
+\index{lg::Operation@{lg::Operation}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Operation\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_aecc73292d3825607de9c90cc7b4ed464}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_afc2739654747436993dbf9dc6ab04a70}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_a076aba23123916682c7fa5d673068970}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_a35449d349754344ee73c9e989fb4e373}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_ae501c933b07b07ba4bc9370a913627f2}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_aaed0e9595e539041245c4d856f853389}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_partial_a4c67ba2a2951a5598873d99d900eeaf8}{lg\+::\+Partial}}, \mbox{\hyperlink{classlg_1_1_recurrent_a02bc18b10a07a0258515a8520c5dd9ec}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_normalization_a7f9b643f135efb640a0241d1db02fcb7}{lg\+::\+Normalization}}, \mbox{\hyperlink{classlg_1_1_averagepooling_af7aa3ae2cb3249b8067089bd5281f82a}{lg\+::\+Averagepooling}}, \mbox{\hyperlink{classlg_1_1_maxpooling_a3ef9fe01c02e70dc47e6f2c09b16e057}{lg\+::\+Maxpooling}}, \mbox{\hyperlink{classlg_1_1_addition_afccc885ed04f2292d2067dcb3b3f38f4}{lg\+::\+Addition}}, \mbox{\hyperlink{classlg_1_1_concatenate_a6ac1c267031ae041dd8a42e882a8e094}{lg\+::\+Concatenate}}, \mbox{\hyperlink{classlg_1_1_dropout_a024c7eac0a1db25a20d72aab91eaa5a9}{lg\+::\+Dropout}}, \mbox{\hyperlink{classlg_1_1_relu_ada941113b0002138e0d4cd787f8fc7c3}{lg\+::\+Relu}}, \mbox{\hyperlink{classlg_1_1_selu_ad02079cd56babd57ba71565b49f18f89}{lg\+::\+Selu}}, \mbox{\hyperlink{classlg_1_1_sigmoid_ab39bf03ad512231db092e102f1b75b72}{lg\+::\+Sigmoid}}, \mbox{\hyperlink{classlg_1_1_softmax_a75ecaf0113ef5de97106e580849ef1cc}{lg\+::\+Softmax}}, \mbox{\hyperlink{classlg_1_1_tanh_a61d260b8cc2bfb7fd2c270c1f9ece749}{lg\+::\+Tanh}}, and \mbox{\hyperlink{classlg_1_1_variable_ae32d08edd9e553f020040c9565800eb4}{lg\+::\+Variable}}.
+
+
+
+Definition at line 85 of file Operation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}\label{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}} 
+\index{lg::Operation@{lg::Operation}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_aa2fa04f31ef31ddac20a7f6ebb9b6fce}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_addition_a12db4b9117c75c4856aaa8506f2358f0}{lg\+::\+Addition}}, \mbox{\hyperlink{classlg_1_1_dropout_a5bd640014d1bbdc50ef90d6158593382}{lg\+::\+Dropout}}, \mbox{\hyperlink{classlg_1_1_normalization_a0faef5d0f6993f952f73b649c67cbedd}{lg\+::\+Normalization}}, \mbox{\hyperlink{classlg_1_1_sigmoid_abc5b5b5f67fbb9f0311aea64b82a2b69}{lg\+::\+Sigmoid}}, \mbox{\hyperlink{classlg_1_1_autoencoder_ae0e7cebc92a7a59e9f2a183c716202d1}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_averagepooling_a2114a3dcfb47cefd9c469dd08636627b}{lg\+::\+Averagepooling}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_aa0627e98e668e94de93712c14c338c1a}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_concatenate_a3c556d06e8c41482c8b8e595d2beb87b}{lg\+::\+Concatenate}}, \mbox{\hyperlink{classlg_1_1_linear_ac9947585b1d3addecd3dd5e6a3efa11a}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_maxpooling_a32c8840fd612994c66517f7fa22293b9}{lg\+::\+Maxpooling}}, \mbox{\hyperlink{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_relu_a7a75798f7e090f126ed7a3a778a69412}{lg\+::\+Relu}}, \mbox{\hyperlink{classlg_1_1_selu_a2206740fb3a6cc086816e3db01840c93}{lg\+::\+Selu}}, \mbox{\hyperlink{classlg_1_1_softmax_ac8f073aecaaf760641a6afaa603bd3e6}{lg\+::\+Softmax}}, \mbox{\hyperlink{classlg_1_1_tanh_ad5bd4df134cde159eabfde078f710963}{lg\+::\+Tanh}}, and \mbox{\hyperlink{classlg_1_1_partial_a15448479baf4f8aec032a54887ae2526}{lg\+::\+Partial}}.
+
+
+
+Definition at line 40 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_a71ed198d3dbf178f37d7abf4bab23c60}\label{classlg_1_1_operation_a71ed198d3dbf178f37d7abf4bab23c60}} 
+\index{lg::Operation@{lg::Operation}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Operation\+::load\+From\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 88 of file Operation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_operation_a71ed198d3dbf178f37d7abf4bab23c60_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}\label{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}} 
+\index{lg::Operation@{lg::Operation}!print@{print}}
+\index{print@{print}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_a9cecd4ed3b567666d6c732f205ff509b}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_ae25109746cc8755fde5543fe9e1bb966}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_a82f5f761e2eac2478593841be191bb40}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_aaede9b37efead6dc8a88740bc81236ab}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_ae090c8f4a509f0b5a5b83369d418efa8}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_afba43d99b7e0d735063286be5a4fd984}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_partial_a8ca833409b1f4a95fcc39ef32c567f4e}{lg\+::\+Partial}}, \mbox{\hyperlink{classlg_1_1_recurrent_aba461d1d36fe5388715288957fe0389c}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_normalization_a6ee3658de4e0edc7e4bc4487f3be2814}{lg\+::\+Normalization}}, \mbox{\hyperlink{classlg_1_1_addition_a28902a4ad67a81dce349af259879b9bc}{lg\+::\+Addition}}, \mbox{\hyperlink{classlg_1_1_concatenate_ae89a5856d44bc5bb1abf59f393fd7233}{lg\+::\+Concatenate}}, \mbox{\hyperlink{classlg_1_1_dropout_a5bf418b960c14966eb7920b64066c6bc}{lg\+::\+Dropout}}, \mbox{\hyperlink{classlg_1_1_relu_ae9d6fe56c2d4ed3f47535ec1ee886c32}{lg\+::\+Relu}}, \mbox{\hyperlink{classlg_1_1_selu_ab9e1d8cc4efb68de7a7e2676f3e993c6}{lg\+::\+Selu}}, \mbox{\hyperlink{classlg_1_1_sigmoid_a4f57732759edc05f28f641ee9dbc4355}{lg\+::\+Sigmoid}}, \mbox{\hyperlink{classlg_1_1_softmax_aaaa6855e7d06266d85a658f0e035dc66}{lg\+::\+Softmax}}, \mbox{\hyperlink{classlg_1_1_tanh_a4b879a85672cb5b9e1b170af04d79825}{lg\+::\+Tanh}}, \mbox{\hyperlink{classlg_1_1_averagepooling_a1b4c55cce46ca20ec7a1d305058061df}{lg\+::\+Averagepooling}}, \mbox{\hyperlink{classlg_1_1_maxpooling_a9bdb8af156130cee99d826639dc3d53a}{lg\+::\+Maxpooling}}, and \mbox{\hyperlink{classlg_1_1_variable_aacac0bb127db932620c6b7efcdea51b1}{lg\+::\+Variable}}.
+
+
+
+Definition at line 58 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_abff158925bd2477aadff748634e27705}\label{classlg_1_1_operation_abff158925bd2477aadff748634e27705}} 
+\index{lg::Operation@{lg::Operation}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_a2bc2a56e96c9a09e3a0c465f3e360389}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_aebf022c462dff4a503c39f5e5f454e29}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_a0605ad7c0832e5f332901ce84e2594de}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_a63bc9177e0ad28a11c1d91ba05562a39}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853}{lg\+::\+Linear\+\_\+\+Freeze}}, and \mbox{\hyperlink{classlg_1_1_partial_afa8eaf8f3b42e2ae5204f8032190b6ee}{lg\+::\+Partial}}.
+
+
+
+Definition at line 72 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_a6674d6949aa2a3574e2f6a89abeae566}\label{classlg_1_1_operation_a6674d6949aa2a3574e2f6a89abeae566}} 
+\index{lg::Operation@{lg::Operation}!reset\_errors@{reset\_errors}}
+\index{reset\_errors@{reset\_errors}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{reset\_errors()}{reset\_errors()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::reset\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_residual_block_aeafb12ff4a771ff78db79931898169ff}{lg\+::\+Residual\+Block}}.
+
+
+
+Definition at line 61 of file Operation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_operation_a6674d6949aa2a3574e2f6a89abeae566_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}\label{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}} 
+\index{lg::Operation@{lg::Operation}!run@{run}}
+\index{run@{run}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_a68bc51ace4ba653af2e6b0fc632657ed}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_ac390a1d8e495bf5b2c7d62fe129dd362}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_a9611cb6ab80a0ae4487a75c3adb6149b}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_a4242320d2713923922b9fb5b61d66cf0}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_a5c03565a2c002b409138891c1c42c27f}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_a7fc832dc881a72ef3a7c8e9e6d08dfd7}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_recurrent_a77f9e39326bb7228831c4da1a28133e8}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_addition_a17895c85c6d8979956e09e9afe1b2f0a}{lg\+::\+Addition}}, \mbox{\hyperlink{classlg_1_1_averagepooling_a43fd40cc610f6622e145b176763fe81f}{lg\+::\+Averagepooling}}, \mbox{\hyperlink{classlg_1_1_concatenate_a370771a0a98a5c7e7b255e0377ff3441}{lg\+::\+Concatenate}}, \mbox{\hyperlink{classlg_1_1_dropout_a3e95b045af5c23ca8df473c02a95ff8f}{lg\+::\+Dropout}}, \mbox{\hyperlink{classlg_1_1_maxpooling_a5088463f5aadc2b187282be731cf827a}{lg\+::\+Maxpooling}}, \mbox{\hyperlink{classlg_1_1_normalization_ab20d6028a029ed6fb8df84c3b2f6113a}{lg\+::\+Normalization}}, \mbox{\hyperlink{classlg_1_1_relu_ab412bd5b8c24fbc9123200d9b5820a3a}{lg\+::\+Relu}}, \mbox{\hyperlink{classlg_1_1_selu_a6712f70c0f412bb18a57e7f972cadeda}{lg\+::\+Selu}}, \mbox{\hyperlink{classlg_1_1_sigmoid_a99fc959ece1b371206932b8227bf9362}{lg\+::\+Sigmoid}}, \mbox{\hyperlink{classlg_1_1_softmax_a64dbb733be3d8750d26e45b0786d0c8c}{lg\+::\+Softmax}}, \mbox{\hyperlink{classlg_1_1_tanh_a4af98d34d669661e40841981d573cfe4}{lg\+::\+Tanh}}, and \mbox{\hyperlink{classlg_1_1_partial_a31e1ab68249c4631b757a32e4b4eafd7}{lg\+::\+Partial}}.
+
+
+
+Definition at line 46 of file Operation.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_a21de7fff525603c94762fbcd9d95b0f7}\label{classlg_1_1_operation_a21de7fff525603c94762fbcd9d95b0f7}} 
+\index{lg::Operation@{lg::Operation}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::save\+To\+File (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \&}]{operation,  }\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 122 of file Operation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_operation_a21de7fff525603c94762fbcd9d95b0f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_operation_a21de7fff525603c94762fbcd9d95b0f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}\label{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}} 
+\index{lg::Operation@{lg::Operation}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Operation\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlg_1_1_convolution_a0afad47dcce8f7777d619d0ebb40422c}{lg\+::\+Convolution}}, \mbox{\hyperlink{classlg_1_1_residual_block_a1359fb0e644baa510b6e356ca580916f}{lg\+::\+Residual\+Block}}, \mbox{\hyperlink{classlg_1_1_autoencoder_aa42992aa2b0eaefd7897b056a7038a94}{lg\+::\+Autoencoder}}, \mbox{\hyperlink{classlg_1_1_capsules_dense_aa4107ae1bcb242322099684f88a6300a}{lg\+::\+Capsules\+Dense}}, \mbox{\hyperlink{classlg_1_1_linear_a0e09367b4369ac891913dedc3e57e8ea}{lg\+::\+Linear}}, \mbox{\hyperlink{classlg_1_1_linear___freeze_a47b69616ea4191ad3d2e72d3b750b6fc}{lg\+::\+Linear\+\_\+\+Freeze}}, \mbox{\hyperlink{classlg_1_1_recurrent_ac9fcbf86968ea472be4215a88bd40171}{lg\+::\+Recurrent}}, \mbox{\hyperlink{classlg_1_1_normalization_a71821a6319720e4a76b3a0aa96331c72}{lg\+::\+Normalization}}, and \mbox{\hyperlink{classlg_1_1_partial_a9bde00c7063092aa762c8af65b25224c}{lg\+::\+Partial}}.
+
+
+
+Definition at line 55 of file Operation.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_operation_ac549ecce07bb6e1c0f54d42a72c81691}\label{classlg_1_1_operation_ac549ecce07bb6e1c0f54d42a72c81691}} 
+\index{lg::Operation@{lg::Operation}!\_errors@{\_errors}}
+\index{\_errors@{\_errors}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{\_errors}{\_errors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Operation\+::\+\_\+errors}
+
+
+
+Definition at line 81 of file Operation.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_a30a8544b0be669ab0a57879d5fe0ad74}\label{classlg_1_1_operation_a30a8544b0be669ab0a57879d5fe0ad74}} 
+\index{lg::Operation@{lg::Operation}!\_outputs@{\_outputs}}
+\index{\_outputs@{\_outputs}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{\_outputs}{\_outputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Operation\+::\+\_\+outputs}
+
+
+
+Definition at line 80 of file Operation.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_operation_a157d0cb655e1cbb29c5d03f86bff5fd7}\label{classlg_1_1_operation_a157d0cb655e1cbb29c5d03f86bff5fd7}} 
+\index{lg::Operation@{lg::Operation}!\_size@{\_size}}
+\index{\_size@{\_size}!lg::Operation@{lg::Operation}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily int lg\+::\+Operation\+::\+\_\+size}
+
+
+
+Definition at line 75 of file Operation.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_operation_8hpp}{Operation.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_operation_8cpp}{Operation.\+cpp}}\end{DoxyCompactItemize}

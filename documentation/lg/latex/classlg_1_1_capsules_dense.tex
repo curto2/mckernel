@@ -1,0 +1,546 @@
+\hypertarget{classlg_1_1_capsules_dense}{}\doxysection{lg\+::Capsules\+Dense Class Reference}
+\label{classlg_1_1_capsules_dense}\index{lg::CapsulesDense@{lg::CapsulesDense}}
+
+
+{\ttfamily \#include $<$Capsules\+Dense.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Capsules\+Dense\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_capsules_dense__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Capsules\+Dense\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classlg_1_1_capsules_dense__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_capsules_dense_ade0e0bac8c4b0b674eeed093baf7a3cc}{Capsules\+Dense}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_capsules_dense_a4685fe35fd64d6ca62753299966d7022}{Capsules\+Dense}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+\mbox{\hyperlink{classlg_1_1_capsules_dense_a7b71c00e928c2e6e4fab1b162eeb55b1}{Capsules\+Dense}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_aa0627e98e668e94de93712c14c338c1a}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a45529b7a7001a217f265324ed6ff547b}{initialize}} (int input\+\_\+size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a61b473c0f23efda05926f8c40eb6aaa3}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a4242320d2713923922b9fb5b61d66cf0}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a19988177360ec80445f610c28fa035aa}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_ab55710a8cd58d10f78fbd5a3005cebb7}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_aa4107ae1bcb242322099684f88a6300a}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a0605ad7c0832e5f332901ce84e2594de}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a4fb2d373ab44dd9fed7e45a64d5cde0c}{reset\+\_\+outputs}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_acdbfc96fb84021ea4baf8b69d0f817f3}{set\+Fixed\+Parameters}} (const bool fixedparameters)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_capsules_dense_a35449d349754344ee73c9e989fb4e373}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_aaede9b37efead6dc8a88740bc81236ab}{print}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a413ff27449f441720b0e52374477d65b}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, bool accumulate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_a12d43c80744be5c4ee0f0ec11079a1b7}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_capsules_dense_ad3c31aadc2cd694c314115c8411b76cd}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_capsules_dense_a7b4d57cd2a9bdc0ebd8b9f006ce07aa9}{make}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+static void \mbox{\hyperlink{classlg_1_1_capsules_dense_a04dafa1344b13d6afa5738bd5dfe433f}{gradient\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_capsules_dense_a9211a0e53a9256dac4272de1edef9d54}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_capsules_dense_a3bdaba938ea9a409f7225885271b78c2}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_capsules_dense_a7b162386e74d51e54a6bd3e285d61fd7}{\+\_\+deltas}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_capsules_dense_a87db10d96a75d429804bce95791dc287}{\+\_\+fixed\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_capsules_dense_a9bff145ce5ec7d4f99e057e71a803e50}{\+\_\+input\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_capsules_dense_a146b48cb06c888592e8e5b817101eccb}{\+\_\+use\+\_\+bias}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_capsules_dense_a87a1db6b500259d5350eb4835e6c86ff}{\+\_\+gradient\+\_\+clipping}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_capsules_dense_ae176f578e83e9f4b4804f6bd702207d2}{\+\_\+l1\+\_\+regularization}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_capsules_dense_a397742bc12cb2ee3725c63162528aa3a}{\+\_\+l2\+\_\+regularization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Capsules\+Dense.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_ade0e0bac8c4b0b674eeed093baf7a3cc}\label{classlg_1_1_capsules_dense_ade0e0bac8c4b0b674eeed093baf7a3cc}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!CapsulesDense@{CapsulesDense}}
+\index{CapsulesDense@{CapsulesDense}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{CapsulesDense()}{CapsulesDense()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::\+Capsules\+Dense\+::\+Capsules\+Dense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Capsules\+Dense.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_ade0e0bac8c4b0b674eeed093baf7a3cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a4685fe35fd64d6ca62753299966d7022}\label{classlg_1_1_capsules_dense_a4685fe35fd64d6ca62753299966d7022}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!CapsulesDense@{CapsulesDense}}
+\index{CapsulesDense@{CapsulesDense}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{CapsulesDense()}{CapsulesDense()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::\+Capsules\+Dense\+::\+Capsules\+Dense (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classlg_1_1_capsules_dense_a4685fe35fd64d6ca62753299966d7022_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a7b71c00e928c2e6e4fab1b162eeb55b1}\label{classlg_1_1_capsules_dense_a7b71c00e928c2e6e4fab1b162eeb55b1}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!CapsulesDense@{CapsulesDense}}
+\index{CapsulesDense@{CapsulesDense}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{CapsulesDense()}{CapsulesDense()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::\+Capsules\+Dense\+::\+Capsules\+Dense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_a7b71c00e928c2e6e4fab1b162eeb55b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_ad3c31aadc2cd694c314115c8411b76cd}\label{classlg_1_1_capsules_dense_ad3c31aadc2cd694c314115c8411b76cd}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 291 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classlg_1_1_capsules_dense_ad3c31aadc2cd694c314115c8411b76cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_ab55710a8cd58d10f78fbd5a3005cebb7}\label{classlg_1_1_capsules_dense_ab55710a8cd58d10f78fbd5a3005cebb7}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 144 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a19988177360ec80445f610c28fa035aa}\label{classlg_1_1_capsules_dense_a19988177360ec80445f610c28fa035aa}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 138 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a12d43c80744be5c4ee0f0ec11079a1b7}\label{classlg_1_1_capsules_dense_a12d43c80744be5c4ee0f0ec11079a1b7}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 271 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classlg_1_1_capsules_dense_a12d43c80744be5c4ee0f0ec11079a1b7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a35449d349754344ee73c9e989fb4e373}\label{classlg_1_1_capsules_dense_a35449d349754344ee73c9e989fb4e373}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Capsules\+Dense\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 320 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a04dafa1344b13d6afa5738bd5dfe433f}\label{classlg_1_1_capsules_dense_a04dafa1344b13d6afa5738bd5dfe433f}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!gradient\_check@{gradient\_check}}
+\index{gradient\_check@{gradient\_check}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{gradient\_check()}{gradient\_check()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::gradient\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 313 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a45529b7a7001a217f265324ed6ff547b}\label{classlg_1_1_capsules_dense_a45529b7a7001a217f265324ed6ff547b}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::initialize (\begin{DoxyParamCaption}\item[{int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classlg_1_1_capsules_dense_a45529b7a7001a217f265324ed6ff547b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_aa0627e98e668e94de93712c14c338c1a}\label{classlg_1_1_capsules_dense_aa0627e98e668e94de93712c14c338c1a}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 100 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classlg_1_1_capsules_dense_aa0627e98e668e94de93712c14c338c1a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a7b4d57cd2a9bdc0ebd8b9f006ce07aa9}\label{classlg_1_1_capsules_dense_a7b4d57cd2a9bdc0ebd8b9f006ce07aa9}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!make@{make}}
+\index{make@{make}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Capsules\+Dense\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_a7b4d57cd2a9bdc0ebd8b9f006ce07aa9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_aaede9b37efead6dc8a88740bc81236ab}\label{classlg_1_1_capsules_dense_aaede9b37efead6dc8a88740bc81236ab}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!print@{print}}
+\index{print@{print}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 326 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a0605ad7c0832e5f332901ce84e2594de}\label{classlg_1_1_capsules_dense_a0605ad7c0832e5f332901ce84e2594de}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 194 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_a0605ad7c0832e5f332901ce84e2594de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a4fb2d373ab44dd9fed7e45a64d5cde0c}\label{classlg_1_1_capsules_dense_a4fb2d373ab44dd9fed7e45a64d5cde0c}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!reset\_outputs@{reset\_outputs}}
+\index{reset\_outputs@{reset\_outputs}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{reset\_outputs()}{reset\_outputs()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::reset\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classlg_1_1_capsules_dense_a4fb2d373ab44dd9fed7e45a64d5cde0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a413ff27449f441720b0e52374477d65b}\label{classlg_1_1_capsules_dense_a413ff27449f441720b0e52374477d65b}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!run@{run}}
+\index{run@{run}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{bool}]{accumulate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 234 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classlg_1_1_capsules_dense_a413ff27449f441720b0e52374477d65b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a4242320d2713923922b9fb5b61d66cf0}\label{classlg_1_1_capsules_dense_a4242320d2713923922b9fb5b61d66cf0}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!run@{run}}
+\index{run@{run}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 132 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a61b473c0f23efda05926f8c40eb6aaa3}\label{classlg_1_1_capsules_dense_a61b473c0f23efda05926f8c40eb6aaa3}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!save@{save}}
+\index{save@{save}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_a61b473c0f23efda05926f8c40eb6aaa3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_acdbfc96fb84021ea4baf8b69d0f817f3}\label{classlg_1_1_capsules_dense_acdbfc96fb84021ea4baf8b69d0f817f3}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!setFixedParameters@{setFixedParameters}}
+\index{setFixedParameters@{setFixedParameters}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{setFixedParameters()}{setFixedParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::set\+Fixed\+Parameters (\begin{DoxyParamCaption}\item[{const bool}]{fixedparameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 285 of file Capsules\+Dense.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_aa4107ae1bcb242322099684f88a6300a}\label{classlg_1_1_capsules_dense_aa4107ae1bcb242322099684f88a6300a}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Capsules\+Dense\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 150 of file Capsules\+Dense.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_capsules_dense_aa4107ae1bcb242322099684f88a6300a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a3bdaba938ea9a409f7225885271b78c2}\label{classlg_1_1_capsules_dense_a3bdaba938ea9a409f7225885271b78c2}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Capsules\+Dense\+::\+\_\+bias}
+
+
+
+Definition at line 63 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a7b162386e74d51e54a6bd3e285d61fd7}\label{classlg_1_1_capsules_dense_a7b162386e74d51e54a6bd3e285d61fd7}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_deltas@{\_deltas}}
+\index{\_deltas@{\_deltas}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_deltas}{\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Capsules\+Dense\+::\+\_\+deltas}
+
+
+
+Definition at line 64 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a87db10d96a75d429804bce95791dc287}\label{classlg_1_1_capsules_dense_a87db10d96a75d429804bce95791dc287}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_fixed\_parameters@{\_fixed\_parameters}}
+\index{\_fixed\_parameters@{\_fixed\_parameters}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_parameters}{\_fixed\_parameters}}
+{\footnotesize\ttfamily bool lg\+::\+Capsules\+Dense\+::\+\_\+fixed\+\_\+parameters}
+
+
+
+Definition at line 68 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a87a1db6b500259d5350eb4835e6c86ff}\label{classlg_1_1_capsules_dense_a87a1db6b500259d5350eb4835e6c86ff}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_gradient\_clipping@{\_gradient\_clipping}}
+\index{\_gradient\_clipping@{\_gradient\_clipping}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_gradient\_clipping}{\_gradient\_clipping}}
+{\footnotesize\ttfamily float lg\+::\+Capsules\+Dense\+::\+\_\+gradient\+\_\+clipping}
+
+
+
+Definition at line 71 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a9bff145ce5ec7d4f99e057e71a803e50}\label{classlg_1_1_capsules_dense_a9bff145ce5ec7d4f99e057e71a803e50}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Capsules\+Dense\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 69 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_ae176f578e83e9f4b4804f6bd702207d2}\label{classlg_1_1_capsules_dense_ae176f578e83e9f4b4804f6bd702207d2}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_l1\_regularization@{\_l1\_regularization}}
+\index{\_l1\_regularization@{\_l1\_regularization}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_l1\_regularization}{\_l1\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Capsules\+Dense\+::\+\_\+l1\+\_\+regularization}
+
+
+
+Definition at line 72 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a397742bc12cb2ee3725c63162528aa3a}\label{classlg_1_1_capsules_dense_a397742bc12cb2ee3725c63162528aa3a}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_l2\_regularization@{\_l2\_regularization}}
+\index{\_l2\_regularization@{\_l2\_regularization}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_l2\_regularization}{\_l2\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Capsules\+Dense\+::\+\_\+l2\+\_\+regularization}
+
+
+
+Definition at line 73 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a146b48cb06c888592e8e5b817101eccb}\label{classlg_1_1_capsules_dense_a146b48cb06c888592e8e5b817101eccb}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_use\_bias@{\_use\_bias}}
+\index{\_use\_bias@{\_use\_bias}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_use\_bias}{\_use\_bias}}
+{\footnotesize\ttfamily bool lg\+::\+Capsules\+Dense\+::\+\_\+use\+\_\+bias}
+
+
+
+Definition at line 70 of file Capsules\+Dense.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_capsules_dense_a9211a0e53a9256dac4272de1edef9d54}\label{classlg_1_1_capsules_dense_a9211a0e53a9256dac4272de1edef9d54}} 
+\index{lg::CapsulesDense@{lg::CapsulesDense}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::CapsulesDense@{lg::CapsulesDense}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Capsules\+Dense\+::\+\_\+weights}
+
+
+
+Definition at line 62 of file Capsules\+Dense.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_capsules_dense_8hpp}{Capsules\+Dense.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_capsules_dense_8cpp}{Capsules\+Dense.\+cpp}}\end{DoxyCompactItemize}

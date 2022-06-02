@@ -1,0 +1,240 @@
+\hypertarget{classlg_1_1_addition}{}\doxysection{lg\+::Addition Class Reference}
+\label{classlg_1_1_addition}\index{lg::Addition@{lg::Addition}}
+
+
+{\ttfamily \#include $<$Addition.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Addition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_addition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Addition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_addition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_addition_a26a8e2d0d893cada5109f6be5ce62054}{Addition}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_addition_a54c13c4c43c348158630b3b0b1d106ef}{Addition}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_addition_a50dfdd5acee5f13f94793d34d1ddb78f}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_addition_a12db4b9117c75c4856aaa8506f2358f0}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_addition_a17895c85c6d8979956e09e9afe1b2f0a}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_addition_aea70e7581853d8dd20ce17236af9ace3}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_addition_afccc885ed04f2292d2067dcb3b3f38f4}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_addition_a28902a4ad67a81dce349af259879b9bc}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_addition_ab2cfdf2d40bdab31e69834d80777f983}{make}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Addition.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_addition_a26a8e2d0d893cada5109f6be5ce62054}\label{classlg_1_1_addition_a26a8e2d0d893cada5109f6be5ce62054}} 
+\index{lg::Addition@{lg::Addition}!Addition@{Addition}}
+\index{Addition@{Addition}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{Addition()}{Addition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Addition\+::\+Addition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Addition.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classlg_1_1_addition_a26a8e2d0d893cada5109f6be5ce62054_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_addition_a54c13c4c43c348158630b3b0b1d106ef}\label{classlg_1_1_addition_a54c13c4c43c348158630b3b0b1d106ef}} 
+\index{lg::Addition@{lg::Addition}!Addition@{Addition}}
+\index{Addition@{Addition}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{Addition()}{Addition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Addition\+::\+Addition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_addition_a54c13c4c43c348158630b3b0b1d106ef_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_addition_aea70e7581853d8dd20ce17236af9ace3}\label{classlg_1_1_addition_aea70e7581853d8dd20ce17236af9ace3}} 
+\index{lg::Addition@{lg::Addition}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Addition\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 111 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_addition_aea70e7581853d8dd20ce17236af9ace3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_addition_afccc885ed04f2292d2067dcb3b3f38f4}\label{classlg_1_1_addition_afccc885ed04f2292d2067dcb3b3f38f4}} 
+\index{lg::Addition@{lg::Addition}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Addition\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 132 of file Addition.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_addition_a12db4b9117c75c4856aaa8506f2358f0}\label{classlg_1_1_addition_a12db4b9117c75c4856aaa8506f2358f0}} 
+\index{lg::Addition@{lg::Addition}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Addition\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 51 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classlg_1_1_addition_a12db4b9117c75c4856aaa8506f2358f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_addition_ab2cfdf2d40bdab31e69834d80777f983}\label{classlg_1_1_addition_ab2cfdf2d40bdab31e69834d80777f983}} 
+\index{lg::Addition@{lg::Addition}!make@{make}}
+\index{make@{make}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Addition\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 21 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classlg_1_1_addition_ab2cfdf2d40bdab31e69834d80777f983_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_addition_a28902a4ad67a81dce349af259879b9bc}\label{classlg_1_1_addition_a28902a4ad67a81dce349af259879b9bc}} 
+\index{lg::Addition@{lg::Addition}!print@{print}}
+\index{print@{print}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Addition\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 138 of file Addition.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_addition_a17895c85c6d8979956e09e9afe1b2f0a}\label{classlg_1_1_addition_a17895c85c6d8979956e09e9afe1b2f0a}} 
+\index{lg::Addition@{lg::Addition}!run@{run}}
+\index{run@{run}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Addition\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 81 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_addition_a17895c85c6d8979956e09e9afe1b2f0a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_addition_a50dfdd5acee5f13f94793d34d1ddb78f}\label{classlg_1_1_addition_a50dfdd5acee5f13f94793d34d1ddb78f}} 
+\index{lg::Addition@{lg::Addition}!save@{save}}
+\index{save@{save}!lg::Addition@{lg::Addition}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Addition\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 72 of file Addition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_addition_a50dfdd5acee5f13f94793d34d1ddb78f_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_addition_8hpp}{Addition.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_addition_8cpp}{Addition.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,300 @@
+\hypertarget{classlg_1_1_tanh}{}\doxysection{lg\+::Tanh Class Reference}
+\label{classlg_1_1_tanh}\index{lg::Tanh@{lg::Tanh}}
+
+
+{\ttfamily \#include $<$Tanh.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Tanh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_tanh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Tanh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_tanh__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_tanh_a1d48eb03ca2b8d2cd39873253cb231c2}{Tanh}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_tanh_abdc96f730df48de150ab5a4eb699cc66}{Tanh}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_tanh_ad5bd4df134cde159eabfde078f710963}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_tanh_a420af6311dfe685f10584b757140b4bb}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_tanh_a4af98d34d669661e40841981d573cfe4}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_tanh_af1b06a6636b7b64cf5fedef4c3380408}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_tanh_a61d260b8cc2bfb7fd2c270c1f9ece749}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_tanh_a4b879a85672cb5b9e1b170af04d79825}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_tanh_a1e7969c58085ea953802bb5fde97bdea}{make}} ()
+\item 
+static void \mbox{\hyperlink{classlg_1_1_tanh_a382d9c894242eb8883542505aab57315}{forward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} output)
+\begin{DoxyCompactList}\small\item\em R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlg_1_1_tanh_ad6d6ecce8f18515f33b9273f8cf96b21}{backward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} errors, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} outputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Tanh.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_tanh_a1d48eb03ca2b8d2cd39873253cb231c2}\label{classlg_1_1_tanh_a1d48eb03ca2b8d2cd39873253cb231c2}} 
+\index{lg::Tanh@{lg::Tanh}!Tanh@{Tanh}}
+\index{Tanh@{Tanh}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{Tanh()}{Tanh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Tanh\+::\+Tanh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Tanh.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classlg_1_1_tanh_a1d48eb03ca2b8d2cd39873253cb231c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_abdc96f730df48de150ab5a4eb699cc66}\label{classlg_1_1_tanh_abdc96f730df48de150ab5a4eb699cc66}} 
+\index{lg::Tanh@{lg::Tanh}!Tanh@{Tanh}}
+\index{Tanh@{Tanh}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{Tanh()}{Tanh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Tanh\+::\+Tanh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_tanh_abdc96f730df48de150ab5a4eb699cc66_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_tanh_af1b06a6636b7b64cf5fedef4c3380408}\label{classlg_1_1_tanh_af1b06a6636b7b64cf5fedef4c3380408}} 
+\index{lg::Tanh@{lg::Tanh}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 107 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_tanh_af1b06a6636b7b64cf5fedef4c3380408_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_ad6d6ecce8f18515f33b9273f8cf96b21}\label{classlg_1_1_tanh_ad6d6ecce8f18515f33b9273f8cf96b21}} 
+\index{lg::Tanh@{lg::Tanh}!backward@{backward}}
+\index{backward@{backward}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::backward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{errors,  }\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{outputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 153 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classlg_1_1_tanh_ad6d6ecce8f18515f33b9273f8cf96b21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_tanh_ad6d6ecce8f18515f33b9273f8cf96b21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_a382d9c894242eb8883542505aab57315}\label{classlg_1_1_tanh_a382d9c894242eb8883542505aab57315}} 
+\index{lg::Tanh@{lg::Tanh}!forward@{forward}}
+\index{forward@{forward}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. 
+
+
+
+Definition at line 145 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classlg_1_1_tanh_a382d9c894242eb8883542505aab57315_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classlg_1_1_tanh_a382d9c894242eb8883542505aab57315_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_a61d260b8cc2bfb7fd2c270c1f9ece749}\label{classlg_1_1_tanh_a61d260b8cc2bfb7fd2c270c1f9ece749}} 
+\index{lg::Tanh@{lg::Tanh}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Tanh\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 127 of file Tanh.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_tanh_ad5bd4df134cde159eabfde078f710963}\label{classlg_1_1_tanh_ad5bd4df134cde159eabfde078f710963}} 
+\index{lg::Tanh@{lg::Tanh}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 55 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classlg_1_1_tanh_ad5bd4df134cde159eabfde078f710963_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_a1e7969c58085ea953802bb5fde97bdea}\label{classlg_1_1_tanh_a1e7969c58085ea953802bb5fde97bdea}} 
+\index{lg::Tanh@{lg::Tanh}!make@{make}}
+\index{make@{make}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Tanh\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 21 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classlg_1_1_tanh_a1e7969c58085ea953802bb5fde97bdea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_a4b879a85672cb5b9e1b170af04d79825}\label{classlg_1_1_tanh_a4b879a85672cb5b9e1b170af04d79825}} 
+\index{lg::Tanh@{lg::Tanh}!print@{print}}
+\index{print@{print}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 133 of file Tanh.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_tanh_a4af98d34d669661e40841981d573cfe4}\label{classlg_1_1_tanh_a4af98d34d669661e40841981d573cfe4}} 
+\index{lg::Tanh@{lg::Tanh}!run@{run}}
+\index{run@{run}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_tanh_a4af98d34d669661e40841981d573cfe4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_tanh_a420af6311dfe685f10584b757140b4bb}\label{classlg_1_1_tanh_a420af6311dfe685f10584b757140b4bb}} 
+\index{lg::Tanh@{lg::Tanh}!save@{save}}
+\index{save@{save}!lg::Tanh@{lg::Tanh}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Tanh\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 78 of file Tanh.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_tanh_a420af6311dfe685f10584b757140b4bb_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_tanh_8hpp}{Tanh.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_tanh_8cpp}{Tanh.\+cpp}}\end{DoxyCompactItemize}

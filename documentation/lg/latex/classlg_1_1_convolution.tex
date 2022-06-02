@@ -1,0 +1,762 @@
+\hypertarget{classlg_1_1_convolution}{}\doxysection{lg\+::Convolution Class Reference}
+\label{classlg_1_1_convolution}\index{lg::Convolution@{lg::Convolution}}
+
+
+{\ttfamily \#include $<$Convolution.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Convolution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classlg_1_1_convolution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Convolution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classlg_1_1_convolution__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_convolution_a74d04a947fb9a02e7a3a536ee814328c}{Convolution}} (const int filter\+\_\+size, const int filter\+\_\+count, const int stride, const int padding=0, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, const float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0.f, const float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0.f)
+\item 
+\mbox{\hyperlink{classlg_1_1_convolution_a8e0136835bc7344a7b66a9993cda7e6a}{Convolution}} (const \mbox{\hyperlink{classlg_1_1_point}{lg\+::\+Point}} filter\+\_\+size, const int filter\+\_\+count, const int stride, const int padding=0, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, const float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0.f, const float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0.f)
+\item 
+\mbox{\hyperlink{classlg_1_1_convolution_a252c8e6148ce035f705e92a4eb1a5a38}{Convolution}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a163f2f76d28fe9da7d9b3455352d49f9}{initialize}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+count)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_ace8d6b9afdb1fa42f8864c6b5913074b}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a68bc51ace4ba653af2e6b0fc632657ed}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a18b0bdfe375c1fdc2256312ca989ec2a}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_aed2303370d85036c5ed6c211660d8fe0}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a0afad47dcce8f7777d619d0ebb40422c}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a5773548d469c00743480c0ba359cd479}{set\+Fixed\+Parameters}} (const bool fixedparameters)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a72a0a44a72a5ed287a466e5edd05bfc1}{save\+Parameters}} (std\+::string filepath)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a0f71eb5cfbce3ab3df5ba2bad0b1ba84}{load\+Parameters}} (std\+::string filepath)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a9cecd4ed3b567666d6c732f205ff509b}{print}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_convolution_aecc73292d3825607de9c90cc7b4ed464}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a214b05edb8fb767924fd1dffe976c4d7}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&input, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_ac9a4db69982359cc3c4eae212c8eeace}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_convolution_a43de69eefeaa28068764f86821e8527c}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_convolution_a1e662a293895d8494d52e97b8bc9051f}{make}} (const int filter\+\_\+size, const int filter\+\_\+count, const int stride, const int padding=0, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, const float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0.f, const float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0.f)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_convolution_a86cd4bce05a636486fdd5c10acdbe057}{make}} (const \mbox{\hyperlink{classlg_1_1_point}{lg\+::\+Point}} filter\+\_\+size, const int filter\+\_\+count, const int stride, const int padding=0, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, const float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0.f, const float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0.f)
+\item 
+static void \mbox{\hyperlink{classlg_1_1_convolution_abffee9943025cdac7f9395dea5967e56}{gradient\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_convolution_ad0ee5f66ffcb49fa9a538df7c0f8953f}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_convolution_aa7ba9415fbc00102aa299361950d2b51}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_convolution_af5b1c671d9007e192bfd8c1bd9bde961}{\+\_\+bias\+\_\+deltas}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_convolution_a7614eb33b0daaa69422974645eea696e}{\+\_\+weights\+\_\+deltas}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_convolution_aed579180d63b310016a9eee5185baa7b}{\+\_\+fixed\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_adceb70e71cd78cf1e4705b60e8bf4df5}{\+\_\+input\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a8f7907f4c6a1cb0ca8a5b7137992462f}{\+\_\+input\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a718a6beb773437f2cfc09704b6cfc215}{\+\_\+input\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_aabf96541542c5221c9932185e2b10c4a}{\+\_\+filter\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a887ab772d0dfe28a24a76d56c35a149e}{\+\_\+filter\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a08332966bc76ffb4bcad90515cbfc1dc}{\+\_\+filter\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_aee5b22a4b4a88ea231f2929ab7128b13}{\+\_\+stride}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a4320805e4f267b74c1af40e243ce7d91}{\+\_\+output\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_ab4a013c0561ce33fcc32c66ecebb84be}{\+\_\+output\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a292403dd34fa10394cf675bdba6ff907}{\+\_\+output\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_a987e60cc1ef2322100cd74c236f88909}{\+\_\+input\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_convolution_abd69b8427d4ab3c85f4a146e45d8faf6}{\+\_\+padding}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_convolution_a0c28f0b4fa16ed59ea09d585c64f5bf2}{\+\_\+gradient\+\_\+clipping}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_convolution_ab3476199bd3350a101c2370a2bce0331}{\+\_\+l1\+\_\+regularization}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_convolution_a1e3ee3df33e819e74f4193611a2c24f5}{\+\_\+l2\+\_\+regularization}}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classlg_1_1_convolution_ada1bea969b492960eff1e5ddc12d60f5}{\+\_\+convmap}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file Convolution.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_convolution_a74d04a947fb9a02e7a3a536ee814328c}\label{classlg_1_1_convolution_a74d04a947fb9a02e7a3a536ee814328c}} 
+\index{lg::Convolution@{lg::Convolution}!Convolution@{Convolution}}
+\index{Convolution@{Convolution}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{Convolution()}{Convolution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::\+Convolution\+::\+Convolution (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding = {\ttfamily 0},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{const float}]{l1\+\_\+regularization = {\ttfamily 0.f},  }\item[{const float}]{l2\+\_\+regularization = {\ttfamily 0.f} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a74d04a947fb9a02e7a3a536ee814328c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a8e0136835bc7344a7b66a9993cda7e6a}\label{classlg_1_1_convolution_a8e0136835bc7344a7b66a9993cda7e6a}} 
+\index{lg::Convolution@{lg::Convolution}!Convolution@{Convolution}}
+\index{Convolution@{Convolution}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{Convolution()}{Convolution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::\+Convolution\+::\+Convolution (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_point}{lg\+::\+Point}}}]{filter\+\_\+size,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding = {\ttfamily 0},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{const float}]{l1\+\_\+regularization = {\ttfamily 0.f},  }\item[{const float}]{l2\+\_\+regularization = {\ttfamily 0.f} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a8e0136835bc7344a7b66a9993cda7e6a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a252c8e6148ce035f705e92a4eb1a5a38}\label{classlg_1_1_convolution_a252c8e6148ce035f705e92a4eb1a5a38}} 
+\index{lg::Convolution@{lg::Convolution}!Convolution@{Convolution}}
+\index{Convolution@{Convolution}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{Convolution()}{Convolution()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::\+Convolution\+::\+Convolution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a252c8e6148ce035f705e92a4eb1a5a38_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_convolution_a43de69eefeaa28068764f86821e8527c}\label{classlg_1_1_convolution_a43de69eefeaa28068764f86821e8527c}} 
+\index{lg::Convolution@{lg::Convolution}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 678 of file Convolution.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_aed2303370d85036c5ed6c211660d8fe0}\label{classlg_1_1_convolution_aed2303370d85036c5ed6c211660d8fe0}} 
+\index{lg::Convolution@{lg::Convolution}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 373 of file Convolution.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_aed2303370d85036c5ed6c211660d8fe0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a18b0bdfe375c1fdc2256312ca989ec2a}\label{classlg_1_1_convolution_a18b0bdfe375c1fdc2256312ca989ec2a}} 
+\index{lg::Convolution@{lg::Convolution}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 366 of file Convolution.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ac9a4db69982359cc3c4eae212c8eeace}\label{classlg_1_1_convolution_ac9a4db69982359cc3c4eae212c8eeace}} 
+\index{lg::Convolution@{lg::Convolution}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 640 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classlg_1_1_convolution_ac9a4db69982359cc3c4eae212c8eeace_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_aecc73292d3825607de9c90cc7b4ed464}\label{classlg_1_1_convolution_aecc73292d3825607de9c90cc7b4ed464}} 
+\index{lg::Convolution@{lg::Convolution}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Convolution\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 480 of file Convolution.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_abffee9943025cdac7f9395dea5967e56}\label{classlg_1_1_convolution_abffee9943025cdac7f9395dea5967e56}} 
+\index{lg::Convolution@{lg::Convolution}!gradient\_check@{gradient\_check}}
+\index{gradient\_check@{gradient\_check}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{gradient\_check()}{gradient\_check()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::gradient\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 521 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_abffee9943025cdac7f9395dea5967e56_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a163f2f76d28fe9da7d9b3455352d49f9}\label{classlg_1_1_convolution_a163f2f76d28fe9da7d9b3455352d49f9}} 
+\index{lg::Convolution@{lg::Convolution}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::initialize (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a163f2f76d28fe9da7d9b3455352d49f9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e}\label{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e}} 
+\index{lg::Convolution@{lg::Convolution}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 217 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a652de051570955aacdf01a84ca506c2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a0f71eb5cfbce3ab3df5ba2bad0b1ba84}\label{classlg_1_1_convolution_a0f71eb5cfbce3ab3df5ba2bad0b1ba84}} 
+\index{lg::Convolution@{lg::Convolution}!loadParameters@{loadParameters}}
+\index{loadParameters@{loadParameters}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{loadParameters()}{loadParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::load\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 466 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a0f71eb5cfbce3ab3df5ba2bad0b1ba84_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a1e662a293895d8494d52e97b8bc9051f}\label{classlg_1_1_convolution_a1e662a293895d8494d52e97b8bc9051f}} 
+\index{lg::Convolution@{lg::Convolution}!make@{make}}
+\index{make@{make}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Convolution\+::make (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding = {\ttfamily 0},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{const float}]{l1\+\_\+regularization = {\ttfamily 0.f},  }\item[{const float}]{l2\+\_\+regularization = {\ttfamily 0.f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a1e662a293895d8494d52e97b8bc9051f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a86cd4bce05a636486fdd5c10acdbe057}\label{classlg_1_1_convolution_a86cd4bce05a636486fdd5c10acdbe057}} 
+\index{lg::Convolution@{lg::Convolution}!make@{make}}
+\index{make@{make}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Convolution\+::make (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlg_1_1_point}{lg\+::\+Point}}}]{filter\+\_\+size,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding = {\ttfamily 0},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{const float}]{l1\+\_\+regularization = {\ttfamily 0.f},  }\item[{const float}]{l2\+\_\+regularization = {\ttfamily 0.f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 34 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a86cd4bce05a636486fdd5c10acdbe057_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a9cecd4ed3b567666d6c732f205ff509b}\label{classlg_1_1_convolution_a9cecd4ed3b567666d6c732f205ff509b}} 
+\index{lg::Convolution@{lg::Convolution}!print@{print}}
+\index{print@{print}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 486 of file Convolution.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8}\label{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8}} 
+\index{lg::Convolution@{lg::Convolution}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 433 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_ab57b816a301105ed7b543aefde8c13d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a214b05edb8fb767924fd1dffe976c4d7}\label{classlg_1_1_convolution_a214b05edb8fb767924fd1dffe976c4d7}} 
+\index{lg::Convolution@{lg::Convolution}!run@{run}}
+\index{run@{run}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{input,  }\item[{const bool}]{training }\end{DoxyParamCaption})}
+
+
+
+Definition at line 605 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classlg_1_1_convolution_a214b05edb8fb767924fd1dffe976c4d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a68bc51ace4ba653af2e6b0fc632657ed}\label{classlg_1_1_convolution_a68bc51ace4ba653af2e6b0fc632657ed}} 
+\index{lg::Convolution@{lg::Convolution}!run@{run}}
+\index{run@{run}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 359 of file Convolution.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a68bc51ace4ba653af2e6b0fc632657ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_ace8d6b9afdb1fa42f8864c6b5913074b}\label{classlg_1_1_convolution_ace8d6b9afdb1fa42f8864c6b5913074b}} 
+\index{lg::Convolution@{lg::Convolution}!save@{save}}
+\index{save@{save}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 335 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_ace8d6b9afdb1fa42f8864c6b5913074b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a72a0a44a72a5ed287a466e5edd05bfc1}\label{classlg_1_1_convolution_a72a0a44a72a5ed287a466e5edd05bfc1}} 
+\index{lg::Convolution@{lg::Convolution}!saveParameters@{saveParameters}}
+\index{saveParameters@{saveParameters}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{saveParameters()}{saveParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::save\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Definition at line 455 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a72a0a44a72a5ed287a466e5edd05bfc1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_convolution_a5773548d469c00743480c0ba359cd479}\label{classlg_1_1_convolution_a5773548d469c00743480c0ba359cd479}} 
+\index{lg::Convolution@{lg::Convolution}!setFixedParameters@{setFixedParameters}}
+\index{setFixedParameters@{setFixedParameters}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{setFixedParameters()}{setFixedParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::set\+Fixed\+Parameters (\begin{DoxyParamCaption}\item[{const bool}]{fixedparameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file Convolution.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a0afad47dcce8f7777d619d0ebb40422c}\label{classlg_1_1_convolution_a0afad47dcce8f7777d619d0ebb40422c}} 
+\index{lg::Convolution@{lg::Convolution}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Convolution\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 380 of file Convolution.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_convolution_a0afad47dcce8f7777d619d0ebb40422c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_convolution_aa7ba9415fbc00102aa299361950d2b51}\label{classlg_1_1_convolution_aa7ba9415fbc00102aa299361950d2b51}} 
+\index{lg::Convolution@{lg::Convolution}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Convolution\+::\+\_\+bias}
+
+
+
+Definition at line 76 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_af5b1c671d9007e192bfd8c1bd9bde961}\label{classlg_1_1_convolution_af5b1c671d9007e192bfd8c1bd9bde961}} 
+\index{lg::Convolution@{lg::Convolution}!\_bias\_deltas@{\_bias\_deltas}}
+\index{\_bias\_deltas@{\_bias\_deltas}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_bias\_deltas}{\_bias\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Convolution\+::\+\_\+bias\+\_\+deltas}
+
+
+
+Definition at line 77 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ada1bea969b492960eff1e5ddc12d60f5}\label{classlg_1_1_convolution_ada1bea969b492960eff1e5ddc12d60f5}} 
+\index{lg::Convolution@{lg::Convolution}!\_convmap@{\_convmap}}
+\index{\_convmap@{\_convmap}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_convmap}{\_convmap}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$ int $>$ $>$ lg\+::\+Convolution\+::\+\_\+convmap}
+
+
+
+Definition at line 97 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a08332966bc76ffb4bcad90515cbfc1dc}\label{classlg_1_1_convolution_a08332966bc76ffb4bcad90515cbfc1dc}} 
+\index{lg::Convolution@{lg::Convolution}!\_filter\_count@{\_filter\_count}}
+\index{\_filter\_count@{\_filter\_count}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_filter\_count}{\_filter\_count}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+filter\+\_\+count}
+
+
+
+Definition at line 87 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a887ab772d0dfe28a24a76d56c35a149e}\label{classlg_1_1_convolution_a887ab772d0dfe28a24a76d56c35a149e}} 
+\index{lg::Convolution@{lg::Convolution}!\_filter\_height@{\_filter\_height}}
+\index{\_filter\_height@{\_filter\_height}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_filter\_height}{\_filter\_height}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+filter\+\_\+height}
+
+
+
+Definition at line 86 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_aabf96541542c5221c9932185e2b10c4a}\label{classlg_1_1_convolution_aabf96541542c5221c9932185e2b10c4a}} 
+\index{lg::Convolution@{lg::Convolution}!\_filter\_width@{\_filter\_width}}
+\index{\_filter\_width@{\_filter\_width}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_filter\_width}{\_filter\_width}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+filter\+\_\+width}
+
+
+
+Definition at line 85 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_aed579180d63b310016a9eee5185baa7b}\label{classlg_1_1_convolution_aed579180d63b310016a9eee5185baa7b}} 
+\index{lg::Convolution@{lg::Convolution}!\_fixed\_parameters@{\_fixed\_parameters}}
+\index{\_fixed\_parameters@{\_fixed\_parameters}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_parameters}{\_fixed\_parameters}}
+{\footnotesize\ttfamily bool lg\+::\+Convolution\+::\+\_\+fixed\+\_\+parameters}
+
+
+
+Definition at line 81 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a0c28f0b4fa16ed59ea09d585c64f5bf2}\label{classlg_1_1_convolution_a0c28f0b4fa16ed59ea09d585c64f5bf2}} 
+\index{lg::Convolution@{lg::Convolution}!\_gradient\_clipping@{\_gradient\_clipping}}
+\index{\_gradient\_clipping@{\_gradient\_clipping}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_gradient\_clipping}{\_gradient\_clipping}}
+{\footnotesize\ttfamily float lg\+::\+Convolution\+::\+\_\+gradient\+\_\+clipping}
+
+
+
+Definition at line 94 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a718a6beb773437f2cfc09704b6cfc215}\label{classlg_1_1_convolution_a718a6beb773437f2cfc09704b6cfc215}} 
+\index{lg::Convolution@{lg::Convolution}!\_input\_count@{\_input\_count}}
+\index{\_input\_count@{\_input\_count}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_input\_count}{\_input\_count}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+input\+\_\+count}
+
+
+
+Definition at line 84 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a8f7907f4c6a1cb0ca8a5b7137992462f}\label{classlg_1_1_convolution_a8f7907f4c6a1cb0ca8a5b7137992462f}} 
+\index{lg::Convolution@{lg::Convolution}!\_input\_height@{\_input\_height}}
+\index{\_input\_height@{\_input\_height}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_input\_height}{\_input\_height}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+input\+\_\+height}
+
+
+
+Definition at line 83 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a987e60cc1ef2322100cd74c236f88909}\label{classlg_1_1_convolution_a987e60cc1ef2322100cd74c236f88909}} 
+\index{lg::Convolution@{lg::Convolution}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 92 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_adceb70e71cd78cf1e4705b60e8bf4df5}\label{classlg_1_1_convolution_adceb70e71cd78cf1e4705b60e8bf4df5}} 
+\index{lg::Convolution@{lg::Convolution}!\_input\_width@{\_input\_width}}
+\index{\_input\_width@{\_input\_width}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_input\_width}{\_input\_width}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+input\+\_\+width}
+
+
+
+Definition at line 82 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ab3476199bd3350a101c2370a2bce0331}\label{classlg_1_1_convolution_ab3476199bd3350a101c2370a2bce0331}} 
+\index{lg::Convolution@{lg::Convolution}!\_l1\_regularization@{\_l1\_regularization}}
+\index{\_l1\_regularization@{\_l1\_regularization}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_l1\_regularization}{\_l1\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Convolution\+::\+\_\+l1\+\_\+regularization}
+
+
+
+Definition at line 95 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a1e3ee3df33e819e74f4193611a2c24f5}\label{classlg_1_1_convolution_a1e3ee3df33e819e74f4193611a2c24f5}} 
+\index{lg::Convolution@{lg::Convolution}!\_l2\_regularization@{\_l2\_regularization}}
+\index{\_l2\_regularization@{\_l2\_regularization}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_l2\_regularization}{\_l2\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Convolution\+::\+\_\+l2\+\_\+regularization}
+
+
+
+Definition at line 96 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ab4a013c0561ce33fcc32c66ecebb84be}\label{classlg_1_1_convolution_ab4a013c0561ce33fcc32c66ecebb84be}} 
+\index{lg::Convolution@{lg::Convolution}!\_output\_height@{\_output\_height}}
+\index{\_output\_height@{\_output\_height}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_output\_height}{\_output\_height}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+output\+\_\+height}
+
+
+
+Definition at line 90 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a292403dd34fa10394cf675bdba6ff907}\label{classlg_1_1_convolution_a292403dd34fa10394cf675bdba6ff907}} 
+\index{lg::Convolution@{lg::Convolution}!\_output\_size@{\_output\_size}}
+\index{\_output\_size@{\_output\_size}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_output\_size}{\_output\_size}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+output\+\_\+size}
+
+
+
+Definition at line 91 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a4320805e4f267b74c1af40e243ce7d91}\label{classlg_1_1_convolution_a4320805e4f267b74c1af40e243ce7d91}} 
+\index{lg::Convolution@{lg::Convolution}!\_output\_width@{\_output\_width}}
+\index{\_output\_width@{\_output\_width}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_output\_width}{\_output\_width}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+output\+\_\+width}
+
+
+
+Definition at line 89 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_abd69b8427d4ab3c85f4a146e45d8faf6}\label{classlg_1_1_convolution_abd69b8427d4ab3c85f4a146e45d8faf6}} 
+\index{lg::Convolution@{lg::Convolution}!\_padding@{\_padding}}
+\index{\_padding@{\_padding}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_padding}{\_padding}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+padding}
+
+
+
+Definition at line 93 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_aee5b22a4b4a88ea231f2929ab7128b13}\label{classlg_1_1_convolution_aee5b22a4b4a88ea231f2929ab7128b13}} 
+\index{lg::Convolution@{lg::Convolution}!\_stride@{\_stride}}
+\index{\_stride@{\_stride}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_stride}{\_stride}}
+{\footnotesize\ttfamily int lg\+::\+Convolution\+::\+\_\+stride}
+
+
+
+Definition at line 88 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_ad0ee5f66ffcb49fa9a538df7c0f8953f}\label{classlg_1_1_convolution_ad0ee5f66ffcb49fa9a538df7c0f8953f}} 
+\index{lg::Convolution@{lg::Convolution}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Convolution\+::\+\_\+weights}
+
+
+
+Definition at line 75 of file Convolution.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_convolution_a7614eb33b0daaa69422974645eea696e}\label{classlg_1_1_convolution_a7614eb33b0daaa69422974645eea696e}} 
+\index{lg::Convolution@{lg::Convolution}!\_weights\_deltas@{\_weights\_deltas}}
+\index{\_weights\_deltas@{\_weights\_deltas}!lg::Convolution@{lg::Convolution}}
+\doxysubsubsection{\texorpdfstring{\_weights\_deltas}{\_weights\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Convolution\+::\+\_\+weights\+\_\+deltas}
+
+
+
+Definition at line 78 of file Convolution.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_convolution_8hpp}{Convolution.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_convolution_8cpp}{Convolution.\+cpp}}\end{DoxyCompactItemize}

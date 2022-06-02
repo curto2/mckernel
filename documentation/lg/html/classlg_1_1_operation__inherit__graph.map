@@ -1,0 +1,23 @@
+<map id="lg::Operation" name="lg::Operation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,487,112,513"/>
+<area shape="rect" id="node2" href="$classlg_1_1_addition.html" title=" " alt="" coords="183,5,279,32"/>
+<area shape="rect" id="node3" href="$classlg_1_1_autoencoder.html" title=" " alt="" coords="169,56,293,83"/>
+<area shape="rect" id="node4" href="$classlg_1_1_averagepooling.html" title=" " alt="" coords="160,107,303,133"/>
+<area shape="rect" id="node5" href="$classlg_1_1_capsules_dense.html" title=" " alt="" coords="160,157,303,184"/>
+<area shape="rect" id="node6" href="$classlg_1_1_concatenate.html" title=" " alt="" coords="169,208,293,235"/>
+<area shape="rect" id="node7" href="$classlg_1_1_convolution.html" title=" " alt="" coords="171,259,291,285"/>
+<area shape="rect" id="node8" href="$classlg_1_1_dropout.html" title=" " alt="" coords="184,309,279,336"/>
+<area shape="rect" id="node9" href="$classlg_1_1_linear.html" title=" " alt="" coords="190,360,273,387"/>
+<area shape="rect" id="node10" href="$classlg_1_1_linear___freeze.html" title=" " alt="" coords="165,411,297,437"/>
+<area shape="rect" id="node11" href="$classlg_1_1_maxpooling.html" title=" " alt="" coords="172,461,291,488"/>
+<area shape="rect" id="node12" href="$classlg_1_1_normalization.html" title=" " alt="" coords="164,512,299,539"/>
+<area shape="rect" id="node13" href="$classlg_1_1_partial.html" title=" " alt="" coords="190,563,273,589"/>
+<area shape="rect" id="node14" href="$classlg_1_1_recurrent.html" title=" " alt="" coords="179,613,284,640"/>
+<area shape="rect" id="node15" href="$classlg_1_1_relu.html" title=" " alt="" coords="196,664,267,691"/>
+<area shape="rect" id="node16" href="$classlg_1_1_residual_block.html" title=" " alt="" coords="164,715,299,741"/>
+<area shape="rect" id="node17" href="$classlg_1_1_selu.html" title=" " alt="" coords="196,765,267,792"/>
+<area shape="rect" id="node18" href="$classlg_1_1_sigmoid.html" title=" " alt="" coords="184,816,279,843"/>
+<area shape="rect" id="node19" href="$classlg_1_1_softmax.html" title=" " alt="" coords="183,867,279,893"/>
+<area shape="rect" id="node20" href="$classlg_1_1_tanh.html" title=" " alt="" coords="195,917,267,944"/>
+<area shape="rect" id="node21" href="$classlg_1_1_variable.html" title=" " alt="" coords="184,968,279,995"/>
+</map>

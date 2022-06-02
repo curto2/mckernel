@@ -1,0 +1,6 @@
+<map id="lg::Tanh::backprop" name="lg::Tanh::backprop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,145,83"/>
+<area shape="rect" id="node2" href="$classlg_1_1_tanh.html#ad6d6ecce8f18515f33b9273f8cf96b21" title=" " alt="" coords="193,5,336,32"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="384,31,503,57"/>
+<area shape="rect" id="node4" href="$classlg_1_1_tensor.html#a07798188b6cc21916986d6fd7c58791d" title=" " alt="" coords="195,107,334,133"/>
+</map>

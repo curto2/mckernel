@@ -1,0 +1,9 @@
+<map id="lg::Cost::getDelta" name="lg::Cost::getDelta">
+<area shape="rect" id="node1" title="Calculate deltas." alt="" coords="236,148,371,175"/>
+<area shape="rect" id="node2" href="$classlg_1_1_d_f_a___optimizer.html#abb7a6bac552681ba5dbeb5c66db7b487" title=" " alt="" coords="17,5,176,32"/>
+<area shape="rect" id="node3" href="$classlg_1_1_s_g_d___optimizer.html#a23104cbfff393eba51f21d620d2b97bf" title=" " alt="" coords="15,56,178,83"/>
+<area shape="rect" id="node4" href="$classlg_1_1_recurrent.html#a7fe9ab1764366db1db9df20617961daa" title=" " alt="" coords="13,107,180,149"/>
+<area shape="rect" id="node5" href="$classlg_1_1_linear___freeze.html#ab52ee5ba9650d6d1937e60c23efc77a6" title=" " alt="" coords="27,173,167,214"/>
+<area shape="rect" id="node6" href="$classlg_1_1_linear.html#a5683e9328a415cf945f1d48fe02dd4d1" title=" " alt="" coords="25,238,169,279"/>
+<area shape="rect" id="node7" href="$classlg_1_1_convolution.html#abffee9943025cdac7f9395dea5967e56" title=" " alt="" coords="5,303,188,345"/>
+</map>

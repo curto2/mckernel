@@ -1,0 +1,142 @@
+\hypertarget{_c_u_d_a__backend_8hpp}{}\doxysection{lg/src/deep\+\_\+learning/\+C\+U\+D\+A\+\_\+backend.hpp File Reference}
+\label{_c_u_d_a__backend_8hpp}\index{lg/src/deep\_learning/CUDA\_backend.hpp@{lg/src/deep\_learning/CUDA\_backend.hpp}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlg_1_1cudnn_1_1_tensor_description}{lg\+::cudnn\+::\+Tensor\+Description}}
+\item 
+class \mbox{\hyperlink{classlg_1_1cudnn_1_1_activation}{lg\+::cudnn\+::\+Activation}}
+\item 
+class \mbox{\hyperlink{classlg_1_1cudnn_1_1_convolution}{lg\+::cudnn\+::\+Convolution}}
+\item 
+class \mbox{\hyperlink{classlg_1_1cudnn_1_1_pooling}{lg\+::cudnn\+::\+Pooling}}
+\item 
+class \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout}{lg\+::cudnn\+::\+Dropout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelg}{lg}}
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacelg_1_1cudnn}{lg\+::cudnn}}
+\begin{DoxyCompactList}\small\item\em N\+A\+M\+E\+S\+P\+A\+CE C\+U\+D\+NN. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacelg_1_1cuda}{lg\+::cuda}}
+\begin{DoxyCompactList}\small\item\em N\+A\+M\+E\+S\+P\+A\+CE C\+U\+DA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28}{lg\+::cudnn\+::\+Data\+Type}} \{ \newline
+\mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28a83f372d1c9db6c53dbadda1e87205c5f}{lg\+::cudnn\+::\+D\+A\+T\+A\+\_\+\+F\+L\+O\+AT}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28a289847449636c34afd4bc2eabada888e}{lg\+::cudnn\+::\+D\+A\+T\+A\+\_\+\+D\+O\+U\+B\+LE}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28a0507d470b34f8e8ead8992cdae434a12}{lg\+::cudnn\+::\+D\+A\+T\+A\+\_\+\+H\+A\+LF}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28a5a0eb578da57eb366e52c6a237f66779}{lg\+::cudnn\+::\+D\+A\+T\+A\+\_\+\+I\+N\+T8}}, 
+\newline
+\mbox{\hyperlink{namespacelg_1_1cudnn_ae723bd7649b468936d3f5ffb1163dd28ad269c23225751f5a6bc371f8ed8ceabd}{lg\+::cudnn\+::\+D\+A\+T\+A\+\_\+\+I\+N\+T32}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48f}{lg\+::cudnn\+::\+Activation\+Type}} \{ \newline
+\mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48fad922f4546f4f7ac7e14a2885e756c219}{lg\+::cudnn\+::\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+S\+I\+G\+M\+O\+ID}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48fa49219e1ec5035b65f661fc89c955008c}{lg\+::cudnn\+::\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+R\+E\+LU}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48fa0796c0b72c2fab816990630b91b23d03}{lg\+::cudnn\+::\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+A\+NH}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48fa5a518d7d7ee3dc7cd313ff5a209d08f3}{lg\+::cudnn\+::\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+C\+L\+I\+P\+P\+E\+D\+\_\+\+R\+E\+LU}}, 
+\newline
+\mbox{\hyperlink{namespacelg_1_1cudnn_ac49356b14c89bae0ff4d4c422719c48fac36699686abed0eb26a6fe942aed94aa}{lg\+::cudnn\+::\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+E\+LU}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6}{lg\+::cudnn\+::\+Pooling\+Type}} \{ \mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6a59513495a6fbd432089720a7908c910e}{lg\+::cudnn\+::\+P\+O\+O\+L\+I\+N\+G\+\_\+\+M\+AX}}, 
+\mbox{\hyperlink{namespacelg_1_1cudnn_a450ec4165ca3788e681e05f42260afc6a169c1eb25fae69de26bcf3342dd116f5}{lg\+::cudnn\+::\+P\+O\+O\+L\+I\+N\+G\+\_\+\+A\+V\+E\+R\+A\+GE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacelg_1_1cudnn_a2ca6eb7e6ef6c6530cf8ccd16d4bc780}{lg\+::cudnn\+::init}} ()
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cudnn_ac2bdb31de41b622ffdcf8b658ee11de9}{lg\+::cudnn\+::destroy}} ()
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a8911de947294cbb37113ce9e8d550783}{lg\+::cuda\+::convn\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int $\ast$out\+\_\+in\+\_\+map, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int output\+\_\+width, int output\+\_\+height, int filters\+\_\+count, int filter\+\_\+area)
+\begin{DoxyCompactList}\small\item\em C\+U\+DA D\+E\+E\+P\+L\+E\+A\+R\+N\+I\+NG I\+N\+T\+E\+R\+F\+A\+CE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_aa4ef754e9424188009a71c1a363aa94d}{lg\+::cuda\+::convn\+\_\+backward}} (float $\ast$weights, float $\ast$out\+\_\+errors, float $\ast$errors, int $\ast$in\+\_\+weight\+\_\+map, int $\ast$in\+\_\+out\+\_\+map, int input\+\_\+count, int output\+\_\+size, int input\+\_\+width, int input\+\_\+height, int filter\+\_\+area, int filters\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2fa8129596126da6ab6fd12b7570e256}{lg\+::cuda\+::convn\+\_\+accumulate\+\_\+deltas}} (float $\ast$weights\+\_\+deltas, float $\ast$bias\+\_\+deltas, float $\ast$errors, float $\ast$inputs, float $\ast$outputs, int $\ast$out\+\_\+in\+\_\+map, int input\+\_\+count, int input\+\_\+width, int input\+\_\+height, int output\+\_\+size, int filter\+\_\+area, int filters\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_aabc1ca86849f1b325416d5fc042d4cee}{lg\+::cuda\+::convn\+\_\+update\+\_\+parameters}} (float $\ast$weights, float $\ast$bias, float $\ast$weights\+\_\+deltas, float $\ast$bias\+\_\+deltas, int filter\+\_\+area, int input\+\_\+count, int filter\+\_\+count, float learningrate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a9faebc3673f09ecfc225c21738da5af3}{lg\+::cuda\+::maxpooling\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int $\ast$maxbuffer, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab502580e89328622329728926b168ced}{lg\+::cuda\+::maxpooling\+\_\+backward}} (float $\ast$out\+\_\+errors, float $\ast$errors, int $\ast$maxbuffer, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6859dafb7adc62c944d3049197cc3aa4}{lg\+::cuda\+::averagepooling\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3a18f9046738e9209bbc4bdd101c2915}{lg\+::cuda\+::averagepooling\+\_\+backward}} (float $\ast$out\+\_\+errors, float $\ast$errors, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a17f5d386c6a971e477fefb1c443fb408}{lg\+::cuda\+::linear\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int input\+\_\+size, int output\+\_\+size, bool use\+\_\+bias, bool accumulate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a23d87aeb9500b8ef1476535a39baa3d3}{lg\+::cuda\+::linear\+\_\+backward}} (float $\ast$weights, float $\ast$out\+\_\+errors, float $\ast$errors, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af1943bb4b10ca0f9465ed36b5063e534}{lg\+::cuda\+::linear\+\_\+accumulate\+\_\+deltas}} (float $\ast$deltas, float $\ast$inputs, float $\ast$errors, int input\+\_\+size, int output\+\_\+size, bool use\+\_\+bias)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6e6de7213575b5eecba3d7da46dd11db}{lg\+::cuda\+::linear\+\_\+update\+\_\+parameters}} (float $\ast$weights, float $\ast$bias, float $\ast$deltas, float learningrate, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_afbcb57abfd9468a3107a5fb8876e3d22}{lg\+::cuda\+::sigmoid\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab87ff03b7876a608d263ed2103a0399e}{lg\+::cuda\+::sigmoid\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae6adb1a572de78eae4715c1c8137c026}{lg\+::cuda\+::relu\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab0642d5b6d1a28b52236ab85f3a53925}{lg\+::cuda\+::relu\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a0fead1b0d84ba90d494c808c9b4c33fe}{lg\+::cuda\+::tanh\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3e0acb2ce86052848da5bbcc6629d56d}{lg\+::cuda\+::tanh\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a8c62455098b6a8ab29a6113e840175a8}{lg\+::cuda\+::dropout\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, unsigned int seed, float dropout\+\_\+probability, bool training, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a9d9e3a4cf4915ca097f8c8edcbfc0e26}{lg\+::cuda\+::dropout\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, float dropout\+\_\+probability, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2924760c84069a2841f300848c0d7b85}{lg\+::cuda\+::selu\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae0db6f2ac2908e7161386f0a36df4560}{lg\+::cuda\+::selu\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a85299cc9e76e9ff15803eb9101e78460}{lg\+::cuda\+::normalization\+\_\+forward}} (float $\ast$inputs, float $\ast$deviation, float $\ast$normalized, float $\ast$outputs, float $\ast$variance, float $\ast$gamma, float $\ast$beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a25134b03f29a49340cfca6acb6ff519c}{lg\+::cuda\+::normalization\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$deviation, float $\ast$variance, float $\ast$gamma, float $\ast$beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a0e4f26dc450867d2347a2d72ed383733}{lg\+::cuda\+::normalization\+\_\+accumulate\+\_\+deltas}} (float $\ast$errors, float $\ast$deviation, float $\ast$variance, float $\ast$d\+\_\+gamma, float $\ast$d\+\_\+beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a965f4592cfb4e6b9f7f1abfa3a1005d8}{lg\+::cuda\+::normalization\+\_\+update\+\_\+parameters}} (float $\ast$gamma, float $\ast$beta, float $\ast$d\+\_\+gamma, float $\ast$d\+\_\+beta, float momentum, int size, float learningrate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a4b1138745ab9fde9daac0c42cb68f66f}{lg\+::cuda\+::sparse\+\_\+indices}} (float $\ast$inputs, int inputs\+\_\+size, int $\ast$indices, int $\ast$tmp\+\_\+indices, int $\ast$indices\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a5b2010c67b263a2325c0f66a5e5043be}{lg\+::cuda\+::linear\+\_\+sparse\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int $\ast$indices, int $\ast$indices\+\_\+count, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_abd2ace1b9d637e47db6c5a643b73cd71}{lg\+::cuda\+::linear\+\_\+sparse\+\_\+accumulate\+\_\+deltas}} (float $\ast$deltas, float $\ast$inputs, float $\ast$errors, int $\ast$indices, int $\ast$indices\+\_\+count, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a52532045d8ca46b5e0fa99a6810362a6}{lg\+::cuda\+::concatenate\+\_\+forward}} (float $\ast$$\ast$inputs, float $\ast$outputs, int $\ast$sizes, int input\+\_\+count, int total\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3f1b29f5fcbbd0e7577c4b0060ffbaaa}{lg\+::cuda\+::concatenate\+\_\+backward}} (float $\ast$errors, float $\ast$$\ast$out\+\_\+errors, int $\ast$sizes, int input\+\_\+count, int total\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af6f534536e457051e65effdbc7534a6d}{lg\+::cuda\+::softmax\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, float scale, int size, float epsilon)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae6100dbc18d64618537e768e67a5eae4}{lg\+::cuda\+::softmax\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a4f1ff47b761603f6600eab5dcdfb0f43}{lg\+::cuda\+::cost\+\_\+crossentropy}} (float $\ast$prediction, float $\ast$target, float $\ast$errors, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a06d4a9fec2e50a26d69a90897dbd7d84}{lg\+::cuda\+::gradient\+\_\+clipping}} (float $\ast$deltas, int size, const float clipping\+\_\+deviation)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a1e622d4a2dbd418b7a4da5839beabe8f}{lg\+::cuda\+::l1\+\_\+regularization}} (float $\ast$weights, const float l1\+\_\+factor, const float learningrate, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a1f640f43ce4d3a9f5017b85d68369b7e}{lg\+::cuda\+::l2\+\_\+regularization}} (float $\ast$weights, const float l2\+\_\+factor, const float learningrate, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a159d5855d0b6c8263d0b734b8c718440}{lg\+::cuda\+::image\+\_\+translate}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const int by\+\_\+x, const int by\+\_\+y)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a75256a409482891fa3c8852714ef3b93}{lg\+::cuda\+::image\+\_\+vertical\+\_\+flip}} (float $\ast$image, const int width, const int height, const int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a87ec4c9b53aef96dbfefda3df54dfa2d}{lg\+::cuda\+::image\+\_\+horizontal\+\_\+flip}} (float $\ast$image, const int width, const int height, const int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af15bc16b0cb62a92e8d0f6bf966f0e0c}{lg\+::cuda\+::image\+\_\+rotate}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const float degrees)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2dfc5b5558f9fc2dd45adae28f200594}{lg\+::cuda\+::image\+\_\+scale}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const float scale\+\_\+factor)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6155fb898132cd2eea9ab0bebf05da91}{lg\+::cuda\+::image\+\_\+add\+\_\+noise}} (float $\ast$image, const int width, const int height, const int channels, const float noise\+\_\+probability)
+\end{DoxyCompactItemize}

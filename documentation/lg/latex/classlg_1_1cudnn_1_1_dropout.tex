@@ -1,0 +1,99 @@
+\hypertarget{classlg_1_1cudnn_1_1_dropout}{}\doxysection{lg\+::cudnn\+::Dropout Class Reference}
+\label{classlg_1_1cudnn_1_1_dropout}\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+
+
+{\ttfamily \#include $<$C\+U\+D\+A\+\_\+backend.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_a1fac1fb41698b15d207dc956965a7dfe}{Dropout}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_a3d3d97c343688113aef1fdda64712c9d}{Dropout}} (const int input\+\_\+size, const float dropout\+\_\+probability, void $\ast$state\+\_\+buffer)
+\item 
+\mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_a42ee5e103620977da2950ada0ff1e2b6}{$\sim$\+Dropout}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_aeb340888ab83d9ea0ccbb4ab2d714b12}{clear}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_a27ce1a6ddce88949121934f3599b3552}{create}} (const int input\+\_\+size, const float dropout\+\_\+probability, void $\ast$state\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_af45ddcc72851f4889d4bd361d82df748}{forward}} (void $\ast$input, void $\ast$output, void $\ast$reserve\+\_\+space\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_a760c340d9758c309f9ce0d0a2dfabf71}{backward}} (void $\ast$errors, void $\ast$out\+\_\+errors, void $\ast$reserve\+\_\+space\+\_\+buffer)
+\item 
+size\+\_\+t \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_afc2d554001e68428ef991bca4bdbfa53}{get\+States\+Size}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classlg_1_1cudnn_1_1_dropout_ae8da161cb40aed9d4ba0509cfaed1352}{get\+Reserve\+Space\+Size}} (const int input\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 134 of file C\+U\+D\+A\+\_\+backend.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_a1fac1fb41698b15d207dc956965a7dfe}\label{classlg_1_1cudnn_1_1_dropout_a1fac1fb41698b15d207dc956965a7dfe}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!Dropout@{Dropout}}
+\index{Dropout@{Dropout}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{Dropout()}{Dropout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Dropout\+::\+Dropout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_a3d3d97c343688113aef1fdda64712c9d}\label{classlg_1_1cudnn_1_1_dropout_a3d3d97c343688113aef1fdda64712c9d}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!Dropout@{Dropout}}
+\index{Dropout@{Dropout}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{Dropout()}{Dropout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Dropout\+::\+Dropout (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+size,  }\item[{const float}]{dropout\+\_\+probability,  }\item[{void $\ast$}]{state\+\_\+buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_a42ee5e103620977da2950ada0ff1e2b6}\label{classlg_1_1cudnn_1_1_dropout_a42ee5e103620977da2950ada0ff1e2b6}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!````~Dropout@{$\sim$Dropout}}
+\index{````~Dropout@{$\sim$Dropout}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{$\sim$Dropout()}{~Dropout()}}
+{\footnotesize\ttfamily lg\+::cudnn\+::\+Dropout\+::$\sim$\+Dropout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_a760c340d9758c309f9ce0d0a2dfabf71}\label{classlg_1_1cudnn_1_1_dropout_a760c340d9758c309f9ce0d0a2dfabf71}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!backward@{backward}}
+\index{backward@{backward}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Dropout\+::backward (\begin{DoxyParamCaption}\item[{void $\ast$}]{errors,  }\item[{void $\ast$}]{out\+\_\+errors,  }\item[{void $\ast$}]{reserve\+\_\+space\+\_\+buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_aeb340888ab83d9ea0ccbb4ab2d714b12}\label{classlg_1_1cudnn_1_1_dropout_aeb340888ab83d9ea0ccbb4ab2d714b12}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!clear@{clear}}
+\index{clear@{clear}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Dropout\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_a27ce1a6ddce88949121934f3599b3552}\label{classlg_1_1cudnn_1_1_dropout_a27ce1a6ddce88949121934f3599b3552}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!create@{create}}
+\index{create@{create}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Dropout\+::create (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+size,  }\item[{const float}]{dropout\+\_\+probability,  }\item[{void $\ast$}]{state\+\_\+buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_af45ddcc72851f4889d4bd361d82df748}\label{classlg_1_1cudnn_1_1_dropout_af45ddcc72851f4889d4bd361d82df748}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!forward@{forward}}
+\index{forward@{forward}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::cudnn\+::\+Dropout\+::forward (\begin{DoxyParamCaption}\item[{void $\ast$}]{input,  }\item[{void $\ast$}]{output,  }\item[{void $\ast$}]{reserve\+\_\+space\+\_\+buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_ae8da161cb40aed9d4ba0509cfaed1352}\label{classlg_1_1cudnn_1_1_dropout_ae8da161cb40aed9d4ba0509cfaed1352}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!getReserveSpaceSize@{getReserveSpaceSize}}
+\index{getReserveSpaceSize@{getReserveSpaceSize}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{getReserveSpaceSize()}{getReserveSpaceSize()}}
+{\footnotesize\ttfamily size\+\_\+t lg\+::cudnn\+::\+Dropout\+::get\+Reserve\+Space\+Size (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlg_1_1cudnn_1_1_dropout_afc2d554001e68428ef991bca4bdbfa53}\label{classlg_1_1cudnn_1_1_dropout_afc2d554001e68428ef991bca4bdbfa53}} 
+\index{lg::cudnn::Dropout@{lg::cudnn::Dropout}!getStatesSize@{getStatesSize}}
+\index{getStatesSize@{getStatesSize}!lg::cudnn::Dropout@{lg::cudnn::Dropout}}
+\doxysubsubsection{\texorpdfstring{getStatesSize()}{getStatesSize()}}
+{\footnotesize\ttfamily size\+\_\+t lg\+::cudnn\+::\+Dropout\+::get\+States\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_c_u_d_a__backend_8hpp}{C\+U\+D\+A\+\_\+backend.\+hpp}}\end{DoxyCompactItemize}

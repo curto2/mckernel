@@ -1,0 +1,240 @@
+\hypertarget{classlg_1_1_concatenate}{}\doxysection{lg\+::Concatenate Class Reference}
+\label{classlg_1_1_concatenate}\index{lg::Concatenate@{lg::Concatenate}}
+
+
+{\ttfamily \#include $<$Concatenate.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Concatenate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classlg_1_1_concatenate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Concatenate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_concatenate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_concatenate_afa13dd1646493754a6a0bb454e005659}{Concatenate}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_concatenate_aed167754fa2ec265e5f714a300ad4be6}{Concatenate}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_concatenate_a3c556d06e8c41482c8b8e595d2beb87b}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_concatenate_a7fa90deb5a1b3b3ce41d680c9a69a411}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_concatenate_a370771a0a98a5c7e7b255e0377ff3441}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_concatenate_aa8c2acec1eecc412e5b3b597e6182d96}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_concatenate_a6ac1c267031ae041dd8a42e882a8e094}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_concatenate_ae89a5856d44bc5bb1abf59f393fd7233}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_concatenate_a689f0a87b1926eef4a66980758a6481f}{make}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Concatenate.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_concatenate_afa13dd1646493754a6a0bb454e005659}\label{classlg_1_1_concatenate_afa13dd1646493754a6a0bb454e005659}} 
+\index{lg::Concatenate@{lg::Concatenate}!Concatenate@{Concatenate}}
+\index{Concatenate@{Concatenate}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{Concatenate()}{Concatenate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Concatenate\+::\+Concatenate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Concatenate.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_afa13dd1646493754a6a0bb454e005659_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_concatenate_aed167754fa2ec265e5f714a300ad4be6}\label{classlg_1_1_concatenate_aed167754fa2ec265e5f714a300ad4be6}} 
+\index{lg::Concatenate@{lg::Concatenate}!Concatenate@{Concatenate}}
+\index{Concatenate@{Concatenate}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{Concatenate()}{Concatenate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Concatenate\+::\+Concatenate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_aed167754fa2ec265e5f714a300ad4be6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_concatenate_aa8c2acec1eecc412e5b3b597e6182d96}\label{classlg_1_1_concatenate_aa8c2acec1eecc412e5b3b597e6182d96}} 
+\index{lg::Concatenate@{lg::Concatenate}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Concatenate\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 163 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_aa8c2acec1eecc412e5b3b597e6182d96_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_concatenate_a6ac1c267031ae041dd8a42e882a8e094}\label{classlg_1_1_concatenate_a6ac1c267031ae041dd8a42e882a8e094}} 
+\index{lg::Concatenate@{lg::Concatenate}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Concatenate\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 192 of file Concatenate.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_concatenate_a3c556d06e8c41482c8b8e595d2beb87b}\label{classlg_1_1_concatenate_a3c556d06e8c41482c8b8e595d2beb87b}} 
+\index{lg::Concatenate@{lg::Concatenate}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Concatenate\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 52 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_a3c556d06e8c41482c8b8e595d2beb87b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_concatenate_a689f0a87b1926eef4a66980758a6481f}\label{classlg_1_1_concatenate_a689f0a87b1926eef4a66980758a6481f}} 
+\index{lg::Concatenate@{lg::Concatenate}!make@{make}}
+\index{make@{make}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Concatenate\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 22 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_a689f0a87b1926eef4a66980758a6481f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_concatenate_ae89a5856d44bc5bb1abf59f393fd7233}\label{classlg_1_1_concatenate_ae89a5856d44bc5bb1abf59f393fd7233}} 
+\index{lg::Concatenate@{lg::Concatenate}!print@{print}}
+\index{print@{print}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Concatenate\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 198 of file Concatenate.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_concatenate_a370771a0a98a5c7e7b255e0377ff3441}\label{classlg_1_1_concatenate_a370771a0a98a5c7e7b255e0377ff3441}} 
+\index{lg::Concatenate@{lg::Concatenate}!run@{run}}
+\index{run@{run}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Concatenate\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 125 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_a370771a0a98a5c7e7b255e0377ff3441_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_concatenate_a7fa90deb5a1b3b3ce41d680c9a69a411}\label{classlg_1_1_concatenate_a7fa90deb5a1b3b3ce41d680c9a69a411}} 
+\index{lg::Concatenate@{lg::Concatenate}!save@{save}}
+\index{save@{save}!lg::Concatenate@{lg::Concatenate}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Concatenate\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 116 of file Concatenate.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_concatenate_a7fa90deb5a1b3b3ce41d680c9a69a411_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_concatenate_8hpp}{Concatenate.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_concatenate_8cpp}{Concatenate.\+cpp}}\end{DoxyCompactItemize}

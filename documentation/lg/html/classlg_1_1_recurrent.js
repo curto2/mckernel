@@ -1,0 +1,27 @@
+var classlg_1_1_recurrent =
+[
+    [ "Recurrent", "classlg_1_1_recurrent.html#acbdb1159133f102efb58b791a0354e55", null ],
+    [ "Recurrent", "classlg_1_1_recurrent.html#a5729051532e563785ad1108e5d61e0ca", null ],
+    [ "accumulate_deltas", "classlg_1_1_recurrent.html#af8841253e68fab43f45dc12e907adad0", null ],
+    [ "accumulate_deltas", "classlg_1_1_recurrent.html#ad0442b9f08c3e812b880742687d0b3cc", null ],
+    [ "backprop", "classlg_1_1_recurrent.html#a378fc8061366973c063cc1090e42a11c", null ],
+    [ "backprop", "classlg_1_1_recurrent.html#ac5ec4d2ecbbfbabacbc544ee114f3664", null ],
+    [ "get_type", "classlg_1_1_recurrent.html#a02bc18b10a07a0258515a8520c5dd9ec", null ],
+    [ "initialize", "classlg_1_1_recurrent.html#a6b57d13023176dcc3f30952c260dff6e", null ],
+    [ "initialize", "classlg_1_1_recurrent.html#a697cd48ab364f4be2ec6f37eb8ae5ae9", null ],
+    [ "print", "classlg_1_1_recurrent.html#aba461d1d36fe5388715288957fe0389c", null ],
+    [ "reset_hidden_state", "classlg_1_1_recurrent.html#a189f0dd284081c0e24eac4c0a00391f0", null ],
+    [ "run", "classlg_1_1_recurrent.html#a797bb6173992fa4460ae88bfc5dfdc16", null ],
+    [ "run", "classlg_1_1_recurrent.html#a77f9e39326bb7228831c4da1a28133e8", null ],
+    [ "save", "classlg_1_1_recurrent.html#aee27dabeceaf0d84e1dc6073c192f57a", null ],
+    [ "update_parameters", "classlg_1_1_recurrent.html#ac9fcbf86968ea472be4215a88bd40171", null ],
+    [ "_btt_pos", "classlg_1_1_recurrent.html#adb40afd5d077e83242b7679c3851468a", null ],
+    [ "_btt_steps", "classlg_1_1_recurrent.html#a71fc7a01d2a16ade7f23fb963ea4e256", null ],
+    [ "_input_size", "classlg_1_1_recurrent.html#a9f52d6acb9a4a922132442b5babc1d21", null ],
+    [ "_mem_inputs", "classlg_1_1_recurrent.html#a7e9595863a6b4a4ebf71cb3f578f098d", null ],
+    [ "_mem_outputs", "classlg_1_1_recurrent.html#a5c94e3874405af1e6905b4672166553d", null ],
+    [ "_mem_tmp_errors", "classlg_1_1_recurrent.html#a3725f9f4eabc6f8af0d684d4bdb08c94", null ],
+    [ "_out", "classlg_1_1_recurrent.html#a7e8c0f491cd112ba644992c50eef166c", null ],
+    [ "_rec", "classlg_1_1_recurrent.html#a8084c48bbac5b4b6e7859df76221a812", null ],
+    [ "_x", "classlg_1_1_recurrent.html#ad8e19c089e1b4c5b2ed0b21d34ce4085", null ]
+];

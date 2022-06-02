@@ -1,0 +1,272 @@
+\hypertarget{classlg_1_1_normalization}{}\doxysection{lg\+::Normalization Class Reference}
+\label{classlg_1_1_normalization}\index{lg::Normalization@{lg::Normalization}}
+
+
+{\ttfamily \#include $<$Normalization.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Normalization\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classlg_1_1_normalization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Normalization\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_normalization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_normalization_a9bed2259bdcd44917cc6570ef5ca8ae6}{Normalization}} (float momentum=0.\+1)
+\item 
+\mbox{\hyperlink{classlg_1_1_normalization_a90b939d2bff861890771c100fc7fde9d}{Normalization}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_a6ae0d5a0a62d154c8cd824ea4461a0a4}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_a0faef5d0f6993f952f73b649c67cbedd}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_ab20d6028a029ed6fb8df84c3b2f6113a}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_abdfe9c3eff8afe5ce08e4d0ddfbd7dfc}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_ae55679ba3619c8f2ca46b39959280fd7}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_a71821a6319720e4a76b3a0aa96331c72}{update\+\_\+parameters}} (const float learningrate)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_normalization_a7f9b643f135efb640a0241d1db02fcb7}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_normalization_a6ee3658de4e0edc7e4bc4487f3be2814}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_normalization_a732d5d9559223d42255fcc513304c1d1}{make}} (float momentum=0.\+1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Normalization.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_normalization_a9bed2259bdcd44917cc6570ef5ca8ae6}\label{classlg_1_1_normalization_a9bed2259bdcd44917cc6570ef5ca8ae6}} 
+\index{lg::Normalization@{lg::Normalization}!Normalization@{Normalization}}
+\index{Normalization@{Normalization}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{Normalization()}{Normalization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Normalization\+::\+Normalization (\begin{DoxyParamCaption}\item[{float}]{momentum = {\ttfamily 0.1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Normalization.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_normalization_a90b939d2bff861890771c100fc7fde9d}\label{classlg_1_1_normalization_a90b939d2bff861890771c100fc7fde9d}} 
+\index{lg::Normalization@{lg::Normalization}!Normalization@{Normalization}}
+\index{Normalization@{Normalization}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{Normalization()}{Normalization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Normalization\+::\+Normalization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_a90b939d2bff861890771c100fc7fde9d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_normalization_ae55679ba3619c8f2ca46b39959280fd7}\label{classlg_1_1_normalization_ae55679ba3619c8f2ca46b39959280fd7}} 
+\index{lg::Normalization@{lg::Normalization}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 228 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_ae55679ba3619c8f2ca46b39959280fd7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_normalization_abdfe9c3eff8afe5ce08e4d0ddfbd7dfc}\label{classlg_1_1_normalization_abdfe9c3eff8afe5ce08e4d0ddfbd7dfc}} 
+\index{lg::Normalization@{lg::Normalization}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 192 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_abdfe9c3eff8afe5ce08e4d0ddfbd7dfc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_normalization_a7f9b643f135efb640a0241d1db02fcb7}\label{classlg_1_1_normalization_a7f9b643f135efb640a0241d1db02fcb7}} 
+\index{lg::Normalization@{lg::Normalization}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Normalization\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 263 of file Normalization.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_normalization_a0faef5d0f6993f952f73b649c67cbedd}\label{classlg_1_1_normalization_a0faef5d0f6993f952f73b649c67cbedd}} 
+\index{lg::Normalization@{lg::Normalization}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 91 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classlg_1_1_normalization_a0faef5d0f6993f952f73b649c67cbedd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_normalization_a732d5d9559223d42255fcc513304c1d1}\label{classlg_1_1_normalization_a732d5d9559223d42255fcc513304c1d1}} 
+\index{lg::Normalization@{lg::Normalization}!make@{make}}
+\index{make@{make}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Normalization\+::make (\begin{DoxyParamCaption}\item[{float}]{momentum = {\ttfamily 0.1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 21 of file Normalization.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_normalization_a6ee3658de4e0edc7e4bc4487f3be2814}\label{classlg_1_1_normalization_a6ee3658de4e0edc7e4bc4487f3be2814}} 
+\index{lg::Normalization@{lg::Normalization}!print@{print}}
+\index{print@{print}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 269 of file Normalization.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_normalization_ab20d6028a029ed6fb8df84c3b2f6113a}\label{classlg_1_1_normalization_ab20d6028a029ed6fb8df84c3b2f6113a}} 
+\index{lg::Normalization@{lg::Normalization}!run@{run}}
+\index{run@{run}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 141 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_ab20d6028a029ed6fb8df84c3b2f6113a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_normalization_a6ae0d5a0a62d154c8cd824ea4461a0a4}\label{classlg_1_1_normalization_a6ae0d5a0a62d154c8cd824ea4461a0a4}} 
+\index{lg::Normalization@{lg::Normalization}!save@{save}}
+\index{save@{save}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 128 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_a6ae0d5a0a62d154c8cd824ea4461a0a4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_normalization_a71821a6319720e4a76b3a0aa96331c72}\label{classlg_1_1_normalization_a71821a6319720e4a76b3a0aa96331c72}} 
+\index{lg::Normalization@{lg::Normalization}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Normalization@{lg::Normalization}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Normalization\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 247 of file Normalization.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_normalization_a71821a6319720e4a76b3a0aa96331c72_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_normalization_8hpp}{Normalization.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_normalization_8cpp}{Normalization.\+cpp}}\end{DoxyCompactItemize}

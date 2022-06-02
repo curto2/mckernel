@@ -1,0 +1,6 @@
+<map id="Bitmap::Bitmap" name="Bitmap::Bitmap">
+<area shape="rect" id="node1" title="Load bitmap from another bitmap region." alt="" coords="5,56,129,83"/>
+<area shape="rect" id="node2" href="$class_bitmap.html#a2b1522af9e663a20fb1860e20e7c0551" title="Get number of color channels." alt="" coords="177,5,336,32"/>
+<area shape="rect" id="node3" href="$class_bitmap.html#aa5ae6d3773cbe88c55cd5859127509d8" title="Get bitmap data." alt="" coords="192,56,321,83"/>
+<area shape="rect" id="node4" href="$class_bitmap.html#a051a04d89370efcbf6b6afc630d83034" title="Get bitmap with." alt="" coords="189,107,325,133"/>
+</map>

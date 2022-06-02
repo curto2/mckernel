@@ -1,0 +1,5 @@
+<map id="lg::SGD_Optimizer" name="lg::SGD_Optimizer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,171,147,197"/>
+<area shape="rect" id="node2" href="$classlg_1_1_optimizer.html" title=" " alt="" coords="23,95,129,121"/>
+<area shape="rect" id="node3" href="$classlg_1_1_cost.html" title="A function that returns a number representing how well the neural network performed to map inputs and..." alt="" coords="41,5,111,32"/>
+</map>

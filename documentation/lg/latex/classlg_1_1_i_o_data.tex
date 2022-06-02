@@ -1,0 +1,656 @@
+\hypertarget{classlg_1_1_i_o_data}{}\doxysection{lg\+::I\+O\+Data Class Reference}
+\label{classlg_1_1_i_o_data}\index{lg::IOData@{lg::IOData}}
+
+
+{\ttfamily \#include $<$I\+O\+Data.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_abbfee0667072b5a97d9dbe33ea767d61}{I\+O\+Data}} (std\+::string name)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_a193432f425dacf4d455b5f80a2d5e33a}{I\+O\+Data}} (std\+::string name, const char $\ast$data, unsigned int size)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_a96074971b176837bae00f837b569a486}{I\+O\+Data}} (std\+::string name, const int data)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_ae3020d823f732566be638c2c1e85dffe}{I\+O\+Data}} (std\+::string name, const std\+::string data)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_af339fa9fc1e614919e3e8910beb7b526}{I\+O\+Data}} (std\+::string name, const float $\ast$data, unsigned int size)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_a80008bdfd493ca925d4ecf0056294dcc}{I\+O\+Data}} (std\+::string name, const float data)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_aef8614614c276ac09f21ab99d11a7a3e}{I\+O\+Data}} (std\+::string name, const bool data)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_a0f2656346359ea328f064f28b172f0f7}{I\+O\+Data}} (std\+::ifstream \&filestream)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data_a6e879dfabbaaf4ddce6de6c4272e2dc9}{$\sim$\+I\+O\+Data}} ()
+\item 
+bool \mbox{\hyperlink{classlg_1_1_i_o_data_a3dc4e6d8b24b892c5a3bbb85719e4383}{load\+From\+File}} (std\+::string filename)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a175e43ac265a357a5fbdf01d5464bab5}{load\+From\+Stream}} (std\+::ifstream \&filestream)
+\item 
+bool \mbox{\hyperlink{classlg_1_1_i_o_data_a8f7bbb67a46e2ffbba1393e8d8cd4241}{write\+To\+File}} (std\+::string filename)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a346ced8e93c83ffc70958d3435efeca2}{write\+To\+Stream}} (std\+::ofstream \&filestream)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a5154892ab759172f26f958aac542e462}{get}} (char $\ast$data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a46e530a6b2742b1f036c762a19982826}{get}} (int \&data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_afe9641272be2d023d203ff8ea34c4a8c}{get}} (std\+::string \&data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_ad18620d6e15a828c86f1b7de07c2a402}{get}} (float $\ast$data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a1d8e17d19a6eeaab4f71644750cc7bf2}{get}} (float \&data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_aeccb386711f973838e73d8873479e886}{get}} (bool \&data) const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a38380170f401f87a95cd9293b6acb118}{set\+Name}} (std\+::string name)
+\item 
+const std\+::string \mbox{\hyperlink{classlg_1_1_i_o_data_aebfaf814458978bc632edfe2e7d32e97}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_aa44feb5642801943bfc578571a6a2083}{push\+Node}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a4e129aafe8e102ae08ce3b1b3fc43b56}{push\+Node}} (std\+::string name, const char $\ast$data, unsigned int size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a9fc69f322b015d18fb57e842e0d74a75}{push\+Node}} (std\+::string name, const int data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_adaafc0c46e92776e062fd72c35f6ff8f}{push\+Node}} (std\+::string name, const std\+::string data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a15337413d5b0b0291a8795e3e596cbf5}{push\+Node}} (std\+::string name, const float $\ast$data, unsigned int size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a171618ae302c450578f071b648930af9}{push\+Node}} (std\+::string name, const float data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a1d1b4a82088dcb5a4c405b82360b6f3e}{push\+Node}} (std\+::string name, const bool data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_i_o_data_a39e843e7285cd9a72ea62c32ec2350ef}{remove\+Node}} (std\+::string label)
+\item 
+\mbox{\hyperlink{classlg_1_1_i_o_data}{I\+O\+Data}} $\ast$ \mbox{\hyperlink{classlg_1_1_i_o_data_a67090b2a79ed3b6296e899006c5c74a5}{find\+Node}} (std\+::string label)
+\item 
+int \mbox{\hyperlink{classlg_1_1_i_o_data_ae350f90b901285b75ca5bd005174421b}{find\+Node\+Index}} (std\+::string label)
+\item 
+bool \mbox{\hyperlink{classlg_1_1_i_o_data_a4c849cdeffb3afa2c18b90a803dec040}{exists\+Node}} (std\+::string label)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_i_o_data}{I\+O\+Data}} $>$ \mbox{\hyperlink{classlg_1_1_i_o_data_a6f537d309b3036729352052d7d086ac8}{get\+Sub\+Nodes}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file I\+O\+Data.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_abbfee0667072b5a97d9dbe33ea767d61}\label{classlg_1_1_i_o_data_abbfee0667072b5a97d9dbe33ea767d61}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file I\+O\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_abbfee0667072b5a97d9dbe33ea767d61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a193432f425dacf4d455b5f80a2d5e33a}\label{classlg_1_1_i_o_data_a193432f425dacf4d455b5f80a2d5e33a}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const char $\ast$}]{data,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a96074971b176837bae00f837b569a486}\label{classlg_1_1_i_o_data_a96074971b176837bae00f837b569a486}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_ae3020d823f732566be638c2c1e85dffe}\label{classlg_1_1_i_o_data_ae3020d823f732566be638c2c1e85dffe}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const std\+::string}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_af339fa9fc1e614919e3e8910beb7b526}\label{classlg_1_1_i_o_data_af339fa9fc1e614919e3e8910beb7b526}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const float $\ast$}]{data,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a80008bdfd493ca925d4ecf0056294dcc}\label{classlg_1_1_i_o_data_a80008bdfd493ca925d4ecf0056294dcc}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const float}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_aef8614614c276ac09f21ab99d11a7a3e}\label{classlg_1_1_i_o_data_aef8614614c276ac09f21ab99d11a7a3e}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const bool}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a0f2656346359ea328f064f28b172f0f7}\label{classlg_1_1_i_o_data_a0f2656346359ea328f064f28b172f0f7}} 
+\index{lg::IOData@{lg::IOData}!IOData@{IOData}}
+\index{IOData@{IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{IOData()}{IOData()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::\+I\+O\+Data (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{filestream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a0f2656346359ea328f064f28b172f0f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a6e879dfabbaaf4ddce6de6c4272e2dc9}\label{classlg_1_1_i_o_data_a6e879dfabbaaf4ddce6de6c4272e2dc9}} 
+\index{lg::IOData@{lg::IOData}!````~IOData@{$\sim$IOData}}
+\index{````~IOData@{$\sim$IOData}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{$\sim$IOData()}{~IOData()}}
+{\footnotesize\ttfamily lg\+::\+I\+O\+Data\+::$\sim$\+I\+O\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file I\+O\+Data.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a4c849cdeffb3afa2c18b90a803dec040}\label{classlg_1_1_i_o_data_a4c849cdeffb3afa2c18b90a803dec040}} 
+\index{lg::IOData@{lg::IOData}!existsNode@{existsNode}}
+\index{existsNode@{existsNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{existsNode()}{existsNode()}}
+{\footnotesize\ttfamily bool lg\+::\+I\+O\+Data\+::exists\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{label }\end{DoxyParamCaption})}
+
+
+
+Definition at line 214 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a4c849cdeffb3afa2c18b90a803dec040_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a67090b2a79ed3b6296e899006c5c74a5}\label{classlg_1_1_i_o_data_a67090b2a79ed3b6296e899006c5c74a5}} 
+\index{lg::IOData@{lg::IOData}!findNode@{findNode}}
+\index{findNode@{findNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{findNode()}{findNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_i_o_data}{I\+O\+Data}} $\ast$ lg\+::\+I\+O\+Data\+::find\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{label }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a67090b2a79ed3b6296e899006c5c74a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classlg_1_1_i_o_data_a67090b2a79ed3b6296e899006c5c74a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_ae350f90b901285b75ca5bd005174421b}\label{classlg_1_1_i_o_data_ae350f90b901285b75ca5bd005174421b}} 
+\index{lg::IOData@{lg::IOData}!findNodeIndex@{findNodeIndex}}
+\index{findNodeIndex@{findNodeIndex}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{findNodeIndex()}{findNodeIndex()}}
+{\footnotesize\ttfamily int lg\+::\+I\+O\+Data\+::find\+Node\+Index (\begin{DoxyParamCaption}\item[{std\+::string}]{label }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_ae350f90b901285b75ca5bd005174421b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_ae350f90b901285b75ca5bd005174421b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_aeccb386711f973838e73d8873479e886}\label{classlg_1_1_i_o_data_aeccb386711f973838e73d8873479e886}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{bool \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 172 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classlg_1_1_i_o_data_aeccb386711f973838e73d8873479e886_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a5154892ab759172f26f958aac542e462}\label{classlg_1_1_i_o_data_a5154892ab759172f26f958aac542e462}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{char $\ast$}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 134 of file I\+O\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classlg_1_1_i_o_data_a5154892ab759172f26f958aac542e462_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a1d8e17d19a6eeaab4f71644750cc7bf2}\label{classlg_1_1_i_o_data_a1d8e17d19a6eeaab4f71644750cc7bf2}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{float \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 165 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classlg_1_1_i_o_data_a1d8e17d19a6eeaab4f71644750cc7bf2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_ad18620d6e15a828c86f1b7de07c2a402}\label{classlg_1_1_i_o_data_ad18620d6e15a828c86f1b7de07c2a402}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{float $\ast$}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 158 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classlg_1_1_i_o_data_ad18620d6e15a828c86f1b7de07c2a402_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a46e530a6b2742b1f036c762a19982826}\label{classlg_1_1_i_o_data_a46e530a6b2742b1f036c762a19982826}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{int \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 143 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classlg_1_1_i_o_data_a46e530a6b2742b1f036c762a19982826_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_afe9641272be2d023d203ff8ea34c4a8c}\label{classlg_1_1_i_o_data_afe9641272be2d023d203ff8ea34c4a8c}} 
+\index{lg::IOData@{lg::IOData}!get@{get}}
+\index{get@{get}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::get (\begin{DoxyParamCaption}\item[{std\+::string \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 150 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classlg_1_1_i_o_data_afe9641272be2d023d203ff8ea34c4a8c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_aebfaf814458978bc632edfe2e7d32e97}\label{classlg_1_1_i_o_data_aebfaf814458978bc632edfe2e7d32e97}} 
+\index{lg::IOData@{lg::IOData}!getName@{getName}}
+\index{getName@{getName}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string lg\+::\+I\+O\+Data\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 179 of file I\+O\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_aebfaf814458978bc632edfe2e7d32e97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a6f537d309b3036729352052d7d086ac8}\label{classlg_1_1_i_o_data_a6f537d309b3036729352052d7d086ac8}} 
+\index{lg::IOData@{lg::IOData}!getSubNodes@{getSubNodes}}
+\index{getSubNodes@{getSubNodes}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{getSubNodes()}{getSubNodes()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_i_o_data}{I\+O\+Data}} $>$ lg\+::\+I\+O\+Data\+::get\+Sub\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 290 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a3dc4e6d8b24b892c5a3bbb85719e4383}\label{classlg_1_1_i_o_data_a3dc4e6d8b24b892c5a3bbb85719e4383}} 
+\index{lg::IOData@{lg::IOData}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily bool lg\+::\+I\+O\+Data\+::load\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a3dc4e6d8b24b892c5a3bbb85719e4383_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a3dc4e6d8b24b892c5a3bbb85719e4383_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a175e43ac265a357a5fbdf01d5464bab5}\label{classlg_1_1_i_o_data_a175e43ac265a357a5fbdf01d5464bab5}} 
+\index{lg::IOData@{lg::IOData}!loadFromStream@{loadFromStream}}
+\index{loadFromStream@{loadFromStream}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{loadFromStream()}{loadFromStream()}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::load\+From\+Stream (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{filestream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file I\+O\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a175e43ac265a357a5fbdf01d5464bab5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_aa44feb5642801943bfc578571a6a2083}\label{classlg_1_1_i_o_data_aa44feb5642801943bfc578571a6a2083}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 238 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_aa44feb5642801943bfc578571a6a2083_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classlg_1_1_i_o_data_aa44feb5642801943bfc578571a6a2083_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a1d1b4a82088dcb5a4c405b82360b6f3e}\label{classlg_1_1_i_o_data_a1d1b4a82088dcb5a4c405b82360b6f3e}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const bool}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 274 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_a1d1b4a82088dcb5a4c405b82360b6f3e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a4e129aafe8e102ae08ce3b1b3fc43b56}\label{classlg_1_1_i_o_data_a4e129aafe8e102ae08ce3b1b3fc43b56}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const char $\ast$}]{data,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 244 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_a4e129aafe8e102ae08ce3b1b3fc43b56_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a15337413d5b0b0291a8795e3e596cbf5}\label{classlg_1_1_i_o_data_a15337413d5b0b0291a8795e3e596cbf5}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const float $\ast$}]{data,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 262 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_a15337413d5b0b0291a8795e3e596cbf5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a171618ae302c450578f071b648930af9}\label{classlg_1_1_i_o_data_a171618ae302c450578f071b648930af9}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const float}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 268 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_a171618ae302c450578f071b648930af9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a9fc69f322b015d18fb57e842e0d74a75}\label{classlg_1_1_i_o_data_a9fc69f322b015d18fb57e842e0d74a75}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 250 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_a9fc69f322b015d18fb57e842e0d74a75_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_adaafc0c46e92776e062fd72c35f6ff8f}\label{classlg_1_1_i_o_data_adaafc0c46e92776e062fd72c35f6ff8f}} 
+\index{lg::IOData@{lg::IOData}!pushNode@{pushNode}}
+\index{pushNode@{pushNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{pushNode()}{pushNode()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::push\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const std\+::string}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 256 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classlg_1_1_i_o_data_adaafc0c46e92776e062fd72c35f6ff8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a39e843e7285cd9a72ea62c32ec2350ef}\label{classlg_1_1_i_o_data_a39e843e7285cd9a72ea62c32ec2350ef}} 
+\index{lg::IOData@{lg::IOData}!removeNode@{removeNode}}
+\index{removeNode@{removeNode}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{removeNode()}{removeNode()}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::remove\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{label }\end{DoxyParamCaption})}
+
+
+
+Definition at line 191 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a39e843e7285cd9a72ea62c32ec2350ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a38380170f401f87a95cd9293b6acb118}\label{classlg_1_1_i_o_data_a38380170f401f87a95cd9293b6acb118}} 
+\index{lg::IOData@{lg::IOData}!setName@{setName}}
+\index{setName@{setName}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 185 of file I\+O\+Data.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a8f7bbb67a46e2ffbba1393e8d8cd4241}\label{classlg_1_1_i_o_data_a8f7bbb67a46e2ffbba1393e8d8cd4241}} 
+\index{lg::IOData@{lg::IOData}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily bool lg\+::\+I\+O\+Data\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file I\+O\+Data.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a8f7bbb67a46e2ffbba1393e8d8cd4241_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a8f7bbb67a46e2ffbba1393e8d8cd4241_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_i_o_data_a346ced8e93c83ffc70958d3435efeca2}\label{classlg_1_1_i_o_data_a346ced8e93c83ffc70958d3435efeca2}} 
+\index{lg::IOData@{lg::IOData}!writeToStream@{writeToStream}}
+\index{writeToStream@{writeToStream}!lg::IOData@{lg::IOData}}
+\doxysubsubsection{\texorpdfstring{writeToStream()}{writeToStream()}}
+{\footnotesize\ttfamily void lg\+::\+I\+O\+Data\+::write\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{filestream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file I\+O\+Data.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_i_o_data_a346ced8e93c83ffc70958d3435efeca2_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/util/\mbox{\hyperlink{_i_o_data_8hpp}{I\+O\+Data.\+hpp}}\item 
+lg/src/util/\mbox{\hyperlink{_i_o_data_8cpp}{I\+O\+Data.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,727 @@
+\hypertarget{dirent__win_8h}{}\doxysection{lg/src/util/dirent\+\_\+win.h File Reference}
+\label{dirent__win_8h}\index{lg/src/util/dirent\_win.h@{lg/src/util/dirent\_win.h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$wchar.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+Include dependency graph for dirent\+\_\+win.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dirent__win_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}}
+\item 
+struct \mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}}
+\item 
+struct \mbox{\hyperlink{structdirent}{dirent}}
+\item 
+struct \mbox{\hyperlink{struct_d_i_r}{D\+IR}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a1e6aefd9b3e29578655bcdf140e43fda}{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ae1c648e7f1fc47b1262f98d6f8ee4ea0}{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aacf8e3610f58598b1cb40df6d3e216a9}{F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE}}~0x40
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}~\+\_\+\+S\+\_\+\+I\+F\+MT
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}}~\+\_\+\+S\+\_\+\+I\+F\+D\+IR
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}}~\+\_\+\+S\+\_\+\+I\+F\+C\+HR
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ad764ca408f6c7de6840f58da5d58c076}{S\+\_\+\+I\+F\+F\+I\+FO}}~\+\_\+\+S\+\_\+\+I\+F\+F\+I\+FO
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}}~\+\_\+\+S\+\_\+\+I\+F\+R\+EG
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a96c6486aa02a821aa4199525f5e79f60}{S\+\_\+\+I\+R\+E\+AD}}~\+\_\+\+S\+\_\+\+I\+R\+E\+AD
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a40eb4ad4bcc675d265615042657c37b7}{S\+\_\+\+I\+W\+R\+I\+TE}}~\+\_\+\+S\+\_\+\+I\+W\+R\+I\+TE
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a49a6665b56f38f52ee9b157cefcf4d68}{S\+\_\+\+I\+E\+X\+EC}}~\+\_\+\+S\+\_\+\+I\+E\+X\+EC
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}}~\+\_\+\+S\+\_\+\+I\+F\+I\+FO
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}{S\+\_\+\+I\+F\+L\+NK}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a28e80cd43106882904be148b2a397d42}{S\+\_\+\+I\+F\+S\+O\+CK}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}{S\+\_\+\+I\+R\+U\+SR}}~\mbox{\hyperlink{dirent__win_8h_a96c6486aa02a821aa4199525f5e79f60}{S\+\_\+\+I\+R\+E\+AD}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ad70001754261c15a1bdc8e876c6d09d7}{S\+\_\+\+I\+W\+U\+SR}}~\mbox{\hyperlink{dirent__win_8h_a40eb4ad4bcc675d265615042657c37b7}{S\+\_\+\+I\+W\+R\+I\+TE}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_af10a35e3950795d6ee4e07157d000131}{S\+\_\+\+I\+X\+U\+SR}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a4f5f280b929768113739fb34d6f7be8a}{S\+\_\+\+I\+R\+G\+RP}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ae6774871a90d9442f00abe18b87fee6e}{S\+\_\+\+I\+W\+G\+RP}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a042e69ac0e7dd56e5cfcd9e97d010323}{S\+\_\+\+I\+X\+G\+RP}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a071147a0cb995036967c80f64b1f74b9}{S\+\_\+\+I\+R\+O\+TH}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a5303f49f26293acdb9533756c78322fb}{S\+\_\+\+I\+W\+O\+TH}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a40223db1b95a04f5b28cceb3c34cfebd}{S\+\_\+\+I\+X\+O\+TH}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ae688d728e1acdfe5988c7db45d6f0166}{P\+A\+T\+H\+\_\+\+M\+AX}}~M\+A\+X\+\_\+\+P\+A\+TH
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}~M\+A\+X\+\_\+\+P\+A\+TH
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_ac64541bdd81c961304b9babef1402640}{N\+A\+M\+E\+\_\+\+M\+AX}}~\mbox{\hyperlink{dirent__win_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a293ce58a2d39f35c52f7f4516a857057}{D\+T\+\_\+\+U\+N\+K\+N\+O\+WN}}~0
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a9973595cf6775b1b29d7274ab4c0d623}{D\+T\+\_\+\+R\+EG}}~\mbox{\hyperlink{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a1dcee67486bc4238096ecb61e2d9ffd1}{D\+T\+\_\+\+D\+IR}}~\mbox{\hyperlink{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a6fabe696c35bf34daa67931b4c245c7d}{D\+T\+\_\+\+F\+I\+FO}}~\mbox{\hyperlink{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aaa6ed2fc54836a2c7d9b698923705f5e}{D\+T\+\_\+\+S\+O\+CK}}~\mbox{\hyperlink{dirent__win_8h_a28e80cd43106882904be148b2a397d42}{S\+\_\+\+I\+F\+S\+O\+CK}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a7d0095c3caf2c334bf222608d02576d7}{D\+T\+\_\+\+C\+HR}}~\mbox{\hyperlink{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a212cebbaad682bc6c3bf798c8749abc5}{D\+T\+\_\+\+B\+LK}}~\mbox{\hyperlink{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aa70b5cb1d9c30b1830cb6a5e835231c6}{D\+T\+\_\+\+L\+NK}}~\mbox{\hyperlink{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}{S\+\_\+\+I\+F\+L\+NK}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_af862352847d1b389ef162ec1222130a8}{I\+F\+T\+O\+DT}}(mode)~((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a74d60eb436b31daadb1fa753c65f024a}{D\+T\+T\+O\+IF}}(type)~(type)
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}{S\+\_\+\+I\+S\+F\+I\+FO}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}{S\+\_\+\+I\+S\+D\+IR}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aad0f32c2c182238f2ff71c83e6ab65a0}{S\+\_\+\+I\+S\+R\+EG}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a765eef536bcb3bd7bacdd675dc2fba13}{S\+\_\+\+I\+S\+L\+NK}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}{S\+\_\+\+I\+F\+L\+NK}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a397ddd128980f1ee034653da2e9d8f6e}{S\+\_\+\+I\+S\+S\+O\+CK}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a28e80cd43106882904be148b2a397d42}{S\+\_\+\+I\+F\+S\+O\+CK}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aae33be85d242a1317f972cf2b189f03d}{S\+\_\+\+I\+S\+C\+HR}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a8b86a24d84c3cfce39cc832a017656ba}{S\+\_\+\+I\+S\+B\+LK}}(mode)~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a51769eed69c4f256aeae3beb4c91c5ae}{\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN}}(p)~((p)-\/$>$d\+\_\+namlen)
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a4e4e85e0a5552ee80184cb4150464fa2}{\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN}}(p)~(\mbox{\hyperlink{dirent__win_8h_ae688d728e1acdfe5988c7db45d6f0166}{P\+A\+T\+H\+\_\+\+M\+AX}})
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_acced66b96e07a03662493638658986f4}{wdirent}}~\mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_aa97efcb21eb4eb1172ca3ac581309f09}{W\+D\+IR}}~\mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}}
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a728bb1173e923c1ae0801c1d91370c0e}{wopendir}}~\+\_\+wopendir
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a53e09ee78c993b9feebaf49cb47146f1}{wreaddir}}~\+\_\+wreaddir
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a783634d83dcc99d8a393b22893acfe66}{wclosedir}}~\+\_\+wclosedir
+\item 
+\#define \mbox{\hyperlink{dirent__win_8h_a8de41b9888772577edbb17b85dce573e}{wrewinddir}}~\+\_\+wrewinddir
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}} \mbox{\hyperlink{dirent__win_8h_a7083dcfe4c262f51d7b4e065df46ebc5}{\+\_\+wdirent}}
+\item 
+typedef struct \mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}} \mbox{\hyperlink{dirent__win_8h_a29ac3d7a7c3ecfd3db9de331f5b71279}{\+\_\+\+W\+D\+IR}}
+\item 
+typedef struct \mbox{\hyperlink{structdirent}{dirent}} \mbox{\hyperlink{dirent__win_8h_ae50c911db67dfb4b55fbfc97a557f6f2}{dirent}}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_i_r}{D\+IR}} \mbox{\hyperlink{dirent__win_8h_a805632179a707f8794b35f089c940cb3}{D\+IR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dirent__win_8h_a4e4e85e0a5552ee80184cb4150464fa2}\label{dirent__win_8h_a4e4e85e0a5552ee80184cb4150464fa2}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_D\_ALLOC\_NAMLEN@{\_D\_ALLOC\_NAMLEN}}
+\index{\_D\_ALLOC\_NAMLEN@{\_D\_ALLOC\_NAMLEN}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_D\_ALLOC\_NAMLEN}{\_D\_ALLOC\_NAMLEN}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~(\mbox{\hyperlink{dirent__win_8h_ae688d728e1acdfe5988c7db45d6f0166}{P\+A\+T\+H\+\_\+\+M\+AX}})}
+
+
+
+Definition at line 205 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a51769eed69c4f256aeae3beb4c91c5ae}\label{dirent__win_8h_a51769eed69c4f256aeae3beb4c91c5ae}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_D\_EXACT\_NAMLEN@{\_D\_EXACT\_NAMLEN}}
+\index{\_D\_EXACT\_NAMLEN@{\_D\_EXACT\_NAMLEN}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_D\_EXACT\_NAMLEN}{\_D\_EXACT\_NAMLEN}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~((p)-\/$>$d\+\_\+namlen)}
+
+
+
+Definition at line 202 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ae1c648e7f1fc47b1262f98d6f8ee4ea0}\label{dirent__win_8h_ae1c648e7f1fc47b1262f98d6f8ee4ea0}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_DIRENT\_HAVE\_D\_NAMLEN@{\_DIRENT\_HAVE\_D\_NAMLEN}}
+\index{\_DIRENT\_HAVE\_D\_NAMLEN@{\_DIRENT\_HAVE\_D\_NAMLEN}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_DIRENT\_HAVE\_D\_NAMLEN}{\_DIRENT\_HAVE\_D\_NAMLEN}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}
+
+
+
+Definition at line 36 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a1e6aefd9b3e29578655bcdf140e43fda}\label{dirent__win_8h_a1e6aefd9b3e29578655bcdf140e43fda}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_DIRENT\_HAVE\_D\_TYPE@{\_DIRENT\_HAVE\_D\_TYPE}}
+\index{\_DIRENT\_HAVE\_D\_TYPE@{\_DIRENT\_HAVE\_D\_TYPE}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_DIRENT\_HAVE\_D\_TYPE}{\_DIRENT\_HAVE\_D\_TYPE}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}
+
+
+
+Definition at line 33 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a212cebbaad682bc6c3bf798c8749abc5}\label{dirent__win_8h_a212cebbaad682bc6c3bf798c8749abc5}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_BLK@{DT\_BLK}}
+\index{DT\_BLK@{DT\_BLK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_BLK}{DT\_BLK}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+B\+LK~\mbox{\hyperlink{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}}}
+
+
+
+Definition at line 166 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a7d0095c3caf2c334bf222608d02576d7}\label{dirent__win_8h_a7d0095c3caf2c334bf222608d02576d7}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_CHR@{DT\_CHR}}
+\index{DT\_CHR@{DT\_CHR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_CHR}{DT\_CHR}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+C\+HR~\mbox{\hyperlink{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}}}
+
+
+
+Definition at line 165 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a1dcee67486bc4238096ecb61e2d9ffd1}\label{dirent__win_8h_a1dcee67486bc4238096ecb61e2d9ffd1}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_DIR@{DT\_DIR}}
+\index{DT\_DIR@{DT\_DIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_DIR}{DT\_DIR}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+D\+IR~\mbox{\hyperlink{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}}}
+
+
+
+Definition at line 162 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a6fabe696c35bf34daa67931b4c245c7d}\label{dirent__win_8h_a6fabe696c35bf34daa67931b4c245c7d}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_FIFO@{DT\_FIFO}}
+\index{DT\_FIFO@{DT\_FIFO}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_FIFO}{DT\_FIFO}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+F\+I\+FO~\mbox{\hyperlink{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}}}
+
+
+
+Definition at line 163 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aa70b5cb1d9c30b1830cb6a5e835231c6}\label{dirent__win_8h_aa70b5cb1d9c30b1830cb6a5e835231c6}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_LNK@{DT\_LNK}}
+\index{DT\_LNK@{DT\_LNK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_LNK}{DT\_LNK}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+L\+NK~\mbox{\hyperlink{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}{S\+\_\+\+I\+F\+L\+NK}}}
+
+
+
+Definition at line 167 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a9973595cf6775b1b29d7274ab4c0d623}\label{dirent__win_8h_a9973595cf6775b1b29d7274ab4c0d623}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_REG@{DT\_REG}}
+\index{DT\_REG@{DT\_REG}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_REG}{DT\_REG}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+R\+EG~\mbox{\hyperlink{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}}}
+
+
+
+Definition at line 161 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aaa6ed2fc54836a2c7d9b698923705f5e}\label{dirent__win_8h_aaa6ed2fc54836a2c7d9b698923705f5e}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_SOCK@{DT\_SOCK}}
+\index{DT\_SOCK@{DT\_SOCK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_SOCK}{DT\_SOCK}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+S\+O\+CK~\mbox{\hyperlink{dirent__win_8h_a28e80cd43106882904be148b2a397d42}{S\+\_\+\+I\+F\+S\+O\+CK}}}
+
+
+
+Definition at line 164 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a293ce58a2d39f35c52f7f4516a857057}\label{dirent__win_8h_a293ce58a2d39f35c52f7f4516a857057}} 
+\index{dirent\_win.h@{dirent\_win.h}!DT\_UNKNOWN@{DT\_UNKNOWN}}
+\index{DT\_UNKNOWN@{DT\_UNKNOWN}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DT\_UNKNOWN}{DT\_UNKNOWN}}
+{\footnotesize\ttfamily \#define D\+T\+\_\+\+U\+N\+K\+N\+O\+WN~0}
+
+
+
+Definition at line 160 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a74d60eb436b31daadb1fa753c65f024a}\label{dirent__win_8h_a74d60eb436b31daadb1fa753c65f024a}} 
+\index{dirent\_win.h@{dirent\_win.h}!DTTOIF@{DTTOIF}}
+\index{DTTOIF@{DTTOIF}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DTTOIF}{DTTOIF}}
+{\footnotesize\ttfamily \#define D\+T\+T\+O\+IF(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})~(type)}
+
+
+
+Definition at line 171 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aacf8e3610f58598b1cb40df6d3e216a9}\label{dirent__win_8h_aacf8e3610f58598b1cb40df6d3e216a9}} 
+\index{dirent\_win.h@{dirent\_win.h}!FILE\_ATTRIBUTE\_DEVICE@{FILE\_ATTRIBUTE\_DEVICE}}
+\index{FILE\_ATTRIBUTE\_DEVICE@{FILE\_ATTRIBUTE\_DEVICE}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_ATTRIBUTE\_DEVICE}{FILE\_ATTRIBUTE\_DEVICE}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE~0x40}
+
+
+
+Definition at line 40 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}\label{dirent__win_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}} 
+\index{dirent\_win.h@{dirent\_win.h}!FILENAME\_MAX@{FILENAME\_MAX}}
+\index{FILENAME\_MAX@{FILENAME\_MAX}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{FILENAME\_MAX}{FILENAME\_MAX}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX~M\+A\+X\+\_\+\+P\+A\+TH}
+
+
+
+Definition at line 153 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_af862352847d1b389ef162ec1222130a8}\label{dirent__win_8h_af862352847d1b389ef162ec1222130a8}} 
+\index{dirent\_win.h@{dirent\_win.h}!IFTODT@{IFTODT}}
+\index{IFTODT@{IFTODT}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{IFTODT}{IFTODT}}
+{\footnotesize\ttfamily \#define I\+F\+T\+O\+DT(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}})}
+
+
+
+Definition at line 170 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ac64541bdd81c961304b9babef1402640}\label{dirent__win_8h_ac64541bdd81c961304b9babef1402640}} 
+\index{dirent\_win.h@{dirent\_win.h}!NAME\_MAX@{NAME\_MAX}}
+\index{NAME\_MAX@{NAME\_MAX}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{NAME\_MAX}{NAME\_MAX}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+\_\+\+M\+AX~\mbox{\hyperlink{dirent__win_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}}
+
+
+
+Definition at line 156 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ae688d728e1acdfe5988c7db45d6f0166}\label{dirent__win_8h_ae688d728e1acdfe5988c7db45d6f0166}} 
+\index{dirent\_win.h@{dirent\_win.h}!PATH\_MAX@{PATH\_MAX}}
+\index{PATH\_MAX@{PATH\_MAX}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{PATH\_MAX}{PATH\_MAX}}
+{\footnotesize\ttfamily \#define P\+A\+T\+H\+\_\+\+M\+AX~M\+A\+X\+\_\+\+P\+A\+TH}
+
+
+
+Definition at line 150 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a49a6665b56f38f52ee9b157cefcf4d68}\label{dirent__win_8h_a49a6665b56f38f52ee9b157cefcf4d68}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IEXEC@{S\_IEXEC}}
+\index{S\_IEXEC@{S\_IEXEC}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IEXEC}{S\_IEXEC}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+E\+X\+EC~\+\_\+\+S\+\_\+\+I\+E\+X\+EC}
+
+
+
+Definition at line 80 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}\label{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFBLK@{S\_IFBLK}}
+\index{S\_IFBLK@{S\_IFBLK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFBLK}{S\_IFBLK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+B\+LK~0}
+
+
+
+Definition at line 90 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}\label{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFCHR@{S\_IFCHR}}
+\index{S\_IFCHR@{S\_IFCHR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFCHR}{S\_IFCHR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+C\+HR~\+\_\+\+S\+\_\+\+I\+F\+C\+HR}
+
+
+
+Definition at line 55 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}\label{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFDIR@{S\_IFDIR}}
+\index{S\_IFDIR@{S\_IFDIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFDIR}{S\_IFDIR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+D\+IR~\+\_\+\+S\+\_\+\+I\+F\+D\+IR}
+
+
+
+Definition at line 50 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ad764ca408f6c7de6840f58da5d58c076}\label{dirent__win_8h_ad764ca408f6c7de6840f58da5d58c076}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFFIFO@{S\_IFFIFO}}
+\index{S\_IFFIFO@{S\_IFFIFO}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFFIFO}{S\_IFFIFO}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+F\+I\+FO~\+\_\+\+S\+\_\+\+I\+F\+F\+I\+FO}
+
+
+
+Definition at line 60 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}\label{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFIFO@{S\_IFIFO}}
+\index{S\_IFIFO@{S\_IFIFO}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFIFO}{S\_IFIFO}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+I\+FO~\+\_\+\+S\+\_\+\+I\+F\+I\+FO}
+
+
+
+Definition at line 85 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}\label{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFLNK@{S\_IFLNK}}
+\index{S\_IFLNK@{S\_IFLNK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFLNK}{S\_IFLNK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+L\+NK~0}
+
+
+
+Definition at line 95 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}\label{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFMT@{S\_IFMT}}
+\index{S\_IFMT@{S\_IFMT}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFMT}{S\_IFMT}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+MT~\+\_\+\+S\+\_\+\+I\+F\+MT}
+
+
+
+Definition at line 45 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}\label{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFREG@{S\_IFREG}}
+\index{S\_IFREG@{S\_IFREG}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFREG}{S\_IFREG}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+R\+EG~\+\_\+\+S\+\_\+\+I\+F\+R\+EG}
+
+
+
+Definition at line 65 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a28e80cd43106882904be148b2a397d42}\label{dirent__win_8h_a28e80cd43106882904be148b2a397d42}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IFSOCK@{S\_IFSOCK}}
+\index{S\_IFSOCK@{S\_IFSOCK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IFSOCK}{S\_IFSOCK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+F\+S\+O\+CK~0}
+
+
+
+Definition at line 100 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a96c6486aa02a821aa4199525f5e79f60}\label{dirent__win_8h_a96c6486aa02a821aa4199525f5e79f60}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IREAD@{S\_IREAD}}
+\index{S\_IREAD@{S\_IREAD}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IREAD}{S\_IREAD}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+E\+AD~\+\_\+\+S\+\_\+\+I\+R\+E\+AD}
+
+
+
+Definition at line 70 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a4f5f280b929768113739fb34d6f7be8a}\label{dirent__win_8h_a4f5f280b929768113739fb34d6f7be8a}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IRGRP@{S\_IRGRP}}
+\index{S\_IRGRP@{S\_IRGRP}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IRGRP}{S\_IRGRP}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+G\+RP~0}
+
+
+
+Definition at line 120 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a071147a0cb995036967c80f64b1f74b9}\label{dirent__win_8h_a071147a0cb995036967c80f64b1f74b9}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IROTH@{S\_IROTH}}
+\index{S\_IROTH@{S\_IROTH}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IROTH}{S\_IROTH}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+O\+TH~0}
+
+
+
+Definition at line 135 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}\label{dirent__win_8h_a84c7dbf5cf2fdfb690f76348b60a8cb7}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IRUSR@{S\_IRUSR}}
+\index{S\_IRUSR@{S\_IRUSR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IRUSR}{S\_IRUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+R\+U\+SR~\mbox{\hyperlink{dirent__win_8h_a96c6486aa02a821aa4199525f5e79f60}{S\+\_\+\+I\+R\+E\+AD}}}
+
+
+
+Definition at line 105 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a8b86a24d84c3cfce39cc832a017656ba}\label{dirent__win_8h_a8b86a24d84c3cfce39cc832a017656ba}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISBLK@{S\_ISBLK}}
+\index{S\_ISBLK@{S\_ISBLK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISBLK}{S\_ISBLK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+B\+LK(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a5c5b74a1cb1a1ae83572500b94e1938f}{S\+\_\+\+I\+F\+B\+LK}})}
+
+
+
+Definition at line 198 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aae33be85d242a1317f972cf2b189f03d}\label{dirent__win_8h_aae33be85d242a1317f972cf2b189f03d}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISCHR@{S\_ISCHR}}
+\index{S\_ISCHR@{S\_ISCHR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISCHR}{S\_ISCHR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+C\+HR(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}{S\+\_\+\+I\+F\+C\+HR}})}
+
+
+
+Definition at line 195 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}\label{dirent__win_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISDIR@{S\_ISDIR}}
+\index{S\_ISDIR@{S\_ISDIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISDIR}{S\_ISDIR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+D\+IR(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a11fb0652b963a735f3377eb1c9239f2d}{S\+\_\+\+I\+F\+D\+IR}})}
+
+
+
+Definition at line 183 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}\label{dirent__win_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISFIFO@{S\_ISFIFO}}
+\index{S\_ISFIFO@{S\_ISFIFO}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISFIFO}{S\_ISFIFO}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+F\+I\+FO(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a4966f25d9f03a7a06bc47ac729fd86cf}{S\+\_\+\+I\+F\+I\+FO}})}
+
+
+
+Definition at line 180 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a765eef536bcb3bd7bacdd675dc2fba13}\label{dirent__win_8h_a765eef536bcb3bd7bacdd675dc2fba13}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISLNK@{S\_ISLNK}}
+\index{S\_ISLNK@{S\_ISLNK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISLNK}{S\_ISLNK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+L\+NK(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_afef163ce62372757e84bd9fc88c07aad}{S\+\_\+\+I\+F\+L\+NK}})}
+
+
+
+Definition at line 189 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aad0f32c2c182238f2ff71c83e6ab65a0}\label{dirent__win_8h_aad0f32c2c182238f2ff71c83e6ab65a0}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISREG@{S\_ISREG}}
+\index{S\_ISREG@{S\_ISREG}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISREG}{S\_ISREG}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+R\+EG(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}{S\+\_\+\+I\+F\+R\+EG}})}
+
+
+
+Definition at line 186 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a397ddd128980f1ee034653da2e9d8f6e}\label{dirent__win_8h_a397ddd128980f1ee034653da2e9d8f6e}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_ISSOCK@{S\_ISSOCK}}
+\index{S\_ISSOCK@{S\_ISSOCK}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_ISSOCK}{S\_ISSOCK}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+S\+S\+O\+CK(\begin{DoxyParamCaption}\item[{}]{mode }\end{DoxyParamCaption})~(((mode) \& \mbox{\hyperlink{dirent__win_8h_ab5bee51e9ee68b83ab11d4b340f7200b}{S\+\_\+\+I\+F\+MT}}) == \mbox{\hyperlink{dirent__win_8h_a28e80cd43106882904be148b2a397d42}{S\+\_\+\+I\+F\+S\+O\+CK}})}
+
+
+
+Definition at line 192 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ae6774871a90d9442f00abe18b87fee6e}\label{dirent__win_8h_ae6774871a90d9442f00abe18b87fee6e}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IWGRP@{S\_IWGRP}}
+\index{S\_IWGRP@{S\_IWGRP}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IWGRP}{S\_IWGRP}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+G\+RP~0}
+
+
+
+Definition at line 125 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a5303f49f26293acdb9533756c78322fb}\label{dirent__win_8h_a5303f49f26293acdb9533756c78322fb}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IWOTH@{S\_IWOTH}}
+\index{S\_IWOTH@{S\_IWOTH}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IWOTH}{S\_IWOTH}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+O\+TH~0}
+
+
+
+Definition at line 140 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a40eb4ad4bcc675d265615042657c37b7}\label{dirent__win_8h_a40eb4ad4bcc675d265615042657c37b7}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IWRITE@{S\_IWRITE}}
+\index{S\_IWRITE@{S\_IWRITE}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IWRITE}{S\_IWRITE}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+R\+I\+TE~\+\_\+\+S\+\_\+\+I\+W\+R\+I\+TE}
+
+
+
+Definition at line 75 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ad70001754261c15a1bdc8e876c6d09d7}\label{dirent__win_8h_ad70001754261c15a1bdc8e876c6d09d7}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IWUSR@{S\_IWUSR}}
+\index{S\_IWUSR@{S\_IWUSR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IWUSR}{S\_IWUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+W\+U\+SR~\mbox{\hyperlink{dirent__win_8h_a40eb4ad4bcc675d265615042657c37b7}{S\+\_\+\+I\+W\+R\+I\+TE}}}
+
+
+
+Definition at line 110 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a042e69ac0e7dd56e5cfcd9e97d010323}\label{dirent__win_8h_a042e69ac0e7dd56e5cfcd9e97d010323}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IXGRP@{S\_IXGRP}}
+\index{S\_IXGRP@{S\_IXGRP}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IXGRP}{S\_IXGRP}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+X\+G\+RP~0}
+
+
+
+Definition at line 130 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a40223db1b95a04f5b28cceb3c34cfebd}\label{dirent__win_8h_a40223db1b95a04f5b28cceb3c34cfebd}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IXOTH@{S\_IXOTH}}
+\index{S\_IXOTH@{S\_IXOTH}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IXOTH}{S\_IXOTH}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+X\+O\+TH~0}
+
+
+
+Definition at line 145 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_af10a35e3950795d6ee4e07157d000131}\label{dirent__win_8h_af10a35e3950795d6ee4e07157d000131}} 
+\index{dirent\_win.h@{dirent\_win.h}!S\_IXUSR@{S\_IXUSR}}
+\index{S\_IXUSR@{S\_IXUSR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{S\_IXUSR}{S\_IXUSR}}
+{\footnotesize\ttfamily \#define S\+\_\+\+I\+X\+U\+SR~0}
+
+
+
+Definition at line 115 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a783634d83dcc99d8a393b22893acfe66}\label{dirent__win_8h_a783634d83dcc99d8a393b22893acfe66}} 
+\index{dirent\_win.h@{dirent\_win.h}!wclosedir@{wclosedir}}
+\index{wclosedir@{wclosedir}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{wclosedir}{wclosedir}}
+{\footnotesize\ttfamily \#define wclosedir~\+\_\+wclosedir}
+
+
+
+Definition at line 261 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_aa97efcb21eb4eb1172ca3ac581309f09}\label{dirent__win_8h_aa97efcb21eb4eb1172ca3ac581309f09}} 
+\index{dirent\_win.h@{dirent\_win.h}!WDIR@{WDIR}}
+\index{WDIR@{WDIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{WDIR}{WDIR}}
+{\footnotesize\ttfamily \#define W\+D\+IR~\mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}}}
+
+
+
+Definition at line 258 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_acced66b96e07a03662493638658986f4}\label{dirent__win_8h_acced66b96e07a03662493638658986f4}} 
+\index{dirent\_win.h@{dirent\_win.h}!wdirent@{wdirent}}
+\index{wdirent@{wdirent}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{wdirent}{wdirent}}
+{\footnotesize\ttfamily \#define wdirent~\mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}}}
+
+
+
+Definition at line 257 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}\label{dirent__win_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}} 
+\index{dirent\_win.h@{dirent\_win.h}!WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}}
+\index{WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{WIN32\_LEAN\_AND\_MEAN}{WIN32\_LEAN\_AND\_MEAN}}
+{\footnotesize\ttfamily \#define W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}
+
+
+
+Definition at line 18 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a728bb1173e923c1ae0801c1d91370c0e}\label{dirent__win_8h_a728bb1173e923c1ae0801c1d91370c0e}} 
+\index{dirent\_win.h@{dirent\_win.h}!wopendir@{wopendir}}
+\index{wopendir@{wopendir}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{wopendir}{wopendir}}
+{\footnotesize\ttfamily \#define wopendir~\+\_\+wopendir}
+
+
+
+Definition at line 259 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a53e09ee78c993b9feebaf49cb47146f1}\label{dirent__win_8h_a53e09ee78c993b9feebaf49cb47146f1}} 
+\index{dirent\_win.h@{dirent\_win.h}!wreaddir@{wreaddir}}
+\index{wreaddir@{wreaddir}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{wreaddir}{wreaddir}}
+{\footnotesize\ttfamily \#define wreaddir~\+\_\+wreaddir}
+
+
+
+Definition at line 260 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a8de41b9888772577edbb17b85dce573e}\label{dirent__win_8h_a8de41b9888772577edbb17b85dce573e}} 
+\index{dirent\_win.h@{dirent\_win.h}!wrewinddir@{wrewinddir}}
+\index{wrewinddir@{wrewinddir}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{wrewinddir}{wrewinddir}}
+{\footnotesize\ttfamily \#define wrewinddir~\+\_\+wrewinddir}
+
+
+
+Definition at line 262 of file dirent\+\_\+win.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{dirent__win_8h_a29ac3d7a7c3ecfd3db9de331f5b71279}\label{dirent__win_8h_a29ac3d7a7c3ecfd3db9de331f5b71279}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_WDIR@{\_WDIR}}
+\index{\_WDIR@{\_WDIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_WDIR}{\_WDIR}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}} \mbox{\hyperlink{struct___w_d_i_r}{\+\_\+\+W\+D\+IR}}}
+
+
+
+Definition at line 248 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a7083dcfe4c262f51d7b4e065df46ebc5}\label{dirent__win_8h_a7083dcfe4c262f51d7b4e065df46ebc5}} 
+\index{dirent\_win.h@{dirent\_win.h}!\_wdirent@{\_wdirent}}
+\index{\_wdirent@{\_wdirent}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{\_wdirent}{\_wdirent}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}} \mbox{\hyperlink{struct__wdirent}{\+\_\+wdirent}}}
+
+
+
+Definition at line 230 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_a805632179a707f8794b35f089c940cb3}\label{dirent__win_8h_a805632179a707f8794b35f089c940cb3}} 
+\index{dirent\_win.h@{dirent\_win.h}!DIR@{DIR}}
+\index{DIR@{DIR}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{DIR}{DIR}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_d_i_r}{D\+IR}} \mbox{\hyperlink{struct_d_i_r}{D\+IR}}}
+
+
+
+Definition at line 288 of file dirent\+\_\+win.\+h.
+
+\mbox{\Hypertarget{dirent__win_8h_ae50c911db67dfb4b55fbfc97a557f6f2}\label{dirent__win_8h_ae50c911db67dfb4b55fbfc97a557f6f2}} 
+\index{dirent\_win.h@{dirent\_win.h}!dirent@{dirent}}
+\index{dirent@{dirent}!dirent\_win.h@{dirent\_win.h}}
+\doxysubsubsection{\texorpdfstring{dirent}{dirent}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdirent}{dirent}} \mbox{\hyperlink{structdirent}{dirent}}}
+
+
+
+Definition at line 282 of file dirent\+\_\+win.\+h.
+

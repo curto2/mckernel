@@ -1,0 +1,598 @@
+\hypertarget{classlg_1_1_autoencoder}{}\doxysection{lg\+::Autoencoder Class Reference}
+\label{classlg_1_1_autoencoder}\index{lg::Autoencoder@{lg::Autoencoder}}
+
+
+{\ttfamily \#include $<$Autoencoder.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Autoencoder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classlg_1_1_autoencoder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Autoencoder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_autoencoder_a0cafaaf6c5dd84184bd418c9a12afd8c}{Autoencoder}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_autoencoder_a8e9ee3d84cac887f69f1b759cfcd508f}{Autoencoder}} (const int size, const float noise)
+\item 
+\mbox{\hyperlink{classlg_1_1_autoencoder_a0ed86a2f4ab8fd82d218b74fb8694bf4}{Autoencoder}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_ae0e7cebc92a7a59e9f2a183c716202d1}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_aee62dcd4a7cd21838952019c7ce3b141}{initialize}} (int input\+\_\+size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a9b25df94407d93929bfe6e8680e49b21}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a9611cb6ab80a0ae4487a75c3adb6149b}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_ad2c3ed9fcb5411bc94a6e384e2557776}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a09ed2da3cf90d954aacccdc6054d02dc}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_aa42992aa2b0eaefd7897b056a7038a94}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_aebf022c462dff4a503c39f5e5f454e29}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a082e7b0ac10aa2cfc2d28bdc64a4dc74}{reset\+\_\+outputs}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a115ef4b17550412ec6acc9c45a6e554e}{set\+Fixed\+Parameters}} (const bool fixedparameters)
+\item 
+const float \mbox{\hyperlink{classlg_1_1_autoencoder_abe037f8c4ed6d07454b5abcf75ba1bf0}{get\+Prediction\+Error}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_autoencoder_a076aba23123916682c7fa5d673068970}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a82f5f761e2eac2478593841be191bb40}{print}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a9afb0e26654d624c2289dbf173f8a086}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, bool accumulate, bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_a80cbc75da0b4df30ff671b4e92d65ee0}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_autoencoder_ae31c6b873bbd6bfcd8661c459d568a87}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_autoencoder_a07c23afd38278b3ac8228ce77124b5f0}{make}} (const int size, const float noise)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_aa47667d08cbf41f171230505dbb608bd}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a10e5333d89fc5510c4ca1eab9fad091e}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a0f7b0b6028ed6f6e53d0382f133b23f3}{\+\_\+w\+\_\+deltas}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_ab07d46df129ffdeecaa7ffc9153df03f}{\+\_\+b\+\_\+deltas}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a975622d8961230c9e9e43e3a9fa7d06a}{\+\_\+prediction}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a74603d58e1f3b0930b7dabfa911505a5}{\+\_\+prediction\+\_\+error}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a755d54633aa5def513ae1c08abaf31f2}{\+\_\+hidden\+\_\+errors}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_autoencoder_a4ca571ceb47f23604d3a1537311a8371}{\+\_\+noise\+\_\+mask}}
+\item 
+\mbox{\hyperlink{namespacelg_a15dc94f47fa6432d896c6bfab0683ca6}{lg\+::\+Tensor\+\_\+int}} \mbox{\hyperlink{classlg_1_1_autoencoder_a003b45a8cd311bcb1c87d90abd305952}{\+\_\+activations}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_autoencoder_ab595712b908a90e415470bb5d3146bb3}{\+\_\+error}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_autoencoder_af0cbe35e62e4d513937f63f39294340b}{\+\_\+noise}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_autoencoder_a7d10b8e3bab025cf9b94f62d329c67e2}{\+\_\+learningrate}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_autoencoder_a5cee0cda8aaae60ee21e51a5ce1a3a4e}{\+\_\+fixed\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_autoencoder_a412edde1528e2428815f1ee85cc8bdcf}{\+\_\+input\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Autoencoder.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a0cafaaf6c5dd84184bd418c9a12afd8c}\label{classlg_1_1_autoencoder_a0cafaaf6c5dd84184bd418c9a12afd8c}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!Autoencoder@{Autoencoder}}
+\index{Autoencoder@{Autoencoder}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{Autoencoder()}{Autoencoder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::\+Autoencoder\+::\+Autoencoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Autoencoder.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a0cafaaf6c5dd84184bd418c9a12afd8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a8e9ee3d84cac887f69f1b759cfcd508f}\label{classlg_1_1_autoencoder_a8e9ee3d84cac887f69f1b759cfcd508f}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!Autoencoder@{Autoencoder}}
+\index{Autoencoder@{Autoencoder}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{Autoencoder()}{Autoencoder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::\+Autoencoder\+::\+Autoencoder (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{const float}]{noise }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a8e9ee3d84cac887f69f1b759cfcd508f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a0ed86a2f4ab8fd82d218b74fb8694bf4}\label{classlg_1_1_autoencoder_a0ed86a2f4ab8fd82d218b74fb8694bf4}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!Autoencoder@{Autoencoder}}
+\index{Autoencoder@{Autoencoder}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{Autoencoder()}{Autoencoder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::\+Autoencoder\+::\+Autoencoder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a0ed86a2f4ab8fd82d218b74fb8694bf4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_ae31c6b873bbd6bfcd8661c459d568a87}\label{classlg_1_1_autoencoder_ae31c6b873bbd6bfcd8661c459d568a87}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 255 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_ae31c6b873bbd6bfcd8661c459d568a87_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a09ed2da3cf90d954aacccdc6054d02dc}\label{classlg_1_1_autoencoder_a09ed2da3cf90d954aacccdc6054d02dc}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 143 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_ad2c3ed9fcb5411bc94a6e384e2557776}\label{classlg_1_1_autoencoder_ad2c3ed9fcb5411bc94a6e384e2557776}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 137 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a80cbc75da0b4df30ff671b4e92d65ee0}\label{classlg_1_1_autoencoder_a80cbc75da0b4df30ff671b4e92d65ee0}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a076aba23123916682c7fa5d673068970}\label{classlg_1_1_autoencoder_a076aba23123916682c7fa5d673068970}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Autoencoder\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 323 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_abe037f8c4ed6d07454b5abcf75ba1bf0}\label{classlg_1_1_autoencoder_abe037f8c4ed6d07454b5abcf75ba1bf0}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!getPredictionError@{getPredictionError}}
+\index{getPredictionError@{getPredictionError}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{getPredictionError()}{getPredictionError()}}
+{\footnotesize\ttfamily const float lg\+::\+Autoencoder\+::get\+Prediction\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_aee62dcd4a7cd21838952019c7ce3b141}\label{classlg_1_1_autoencoder_aee62dcd4a7cd21838952019c7ce3b141}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::initialize (\begin{DoxyParamCaption}\item[{int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_aee62dcd4a7cd21838952019c7ce3b141_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_ae0e7cebc92a7a59e9f2a183c716202d1}\label{classlg_1_1_autoencoder_ae0e7cebc92a7a59e9f2a183c716202d1}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 91 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classlg_1_1_autoencoder_ae0e7cebc92a7a59e9f2a183c716202d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a07c23afd38278b3ac8228ce77124b5f0}\label{classlg_1_1_autoencoder_a07c23afd38278b3ac8228ce77124b5f0}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!make@{make}}
+\index{make@{make}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Autoencoder\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{const float}]{noise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 24 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a07c23afd38278b3ac8228ce77124b5f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a82f5f761e2eac2478593841be191bb40}\label{classlg_1_1_autoencoder_a82f5f761e2eac2478593841be191bb40}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!print@{print}}
+\index{print@{print}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 329 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_aebf022c462dff4a503c39f5e5f454e29}\label{classlg_1_1_autoencoder_aebf022c462dff4a503c39f5e5f454e29}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 170 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classlg_1_1_autoencoder_aebf022c462dff4a503c39f5e5f454e29_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a082e7b0ac10aa2cfc2d28bdc64a4dc74}\label{classlg_1_1_autoencoder_a082e7b0ac10aa2cfc2d28bdc64a4dc74}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!reset\_outputs@{reset\_outputs}}
+\index{reset\_outputs@{reset\_outputs}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{reset\_outputs()}{reset\_outputs()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::reset\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 311 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classlg_1_1_autoencoder_a082e7b0ac10aa2cfc2d28bdc64a4dc74_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a9afb0e26654d624c2289dbf173f8a086}\label{classlg_1_1_autoencoder_a9afb0e26654d624c2289dbf173f8a086}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!run@{run}}
+\index{run@{run}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{bool}]{accumulate,  }\item[{bool}]{training }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a9afb0e26654d624c2289dbf173f8a086_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a9611cb6ab80a0ae4487a75c3adb6149b}\label{classlg_1_1_autoencoder_a9611cb6ab80a0ae4487a75c3adb6149b}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!run@{run}}
+\index{run@{run}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 131 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a9b25df94407d93929bfe6e8680e49b21}\label{classlg_1_1_autoencoder_a9b25df94407d93929bfe6e8680e49b21}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!save@{save}}
+\index{save@{save}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 82 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_autoencoder_a9b25df94407d93929bfe6e8680e49b21_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a115ef4b17550412ec6acc9c45a6e554e}\label{classlg_1_1_autoencoder_a115ef4b17550412ec6acc9c45a6e554e}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!setFixedParameters@{setFixedParameters}}
+\index{setFixedParameters@{setFixedParameters}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{setFixedParameters()}{setFixedParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::set\+Fixed\+Parameters (\begin{DoxyParamCaption}\item[{const bool}]{fixedparameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 317 of file Autoencoder.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_aa42992aa2b0eaefd7897b056a7038a94}\label{classlg_1_1_autoencoder_aa42992aa2b0eaefd7897b056a7038a94}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Autoencoder\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 149 of file Autoencoder.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classlg_1_1_autoencoder_aa42992aa2b0eaefd7897b056a7038a94_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a003b45a8cd311bcb1c87d90abd305952}\label{classlg_1_1_autoencoder_a003b45a8cd311bcb1c87d90abd305952}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_activations@{\_activations}}
+\index{\_activations@{\_activations}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_activations}{\_activations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a15dc94f47fa6432d896c6bfab0683ca6}{lg\+::\+Tensor\+\_\+int}} lg\+::\+Autoencoder\+::\+\_\+activations}
+
+
+
+Definition at line 58 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_ab07d46df129ffdeecaa7ffc9153df03f}\label{classlg_1_1_autoencoder_ab07d46df129ffdeecaa7ffc9153df03f}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_b\_deltas@{\_b\_deltas}}
+\index{\_b\_deltas@{\_b\_deltas}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_b\_deltas}{\_b\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+b\+\_\+deltas}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a10e5333d89fc5510c4ca1eab9fad091e}\label{classlg_1_1_autoencoder_a10e5333d89fc5510c4ca1eab9fad091e}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+bias}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_ab595712b908a90e415470bb5d3146bb3}\label{classlg_1_1_autoencoder_ab595712b908a90e415470bb5d3146bb3}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_error@{\_error}}
+\index{\_error@{\_error}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_error}{\_error}}
+{\footnotesize\ttfamily float lg\+::\+Autoencoder\+::\+\_\+error}
+
+
+
+Definition at line 61 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a5cee0cda8aaae60ee21e51a5ce1a3a4e}\label{classlg_1_1_autoencoder_a5cee0cda8aaae60ee21e51a5ce1a3a4e}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_fixed\_parameters@{\_fixed\_parameters}}
+\index{\_fixed\_parameters@{\_fixed\_parameters}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_parameters}{\_fixed\_parameters}}
+{\footnotesize\ttfamily bool lg\+::\+Autoencoder\+::\+\_\+fixed\+\_\+parameters}
+
+
+
+Definition at line 64 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a755d54633aa5def513ae1c08abaf31f2}\label{classlg_1_1_autoencoder_a755d54633aa5def513ae1c08abaf31f2}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_hidden\_errors@{\_hidden\_errors}}
+\index{\_hidden\_errors@{\_hidden\_errors}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_hidden\_errors}{\_hidden\_errors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+hidden\+\_\+errors}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a412edde1528e2428815f1ee85cc8bdcf}\label{classlg_1_1_autoencoder_a412edde1528e2428815f1ee85cc8bdcf}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Autoencoder\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 65 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a7d10b8e3bab025cf9b94f62d329c67e2}\label{classlg_1_1_autoencoder_a7d10b8e3bab025cf9b94f62d329c67e2}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_learningrate@{\_learningrate}}
+\index{\_learningrate@{\_learningrate}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_learningrate}{\_learningrate}}
+{\footnotesize\ttfamily float lg\+::\+Autoencoder\+::\+\_\+learningrate}
+
+
+
+Definition at line 63 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_af0cbe35e62e4d513937f63f39294340b}\label{classlg_1_1_autoencoder_af0cbe35e62e4d513937f63f39294340b}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_noise@{\_noise}}
+\index{\_noise@{\_noise}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_noise}{\_noise}}
+{\footnotesize\ttfamily float lg\+::\+Autoencoder\+::\+\_\+noise}
+
+
+
+Definition at line 62 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a4ca571ceb47f23604d3a1537311a8371}\label{classlg_1_1_autoencoder_a4ca571ceb47f23604d3a1537311a8371}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_noise\_mask@{\_noise\_mask}}
+\index{\_noise\_mask@{\_noise\_mask}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_noise\_mask}{\_noise\_mask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+noise\+\_\+mask}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a975622d8961230c9e9e43e3a9fa7d06a}\label{classlg_1_1_autoencoder_a975622d8961230c9e9e43e3a9fa7d06a}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_prediction@{\_prediction}}
+\index{\_prediction@{\_prediction}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_prediction}{\_prediction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+prediction}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a74603d58e1f3b0930b7dabfa911505a5}\label{classlg_1_1_autoencoder_a74603d58e1f3b0930b7dabfa911505a5}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_prediction\_error@{\_prediction\_error}}
+\index{\_prediction\_error@{\_prediction\_error}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_prediction\_error}{\_prediction\_error}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+prediction\+\_\+error}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_a0f7b0b6028ed6f6e53d0382f133b23f3}\label{classlg_1_1_autoencoder_a0f7b0b6028ed6f6e53d0382f133b23f3}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_w\_deltas@{\_w\_deltas}}
+\index{\_w\_deltas@{\_w\_deltas}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_w\_deltas}{\_w\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+w\+\_\+deltas}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_autoencoder_aa47667d08cbf41f171230505dbb608bd}\label{classlg_1_1_autoencoder_aa47667d08cbf41f171230505dbb608bd}} 
+\index{lg::Autoencoder@{lg::Autoencoder}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::Autoencoder@{lg::Autoencoder}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{lg\+::\+Tensor\+\_\+float}} lg\+::\+Autoencoder\+::\+\_\+weights}
+
+
+
+Definition at line 57 of file Autoencoder.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_autoencoder_8hpp}{Autoencoder.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_autoencoder_8cpp}{Autoencoder.\+cpp}}\end{DoxyCompactItemize}

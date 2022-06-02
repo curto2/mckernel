@@ -1,0 +1,59 @@
+\hypertarget{_data_augmentation_8cpp}{}\doxysection{lg/src/deep\+\_\+learning/\+Data\+Augmentation.cpp File Reference}
+\label{_data_augmentation_8cpp}\index{lg/src/deep\_learning/DataAugmentation.cpp@{lg/src/deep\_learning/DataAugmentation.cpp}}
+{\ttfamily \#include \char`\"{}Data\+Augmentation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../util/ensure.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../util/\+Util.\+hpp\char`\"{}}\newline
+Include dependency graph for Data\+Augmentation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_data_augmentation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelg}{lg}}
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacelg_1_1augmentation}{lg\+::augmentation}}
+\begin{DoxyCompactList}\small\item\em N\+A\+M\+E\+S\+P\+A\+CE A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_data_augmentation_8cpp_a902092ff4e7e7cb2c9e15a3576125c4b}{A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+G\+E\+N\+E\+R\+A\+B\+L\+E\+\_\+\+I\+M\+A\+G\+ES}}~1000000
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+L\+U\+D\+ES. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_ac0ae518aceaff406dfd488e480c5e045}{lg\+::augmentation\+::tensor\+\_\+copy}} (const Tensor\+\_\+float \&src, Tensor\+\_\+float \&dst)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a626320805a783ff7d8a0d468d73f65bd}{lg\+::augmentation\+::hflip}} (Tensor\+\_\+float \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a80bc7c0a8ebbf0bb2c86ad232e0f0f53}{lg\+::augmentation\+::vflip}} (Tensor\+\_\+float \&t, int width, int height, int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_ae5eb1247fc0cc2634f8ba72e2545375f}{lg\+::augmentation\+::rotate}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float degrees)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a93af29c39e1906a93bd767396c6fa133}{lg\+::augmentation\+::translate}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, int tx, int ty)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a05f96b1587e277ba0c2e13bc99c146f5}{lg\+::augmentation\+::noise}} (Tensor\+\_\+float \&t, int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, float noise)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1augmentation_a32bf760b019fce61cc9d290a05c9508f}{lg\+::augmentation\+::scaling}} (Tensor\+\_\+float \&t, int width, int height, int channel, float scale\+\_\+factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_data_augmentation_8cpp_a902092ff4e7e7cb2c9e15a3576125c4b}\label{_data_augmentation_8cpp_a902092ff4e7e7cb2c9e15a3576125c4b}} 
+\index{DataAugmentation.cpp@{DataAugmentation.cpp}!AUGMENTATION\_MAX\_GENERABLE\_IMAGES@{AUGMENTATION\_MAX\_GENERABLE\_IMAGES}}
+\index{AUGMENTATION\_MAX\_GENERABLE\_IMAGES@{AUGMENTATION\_MAX\_GENERABLE\_IMAGES}!DataAugmentation.cpp@{DataAugmentation.cpp}}
+\doxysubsubsection{\texorpdfstring{AUGMENTATION\_MAX\_GENERABLE\_IMAGES}{AUGMENTATION\_MAX\_GENERABLE\_IMAGES}}
+{\footnotesize\ttfamily \#define A\+U\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+G\+E\+N\+E\+R\+A\+B\+L\+E\+\_\+\+I\+M\+A\+G\+ES~1000000}
+
+
+
+I\+N\+C\+L\+U\+D\+ES. 
+
+
+
+Definition at line 16 of file Data\+Augmentation.\+cpp.
+

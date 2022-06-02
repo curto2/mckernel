@@ -1,0 +1,324 @@
+\hypertarget{class_mc_kernel}{}\doxysection{Mc\+Kernel Class Reference}
+\label{class_mc_kernel}\index{McKernel@{McKernel}}
+
+
+{\ttfamily \#include $<$Factory\+\_\+\+Mc\+Kernel.\+hpp$>$}
+
+
+
+Inheritance diagram for Mc\+Kernel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_mc_kernel__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mc_kernel_a490fbcab620c1ef868c0bf2e1a95095e}{Mc\+Kernel}} (float $\ast$data, const unsigned long nv, const unsigned long dn, const unsigned long D, const unsigned long seed, const float sigma)
+\item 
+virtual void \mbox{\hyperlink{class_mc_kernel_aa31eb98db4f038a9be35c91656ccf15e}{Mc\+Features}} ()
+\item 
+virtual void \mbox{\hyperlink{class_mc_kernel_ae8a44746e5d8f7b5b5e957a4ea5c5b65}{Mc\+Evaluate}} ()
+\item 
+virtual \mbox{\hyperlink{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}{$\sim$\+Mc\+Kernel}} ()
+\item 
+\mbox{\hyperlink{class_mc_kernel_a3bd03fc1cc7564a56e69cc5d2012512a}{Mc\+Kernel}} (float $\ast$data, const unsigned long nv, const unsigned long dn, const unsigned long D, mt19937 seed, const float sigma)
+\item 
+virtual void \mbox{\hyperlink{class_mc_kernel_a0821bfa75bcb5adb984e0fcfeec16083}{Mc\+Features}} ()
+\item 
+virtual void \mbox{\hyperlink{class_mc_kernel_a7a9b6514f91c7505b9ab6fd14ef7c72c}{Mc\+Evaluate}} ()
+\item 
+virtual \mbox{\hyperlink{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}{$\sim$\+Mc\+Kernel}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{class_mc_kernel_a6b3226db3ccd9a4393610796af649c9e}{M\+\_\+nv}}
+\item 
+unsigned long \mbox{\hyperlink{class_mc_kernel_abc40561933913fd173c71d91018021cf}{M\+\_\+dn}}
+\item 
+unsigned long \mbox{\hyperlink{class_mc_kernel_a6f4f8f5d0b6be71db605ea778b403687}{M\+\_\+dnpg}}
+\item 
+unsigned long \mbox{\hyperlink{class_mc_kernel_a861269c78fcbfb3248e756fd9bf19171}{M\+\_\+D}}
+\item 
+unsigned long \mbox{\hyperlink{class_mc_kernel_aa3100d0d7e4722658eb9b16f125884e1}{M\+\_\+dn\+\_\+D}}
+\item 
+float $\ast$ \mbox{\hyperlink{class_mc_kernel_a4cea500d85e7205e94c9e94f8e8e88af}{M\+\_\+data}}
+\item 
+float $\ast$ \mbox{\hyperlink{class_mc_kernel_adec5d19cd9e3e4f6befef32adb7517dd}{M\+\_\+data\+\_\+out}}
+\item 
+float $\ast$ \mbox{\hyperlink{class_mc_kernel_a602a446dc44c75be7e495e533b76d2e0}{M\+\_\+features}}
+\item 
+vector$<$ unsigned long $>$ \mbox{\hyperlink{class_mc_kernel_ae389e852da3148d0a4b02c3063a39f1b}{dl\+\_\+\+Pi}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{class_mc_kernel_a6cae4350ba93b3499da8827bf7153ad0}{dl\+\_\+G}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{class_mc_kernel_a69d226291c4cf24a44b93de6fb42de16}{dl\+\_\+C}}
+\item 
+vector$<$ long $>$ \mbox{\hyperlink{class_mc_kernel_acc3d65fcb91a9c1a711b14ddf5d9e6e5}{dl\+\_\+B}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mc_kernel_a490fbcab620c1ef868c0bf2e1a95095e}\label{class_mc_kernel_a490fbcab620c1ef868c0bf2e1a95095e}} 
+\index{McKernel@{McKernel}!McKernel@{McKernel}}
+\index{McKernel@{McKernel}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McKernel()}{McKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mc\+Kernel\+::\+Mc\+Kernel (\begin{DoxyParamCaption}\item[{float $\ast$}]{data,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{D,  }\item[{const unsigned long}]{seed,  }\item[{const float}]{sigma }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mc_kernel_a490fbcab620c1ef868c0bf2e1a95095e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}\label{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}} 
+\index{McKernel@{McKernel}!````~McKernel@{$\sim$McKernel}}
+\index{````~McKernel@{$\sim$McKernel}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{$\sim$McKernel()}{~McKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Mc\+Kernel\+::$\sim$\+Mc\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 35 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a3bd03fc1cc7564a56e69cc5d2012512a}\label{class_mc_kernel_a3bd03fc1cc7564a56e69cc5d2012512a}} 
+\index{McKernel@{McKernel}!McKernel@{McKernel}}
+\index{McKernel@{McKernel}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McKernel()}{McKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mc\+Kernel\+::\+Mc\+Kernel (\begin{DoxyParamCaption}\item[{float $\ast$}]{data,  }\item[{const unsigned long}]{nv,  }\item[{const unsigned long}]{dn,  }\item[{const unsigned long}]{D,  }\item[{mt19937}]{seed,  }\item[{const float}]{sigma }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mc_kernel_a3bd03fc1cc7564a56e69cc5d2012512a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}\label{class_mc_kernel_a10683cd4314c40900a1bffb7bc30070f}} 
+\index{McKernel@{McKernel}!````~McKernel@{$\sim$McKernel}}
+\index{````~McKernel@{$\sim$McKernel}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{$\sim$McKernel()}{~McKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Mc\+Kernel\+::$\sim$\+Mc\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 35 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mc_kernel_ae8a44746e5d8f7b5b5e957a4ea5c5b65}\label{class_mc_kernel_ae8a44746e5d8f7b5b5e957a4ea5c5b65}} 
+\index{McKernel@{McKernel}!McEvaluate@{McEvaluate}}
+\index{McEvaluate@{McEvaluate}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McEvaluate()}{McEvaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Mc\+Kernel\+::\+Mc\+Evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 103 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_mc_kernel_ae8a44746e5d8f7b5b5e957a4ea5c5b65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_mc_kernel_ae8a44746e5d8f7b5b5e957a4ea5c5b65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_mc_kernel_a7a9b6514f91c7505b9ab6fd14ef7c72c}\label{class_mc_kernel_a7a9b6514f91c7505b9ab6fd14ef7c72c}} 
+\index{McKernel@{McKernel}!McEvaluate@{McEvaluate}}
+\index{McEvaluate@{McEvaluate}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McEvaluate()}{McEvaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Mc\+Kernel\+::\+Mc\+Evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mc_kernel_a0821bfa75bcb5adb984e0fcfeec16083}\label{class_mc_kernel_a0821bfa75bcb5adb984e0fcfeec16083}} 
+\index{McKernel@{McKernel}!McFeatures@{McFeatures}}
+\index{McFeatures@{McFeatures}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McFeatures()}{McFeatures()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Mc\+Kernel\+::\+Mc\+Features (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mc_kernel_aa31eb98db4f038a9be35c91656ccf15e}\label{class_mc_kernel_aa31eb98db4f038a9be35c91656ccf15e}} 
+\index{McKernel@{McKernel}!McFeatures@{McFeatures}}
+\index{McFeatures@{McFeatures}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{McFeatures()}{McFeatures()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mc\+Kernel\+::\+Mc\+Features (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 67 of file Factory\+\_\+\+Mc\+Kernel.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mc_kernel_aa31eb98db4f038a9be35c91656ccf15e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_mc_kernel_aa31eb98db4f038a9be35c91656ccf15e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mc_kernel_acc3d65fcb91a9c1a711b14ddf5d9e6e5}\label{class_mc_kernel_acc3d65fcb91a9c1a711b14ddf5d9e6e5}} 
+\index{McKernel@{McKernel}!dl\_B@{dl\_B}}
+\index{dl\_B@{dl\_B}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{dl\_B}{dl\_B}}
+{\footnotesize\ttfamily vector$<$ long $>$ Mc\+Kernel\+::dl\+\_\+B}
+
+
+
+Definition at line 27 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a69d226291c4cf24a44b93de6fb42de16}\label{class_mc_kernel_a69d226291c4cf24a44b93de6fb42de16}} 
+\index{McKernel@{McKernel}!dl\_C@{dl\_C}}
+\index{dl\_C@{dl\_C}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{dl\_C}{dl\_C}}
+{\footnotesize\ttfamily vector$<$ float $>$ Mc\+Kernel\+::dl\+\_\+C}
+
+
+
+Definition at line 26 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a6cae4350ba93b3499da8827bf7153ad0}\label{class_mc_kernel_a6cae4350ba93b3499da8827bf7153ad0}} 
+\index{McKernel@{McKernel}!dl\_G@{dl\_G}}
+\index{dl\_G@{dl\_G}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{dl\_G}{dl\_G}}
+{\footnotesize\ttfamily vector$<$ float $>$ Mc\+Kernel\+::dl\+\_\+G}
+
+
+
+Definition at line 25 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_ae389e852da3148d0a4b02c3063a39f1b}\label{class_mc_kernel_ae389e852da3148d0a4b02c3063a39f1b}} 
+\index{McKernel@{McKernel}!dl\_Pi@{dl\_Pi}}
+\index{dl\_Pi@{dl\_Pi}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{dl\_Pi}{dl\_Pi}}
+{\footnotesize\ttfamily vector$<$ unsigned long $>$ Mc\+Kernel\+::dl\+\_\+\+Pi}
+
+
+
+Definition at line 24 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a861269c78fcbfb3248e756fd9bf19171}\label{class_mc_kernel_a861269c78fcbfb3248e756fd9bf19171}} 
+\index{McKernel@{McKernel}!M\_D@{M\_D}}
+\index{M\_D@{M\_D}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_D}{M\_D}}
+{\footnotesize\ttfamily unsigned long Mc\+Kernel\+::\+M\+\_\+D}
+
+
+
+Definition at line 18 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a4cea500d85e7205e94c9e94f8e8e88af}\label{class_mc_kernel_a4cea500d85e7205e94c9e94f8e8e88af}} 
+\index{McKernel@{McKernel}!M\_data@{M\_data}}
+\index{M\_data@{M\_data}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_data}{M\_data}}
+{\footnotesize\ttfamily float $\ast$ Mc\+Kernel\+::\+M\+\_\+data}
+
+
+
+Definition at line 20 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_adec5d19cd9e3e4f6befef32adb7517dd}\label{class_mc_kernel_adec5d19cd9e3e4f6befef32adb7517dd}} 
+\index{McKernel@{McKernel}!M\_data\_out@{M\_data\_out}}
+\index{M\_data\_out@{M\_data\_out}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_data\_out}{M\_data\_out}}
+{\footnotesize\ttfamily float $\ast$ Mc\+Kernel\+::\+M\+\_\+data\+\_\+out}
+
+
+
+Definition at line 21 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_abc40561933913fd173c71d91018021cf}\label{class_mc_kernel_abc40561933913fd173c71d91018021cf}} 
+\index{McKernel@{McKernel}!M\_dn@{M\_dn}}
+\index{M\_dn@{M\_dn}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_dn}{M\_dn}}
+{\footnotesize\ttfamily unsigned long Mc\+Kernel\+::\+M\+\_\+dn}
+
+
+
+Definition at line 16 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_aa3100d0d7e4722658eb9b16f125884e1}\label{class_mc_kernel_aa3100d0d7e4722658eb9b16f125884e1}} 
+\index{McKernel@{McKernel}!M\_dn\_D@{M\_dn\_D}}
+\index{M\_dn\_D@{M\_dn\_D}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_dn\_D}{M\_dn\_D}}
+{\footnotesize\ttfamily unsigned long Mc\+Kernel\+::\+M\+\_\+dn\+\_\+D}
+
+
+
+Definition at line 19 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a6f4f8f5d0b6be71db605ea778b403687}\label{class_mc_kernel_a6f4f8f5d0b6be71db605ea778b403687}} 
+\index{McKernel@{McKernel}!M\_dnpg@{M\_dnpg}}
+\index{M\_dnpg@{M\_dnpg}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_dnpg}{M\_dnpg}}
+{\footnotesize\ttfamily unsigned long Mc\+Kernel\+::\+M\+\_\+dnpg}
+
+
+
+Definition at line 17 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a602a446dc44c75be7e495e533b76d2e0}\label{class_mc_kernel_a602a446dc44c75be7e495e533b76d2e0}} 
+\index{McKernel@{McKernel}!M\_features@{M\_features}}
+\index{M\_features@{M\_features}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_features}{M\_features}}
+{\footnotesize\ttfamily float $\ast$ Mc\+Kernel\+::\+M\+\_\+features}
+
+
+
+Definition at line 22 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+\mbox{\Hypertarget{class_mc_kernel_a6b3226db3ccd9a4393610796af649c9e}\label{class_mc_kernel_a6b3226db3ccd9a4393610796af649c9e}} 
+\index{McKernel@{McKernel}!M\_nv@{M\_nv}}
+\index{M\_nv@{M\_nv}!McKernel@{McKernel}}
+\doxysubsubsection{\texorpdfstring{M\_nv}{M\_nv}}
+{\footnotesize\ttfamily unsigned long Mc\+Kernel\+::\+M\+\_\+nv}
+
+
+
+Definition at line 15 of file Factory\+\_\+\+Mc\+Kernel.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mckernel/sdd+/hpp/\mbox{\hyperlink{sdd_09_2hpp_2_factory___mc_kernel_8hpp}{Factory\+\_\+\+Mc\+Kernel.\+hpp}}\item 
+mckernel/sdd+/src/\mbox{\hyperlink{sdd_09_2src_2_factory___mc_kernel_8cpp}{Factory\+\_\+\+Mc\+Kernel.\+cpp}}\end{DoxyCompactItemize}

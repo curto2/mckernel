@@ -1,0 +1,73 @@
+\hypertarget{_text_rendering_8cpp}{}\doxysection{lg/src/visualization/\+Text\+Rendering.cpp File Reference}
+\label{_text_rendering_8cpp}\index{lg/src/visualization/TextRendering.cpp@{lg/src/visualization/TextRendering.cpp}}
+{\ttfamily \#include \char`\"{}Text\+Rendering.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}font8x8\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Text\+Rendering.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_text_rendering_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_text_rendering_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}{G\+E\+T\+B\+Y\+TE}}(n,  byte\+\_\+pos)~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_text_rendering_8cpp_a4893bfc00fbec547e84b2f510dfeabf4}{render\+\_\+char}} (float $\ast$image\+\_\+data, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+width, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+height, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+channels, char $\ast$char\+\_\+bitmap, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} x, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} y, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} size, long color)
+\item 
+void \mbox{\hyperlink{_text_rendering_8cpp_a6c9e35194a4069c1dc4032382533fa76}{text\+\_\+draw}} (float $\ast$image\+\_\+data, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+width, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+height, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} image\+\_\+channels, const char $\ast$text, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} x, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} y, const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} char\+\_\+size, const long color)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_text_rendering_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}\label{_text_rendering_8cpp_a737cf3bd62a67f25b410ea6599ec8f0f}} 
+\index{TextRendering.cpp@{TextRendering.cpp}!GETBYTE@{GETBYTE}}
+\index{GETBYTE@{GETBYTE}!TextRendering.cpp@{TextRendering.cpp}}
+\doxysubsubsection{\texorpdfstring{GETBYTE}{GETBYTE}}
+{\footnotesize\ttfamily \#define G\+E\+T\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{byte\+\_\+pos }\end{DoxyParamCaption})~(n $>$$>$ (8 $\ast$ byte\+\_\+pos)) \& 0x\+FF}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_text_rendering_8cpp_a4893bfc00fbec547e84b2f510dfeabf4}\label{_text_rendering_8cpp_a4893bfc00fbec547e84b2f510dfeabf4}} 
+\index{TextRendering.cpp@{TextRendering.cpp}!render\_char@{render\_char}}
+\index{render\_char@{render\_char}!TextRendering.cpp@{TextRendering.cpp}}
+\doxysubsubsection{\texorpdfstring{render\_char()}{render\_char()}}
+{\footnotesize\ttfamily void render\+\_\+char (\begin{DoxyParamCaption}\item[{float $\ast$}]{image\+\_\+data,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+width,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+height,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+channels,  }\item[{char $\ast$}]{char\+\_\+bitmap,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{x,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{y,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{size,  }\item[{long}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Text\+Rendering.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_text_rendering_8cpp_a4893bfc00fbec547e84b2f510dfeabf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_text_rendering_8cpp_a6c9e35194a4069c1dc4032382533fa76}\label{_text_rendering_8cpp_a6c9e35194a4069c1dc4032382533fa76}} 
+\index{TextRendering.cpp@{TextRendering.cpp}!text\_draw@{text\_draw}}
+\index{text\_draw@{text\_draw}!TextRendering.cpp@{TextRendering.cpp}}
+\doxysubsubsection{\texorpdfstring{text\_draw()}{text\_draw()}}
+{\footnotesize\ttfamily void text\+\_\+draw (\begin{DoxyParamCaption}\item[{float $\ast$}]{image\+\_\+data,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+width,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+height,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{image\+\_\+channels,  }\item[{const char $\ast$}]{text,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{x,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{y,  }\item[{const \mbox{\hyperlink{_text_rendering_8hpp_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}}]{char\+\_\+size,  }\item[{const long}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Text\+Rendering.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_text_rendering_8cpp_a6c9e35194a4069c1dc4032382533fa76_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,586 @@
+\hypertarget{classlg_1_1_linear___freeze}{}\doxysection{lg\+::Linear\+\_\+\+Freeze Class Reference}
+\label{classlg_1_1_linear___freeze}\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+
+
+{\ttfamily \#include $<$Linear\+\_\+\+Freeze.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Linear\+\_\+\+Freeze\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classlg_1_1_linear___freeze__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Linear\+\_\+\+Freeze\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classlg_1_1_linear___freeze__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_linear___freeze_aeed9564848a0791894dd1a51e1d7b9c3}{Linear\+\_\+\+Freeze}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_linear___freeze_a6928939f19a3c2658bd05e3f9f5464d5}{Linear\+\_\+\+Freeze}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+\mbox{\hyperlink{classlg_1_1_linear___freeze_af4fc2faed11601819ca7b192c8fbc07c}{Linear\+\_\+\+Freeze}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_aba75b3e95723b32ea1563cc364b69c66}{initialize}} (int input\+\_\+size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a3de23fe202744102fb4097edf2e930b3}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a7fc832dc881a72ef3a7c8e9e6d08dfd7}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a821124b6824a6a5ea24d2348d33bbc49}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_ab7f6b6d44bc26db7c72bb96615b297cb}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a47b69616ea4191ad3d2e72d3b750b6fc}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_ac97d795eb9246fbf605aaa280a016780}{reset\+\_\+outputs}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_ae96086d0e84901555a1a75ca8bd398b9}{set\+Fixed\+Parameters}} (const bool fixedparameters)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_linear___freeze_aaed0e9595e539041245c4d856f853389}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_afba43d99b7e0d735063286be5a4fd984}{print}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a1725dae5044afa7cb969638bc702265f}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, bool accumulate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_af5d51a0a08e7790495b2e18ac4c10c4c}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_linear___freeze_a11212fce7109ddb913649163a0b5ecf4}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_linear___freeze_a513a8663a1979564740c945dd243b6b1}{make}} (const int size, bool use\+\_\+bias=true, const float \mbox{\hyperlink{namespacelg_a768463cd5143fa9c6edbdc9b3746faa5}{gradient\+\_\+clipping}}=0, float \mbox{\hyperlink{namespacelg_ac65fd2c3e6db06e438f401aa71c3cb77}{l1\+\_\+regularization}}=0, float \mbox{\hyperlink{namespacelg_a0286da74210921268d3cbcfbf3b2536c}{l2\+\_\+regularization}}=0)
+\item 
+static void \mbox{\hyperlink{classlg_1_1_linear___freeze_ab52ee5ba9650d6d1937e60c23efc77a6}{gradient\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear___freeze_a785e4d7d83533181b73e0be76ac956c8}{\+\_\+weights}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear___freeze_a8772739b4c71b7327886a67d49e8682d}{\+\_\+bias}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_linear___freeze_a6c61a785bf828173750eac20f2c2ccfe}{\+\_\+deltas}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_linear___freeze_a33ae69f4ce3711e280b0c2a189693b5b}{\+\_\+fixed\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_linear___freeze_ae4638caf72c83bd77471a9fb0254ac62}{\+\_\+input\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classlg_1_1_linear___freeze_a79e71cdfce5c137700456daa681c3d6f}{\+\_\+use\+\_\+bias}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear___freeze_a79ed0386e8c53dbe76c780e9c2dcd698}{\+\_\+gradient\+\_\+clipping}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear___freeze_a23e40545a1dbc68da655e09d0c410071}{\+\_\+l1\+\_\+regularization}}
+\item 
+float \mbox{\hyperlink{classlg_1_1_linear___freeze_a4c2b445b94c828ead9778251ebfbd27c}{\+\_\+l2\+\_\+regularization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Linear\+\_\+\+Freeze.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_aeed9564848a0791894dd1a51e1d7b9c3}\label{classlg_1_1_linear___freeze_aeed9564848a0791894dd1a51e1d7b9c3}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!Linear\_Freeze@{Linear\_Freeze}}
+\index{Linear\_Freeze@{Linear\_Freeze}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{Linear\_Freeze()}{Linear\_Freeze()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+\_\+\+Freeze\+::\+Linear\+\_\+\+Freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_aeed9564848a0791894dd1a51e1d7b9c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a6928939f19a3c2658bd05e3f9f5464d5}\label{classlg_1_1_linear___freeze_a6928939f19a3c2658bd05e3f9f5464d5}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!Linear\_Freeze@{Linear\_Freeze}}
+\index{Linear\_Freeze@{Linear\_Freeze}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{Linear\_Freeze()}{Linear\_Freeze()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+\_\+\+Freeze\+::\+Linear\+\_\+\+Freeze (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classlg_1_1_linear___freeze_a6928939f19a3c2658bd05e3f9f5464d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_af4fc2faed11601819ca7b192c8fbc07c}\label{classlg_1_1_linear___freeze_af4fc2faed11601819ca7b192c8fbc07c}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!Linear\_Freeze@{Linear\_Freeze}}
+\index{Linear\_Freeze@{Linear\_Freeze}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{Linear\_Freeze()}{Linear\_Freeze()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lg\+::\+Linear\+\_\+\+Freeze\+::\+Linear\+\_\+\+Freeze (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_af4fc2faed11601819ca7b192c8fbc07c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a11212fce7109ddb913649163a0b5ecf4}\label{classlg_1_1_linear___freeze_a11212fce7109ddb913649163a0b5ecf4}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 290 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlg_1_1_linear___freeze_a11212fce7109ddb913649163a0b5ecf4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ab7f6b6d44bc26db7c72bb96615b297cb}\label{classlg_1_1_linear___freeze_ab7f6b6d44bc26db7c72bb96615b297cb}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 143 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_linear___freeze_ab7f6b6d44bc26db7c72bb96615b297cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a821124b6824a6a5ea24d2348d33bbc49}\label{classlg_1_1_linear___freeze_a821124b6824a6a5ea24d2348d33bbc49}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 137 of file Linear\+\_\+\+Freeze.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_af5d51a0a08e7790495b2e18ac4c10c4c}\label{classlg_1_1_linear___freeze_af5d51a0a08e7790495b2e18ac4c10c4c}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 270 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classlg_1_1_linear___freeze_af5d51a0a08e7790495b2e18ac4c10c4c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_aaed0e9595e539041245c4d856f853389}\label{classlg_1_1_linear___freeze_aaed0e9595e539041245c4d856f853389}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Linear\+\_\+\+Freeze\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 385 of file Linear\+\_\+\+Freeze.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ab52ee5ba9650d6d1937e60c23efc77a6}\label{classlg_1_1_linear___freeze_ab52ee5ba9650d6d1937e60c23efc77a6}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!gradient\_check@{gradient\_check}}
+\index{gradient\_check@{gradient\_check}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{gradient\_check()}{gradient\_check()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::gradient\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 312 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_ab52ee5ba9650d6d1937e60c23efc77a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_aba75b3e95723b32ea1563cc364b69c66}\label{classlg_1_1_linear___freeze_aba75b3e95723b32ea1563cc364b69c66}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::initialize (\begin{DoxyParamCaption}\item[{int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classlg_1_1_linear___freeze_aba75b3e95723b32ea1563cc364b69c66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722}\label{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 100 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classlg_1_1_linear___freeze_afbd5667fdcdce5e53881c0224688d722_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a513a8663a1979564740c945dd243b6b1}\label{classlg_1_1_linear___freeze_a513a8663a1979564740c945dd243b6b1}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!make@{make}}
+\index{make@{make}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Linear\+\_\+\+Freeze\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{bool}]{use\+\_\+bias = {\ttfamily true},  }\item[{const float}]{gradient\+\_\+clipping = {\ttfamily 0},  }\item[{float}]{l1\+\_\+regularization = {\ttfamily 0},  }\item[{float}]{l2\+\_\+regularization = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_a513a8663a1979564740c945dd243b6b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_afba43d99b7e0d735063286be5a4fd984}\label{classlg_1_1_linear___freeze_afba43d99b7e0d735063286be5a4fd984}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!print@{print}}
+\index{print@{print}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 391 of file Linear\+\_\+\+Freeze.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853}\label{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 193 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classlg_1_1_linear___freeze_ac74c857489011ef574b6bd2dbe894853_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ac97d795eb9246fbf605aaa280a016780}\label{classlg_1_1_linear___freeze_ac97d795eb9246fbf605aaa280a016780}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!reset\_outputs@{reset\_outputs}}
+\index{reset\_outputs@{reset\_outputs}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{reset\_outputs()}{reset\_outputs()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::reset\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 304 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classlg_1_1_linear___freeze_ac97d795eb9246fbf605aaa280a016780_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a1725dae5044afa7cb969638bc702265f}\label{classlg_1_1_linear___freeze_a1725dae5044afa7cb969638bc702265f}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!run@{run}}
+\index{run@{run}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{bool}]{accumulate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classlg_1_1_linear___freeze_a1725dae5044afa7cb969638bc702265f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a7fc832dc881a72ef3a7c8e9e6d08dfd7}\label{classlg_1_1_linear___freeze_a7fc832dc881a72ef3a7c8e9e6d08dfd7}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!run@{run}}
+\index{run@{run}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 131 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classlg_1_1_linear___freeze_a7fc832dc881a72ef3a7c8e9e6d08dfd7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a3de23fe202744102fb4097edf2e930b3}\label{classlg_1_1_linear___freeze_a3de23fe202744102fb4097edf2e930b3}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!save@{save}}
+\index{save@{save}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_a3de23fe202744102fb4097edf2e930b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ae96086d0e84901555a1a75ca8bd398b9}\label{classlg_1_1_linear___freeze_ae96086d0e84901555a1a75ca8bd398b9}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!setFixedParameters@{setFixedParameters}}
+\index{setFixedParameters@{setFixedParameters}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{setFixedParameters()}{setFixedParameters()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::set\+Fixed\+Parameters (\begin{DoxyParamCaption}\item[{const bool}]{fixedparameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file Linear\+\_\+\+Freeze.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a47b69616ea4191ad3d2e72d3b750b6fc}\label{classlg_1_1_linear___freeze_a47b69616ea4191ad3d2e72d3b750b6fc}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Linear\+\_\+\+Freeze\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 149 of file Linear\+\_\+\+Freeze.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_linear___freeze_a47b69616ea4191ad3d2e72d3b750b6fc_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a8772739b4c71b7327886a67d49e8682d}\label{classlg_1_1_linear___freeze_a8772739b4c71b7327886a67d49e8682d}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_bias@{\_bias}}
+\index{\_bias@{\_bias}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_bias}{\_bias}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+bias}
+
+
+
+Definition at line 63 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a6c61a785bf828173750eac20f2c2ccfe}\label{classlg_1_1_linear___freeze_a6c61a785bf828173750eac20f2c2ccfe}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_deltas@{\_deltas}}
+\index{\_deltas@{\_deltas}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_deltas}{\_deltas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+deltas}
+
+
+
+Definition at line 64 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a33ae69f4ce3711e280b0c2a189693b5b}\label{classlg_1_1_linear___freeze_a33ae69f4ce3711e280b0c2a189693b5b}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_fixed\_parameters@{\_fixed\_parameters}}
+\index{\_fixed\_parameters@{\_fixed\_parameters}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_parameters}{\_fixed\_parameters}}
+{\footnotesize\ttfamily bool lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+fixed\+\_\+parameters}
+
+
+
+Definition at line 67 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a79ed0386e8c53dbe76c780e9c2dcd698}\label{classlg_1_1_linear___freeze_a79ed0386e8c53dbe76c780e9c2dcd698}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_gradient\_clipping@{\_gradient\_clipping}}
+\index{\_gradient\_clipping@{\_gradient\_clipping}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_gradient\_clipping}{\_gradient\_clipping}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+gradient\+\_\+clipping}
+
+
+
+Definition at line 70 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_ae4638caf72c83bd77471a9fb0254ac62}\label{classlg_1_1_linear___freeze_ae4638caf72c83bd77471a9fb0254ac62}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 68 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a23e40545a1dbc68da655e09d0c410071}\label{classlg_1_1_linear___freeze_a23e40545a1dbc68da655e09d0c410071}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_l1\_regularization@{\_l1\_regularization}}
+\index{\_l1\_regularization@{\_l1\_regularization}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_l1\_regularization}{\_l1\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+l1\+\_\+regularization}
+
+
+
+Definition at line 71 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a4c2b445b94c828ead9778251ebfbd27c}\label{classlg_1_1_linear___freeze_a4c2b445b94c828ead9778251ebfbd27c}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_l2\_regularization@{\_l2\_regularization}}
+\index{\_l2\_regularization@{\_l2\_regularization}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_l2\_regularization}{\_l2\_regularization}}
+{\footnotesize\ttfamily float lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+l2\+\_\+regularization}
+
+
+
+Definition at line 72 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a79e71cdfce5c137700456daa681c3d6f}\label{classlg_1_1_linear___freeze_a79e71cdfce5c137700456daa681c3d6f}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_use\_bias@{\_use\_bias}}
+\index{\_use\_bias@{\_use\_bias}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_use\_bias}{\_use\_bias}}
+{\footnotesize\ttfamily bool lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+use\+\_\+bias}
+
+
+
+Definition at line 69 of file Linear\+\_\+\+Freeze.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_linear___freeze_a785e4d7d83533181b73e0be76ac956c8}\label{classlg_1_1_linear___freeze_a785e4d7d83533181b73e0be76ac956c8}} 
+\index{lg::Linear\_Freeze@{lg::Linear\_Freeze}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!lg::Linear\_Freeze@{lg::Linear\_Freeze}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Linear\+\_\+\+Freeze\+::\+\_\+weights}
+
+
+
+Definition at line 62 of file Linear\+\_\+\+Freeze.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_linear___freeze_8hpp}{Linear\+\_\+\+Freeze.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_linear___freeze_8cpp}{Linear\+\_\+\+Freeze.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\hypertarget{classlg_1_1_dropout}{}\doxysection{lg\+::Dropout Class Reference}
+\label{classlg_1_1_dropout}\index{lg::Dropout@{lg::Dropout}}
+
+
+{\ttfamily \#include $<$Dropout.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Dropout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_dropout__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Dropout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_dropout__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_dropout_a5213d123a16d9d3ddfa38cefec5fb6e7}{Dropout}} (const double drop\+\_\+probability)
+\item 
+\mbox{\hyperlink{classlg_1_1_dropout_ac8623d90c86f783896871e0040f019f7}{Dropout}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_dropout_ad5a60b6b51cc069e9fe1c5f2dc9907a9}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_dropout_a5bd640014d1bbdc50ef90d6158593382}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_dropout_a3e95b045af5c23ca8df473c02a95ff8f}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_dropout_afc64f0408d900dd98b84bdece5b69189}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_dropout_a024c7eac0a1db25a20d72aab91eaa5a9}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_dropout_a5bf418b960c14966eb7920b64066c6bc}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_dropout_abd43875ab7f6c4b0afbda8eba721e7e9}{make}} (const double drop\+\_\+probability)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classlg_1_1_dropout_a5fc16ec0f8e0e23319e3ca7dd83d82a4}{\+\_\+drop\+\_\+probability}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Dropout.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_dropout_a5213d123a16d9d3ddfa38cefec5fb6e7}\label{classlg_1_1_dropout_a5213d123a16d9d3ddfa38cefec5fb6e7}} 
+\index{lg::Dropout@{lg::Dropout}!Dropout@{Dropout}}
+\index{Dropout@{Dropout}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{Dropout()}{Dropout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Dropout\+::\+Dropout (\begin{DoxyParamCaption}\item[{const double}]{drop\+\_\+probability }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Dropout.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_dropout_ac8623d90c86f783896871e0040f019f7}\label{classlg_1_1_dropout_ac8623d90c86f783896871e0040f019f7}} 
+\index{lg::Dropout@{lg::Dropout}!Dropout@{Dropout}}
+\index{Dropout@{Dropout}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{Dropout()}{Dropout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Dropout\+::\+Dropout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Dropout.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_dropout_ac8623d90c86f783896871e0040f019f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_dropout_afc64f0408d900dd98b84bdece5b69189}\label{classlg_1_1_dropout_afc64f0408d900dd98b84bdece5b69189}} 
+\index{lg::Dropout@{lg::Dropout}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Dropout\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 152 of file Dropout.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classlg_1_1_dropout_afc64f0408d900dd98b84bdece5b69189_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_dropout_a024c7eac0a1db25a20d72aab91eaa5a9}\label{classlg_1_1_dropout_a024c7eac0a1db25a20d72aab91eaa5a9}} 
+\index{lg::Dropout@{lg::Dropout}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Dropout\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 175 of file Dropout.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_dropout_a5bd640014d1bbdc50ef90d6158593382}\label{classlg_1_1_dropout_a5bd640014d1bbdc50ef90d6158593382}} 
+\index{lg::Dropout@{lg::Dropout}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Dropout\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 67 of file Dropout.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classlg_1_1_dropout_a5bd640014d1bbdc50ef90d6158593382_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_dropout_abd43875ab7f6c4b0afbda8eba721e7e9}\label{classlg_1_1_dropout_abd43875ab7f6c4b0afbda8eba721e7e9}} 
+\index{lg::Dropout@{lg::Dropout}!make@{make}}
+\index{make@{make}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Dropout\+::make (\begin{DoxyParamCaption}\item[{const double}]{drop\+\_\+probability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Dropout.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_dropout_a5bf418b960c14966eb7920b64066c6bc}\label{classlg_1_1_dropout_a5bf418b960c14966eb7920b64066c6bc}} 
+\index{lg::Dropout@{lg::Dropout}!print@{print}}
+\index{print@{print}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Dropout\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 181 of file Dropout.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_dropout_a3e95b045af5c23ca8df473c02a95ff8f}\label{classlg_1_1_dropout_a3e95b045af5c23ca8df473c02a95ff8f}} 
+\index{lg::Dropout@{lg::Dropout}!run@{run}}
+\index{run@{run}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Dropout\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 101 of file Dropout.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_dropout_a3e95b045af5c23ca8df473c02a95ff8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_dropout_ad5a60b6b51cc069e9fe1c5f2dc9907a9}\label{classlg_1_1_dropout_ad5a60b6b51cc069e9fe1c5f2dc9907a9}} 
+\index{lg::Dropout@{lg::Dropout}!save@{save}}
+\index{save@{save}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Dropout\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 91 of file Dropout.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_dropout_ad5a60b6b51cc069e9fe1c5f2dc9907a9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_dropout_a5fc16ec0f8e0e23319e3ca7dd83d82a4}\label{classlg_1_1_dropout_a5fc16ec0f8e0e23319e3ca7dd83d82a4}} 
+\index{lg::Dropout@{lg::Dropout}!\_drop\_probability@{\_drop\_probability}}
+\index{\_drop\_probability@{\_drop\_probability}!lg::Dropout@{lg::Dropout}}
+\doxysubsubsection{\texorpdfstring{\_drop\_probability}{\_drop\_probability}}
+{\footnotesize\ttfamily float lg\+::\+Dropout\+::\+\_\+drop\+\_\+probability}
+
+
+
+Definition at line 33 of file Dropout.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_dropout_8hpp}{Dropout.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_dropout_8cpp}{Dropout.\+cpp}}\end{DoxyCompactItemize}

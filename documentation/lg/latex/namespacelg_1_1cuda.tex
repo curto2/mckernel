@@ -1,0 +1,560 @@
+\hypertarget{namespacelg_1_1cuda}{}\doxysection{lg\+::cuda Namespace Reference}
+\label{namespacelg_1_1cuda}\index{lg::cuda@{lg::cuda}}
+
+
+N\+A\+M\+E\+S\+P\+A\+CE C\+U\+DA.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a8911de947294cbb37113ce9e8d550783}{convn\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int $\ast$out\+\_\+in\+\_\+map, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int output\+\_\+width, int output\+\_\+height, int filters\+\_\+count, int filter\+\_\+area)
+\begin{DoxyCompactList}\small\item\em C\+U\+DA D\+E\+E\+P\+L\+E\+A\+R\+N\+I\+NG I\+N\+T\+E\+R\+F\+A\+CE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_aa4ef754e9424188009a71c1a363aa94d}{convn\+\_\+backward}} (float $\ast$weights, float $\ast$out\+\_\+errors, float $\ast$errors, int $\ast$in\+\_\+weight\+\_\+map, int $\ast$in\+\_\+out\+\_\+map, int input\+\_\+count, int output\+\_\+size, int input\+\_\+width, int input\+\_\+height, int filter\+\_\+area, int filters\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2fa8129596126da6ab6fd12b7570e256}{convn\+\_\+accumulate\+\_\+deltas}} (float $\ast$weights\+\_\+deltas, float $\ast$bias\+\_\+deltas, float $\ast$errors, float $\ast$inputs, float $\ast$outputs, int $\ast$out\+\_\+in\+\_\+map, int input\+\_\+count, int input\+\_\+width, int input\+\_\+height, int output\+\_\+size, int filter\+\_\+area, int filters\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_aabc1ca86849f1b325416d5fc042d4cee}{convn\+\_\+update\+\_\+parameters}} (float $\ast$weights, float $\ast$bias, float $\ast$weights\+\_\+deltas, float $\ast$bias\+\_\+deltas, int filter\+\_\+area, int input\+\_\+count, int filter\+\_\+count, float learningrate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a9faebc3673f09ecfc225c21738da5af3}{maxpooling\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int $\ast$maxbuffer, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab502580e89328622329728926b168ced}{maxpooling\+\_\+backward}} (float $\ast$out\+\_\+errors, float $\ast$errors, int $\ast$maxbuffer, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6859dafb7adc62c944d3049197cc3aa4}{averagepooling\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3a18f9046738e9209bbc4bdd101c2915}{averagepooling\+\_\+backward}} (float $\ast$out\+\_\+errors, float $\ast$errors, int input\+\_\+width, int input\+\_\+height, int input\+\_\+count, int stride, int filter\+\_\+size, int output\+\_\+width, int output\+\_\+height)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a17f5d386c6a971e477fefb1c443fb408}{linear\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int input\+\_\+size, int output\+\_\+size, bool use\+\_\+bias, bool accumulate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a23d87aeb9500b8ef1476535a39baa3d3}{linear\+\_\+backward}} (float $\ast$weights, float $\ast$out\+\_\+errors, float $\ast$errors, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af1943bb4b10ca0f9465ed36b5063e534}{linear\+\_\+accumulate\+\_\+deltas}} (float $\ast$deltas, float $\ast$inputs, float $\ast$errors, int input\+\_\+size, int output\+\_\+size, bool use\+\_\+bias)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6e6de7213575b5eecba3d7da46dd11db}{linear\+\_\+update\+\_\+parameters}} (float $\ast$weights, float $\ast$bias, float $\ast$deltas, float learningrate, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_afbcb57abfd9468a3107a5fb8876e3d22}{sigmoid\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab87ff03b7876a608d263ed2103a0399e}{sigmoid\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae6adb1a572de78eae4715c1c8137c026}{relu\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ab0642d5b6d1a28b52236ab85f3a53925}{relu\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a0fead1b0d84ba90d494c808c9b4c33fe}{tanh\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3e0acb2ce86052848da5bbcc6629d56d}{tanh\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a8c62455098b6a8ab29a6113e840175a8}{dropout\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, unsigned int seed, float dropout\+\_\+probability, bool training, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a9d9e3a4cf4915ca097f8c8edcbfc0e26}{dropout\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, float dropout\+\_\+probability, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2924760c84069a2841f300848c0d7b85}{selu\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae0db6f2ac2908e7161386f0a36df4560}{selu\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a85299cc9e76e9ff15803eb9101e78460}{normalization\+\_\+forward}} (float $\ast$inputs, float $\ast$deviation, float $\ast$normalized, float $\ast$outputs, float $\ast$variance, float $\ast$gamma, float $\ast$beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a25134b03f29a49340cfca6acb6ff519c}{normalization\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$deviation, float $\ast$variance, float $\ast$gamma, float $\ast$beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a0e4f26dc450867d2347a2d72ed383733}{normalization\+\_\+accumulate\+\_\+deltas}} (float $\ast$errors, float $\ast$deviation, float $\ast$variance, float $\ast$d\+\_\+gamma, float $\ast$d\+\_\+beta, float epsilon, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a965f4592cfb4e6b9f7f1abfa3a1005d8}{normalization\+\_\+update\+\_\+parameters}} (float $\ast$gamma, float $\ast$beta, float $\ast$d\+\_\+gamma, float $\ast$d\+\_\+beta, float momentum, int size, float learningrate)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a4b1138745ab9fde9daac0c42cb68f66f}{sparse\+\_\+indices}} (float $\ast$inputs, int inputs\+\_\+size, int $\ast$indices, int $\ast$tmp\+\_\+indices, int $\ast$indices\+\_\+count)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a5b2010c67b263a2325c0f66a5e5043be}{linear\+\_\+sparse\+\_\+forward}} (float $\ast$weights, float $\ast$bias, float $\ast$inputs, float $\ast$outputs, int $\ast$indices, int $\ast$indices\+\_\+count, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_abd2ace1b9d637e47db6c5a643b73cd71}{linear\+\_\+sparse\+\_\+accumulate\+\_\+deltas}} (float $\ast$deltas, float $\ast$inputs, float $\ast$errors, int $\ast$indices, int $\ast$indices\+\_\+count, int input\+\_\+size, int output\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a52532045d8ca46b5e0fa99a6810362a6}{concatenate\+\_\+forward}} (float $\ast$$\ast$inputs, float $\ast$outputs, int $\ast$sizes, int input\+\_\+count, int total\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a3f1b29f5fcbbd0e7577c4b0060ffbaaa}{concatenate\+\_\+backward}} (float $\ast$errors, float $\ast$$\ast$out\+\_\+errors, int $\ast$sizes, int input\+\_\+count, int total\+\_\+size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af6f534536e457051e65effdbc7534a6d}{softmax\+\_\+forward}} (float $\ast$inputs, float $\ast$outputs, float scale, int size, float epsilon)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_ae6100dbc18d64618537e768e67a5eae4}{softmax\+\_\+backward}} (float $\ast$errors, float $\ast$out\+\_\+errors, float $\ast$outputs, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a4f1ff47b761603f6600eab5dcdfb0f43}{cost\+\_\+crossentropy}} (float $\ast$prediction, float $\ast$target, float $\ast$errors, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a06d4a9fec2e50a26d69a90897dbd7d84}{gradient\+\_\+clipping}} (float $\ast$deltas, int size, const float clipping\+\_\+deviation)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a1e622d4a2dbd418b7a4da5839beabe8f}{l1\+\_\+regularization}} (float $\ast$weights, const float l1\+\_\+factor, const float learningrate, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a1f640f43ce4d3a9f5017b85d68369b7e}{l2\+\_\+regularization}} (float $\ast$weights, const float l2\+\_\+factor, const float learningrate, int size)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a159d5855d0b6c8263d0b734b8c718440}{image\+\_\+translate}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const int by\+\_\+x, const int by\+\_\+y)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a75256a409482891fa3c8852714ef3b93}{image\+\_\+vertical\+\_\+flip}} (float $\ast$image, const int width, const int height, const int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a87ec4c9b53aef96dbfefda3df54dfa2d}{image\+\_\+horizontal\+\_\+flip}} (float $\ast$image, const int width, const int height, const int channels)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_af15bc16b0cb62a92e8d0f6bf966f0e0c}{image\+\_\+rotate}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const float degrees)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a2dfc5b5558f9fc2dd45adae28f200594}{image\+\_\+scale}} (float $\ast$image, float $\ast$result\+\_\+buffer, const int width, const int height, const int channels, const float scale\+\_\+factor)
+\item 
+void \mbox{\hyperlink{namespacelg_1_1cuda_a6155fb898132cd2eea9ab0bebf05da91}{image\+\_\+add\+\_\+noise}} (float $\ast$image, const int width, const int height, const int channels, const float noise\+\_\+probability)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+N\+A\+M\+E\+S\+P\+A\+CE C\+U\+DA. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a3a18f9046738e9209bbc4bdd101c2915}\label{namespacelg_1_1cuda_a3a18f9046738e9209bbc4bdd101c2915}} 
+\index{lg::cuda@{lg::cuda}!averagepooling\_backward@{averagepooling\_backward}}
+\index{averagepooling\_backward@{averagepooling\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{averagepooling\_backward()}{averagepooling\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::averagepooling\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{errors,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{stride,  }\item[{int}]{filter\+\_\+size,  }\item[{int}]{output\+\_\+width,  }\item[{int}]{output\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 353 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a6859dafb7adc62c944d3049197cc3aa4}\label{namespacelg_1_1cuda_a6859dafb7adc62c944d3049197cc3aa4}} 
+\index{lg::cuda@{lg::cuda}!averagepooling\_forward@{averagepooling\_forward}}
+\index{averagepooling\_forward@{averagepooling\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{averagepooling\_forward()}{averagepooling\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::averagepooling\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{stride,  }\item[{int}]{filter\+\_\+size,  }\item[{int}]{output\+\_\+width,  }\item[{int}]{output\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 318 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a3f1b29f5fcbbd0e7577c4b0060ffbaaa}\label{namespacelg_1_1cuda_a3f1b29f5fcbbd0e7577c4b0060ffbaaa}} 
+\index{lg::cuda@{lg::cuda}!concatenate\_backward@{concatenate\_backward}}
+\index{concatenate\_backward@{concatenate\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{concatenate\_backward()}{concatenate\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::concatenate\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$$\ast$}]{out\+\_\+errors,  }\item[{int $\ast$}]{sizes,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{total\+\_\+size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a3f1b29f5fcbbd0e7577c4b0060ffbaaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a52532045d8ca46b5e0fa99a6810362a6}\label{namespacelg_1_1cuda_a52532045d8ca46b5e0fa99a6810362a6}} 
+\index{lg::cuda@{lg::cuda}!concatenate\_forward@{concatenate\_forward}}
+\index{concatenate\_forward@{concatenate\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{concatenate\_forward()}{concatenate\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::concatenate\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int $\ast$}]{sizes,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{total\+\_\+size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a52532045d8ca46b5e0fa99a6810362a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a2fa8129596126da6ab6fd12b7570e256}\label{namespacelg_1_1cuda_a2fa8129596126da6ab6fd12b7570e256}} 
+\index{lg::cuda@{lg::cuda}!convn\_accumulate\_deltas@{convn\_accumulate\_deltas}}
+\index{convn\_accumulate\_deltas@{convn\_accumulate\_deltas}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{convn\_accumulate\_deltas()}{convn\_accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::convn\+\_\+accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights\+\_\+deltas,  }\item[{float $\ast$}]{bias\+\_\+deltas,  }\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int $\ast$}]{out\+\_\+in\+\_\+map,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{output\+\_\+size,  }\item[{int}]{filter\+\_\+area,  }\item[{int}]{filters\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_aa4ef754e9424188009a71c1a363aa94d}\label{namespacelg_1_1cuda_aa4ef754e9424188009a71c1a363aa94d}} 
+\index{lg::cuda@{lg::cuda}!convn\_backward@{convn\_backward}}
+\index{convn\_backward@{convn\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{convn\_backward()}{convn\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::convn\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{errors,  }\item[{int $\ast$}]{in\+\_\+weight\+\_\+map,  }\item[{int $\ast$}]{in\+\_\+out\+\_\+map,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{output\+\_\+size,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{filter\+\_\+area,  }\item[{int}]{filters\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a8911de947294cbb37113ce9e8d550783}\label{namespacelg_1_1cuda_a8911de947294cbb37113ce9e8d550783}} 
+\index{lg::cuda@{lg::cuda}!convn\_forward@{convn\_forward}}
+\index{convn\_forward@{convn\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{convn\_forward()}{convn\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::convn\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{bias,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int $\ast$}]{out\+\_\+in\+\_\+map,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{stride,  }\item[{int}]{output\+\_\+width,  }\item[{int}]{output\+\_\+height,  }\item[{int}]{filters\+\_\+count,  }\item[{int}]{filter\+\_\+area }\end{DoxyParamCaption})}
+
+
+
+C\+U\+DA D\+E\+E\+P\+L\+E\+A\+R\+N\+I\+NG I\+N\+T\+E\+R\+F\+A\+CE. 
+
+C\+U\+DA D\+E\+E\+P\+L\+E\+A\+R\+N\+I\+NG I\+N\+T\+E\+R\+F\+A\+CE. 
+
+Definition at line 27 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_aabc1ca86849f1b325416d5fc042d4cee}\label{namespacelg_1_1cuda_aabc1ca86849f1b325416d5fc042d4cee}} 
+\index{lg::cuda@{lg::cuda}!convn\_update\_parameters@{convn\_update\_parameters}}
+\index{convn\_update\_parameters@{convn\_update\_parameters}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{convn\_update\_parameters()}{convn\_update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::convn\+\_\+update\+\_\+parameters (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{bias,  }\item[{float $\ast$}]{weights\+\_\+deltas,  }\item[{float $\ast$}]{bias\+\_\+deltas,  }\item[{int}]{filter\+\_\+area,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{filter\+\_\+count,  }\item[{float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a4f1ff47b761603f6600eab5dcdfb0f43}\label{namespacelg_1_1cuda_a4f1ff47b761603f6600eab5dcdfb0f43}} 
+\index{lg::cuda@{lg::cuda}!cost\_crossentropy@{cost\_crossentropy}}
+\index{cost\_crossentropy@{cost\_crossentropy}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{cost\_crossentropy()}{cost\_crossentropy()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::cost\+\_\+crossentropy (\begin{DoxyParamCaption}\item[{float $\ast$}]{prediction,  }\item[{float $\ast$}]{target,  }\item[{float $\ast$}]{errors,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a9d9e3a4cf4915ca097f8c8edcbfc0e26}\label{namespacelg_1_1cuda_a9d9e3a4cf4915ca097f8c8edcbfc0e26}} 
+\index{lg::cuda@{lg::cuda}!dropout\_backward@{dropout\_backward}}
+\index{dropout\_backward@{dropout\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{dropout\_backward()}{dropout\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::dropout\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{float}]{dropout\+\_\+probability,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a8c62455098b6a8ab29a6113e840175a8}\label{namespacelg_1_1cuda_a8c62455098b6a8ab29a6113e840175a8}} 
+\index{lg::cuda@{lg::cuda}!dropout\_forward@{dropout\_forward}}
+\index{dropout\_forward@{dropout\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{dropout\_forward()}{dropout\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::dropout\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{unsigned int}]{seed,  }\item[{float}]{dropout\+\_\+probability,  }\item[{bool}]{training,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a06d4a9fec2e50a26d69a90897dbd7d84}\label{namespacelg_1_1cuda_a06d4a9fec2e50a26d69a90897dbd7d84}} 
+\index{lg::cuda@{lg::cuda}!gradient\_clipping@{gradient\_clipping}}
+\index{gradient\_clipping@{gradient\_clipping}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{gradient\_clipping()}{gradient\_clipping()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::gradient\+\_\+clipping (\begin{DoxyParamCaption}\item[{float $\ast$}]{deltas,  }\item[{int}]{size,  }\item[{const float}]{clipping\+\_\+deviation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 490 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a06d4a9fec2e50a26d69a90897dbd7d84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a6155fb898132cd2eea9ab0bebf05da91}\label{namespacelg_1_1cuda_a6155fb898132cd2eea9ab0bebf05da91}} 
+\index{lg::cuda@{lg::cuda}!image\_add\_noise@{image\_add\_noise}}
+\index{image\_add\_noise@{image\_add\_noise}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_add\_noise()}{image\_add\_noise()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+add\+\_\+noise (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels,  }\item[{const float}]{noise\+\_\+probability }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a87ec4c9b53aef96dbfefda3df54dfa2d}\label{namespacelg_1_1cuda_a87ec4c9b53aef96dbfefda3df54dfa2d}} 
+\index{lg::cuda@{lg::cuda}!image\_horizontal\_flip@{image\_horizontal\_flip}}
+\index{image\_horizontal\_flip@{image\_horizontal\_flip}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_horizontal\_flip()}{image\_horizontal\_flip()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+horizontal\+\_\+flip (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_af15bc16b0cb62a92e8d0f6bf966f0e0c}\label{namespacelg_1_1cuda_af15bc16b0cb62a92e8d0f6bf966f0e0c}} 
+\index{lg::cuda@{lg::cuda}!image\_rotate@{image\_rotate}}
+\index{image\_rotate@{image\_rotate}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_rotate()}{image\_rotate()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+rotate (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{float $\ast$}]{result\+\_\+buffer,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels,  }\item[{const float}]{degrees }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a2dfc5b5558f9fc2dd45adae28f200594}\label{namespacelg_1_1cuda_a2dfc5b5558f9fc2dd45adae28f200594}} 
+\index{lg::cuda@{lg::cuda}!image\_scale@{image\_scale}}
+\index{image\_scale@{image\_scale}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_scale()}{image\_scale()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+scale (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{float $\ast$}]{result\+\_\+buffer,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels,  }\item[{const float}]{scale\+\_\+factor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a159d5855d0b6c8263d0b734b8c718440}\label{namespacelg_1_1cuda_a159d5855d0b6c8263d0b734b8c718440}} 
+\index{lg::cuda@{lg::cuda}!image\_translate@{image\_translate}}
+\index{image\_translate@{image\_translate}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_translate()}{image\_translate()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+translate (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{float $\ast$}]{result\+\_\+buffer,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels,  }\item[{const int}]{by\+\_\+x,  }\item[{const int}]{by\+\_\+y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a75256a409482891fa3c8852714ef3b93}\label{namespacelg_1_1cuda_a75256a409482891fa3c8852714ef3b93}} 
+\index{lg::cuda@{lg::cuda}!image\_vertical\_flip@{image\_vertical\_flip}}
+\index{image\_vertical\_flip@{image\_vertical\_flip}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{image\_vertical\_flip()}{image\_vertical\_flip()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::image\+\_\+vertical\+\_\+flip (\begin{DoxyParamCaption}\item[{float $\ast$}]{image,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{const int}]{channels }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a1e622d4a2dbd418b7a4da5839beabe8f}\label{namespacelg_1_1cuda_a1e622d4a2dbd418b7a4da5839beabe8f}} 
+\index{lg::cuda@{lg::cuda}!l1\_regularization@{l1\_regularization}}
+\index{l1\_regularization@{l1\_regularization}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{l1\_regularization()}{l1\_regularization()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::l1\+\_\+regularization (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{const float}]{l1\+\_\+factor,  }\item[{const float}]{learningrate,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 499 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a1e622d4a2dbd418b7a4da5839beabe8f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a1f640f43ce4d3a9f5017b85d68369b7e}\label{namespacelg_1_1cuda_a1f640f43ce4d3a9f5017b85d68369b7e}} 
+\index{lg::cuda@{lg::cuda}!l2\_regularization@{l2\_regularization}}
+\index{l2\_regularization@{l2\_regularization}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{l2\_regularization()}{l2\_regularization()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::l2\+\_\+regularization (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{const float}]{l2\+\_\+factor,  }\item[{const float}]{learningrate,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 506 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a1f640f43ce4d3a9f5017b85d68369b7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_af1943bb4b10ca0f9465ed36b5063e534}\label{namespacelg_1_1cuda_af1943bb4b10ca0f9465ed36b5063e534}} 
+\index{lg::cuda@{lg::cuda}!linear\_accumulate\_deltas@{linear\_accumulate\_deltas}}
+\index{linear\_accumulate\_deltas@{linear\_accumulate\_deltas}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_accumulate\_deltas()}{linear\_accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{float $\ast$}]{deltas,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{errors,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size,  }\item[{bool}]{use\+\_\+bias }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a23d87aeb9500b8ef1476535a39baa3d3}\label{namespacelg_1_1cuda_a23d87aeb9500b8ef1476535a39baa3d3}} 
+\index{lg::cuda@{lg::cuda}!linear\_backward@{linear\_backward}}
+\index{linear\_backward@{linear\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_backward()}{linear\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{errors,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a17f5d386c6a971e477fefb1c443fb408}\label{namespacelg_1_1cuda_a17f5d386c6a971e477fefb1c443fb408}} 
+\index{lg::cuda@{lg::cuda}!linear\_forward@{linear\_forward}}
+\index{linear\_forward@{linear\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_forward()}{linear\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{bias,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size,  }\item[{bool}]{use\+\_\+bias,  }\item[{bool}]{accumulate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_abd2ace1b9d637e47db6c5a643b73cd71}\label{namespacelg_1_1cuda_abd2ace1b9d637e47db6c5a643b73cd71}} 
+\index{lg::cuda@{lg::cuda}!linear\_sparse\_accumulate\_deltas@{linear\_sparse\_accumulate\_deltas}}
+\index{linear\_sparse\_accumulate\_deltas@{linear\_sparse\_accumulate\_deltas}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_sparse\_accumulate\_deltas()}{linear\_sparse\_accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+sparse\+\_\+accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{float $\ast$}]{deltas,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{errors,  }\item[{int $\ast$}]{indices,  }\item[{int $\ast$}]{indices\+\_\+count,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a5b2010c67b263a2325c0f66a5e5043be}\label{namespacelg_1_1cuda_a5b2010c67b263a2325c0f66a5e5043be}} 
+\index{lg::cuda@{lg::cuda}!linear\_sparse\_forward@{linear\_sparse\_forward}}
+\index{linear\_sparse\_forward@{linear\_sparse\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_sparse\_forward()}{linear\_sparse\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+sparse\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{bias,  }\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int $\ast$}]{indices,  }\item[{int $\ast$}]{indices\+\_\+count,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a6e6de7213575b5eecba3d7da46dd11db}\label{namespacelg_1_1cuda_a6e6de7213575b5eecba3d7da46dd11db}} 
+\index{lg::cuda@{lg::cuda}!linear\_update\_parameters@{linear\_update\_parameters}}
+\index{linear\_update\_parameters@{linear\_update\_parameters}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{linear\_update\_parameters()}{linear\_update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::linear\+\_\+update\+\_\+parameters (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{bias,  }\item[{float $\ast$}]{deltas,  }\item[{float}]{learningrate,  }\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a6e6de7213575b5eecba3d7da46dd11db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_ab502580e89328622329728926b168ced}\label{namespacelg_1_1cuda_ab502580e89328622329728926b168ced}} 
+\index{lg::cuda@{lg::cuda}!maxpooling\_backward@{maxpooling\_backward}}
+\index{maxpooling\_backward@{maxpooling\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{maxpooling\_backward()}{maxpooling\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::maxpooling\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{errors,  }\item[{int $\ast$}]{maxbuffer,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{stride,  }\item[{int}]{filter\+\_\+size,  }\item[{int}]{output\+\_\+width,  }\item[{int}]{output\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 298 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a9faebc3673f09ecfc225c21738da5af3}\label{namespacelg_1_1cuda_a9faebc3673f09ecfc225c21738da5af3}} 
+\index{lg::cuda@{lg::cuda}!maxpooling\_forward@{maxpooling\_forward}}
+\index{maxpooling\_forward@{maxpooling\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{maxpooling\_forward()}{maxpooling\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::maxpooling\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int $\ast$}]{maxbuffer,  }\item[{int}]{input\+\_\+width,  }\item[{int}]{input\+\_\+height,  }\item[{int}]{input\+\_\+count,  }\item[{int}]{stride,  }\item[{int}]{filter\+\_\+size,  }\item[{int}]{output\+\_\+width,  }\item[{int}]{output\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 250 of file C\+P\+U\+\_\+backend.\+cpp.
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a0e4f26dc450867d2347a2d72ed383733}\label{namespacelg_1_1cuda_a0e4f26dc450867d2347a2d72ed383733}} 
+\index{lg::cuda@{lg::cuda}!normalization\_accumulate\_deltas@{normalization\_accumulate\_deltas}}
+\index{normalization\_accumulate\_deltas@{normalization\_accumulate\_deltas}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{normalization\_accumulate\_deltas()}{normalization\_accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::normalization\+\_\+accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{deviation,  }\item[{float $\ast$}]{variance,  }\item[{float $\ast$}]{d\+\_\+gamma,  }\item[{float $\ast$}]{d\+\_\+beta,  }\item[{float}]{epsilon,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a0e4f26dc450867d2347a2d72ed383733_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a25134b03f29a49340cfca6acb6ff519c}\label{namespacelg_1_1cuda_a25134b03f29a49340cfca6acb6ff519c}} 
+\index{lg::cuda@{lg::cuda}!normalization\_backward@{normalization\_backward}}
+\index{normalization\_backward@{normalization\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{normalization\_backward()}{normalization\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::normalization\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{deviation,  }\item[{float $\ast$}]{variance,  }\item[{float $\ast$}]{gamma,  }\item[{float $\ast$}]{beta,  }\item[{float}]{epsilon,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a25134b03f29a49340cfca6acb6ff519c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a85299cc9e76e9ff15803eb9101e78460}\label{namespacelg_1_1cuda_a85299cc9e76e9ff15803eb9101e78460}} 
+\index{lg::cuda@{lg::cuda}!normalization\_forward@{normalization\_forward}}
+\index{normalization\_forward@{normalization\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{normalization\_forward()}{normalization\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::normalization\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{deviation,  }\item[{float $\ast$}]{normalized,  }\item[{float $\ast$}]{outputs,  }\item[{float $\ast$}]{variance,  }\item[{float $\ast$}]{gamma,  }\item[{float $\ast$}]{beta,  }\item[{float}]{epsilon,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 165 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a85299cc9e76e9ff15803eb9101e78460_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a965f4592cfb4e6b9f7f1abfa3a1005d8}\label{namespacelg_1_1cuda_a965f4592cfb4e6b9f7f1abfa3a1005d8}} 
+\index{lg::cuda@{lg::cuda}!normalization\_update\_parameters@{normalization\_update\_parameters}}
+\index{normalization\_update\_parameters@{normalization\_update\_parameters}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{normalization\_update\_parameters()}{normalization\_update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::normalization\+\_\+update\+\_\+parameters (\begin{DoxyParamCaption}\item[{float $\ast$}]{gamma,  }\item[{float $\ast$}]{beta,  }\item[{float $\ast$}]{d\+\_\+gamma,  }\item[{float $\ast$}]{d\+\_\+beta,  }\item[{float}]{momentum,  }\item[{int}]{size,  }\item[{float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 219 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_a965f4592cfb4e6b9f7f1abfa3a1005d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_ab0642d5b6d1a28b52236ab85f3a53925}\label{namespacelg_1_1cuda_ab0642d5b6d1a28b52236ab85f3a53925}} 
+\index{lg::cuda@{lg::cuda}!relu\_backward@{relu\_backward}}
+\index{relu\_backward@{relu\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{relu\_backward()}{relu\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::relu\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_ae6adb1a572de78eae4715c1c8137c026}\label{namespacelg_1_1cuda_ae6adb1a572de78eae4715c1c8137c026}} 
+\index{lg::cuda@{lg::cuda}!relu\_forward@{relu\_forward}}
+\index{relu\_forward@{relu\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{relu\_forward()}{relu\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::relu\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_ae0db6f2ac2908e7161386f0a36df4560}\label{namespacelg_1_1cuda_ae0db6f2ac2908e7161386f0a36df4560}} 
+\index{lg::cuda@{lg::cuda}!selu\_backward@{selu\_backward}}
+\index{selu\_backward@{selu\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{selu\_backward()}{selu\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::selu\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_ae0db6f2ac2908e7161386f0a36df4560_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a2924760c84069a2841f300848c0d7b85}\label{namespacelg_1_1cuda_a2924760c84069a2841f300848c0d7b85}} 
+\index{lg::cuda@{lg::cuda}!selu\_forward@{selu\_forward}}
+\index{selu\_forward@{selu\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{selu\_forward()}{selu\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::selu\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{namespacelg_1_1cuda_a2924760c84069a2841f300848c0d7b85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_ab87ff03b7876a608d263ed2103a0399e}\label{namespacelg_1_1cuda_ab87ff03b7876a608d263ed2103a0399e}} 
+\index{lg::cuda@{lg::cuda}!sigmoid\_backward@{sigmoid\_backward}}
+\index{sigmoid\_backward@{sigmoid\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{sigmoid\_backward()}{sigmoid\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::sigmoid\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_afbcb57abfd9468a3107a5fb8876e3d22}\label{namespacelg_1_1cuda_afbcb57abfd9468a3107a5fb8876e3d22}} 
+\index{lg::cuda@{lg::cuda}!sigmoid\_forward@{sigmoid\_forward}}
+\index{sigmoid\_forward@{sigmoid\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{sigmoid\_forward()}{sigmoid\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::sigmoid\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_ae6100dbc18d64618537e768e67a5eae4}\label{namespacelg_1_1cuda_ae6100dbc18d64618537e768e67a5eae4}} 
+\index{lg::cuda@{lg::cuda}!softmax\_backward@{softmax\_backward}}
+\index{softmax\_backward@{softmax\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{softmax\_backward()}{softmax\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::softmax\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 464 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_ae6100dbc18d64618537e768e67a5eae4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_af6f534536e457051e65effdbc7534a6d}\label{namespacelg_1_1cuda_af6f534536e457051e65effdbc7534a6d}} 
+\index{lg::cuda@{lg::cuda}!softmax\_forward@{softmax\_forward}}
+\index{softmax\_forward@{softmax\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{softmax\_forward()}{softmax\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::softmax\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{float}]{scale,  }\item[{int}]{size,  }\item[{float}]{epsilon }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file C\+P\+U\+\_\+backend.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg_1_1cuda_af6f534536e457051e65effdbc7534a6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg_1_1cuda_a4b1138745ab9fde9daac0c42cb68f66f}\label{namespacelg_1_1cuda_a4b1138745ab9fde9daac0c42cb68f66f}} 
+\index{lg::cuda@{lg::cuda}!sparse\_indices@{sparse\_indices}}
+\index{sparse\_indices@{sparse\_indices}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{sparse\_indices()}{sparse\_indices()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::sparse\+\_\+indices (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{int}]{inputs\+\_\+size,  }\item[{int $\ast$}]{indices,  }\item[{int $\ast$}]{tmp\+\_\+indices,  }\item[{int $\ast$}]{indices\+\_\+count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a3e0acb2ce86052848da5bbcc6629d56d}\label{namespacelg_1_1cuda_a3e0acb2ce86052848da5bbcc6629d56d}} 
+\index{lg::cuda@{lg::cuda}!tanh\_backward@{tanh\_backward}}
+\index{tanh\_backward@{tanh\_backward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{tanh\_backward()}{tanh\_backward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::tanh\+\_\+backward (\begin{DoxyParamCaption}\item[{float $\ast$}]{errors,  }\item[{float $\ast$}]{out\+\_\+errors,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelg_1_1cuda_a0fead1b0d84ba90d494c808c9b4c33fe}\label{namespacelg_1_1cuda_a0fead1b0d84ba90d494c808c9b4c33fe}} 
+\index{lg::cuda@{lg::cuda}!tanh\_forward@{tanh\_forward}}
+\index{tanh\_forward@{tanh\_forward}!lg::cuda@{lg::cuda}}
+\doxysubsubsection{\texorpdfstring{tanh\_forward()}{tanh\_forward()}}
+{\footnotesize\ttfamily void lg\+::cuda\+::tanh\+\_\+forward (\begin{DoxyParamCaption}\item[{float $\ast$}]{inputs,  }\item[{float $\ast$}]{outputs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+

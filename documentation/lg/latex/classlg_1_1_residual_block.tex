@@ -1,0 +1,470 @@
+\hypertarget{classlg_1_1_residual_block}{}\doxysection{lg\+::Residual\+Block Class Reference}
+\label{classlg_1_1_residual_block}\index{lg::ResidualBlock@{lg::ResidualBlock}}
+
+
+{\ttfamily \#include $<$Residual\+Block.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Residual\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classlg_1_1_residual_block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Residual\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_residual_block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_residual_block_a3b441e22f45a14db4f9b291894d11503}{Residual\+Block}} (const int filter\+\_\+size, const int filer\+\_\+count, const int stride, const int padding, const unsigned int blocks\+\_\+count)
+\item 
+\mbox{\hyperlink{classlg_1_1_residual_block_a13ee4d9bdaa95ca207f0864a2d003a18}{Residual\+Block}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_aa2fa04f31ef31ddac20a7f6ebb9b6fce}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_a50f604f255f907c649c906d085fbab40}{initialize}} (const int input\+\_\+width, const int input\+\_\+height, const int input\+\_\+count)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_a04a601d5b54175c6f4115c8ec220e584}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_ac390a1d8e495bf5b2c7d62fe129dd362}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_ad3826cd6d8e6dfd83de8e4e00abee20e}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_afa8cf9be895f5052920a193b50f71146}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_a1359fb0e644baa510b6e356ca580916f}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_a2bc2a56e96c9a09e3a0c465f3e360389}{reset\+\_\+deltas}} (const double momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_aeafb12ff4a771ff78db79931898169ff}{reset\+\_\+errors}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_a73487265d860d284da06c48349dfa31b}{reset\+\_\+outputs}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_residual_block_afc2739654747436993dbf9dc6ab04a70}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_residual_block_ae25109746cc8755fde5543fe9e1bb966}{print}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \mbox{\hyperlink{classlg_1_1_residual_block_a35bea1e983c97c3c28dfdf78a8f7581f}{link\+\_\+layers}} (\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$op)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \mbox{\hyperlink{classlg_1_1_residual_block_a4532660586269575f44f666a6afcc8f7}{link\+\_\+layers}} (\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$op1, \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$op2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_residual_block_a448557be8c1502e6304dd2ad54a51b87}{make}} (const int filter\+\_\+size, const int filter\+\_\+count, const int stride, const int padding, const unsigned int blocks\+\_\+count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}} $>$ $>$ \mbox{\hyperlink{classlg_1_1_residual_block_a4d2fa16f48a1035edec921febe6a0ac2}{\+\_\+layers}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ $>$ \mbox{\hyperlink{classlg_1_1_residual_block_ad59b04399f1d20b3a36a3b11c4afc3fb}{\+\_\+layers\+\_\+connections}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_ad9421a8fd7e219faac4db45891f28f2a}{\+\_\+input\+\_\+width}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a10f090a2aa12c1dec0d9d214ed2d8972}{\+\_\+input\+\_\+height}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_ac9d213f6453084c8a0d9f19721b6b15b}{\+\_\+input\+\_\+count}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a59f9d4006b4296e0ea19cb8c309f0b02}{\+\_\+filter\+\_\+width}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_afaaa9561cdf2450ed7bc32cdb9ec0bd4}{\+\_\+filter\+\_\+height}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a9ffc248e101297929125691db6b3bcd8}{\+\_\+filter\+\_\+count}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_aeab1288df49c3e3fcef7c700c3c9acc3}{\+\_\+stride}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a003211410a718c9989f6d9eaa8c48439}{\+\_\+input\+\_\+size}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a9d7c49ab0a777446cce31e9c8079b142}{\+\_\+padding}}
+\item 
+unsigned int \mbox{\hyperlink{classlg_1_1_residual_block_a2716b051c05718700b3e014791b11f2f}{\+\_\+blocks\+\_\+count}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Residual\+Block.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_residual_block_a3b441e22f45a14db4f9b291894d11503}\label{classlg_1_1_residual_block_a3b441e22f45a14db4f9b291894d11503}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!ResidualBlock@{ResidualBlock}}
+\index{ResidualBlock@{ResidualBlock}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{ResidualBlock()}{ResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Residual\+Block\+::\+Residual\+Block (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{filer\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding,  }\item[{const unsigned int}]{blocks\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a13ee4d9bdaa95ca207f0864a2d003a18}\label{classlg_1_1_residual_block_a13ee4d9bdaa95ca207f0864a2d003a18}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!ResidualBlock@{ResidualBlock}}
+\index{ResidualBlock@{ResidualBlock}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{ResidualBlock()}{ResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Residual\+Block\+::\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Residual\+Block.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_residual_block_afa8cf9be895f5052920a193b50f71146}\label{classlg_1_1_residual_block_afa8cf9be895f5052920a193b50f71146}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 173 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_ad3826cd6d8e6dfd83de8e4e00abee20e}\label{classlg_1_1_residual_block_ad3826cd6d8e6dfd83de8e4e00abee20e}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 166 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_afc2739654747436993dbf9dc6ab04a70}\label{classlg_1_1_residual_block_afc2739654747436993dbf9dc6ab04a70}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Residual\+Block\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 204 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a50f604f255f907c649c906d085fbab40}\label{classlg_1_1_residual_block_a50f604f255f907c649c906d085fbab40}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::initialize (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+width,  }\item[{const int}]{input\+\_\+height,  }\item[{const int}]{input\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_aa2fa04f31ef31ddac20a7f6ebb9b6fce}\label{classlg_1_1_residual_block_aa2fa04f31ef31ddac20a7f6ebb9b6fce}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 69 of file Residual\+Block.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_residual_block_aa2fa04f31ef31ddac20a7f6ebb9b6fce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_residual_block_a35bea1e983c97c3c28dfdf78a8f7581f}\label{classlg_1_1_residual_block_a35bea1e983c97c3c28dfdf78a8f7581f}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!link\_layers@{link\_layers}}
+\index{link\_layers@{link\_layers}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{link\_layers()}{link\_layers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ lg\+::\+Residual\+Block\+::link\+\_\+layers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$}]{op }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file Residual\+Block.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_residual_block_a35bea1e983c97c3c28dfdf78a8f7581f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_residual_block_a4532660586269575f44f666a6afcc8f7}\label{classlg_1_1_residual_block_a4532660586269575f44f666a6afcc8f7}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!link\_layers@{link\_layers}}
+\index{link\_layers@{link\_layers}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{link\_layers()}{link\_layers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ lg\+::\+Residual\+Block\+::link\+\_\+layers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$}]{op1,  }\item[{\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$}]{op2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a448557be8c1502e6304dd2ad54a51b87}\label{classlg_1_1_residual_block_a448557be8c1502e6304dd2ad54a51b87}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!make@{make}}
+\index{make@{make}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Residual\+Block\+::make (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{filter\+\_\+count,  }\item[{const int}]{stride,  }\item[{const int}]{padding,  }\item[{const unsigned int}]{blocks\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_ae25109746cc8755fde5543fe9e1bb966}\label{classlg_1_1_residual_block_ae25109746cc8755fde5543fe9e1bb966}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!print@{print}}
+\index{print@{print}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 210 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a2bc2a56e96c9a09e3a0c465f3e360389}\label{classlg_1_1_residual_block_a2bc2a56e96c9a09e3a0c465f3e360389}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const double}]{momentum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_abff158925bd2477aadff748634e27705}{lg\+::\+Operation}}.
+
+
+
+Definition at line 186 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_aeafb12ff4a771ff78db79931898169ff}\label{classlg_1_1_residual_block_aeafb12ff4a771ff78db79931898169ff}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!reset\_errors@{reset\_errors}}
+\index{reset\_errors@{reset\_errors}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{reset\_errors()}{reset\_errors()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::reset\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a6674d6949aa2a3574e2f6a89abeae566}{lg\+::\+Operation}}.
+
+
+
+Definition at line 192 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a73487265d860d284da06c48349dfa31b}\label{classlg_1_1_residual_block_a73487265d860d284da06c48349dfa31b}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!reset\_outputs@{reset\_outputs}}
+\index{reset\_outputs@{reset\_outputs}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{reset\_outputs()}{reset\_outputs()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::reset\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file Residual\+Block.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classlg_1_1_residual_block_a73487265d860d284da06c48349dfa31b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_residual_block_ac390a1d8e495bf5b2c7d62fe129dd362}\label{classlg_1_1_residual_block_ac390a1d8e495bf5b2c7d62fe129dd362}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!run@{run}}
+\index{run@{run}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 159 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a04a601d5b54175c6f4115c8ec220e584}\label{classlg_1_1_residual_block_a04a601d5b54175c6f4115c8ec220e584}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!save@{save}}
+\index{save@{save}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 46 of file Residual\+Block.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a1359fb0e644baa510b6e356ca580916f}\label{classlg_1_1_residual_block_a1359fb0e644baa510b6e356ca580916f}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Residual\+Block\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 180 of file Residual\+Block.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_residual_block_a2716b051c05718700b3e014791b11f2f}\label{classlg_1_1_residual_block_a2716b051c05718700b3e014791b11f2f}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_blocks\_count@{\_blocks\_count}}
+\index{\_blocks\_count@{\_blocks\_count}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_blocks\_count}{\_blocks\_count}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+blocks\+\_\+count}
+
+
+
+Definition at line 60 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a9ffc248e101297929125691db6b3bcd8}\label{classlg_1_1_residual_block_a9ffc248e101297929125691db6b3bcd8}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_filter\_count@{\_filter\_count}}
+\index{\_filter\_count@{\_filter\_count}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_filter\_count}{\_filter\_count}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+filter\+\_\+count}
+
+
+
+Definition at line 56 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_afaaa9561cdf2450ed7bc32cdb9ec0bd4}\label{classlg_1_1_residual_block_afaaa9561cdf2450ed7bc32cdb9ec0bd4}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_filter\_height@{\_filter\_height}}
+\index{\_filter\_height@{\_filter\_height}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_filter\_height}{\_filter\_height}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+filter\+\_\+height}
+
+
+
+Definition at line 55 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a59f9d4006b4296e0ea19cb8c309f0b02}\label{classlg_1_1_residual_block_a59f9d4006b4296e0ea19cb8c309f0b02}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_filter\_width@{\_filter\_width}}
+\index{\_filter\_width@{\_filter\_width}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_filter\_width}{\_filter\_width}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+filter\+\_\+width}
+
+
+
+Definition at line 54 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_ac9d213f6453084c8a0d9f19721b6b15b}\label{classlg_1_1_residual_block_ac9d213f6453084c8a0d9f19721b6b15b}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_input\_count@{\_input\_count}}
+\index{\_input\_count@{\_input\_count}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_input\_count}{\_input\_count}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+input\+\_\+count}
+
+
+
+Definition at line 53 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a10f090a2aa12c1dec0d9d214ed2d8972}\label{classlg_1_1_residual_block_a10f090a2aa12c1dec0d9d214ed2d8972}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_input\_height@{\_input\_height}}
+\index{\_input\_height@{\_input\_height}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_input\_height}{\_input\_height}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+input\+\_\+height}
+
+
+
+Definition at line 52 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a003211410a718c9989f6d9eaa8c48439}\label{classlg_1_1_residual_block_a003211410a718c9989f6d9eaa8c48439}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 58 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_ad9421a8fd7e219faac4db45891f28f2a}\label{classlg_1_1_residual_block_ad9421a8fd7e219faac4db45891f28f2a}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_input\_width@{\_input\_width}}
+\index{\_input\_width@{\_input\_width}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_input\_width}{\_input\_width}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+input\+\_\+width}
+
+
+
+Definition at line 51 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a4d2fa16f48a1035edec921febe6a0ac2}\label{classlg_1_1_residual_block_a4d2fa16f48a1035edec921febe6a0ac2}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_layers@{\_layers}}
+\index{\_layers@{\_layers}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_layers}{\_layers}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}} $>$ $>$ lg\+::\+Residual\+Block\+::\+\_\+layers}
+
+
+
+Definition at line 45 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_ad59b04399f1d20b3a36a3b11c4afc3fb}\label{classlg_1_1_residual_block_ad59b04399f1d20b3a36a3b11c4afc3fb}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_layers\_connections@{\_layers\_connections}}
+\index{\_layers\_connections@{\_layers\_connections}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_layers\_connections}{\_layers\_connections}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}}$\ast$ $>$ $>$ lg\+::\+Residual\+Block\+::\+\_\+layers\+\_\+connections}
+
+
+
+Definition at line 46 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_a9d7c49ab0a777446cce31e9c8079b142}\label{classlg_1_1_residual_block_a9d7c49ab0a777446cce31e9c8079b142}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_padding@{\_padding}}
+\index{\_padding@{\_padding}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_padding}{\_padding}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+padding}
+
+
+
+Definition at line 59 of file Residual\+Block.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_residual_block_aeab1288df49c3e3fcef7c700c3c9acc3}\label{classlg_1_1_residual_block_aeab1288df49c3e3fcef7c700c3c9acc3}} 
+\index{lg::ResidualBlock@{lg::ResidualBlock}!\_stride@{\_stride}}
+\index{\_stride@{\_stride}!lg::ResidualBlock@{lg::ResidualBlock}}
+\doxysubsubsection{\texorpdfstring{\_stride}{\_stride}}
+{\footnotesize\ttfamily unsigned int lg\+::\+Residual\+Block\+::\+\_\+stride}
+
+
+
+Definition at line 57 of file Residual\+Block.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_residual_block_8hpp}{Residual\+Block.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_residual_block_8cpp}{Residual\+Block.\+cpp}}\end{DoxyCompactItemize}

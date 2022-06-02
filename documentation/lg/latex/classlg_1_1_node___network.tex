@@ -1,0 +1,228 @@
+\hypertarget{classlg_1_1_node___network}{}\doxysection{lg\+::Node\+\_\+\+Network Class Reference}
+\label{classlg_1_1_node___network}\index{lg::Node\_Network@{lg::Node\_Network}}
+
+
+{\ttfamily \#include $<$Node\+\_\+\+Network.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_node___network_a6c975fb8eabc02af5ab0912f23a98c9b}{Node\+\_\+\+Network}} (std\+::string node\+\_\+name, std\+::vector$<$ std\+::string $>$ input\+\_\+names, \mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} $\ast$network, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ operation)
+\item 
+\mbox{\hyperlink{classlg_1_1_node___network_adde0610ff9363f99931690e18181d48d}{Node\+\_\+\+Network}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data, \mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} $\ast$network)
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a7d56ba72152409bdde80988cdca3d2f3}{run}} (bool training=false)
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_afd8406ea35e7141843887aa044dffdd9}{backprop}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a0790fda4e2c7c9b973c75103fcbd1a1c}{accumulate\+\_\+deltas}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_ac6f81fc772d81a287cee386ceeab4a2f}{update\+\_\+parameters}} (const float learningrate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a87df517c3076bb71e4c72900976778a7}{reset\+\_\+errors}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a8bd261cd61e06536adbfc8263eebfeca}{reset\+\_\+deltas}} (const float momentum)
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a9f9c496042444663c06492c8a8c2f367}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+const std\+::string \mbox{\hyperlink{classlg_1_1_node___network_a49f3dc2fef26e5de32f7098e7cc2c929}{get\+Name}} () const
+\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classlg_1_1_node___network_ad3cf454651a03a85538a1a04c0a0170a}{get\+Inputs\+Names}} ()
+\item 
+const std\+::vector$<$ int $>$ \mbox{\hyperlink{classlg_1_1_node___network_adf01e8e07d165dee036b4b7310ba8524}{get\+Inputs\+Indicies}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a2d2acda7261e2361487a6c2ca825c53c}{print}} ()
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& \mbox{\hyperlink{classlg_1_1_node___network_a9b2a8547715b4ef4433988f561684fba}{get\+Operation\+Output}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_node___network_a282b0774a2623d216c7ecd212dbe9c45}{set\+Operation\+Output}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&output)
+\item 
+\mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ \mbox{\hyperlink{classlg_1_1_node___network_a0439dc2319d39f034f190ccea7b775b3}{get\+Operation}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 42 of file Node\+\_\+\+Network.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_node___network_a6c975fb8eabc02af5ab0912f23a98c9b}\label{classlg_1_1_node___network_a6c975fb8eabc02af5ab0912f23a98c9b}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!Node\_Network@{Node\_Network}}
+\index{Node\_Network@{Node\_Network}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{Node\_Network()}{Node\_Network()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Node\+\_\+\+Network\+::\+Node\+\_\+\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{node\+\_\+name,  }\item[{std\+::vector$<$ std\+::string $>$}]{input\+\_\+names,  }\item[{\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} $\ast$}]{network,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$}]{operation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_adde0610ff9363f99931690e18181d48d}\label{classlg_1_1_node___network_adde0610ff9363f99931690e18181d48d}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!Node\_Network@{Node\_Network}}
+\index{Node\_Network@{Node\_Network}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{Node\_Network()}{Node\_Network()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Node\+\_\+\+Network\+::\+Node\+\_\+\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data,  }\item[{\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} $\ast$}]{network }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Node\+\_\+\+Network.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_node___network_a0790fda4e2c7c9b973c75103fcbd1a1c}\label{classlg_1_1_node___network_a0790fda4e2c7c9b973c75103fcbd1a1c}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_afd8406ea35e7141843887aa044dffdd9}\label{classlg_1_1_node___network_afd8406ea35e7141843887aa044dffdd9}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::backprop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_adf01e8e07d165dee036b4b7310ba8524}\label{classlg_1_1_node___network_adf01e8e07d165dee036b4b7310ba8524}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!getInputsIndicies@{getInputsIndicies}}
+\index{getInputsIndicies@{getInputsIndicies}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{getInputsIndicies()}{getInputsIndicies()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ lg\+::\+Node\+\_\+\+Network\+::get\+Inputs\+Indicies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 170 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_ad3cf454651a03a85538a1a04c0a0170a}\label{classlg_1_1_node___network_ad3cf454651a03a85538a1a04c0a0170a}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!getInputsNames@{getInputsNames}}
+\index{getInputsNames@{getInputsNames}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{getInputsNames()}{getInputsNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ lg\+::\+Node\+\_\+\+Network\+::get\+Inputs\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 164 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a49f3dc2fef26e5de32f7098e7cc2c929}\label{classlg_1_1_node___network_a49f3dc2fef26e5de32f7098e7cc2c929}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!getName@{getName}}
+\index{getName@{getName}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string lg\+::\+Node\+\_\+\+Network\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 158 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a0439dc2319d39f034f190ccea7b775b3}\label{classlg_1_1_node___network_a0439dc2319d39f034f190ccea7b775b3}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!getOperation@{getOperation}}
+\index{getOperation@{getOperation}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{getOperation()}{getOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ lg\+::\+Node\+\_\+\+Network\+::get\+Operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 176 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a9b2a8547715b4ef4433988f561684fba}\label{classlg_1_1_node___network_a9b2a8547715b4ef4433988f561684fba}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!getOperationOutput@{getOperationOutput}}
+\index{getOperationOutput@{getOperationOutput}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{getOperationOutput()}{getOperationOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \& lg\+::\+Node\+\_\+\+Network\+::get\+Operation\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a2d2acda7261e2361487a6c2ca825c53c}\label{classlg_1_1_node___network_a2d2acda7261e2361487a6c2ca825c53c}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!print@{print}}
+\index{print@{print}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 220 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a8bd261cd61e06536adbfc8263eebfeca}\label{classlg_1_1_node___network_a8bd261cd61e06536adbfc8263eebfeca}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!reset\_deltas@{reset\_deltas}}
+\index{reset\_deltas@{reset\_deltas}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{reset\_deltas()}{reset\_deltas()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::reset\+\_\+deltas (\begin{DoxyParamCaption}\item[{const float}]{momentum }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a87df517c3076bb71e4c72900976778a7}\label{classlg_1_1_node___network_a87df517c3076bb71e4c72900976778a7}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!reset\_errors@{reset\_errors}}
+\index{reset\_errors@{reset\_errors}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{reset\_errors()}{reset\_errors()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::reset\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 146 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a7d56ba72152409bdde80988cdca3d2f3}\label{classlg_1_1_node___network_a7d56ba72152409bdde80988cdca3d2f3}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!run@{run}}
+\index{run@{run}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::run (\begin{DoxyParamCaption}\item[{bool}]{training = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_a9f9c496042444663c06492c8a8c2f367}\label{classlg_1_1_node___network_a9f9c496042444663c06492c8a8c2f367}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!save@{save}}
+\index{save@{save}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file Node\+\_\+\+Network.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_node___network_a9f9c496042444663c06492c8a8c2f367_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_node___network_a282b0774a2623d216c7ecd212dbe9c45}\label{classlg_1_1_node___network_a282b0774a2623d216c7ecd212dbe9c45}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!setOperationOutput@{setOperationOutput}}
+\index{setOperationOutput@{setOperationOutput}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{setOperationOutput()}{setOperationOutput()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::set\+Operation\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{output }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file Node\+\_\+\+Network.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_node___network_ac6f81fc772d81a287cee386ceeab4a2f}\label{classlg_1_1_node___network_ac6f81fc772d81a287cee386ceeab4a2f}} 
+\index{lg::Node\_Network@{lg::Node\_Network}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Node\_Network@{lg::Node\_Network}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Node\+\_\+\+Network\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file Node\+\_\+\+Network.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_node___network_8hpp}{Node\+\_\+\+Network.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_node___network_8cpp}{Node\+\_\+\+Network.\+cpp}}\end{DoxyCompactItemize}

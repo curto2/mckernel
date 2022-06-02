@@ -1,0 +1,300 @@
+\hypertarget{classlg_1_1_relu}{}\doxysection{lg\+::Relu Class Reference}
+\label{classlg_1_1_relu}\index{lg::Relu@{lg::Relu}}
+
+
+{\ttfamily \#include $<$Relu.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Relu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_relu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Relu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_relu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_relu_a1a07088b41c6ba77249d3015a431547b}{Relu}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_relu_ac5eb47abceaa7d78c58d2ba2b536a45c}{Relu}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_relu_a7a75798f7e090f126ed7a3a778a69412}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_relu_a83baa5e2933a94c541a39ed574b39c2c}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_relu_ab412bd5b8c24fbc9123200d9b5820a3a}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_relu_ae21d5ae98aaaa1f2e6461adb30837acd}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_relu_ada941113b0002138e0d4cd787f8fc7c3}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_relu_ae9d6fe56c2d4ed3f47535ec1ee886c32}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_relu_a809befe4e39853755f12953e54375b34}{make}} ()
+\item 
+static void \mbox{\hyperlink{classlg_1_1_relu_ac37888605ad3dfc70cd8ffbe8467efce}{forward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} output)
+\begin{DoxyCompactList}\small\item\em R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlg_1_1_relu_a5716c928e08481ce2a2a0f180a46d27d}{backward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} errors, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} outputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Relu.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_relu_a1a07088b41c6ba77249d3015a431547b}\label{classlg_1_1_relu_a1a07088b41c6ba77249d3015a431547b}} 
+\index{lg::Relu@{lg::Relu}!Relu@{Relu}}
+\index{Relu@{Relu}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{Relu()}{Relu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Relu\+::\+Relu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Relu.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classlg_1_1_relu_a1a07088b41c6ba77249d3015a431547b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_ac5eb47abceaa7d78c58d2ba2b536a45c}\label{classlg_1_1_relu_ac5eb47abceaa7d78c58d2ba2b536a45c}} 
+\index{lg::Relu@{lg::Relu}!Relu@{Relu}}
+\index{Relu@{Relu}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{Relu()}{Relu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Relu\+::\+Relu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_relu_ac5eb47abceaa7d78c58d2ba2b536a45c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_relu_ae21d5ae98aaaa1f2e6461adb30837acd}\label{classlg_1_1_relu_ae21d5ae98aaaa1f2e6461adb30837acd}} 
+\index{lg::Relu@{lg::Relu}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 108 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlg_1_1_relu_ae21d5ae98aaaa1f2e6461adb30837acd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_a5716c928e08481ce2a2a0f180a46d27d}\label{classlg_1_1_relu_a5716c928e08481ce2a2a0f180a46d27d}} 
+\index{lg::Relu@{lg::Relu}!backward@{backward}}
+\index{backward@{backward}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::backward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{errors,  }\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{outputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 154 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classlg_1_1_relu_a5716c928e08481ce2a2a0f180a46d27d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_relu_a5716c928e08481ce2a2a0f180a46d27d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_ac37888605ad3dfc70cd8ffbe8467efce}\label{classlg_1_1_relu_ac37888605ad3dfc70cd8ffbe8467efce}} 
+\index{lg::Relu@{lg::Relu}!forward@{forward}}
+\index{forward@{forward}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. 
+
+
+
+Definition at line 143 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classlg_1_1_relu_ac37888605ad3dfc70cd8ffbe8467efce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classlg_1_1_relu_ac37888605ad3dfc70cd8ffbe8467efce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_ada941113b0002138e0d4cd787f8fc7c3}\label{classlg_1_1_relu_ada941113b0002138e0d4cd787f8fc7c3}} 
+\index{lg::Relu@{lg::Relu}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Relu\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 129 of file Relu.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_relu_a7a75798f7e090f126ed7a3a778a69412}\label{classlg_1_1_relu_a7a75798f7e090f126ed7a3a778a69412}} 
+\index{lg::Relu@{lg::Relu}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 55 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_relu_a7a75798f7e090f126ed7a3a778a69412_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_a809befe4e39853755f12953e54375b34}\label{classlg_1_1_relu_a809befe4e39853755f12953e54375b34}} 
+\index{lg::Relu@{lg::Relu}!make@{make}}
+\index{make@{make}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Relu\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 21 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classlg_1_1_relu_a809befe4e39853755f12953e54375b34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_ae9d6fe56c2d4ed3f47535ec1ee886c32}\label{classlg_1_1_relu_ae9d6fe56c2d4ed3f47535ec1ee886c32}} 
+\index{lg::Relu@{lg::Relu}!print@{print}}
+\index{print@{print}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 135 of file Relu.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_relu_ab412bd5b8c24fbc9123200d9b5820a3a}\label{classlg_1_1_relu_ab412bd5b8c24fbc9123200d9b5820a3a}} 
+\index{lg::Relu@{lg::Relu}!run@{run}}
+\index{run@{run}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classlg_1_1_relu_ab412bd5b8c24fbc9123200d9b5820a3a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_relu_a83baa5e2933a94c541a39ed574b39c2c}\label{classlg_1_1_relu_a83baa5e2933a94c541a39ed574b39c2c}} 
+\index{lg::Relu@{lg::Relu}!save@{save}}
+\index{save@{save}!lg::Relu@{lg::Relu}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Relu\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 78 of file Relu.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_relu_a83baa5e2933a94c541a39ed574b39c2c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_relu_8hpp}{Relu.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_relu_8cpp}{Relu.\+cpp}}\end{DoxyCompactItemize}

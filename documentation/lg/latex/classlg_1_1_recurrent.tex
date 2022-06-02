@@ -1,0 +1,526 @@
+\hypertarget{classlg_1_1_recurrent}{}\doxysection{lg\+::Recurrent Class Reference}
+\label{classlg_1_1_recurrent}\index{lg::Recurrent@{lg::Recurrent}}
+
+
+{\ttfamily \#include $<$Recurrent.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Recurrent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_recurrent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Recurrent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classlg_1_1_recurrent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_recurrent_acbdb1159133f102efb58b791a0354e55}{Recurrent}} (const int size, int btt\+\_\+steps=3)
+\item 
+\mbox{\hyperlink{classlg_1_1_recurrent_a5729051532e563785ad1108e5d61e0ca}{Recurrent}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a6b57d13023176dcc3f30952c260dff6e}{initialize}} (const int input\+\_\+size)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_aee27dabeceaf0d84e1dc6073c192f57a}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a77f9e39326bb7228831c4da1a28133e8}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a378fc8061366973c063cc1090e42a11c}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_ad0442b9f08c3e812b880742687d0b3cc}{accumulate\+\_\+deltas}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_ac9fcbf86968ea472be4215a88bd40171}{update\+\_\+parameters}} (const float learningrate)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_recurrent_a02bc18b10a07a0258515a8520c5dd9ec}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a189f0dd284081c0e24eac4c0a00391f0}{reset\+\_\+hidden\+\_\+state}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_aba461d1d36fe5388715288957fe0389c}{print}} ()
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_a797bb6173992fa4460ae88bfc5dfdc16}{run}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, bool accumulate)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_ac5ec4d2ecbbfbabacbc544ee114f3664}{backprop}} (\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\item 
+void \mbox{\hyperlink{classlg_1_1_recurrent_af8841253e68fab43f45dc12e907adad0}{accumulate\+\_\+deltas}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlg_1_1_recurrent_a7fe9ab1764366db1db9df20617961daa}{gradient\+\_\+check}} ()
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_recurrent_ade31e1165e16abed6d6d34af45394d26}{make}} (const int size, int btt\+\_\+steps=3)
+\begin{DoxyCompactList}\small\item\em U\+T\+IL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} \mbox{\hyperlink{classlg_1_1_recurrent_ad8e19c089e1b4c5b2ed0b21d34ce4085}{\+\_\+x}}
+\item 
+\mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} \mbox{\hyperlink{classlg_1_1_recurrent_a8084c48bbac5b4b6e7859df76221a812}{\+\_\+rec}}
+\item 
+\mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} \mbox{\hyperlink{classlg_1_1_recurrent_a7e8c0f491cd112ba644992c50eef166c}{\+\_\+out}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_recurrent_a5c94e3874405af1e6905b4672166553d}{\+\_\+mem\+\_\+outputs}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_recurrent_a3725f9f4eabc6f8af0d684d4bdb08c94}{\+\_\+mem\+\_\+tmp\+\_\+errors}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_recurrent_a7e9595863a6b4a4ebf71cb3f578f098d}{\+\_\+mem\+\_\+inputs}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_recurrent_a71fc7a01d2a16ade7f23fb963ea4e256}{\+\_\+btt\+\_\+steps}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_recurrent_adb40afd5d077e83242b7679c3851468a}{\+\_\+btt\+\_\+pos}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_recurrent_a9f52d6acb9a4a922132442b5babc1d21}{\+\_\+input\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Recurrent.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_recurrent_acbdb1159133f102efb58b791a0354e55}\label{classlg_1_1_recurrent_acbdb1159133f102efb58b791a0354e55}} 
+\index{lg::Recurrent@{lg::Recurrent}!Recurrent@{Recurrent}}
+\index{Recurrent@{Recurrent}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{Recurrent()}{Recurrent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Recurrent\+::\+Recurrent (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{int}]{btt\+\_\+steps = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Recurrent.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a5729051532e563785ad1108e5d61e0ca}\label{classlg_1_1_recurrent_a5729051532e563785ad1108e5d61e0ca}} 
+\index{lg::Recurrent@{lg::Recurrent}!Recurrent@{Recurrent}}
+\index{Recurrent@{Recurrent}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{Recurrent()}{Recurrent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Recurrent\+::\+Recurrent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a5729051532e563785ad1108e5d61e0ca_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_recurrent_af8841253e68fab43f45dc12e907adad0}\label{classlg_1_1_recurrent_af8841253e68fab43f45dc12e907adad0}} 
+\index{lg::Recurrent@{lg::Recurrent}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 268 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_af8841253e68fab43f45dc12e907adad0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_ad0442b9f08c3e812b880742687d0b3cc}\label{classlg_1_1_recurrent_ad0442b9f08c3e812b880742687d0b3cc}} 
+\index{lg::Recurrent@{lg::Recurrent}!accumulate\_deltas@{accumulate\_deltas}}
+\index{accumulate\_deltas@{accumulate\_deltas}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{accumulate\_deltas()}{accumulate\_deltas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::accumulate\+\_\+deltas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a5c89bb0500d6055e4a8de83dd15a6df0}{lg\+::\+Operation}}.
+
+
+
+Definition at line 183 of file Recurrent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_ad0442b9f08c3e812b880742687d0b3cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a378fc8061366973c063cc1090e42a11c}\label{classlg_1_1_recurrent_a378fc8061366973c063cc1090e42a11c}} 
+\index{lg::Recurrent@{lg::Recurrent}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 176 of file Recurrent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a378fc8061366973c063cc1090e42a11c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_ac5ec4d2ecbbfbabacbc544ee114f3664}\label{classlg_1_1_recurrent_ac5ec4d2ecbbfbabacbc544ee114f3664}} 
+\index{lg::Recurrent@{lg::Recurrent}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::backprop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 243 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_ac5ec4d2ecbbfbabacbc544ee114f3664_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a02bc18b10a07a0258515a8520c5dd9ec}\label{classlg_1_1_recurrent_a02bc18b10a07a0258515a8520c5dd9ec}} 
+\index{lg::Recurrent@{lg::Recurrent}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Recurrent\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 368 of file Recurrent.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a7fe9ab1764366db1db9df20617961daa}\label{classlg_1_1_recurrent_a7fe9ab1764366db1db9df20617961daa}} 
+\index{lg::Recurrent@{lg::Recurrent}!gradient\_check@{gradient\_check}}
+\index{gradient\_check@{gradient\_check}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{gradient\_check()}{gradient\_check()}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::gradient\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 288 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a7fe9ab1764366db1db9df20617961daa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a6b57d13023176dcc3f30952c260dff6e}\label{classlg_1_1_recurrent_a6b57d13023176dcc3f30952c260dff6e}} 
+\index{lg::Recurrent@{lg::Recurrent}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::initialize (\begin{DoxyParamCaption}\item[{const int}]{input\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a6b57d13023176dcc3f30952c260dff6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9}\label{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9}} 
+\index{lg::Recurrent@{lg::Recurrent}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 114 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a697cd48ab364f4be2ec6f37eb8ae5ae9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_ade31e1165e16abed6d6d34af45394d26}\label{classlg_1_1_recurrent_ade31e1165e16abed6d6d34af45394d26}} 
+\index{lg::Recurrent@{lg::Recurrent}!make@{make}}
+\index{make@{make}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Recurrent\+::make (\begin{DoxyParamCaption}\item[{const int}]{size,  }\item[{int}]{btt\+\_\+steps = {\ttfamily 3} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+U\+T\+IL. 
+
+R\+E\+C\+U\+R\+R\+E\+NT 
+
+Definition at line 33 of file Recurrent.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_aba461d1d36fe5388715288957fe0389c}\label{classlg_1_1_recurrent_aba461d1d36fe5388715288957fe0389c}} 
+\index{lg::Recurrent@{lg::Recurrent}!print@{print}}
+\index{print@{print}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 381 of file Recurrent.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a189f0dd284081c0e24eac4c0a00391f0}\label{classlg_1_1_recurrent_a189f0dd284081c0e24eac4c0a00391f0}} 
+\index{lg::Recurrent@{lg::Recurrent}!reset\_hidden\_state@{reset\_hidden\_state}}
+\index{reset\_hidden\_state@{reset\_hidden\_state}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{reset\_hidden\_state()}{reset\_hidden\_state()}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::reset\+\_\+hidden\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 374 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classlg_1_1_recurrent_a189f0dd284081c0e24eac4c0a00391f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a189f0dd284081c0e24eac4c0a00391f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a797bb6173992fa4460ae88bfc5dfdc16}\label{classlg_1_1_recurrent_a797bb6173992fa4460ae88bfc5dfdc16}} 
+\index{lg::Recurrent@{lg::Recurrent}!run@{run}}
+\index{run@{run}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{bool}]{accumulate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 223 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_a797bb6173992fa4460ae88bfc5dfdc16_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_a77f9e39326bb7228831c4da1a28133e8}\label{classlg_1_1_recurrent_a77f9e39326bb7228831c4da1a28133e8}} 
+\index{lg::Recurrent@{lg::Recurrent}!run@{run}}
+\index{run@{run}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 169 of file Recurrent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classlg_1_1_recurrent_a77f9e39326bb7228831c4da1a28133e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_aee27dabeceaf0d84e1dc6073c192f57a}\label{classlg_1_1_recurrent_aee27dabeceaf0d84e1dc6073c192f57a}} 
+\index{lg::Recurrent@{lg::Recurrent}!save@{save}}
+\index{save@{save}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 100 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_aee27dabeceaf0d84e1dc6073c192f57a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_recurrent_ac9fcbf86968ea472be4215a88bd40171}\label{classlg_1_1_recurrent_ac9fcbf86968ea472be4215a88bd40171}} 
+\index{lg::Recurrent@{lg::Recurrent}!update\_parameters@{update\_parameters}}
+\index{update\_parameters@{update\_parameters}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{update\_parameters()}{update\_parameters()}}
+{\footnotesize\ttfamily void lg\+::\+Recurrent\+::update\+\_\+parameters (\begin{DoxyParamCaption}\item[{const float}]{learningrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a458335df8261b848dc357eb93ba1fc44}{lg\+::\+Operation}}.
+
+
+
+Definition at line 190 of file Recurrent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_recurrent_ac9fcbf86968ea472be4215a88bd40171_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_recurrent_adb40afd5d077e83242b7679c3851468a}\label{classlg_1_1_recurrent_adb40afd5d077e83242b7679c3851468a}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_btt\_pos@{\_btt\_pos}}
+\index{\_btt\_pos@{\_btt\_pos}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_btt\_pos}{\_btt\_pos}}
+{\footnotesize\ttfamily int lg\+::\+Recurrent\+::\+\_\+btt\+\_\+pos}
+
+
+
+Definition at line 69 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a71fc7a01d2a16ade7f23fb963ea4e256}\label{classlg_1_1_recurrent_a71fc7a01d2a16ade7f23fb963ea4e256}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_btt\_steps@{\_btt\_steps}}
+\index{\_btt\_steps@{\_btt\_steps}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_btt\_steps}{\_btt\_steps}}
+{\footnotesize\ttfamily int lg\+::\+Recurrent\+::\+\_\+btt\+\_\+steps}
+
+
+
+Definition at line 68 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a9f52d6acb9a4a922132442b5babc1d21}\label{classlg_1_1_recurrent_a9f52d6acb9a4a922132442b5babc1d21}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Recurrent\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 70 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a7e9595863a6b4a4ebf71cb3f578f098d}\label{classlg_1_1_recurrent_a7e9595863a6b4a4ebf71cb3f578f098d}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_mem\_inputs@{\_mem\_inputs}}
+\index{\_mem\_inputs@{\_mem\_inputs}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_mem\_inputs}{\_mem\_inputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Recurrent\+::\+\_\+mem\+\_\+inputs}
+
+
+
+Definition at line 64 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a5c94e3874405af1e6905b4672166553d}\label{classlg_1_1_recurrent_a5c94e3874405af1e6905b4672166553d}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_mem\_outputs@{\_mem\_outputs}}
+\index{\_mem\_outputs@{\_mem\_outputs}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_mem\_outputs}{\_mem\_outputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Recurrent\+::\+\_\+mem\+\_\+outputs}
+
+
+
+Definition at line 62 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a3725f9f4eabc6f8af0d684d4bdb08c94}\label{classlg_1_1_recurrent_a3725f9f4eabc6f8af0d684d4bdb08c94}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_mem\_tmp\_errors@{\_mem\_tmp\_errors}}
+\index{\_mem\_tmp\_errors@{\_mem\_tmp\_errors}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_mem\_tmp\_errors}{\_mem\_tmp\_errors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Recurrent\+::\+\_\+mem\+\_\+tmp\+\_\+errors}
+
+
+
+Definition at line 63 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a7e8c0f491cd112ba644992c50eef166c}\label{classlg_1_1_recurrent_a7e8c0f491cd112ba644992c50eef166c}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_out@{\_out}}
+\index{\_out@{\_out}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_out}{\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} lg\+::\+Recurrent\+::\+\_\+out}
+
+
+
+Definition at line 42 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_a8084c48bbac5b4b6e7859df76221a812}\label{classlg_1_1_recurrent_a8084c48bbac5b4b6e7859df76221a812}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_rec@{\_rec}}
+\index{\_rec@{\_rec}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_rec}{\_rec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} lg\+::\+Recurrent\+::\+\_\+rec}
+
+
+
+Definition at line 41 of file Recurrent.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_recurrent_ad8e19c089e1b4c5b2ed0b21d34ce4085}\label{classlg_1_1_recurrent_ad8e19c089e1b4c5b2ed0b21d34ce4085}} 
+\index{lg::Recurrent@{lg::Recurrent}!\_x@{\_x}}
+\index{\_x@{\_x}!lg::Recurrent@{lg::Recurrent}}
+\doxysubsubsection{\texorpdfstring{\_x}{\_x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlg_1_1_linear}{lg\+::\+Linear}} lg\+::\+Recurrent\+::\+\_\+x}
+
+
+
+Definition at line 40 of file Recurrent.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_recurrent_8hpp}{Recurrent.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_recurrent_8cpp}{Recurrent.\+cpp}}\end{DoxyCompactItemize}

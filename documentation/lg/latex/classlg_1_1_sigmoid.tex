@@ -1,0 +1,292 @@
+\hypertarget{classlg_1_1_sigmoid}{}\doxysection{lg\+::Sigmoid Class Reference}
+\label{classlg_1_1_sigmoid}\index{lg::Sigmoid@{lg::Sigmoid}}
+
+
+{\ttfamily \#include $<$Sigmoid.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Sigmoid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classlg_1_1_sigmoid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Sigmoid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_sigmoid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_sigmoid_aeb9889c0a22162df04fdea6341349dcb}{Sigmoid}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_sigmoid_a23fb5d4c79c6c9d8b07c7d3a91d12fc1}{Sigmoid}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_sigmoid_afd6337d2ee78efac1ad11a2b5f67123c}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_sigmoid_abc5b5b5f67fbb9f0311aea64b82a2b69}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_sigmoid_a99fc959ece1b371206932b8227bf9362}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_sigmoid_a2e04afa8ae204852c202f875ed4df806}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_sigmoid_ab39bf03ad512231db092e102f1b75b72}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classlg_1_1_sigmoid_a4f57732759edc05f28f641ee9dbc4355}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_sigmoid_a1d1991f6f89ee48ec75d41514bf3bbaa}{make}} ()
+\item 
+static void \mbox{\hyperlink{classlg_1_1_sigmoid_a7e25deba757f8f0bad008bab349d5b65}{forward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} input, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} output)
+\begin{DoxyCompactList}\small\item\em R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlg_1_1_sigmoid_a0f67f6e78b30df0c770da659d38a94c2}{backward}} (const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} errors, const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} outputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} out\+\_\+errors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Sigmoid.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_aeb9889c0a22162df04fdea6341349dcb}\label{classlg_1_1_sigmoid_aeb9889c0a22162df04fdea6341349dcb}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!Sigmoid@{Sigmoid}}
+\index{Sigmoid@{Sigmoid}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{Sigmoid()}{Sigmoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Sigmoid\+::\+Sigmoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Sigmoid.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_sigmoid_aeb9889c0a22162df04fdea6341349dcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a23fb5d4c79c6c9d8b07c7d3a91d12fc1}\label{classlg_1_1_sigmoid_a23fb5d4c79c6c9d8b07c7d3a91d12fc1}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!Sigmoid@{Sigmoid}}
+\index{Sigmoid@{Sigmoid}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{Sigmoid()}{Sigmoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Sigmoid\+::\+Sigmoid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_sigmoid_a23fb5d4c79c6c9d8b07c7d3a91d12fc1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a2e04afa8ae204852c202f875ed4df806}\label{classlg_1_1_sigmoid_a2e04afa8ae204852c202f875ed4df806}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 108 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classlg_1_1_sigmoid_a2e04afa8ae204852c202f875ed4df806_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a0f67f6e78b30df0c770da659d38a94c2}\label{classlg_1_1_sigmoid_a0f67f6e78b30df0c770da659d38a94c2}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!backward@{backward}}
+\index{backward@{backward}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::backward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{errors,  }\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{outputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{out\+\_\+errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 153 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_sigmoid_a0f67f6e78b30df0c770da659d38a94c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a7e25deba757f8f0bad008bab349d5b65}\label{classlg_1_1_sigmoid_a7e25deba757f8f0bad008bab349d5b65}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!forward@{forward}}
+\index{forward@{forward}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{input,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}}}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+R\+AW O\+P\+E\+R\+A\+T\+I\+O\+NS. 
+
+
+
+Definition at line 142 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classlg_1_1_sigmoid_a7e25deba757f8f0bad008bab349d5b65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_ab39bf03ad512231db092e102f1b75b72}\label{classlg_1_1_sigmoid_ab39bf03ad512231db092e102f1b75b72}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Sigmoid\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 128 of file Sigmoid.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_sigmoid_abc5b5b5f67fbb9f0311aea64b82a2b69}\label{classlg_1_1_sigmoid_abc5b5b5f67fbb9f0311aea64b82a2b69}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 55 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classlg_1_1_sigmoid_abc5b5b5f67fbb9f0311aea64b82a2b69_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a1d1991f6f89ee48ec75d41514bf3bbaa}\label{classlg_1_1_sigmoid_a1d1991f6f89ee48ec75d41514bf3bbaa}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!make@{make}}
+\index{make@{make}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Sigmoid\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 21 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classlg_1_1_sigmoid_a1d1991f6f89ee48ec75d41514bf3bbaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classlg_1_1_sigmoid_a1d1991f6f89ee48ec75d41514bf3bbaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a4f57732759edc05f28f641ee9dbc4355}\label{classlg_1_1_sigmoid_a4f57732759edc05f28f641ee9dbc4355}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!print@{print}}
+\index{print@{print}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 134 of file Sigmoid.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_sigmoid_a99fc959ece1b371206932b8227bf9362}\label{classlg_1_1_sigmoid_a99fc959ece1b371206932b8227bf9362}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!run@{run}}
+\index{run@{run}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 87 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classlg_1_1_sigmoid_a99fc959ece1b371206932b8227bf9362_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_sigmoid_afd6337d2ee78efac1ad11a2b5f67123c}\label{classlg_1_1_sigmoid_afd6337d2ee78efac1ad11a2b5f67123c}} 
+\index{lg::Sigmoid@{lg::Sigmoid}!save@{save}}
+\index{save@{save}!lg::Sigmoid@{lg::Sigmoid}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Sigmoid\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 78 of file Sigmoid.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_sigmoid_afd6337d2ee78efac1ad11a2b5f67123c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_sigmoid_8hpp}{Sigmoid.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_sigmoid_8cpp}{Sigmoid.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,350 @@
+\hypertarget{classlg_1_1_maxpooling}{}\doxysection{lg\+::Maxpooling Class Reference}
+\label{classlg_1_1_maxpooling}\index{lg::Maxpooling@{lg::Maxpooling}}
+
+
+{\ttfamily \#include $<$Maxpooling.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Maxpooling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classlg_1_1_maxpooling__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Maxpooling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_maxpooling__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_maxpooling_a1f54ff30aca206b778edc05db443a7af}{Maxpooling}} (const int filter\+\_\+size, const int stride)
+\item 
+\mbox{\hyperlink{classlg_1_1_maxpooling_a1d335b9d16e34c41f63b16e9f7f89318}{Maxpooling}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_maxpooling_a32c8840fd612994c66517f7fa22293b9}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_maxpooling_ab64d456293e1877b30efb15fdc9577b5}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_maxpooling_a5088463f5aadc2b187282be731cf827a}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_maxpooling_a80d99d2e1b918671955f7c206aeab6f7}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_maxpooling_a9bdb8af156130cee99d826639dc3d53a}{print}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_maxpooling_a3ef9fe01c02e70dc47e6f2c09b16e057}{get\+\_\+type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_maxpooling_aa91b760779054eb48166bd4f514b45df}{make}} (const int filter\+\_\+size, const int stride)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_a5c8243769320c03c742f2f92941d98d4}{\+\_\+input\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_af583b07c3e9d31ff2f8b0065c227ce85}{\+\_\+input\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_ab0576fcdfbfaec61276b05dea9c529e3}{\+\_\+input\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_a0a3a593807a0ab57f88833c5c3feed41}{\+\_\+filter\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_a46b259e57eb290b6271b8372a83affdd}{\+\_\+stride}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_ac56dee9ae37f9eae0fb1c220e8562e70}{\+\_\+output\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_aff991db11f1294c1fa46d15ea8c7bad4}{\+\_\+output\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_a9fc491e55aa53a2668c6a3112c07b20a}{\+\_\+output\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_maxpooling_a06f291310e6aeca4f10d7e88fd35e3a0}{\+\_\+input\+\_\+size}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classlg_1_1_maxpooling_a594bee88d38ec871a1512186f7640388}{\+\_\+maxin}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Maxpooling.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a1f54ff30aca206b778edc05db443a7af}\label{classlg_1_1_maxpooling_a1f54ff30aca206b778edc05db443a7af}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!Maxpooling@{Maxpooling}}
+\index{Maxpooling@{Maxpooling}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{Maxpooling()}{Maxpooling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Maxpooling\+::\+Maxpooling (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{stride }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Maxpooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a1d335b9d16e34c41f63b16e9f7f89318}\label{classlg_1_1_maxpooling_a1d335b9d16e34c41f63b16e9f7f89318}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!Maxpooling@{Maxpooling}}
+\index{Maxpooling@{Maxpooling}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{Maxpooling()}{Maxpooling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Maxpooling\+::\+Maxpooling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Maxpooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_maxpooling_a1d335b9d16e34c41f63b16e9f7f89318_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a80d99d2e1b918671955f7c206aeab6f7}\label{classlg_1_1_maxpooling_a80d99d2e1b918671955f7c206aeab6f7}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Maxpooling\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 248 of file Maxpooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_maxpooling_a80d99d2e1b918671955f7c206aeab6f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a3ef9fe01c02e70dc47e6f2c09b16e057}\label{classlg_1_1_maxpooling_a3ef9fe01c02e70dc47e6f2c09b16e057}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Maxpooling\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 284 of file Maxpooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a32c8840fd612994c66517f7fa22293b9}\label{classlg_1_1_maxpooling_a32c8840fd612994c66517f7fa22293b9}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Maxpooling\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 83 of file Maxpooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_maxpooling_a32c8840fd612994c66517f7fa22293b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_aa91b760779054eb48166bd4f514b45df}\label{classlg_1_1_maxpooling_aa91b760779054eb48166bd4f514b45df}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!make@{make}}
+\index{make@{make}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Maxpooling\+::make (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 22 of file Maxpooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a9bdb8af156130cee99d826639dc3d53a}\label{classlg_1_1_maxpooling_a9bdb8af156130cee99d826639dc3d53a}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!print@{print}}
+\index{print@{print}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Maxpooling\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 290 of file Maxpooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a5088463f5aadc2b187282be731cf827a}\label{classlg_1_1_maxpooling_a5088463f5aadc2b187282be731cf827a}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!run@{run}}
+\index{run@{run}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Maxpooling\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 136 of file Maxpooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classlg_1_1_maxpooling_a5088463f5aadc2b187282be731cf827a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_ab64d456293e1877b30efb15fdc9577b5}\label{classlg_1_1_maxpooling_ab64d456293e1877b30efb15fdc9577b5}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!save@{save}}
+\index{save@{save}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Maxpooling\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 124 of file Maxpooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_maxpooling_ab64d456293e1877b30efb15fdc9577b5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a0a3a593807a0ab57f88833c5c3feed41}\label{classlg_1_1_maxpooling_a0a3a593807a0ab57f88833c5c3feed41}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_filter\_size@{\_filter\_size}}
+\index{\_filter\_size@{\_filter\_size}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_filter\_size}{\_filter\_size}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+filter\+\_\+size}
+
+
+
+Definition at line 36 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_ab0576fcdfbfaec61276b05dea9c529e3}\label{classlg_1_1_maxpooling_ab0576fcdfbfaec61276b05dea9c529e3}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_input\_count@{\_input\_count}}
+\index{\_input\_count@{\_input\_count}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_count}{\_input\_count}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+input\+\_\+count}
+
+
+
+Definition at line 35 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_af583b07c3e9d31ff2f8b0065c227ce85}\label{classlg_1_1_maxpooling_af583b07c3e9d31ff2f8b0065c227ce85}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_input\_height@{\_input\_height}}
+\index{\_input\_height@{\_input\_height}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_height}{\_input\_height}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+input\+\_\+height}
+
+
+
+Definition at line 34 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a06f291310e6aeca4f10d7e88fd35e3a0}\label{classlg_1_1_maxpooling_a06f291310e6aeca4f10d7e88fd35e3a0}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 41 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a5c8243769320c03c742f2f92941d98d4}\label{classlg_1_1_maxpooling_a5c8243769320c03c742f2f92941d98d4}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_input\_width@{\_input\_width}}
+\index{\_input\_width@{\_input\_width}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_width}{\_input\_width}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+input\+\_\+width}
+
+
+
+Definition at line 33 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a594bee88d38ec871a1512186f7640388}\label{classlg_1_1_maxpooling_a594bee88d38ec871a1512186f7640388}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_maxin@{\_maxin}}
+\index{\_maxin@{\_maxin}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_maxin}{\_maxin}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ lg\+::\+Maxpooling\+::\+\_\+maxin}
+
+
+
+Definition at line 46 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_aff991db11f1294c1fa46d15ea8c7bad4}\label{classlg_1_1_maxpooling_aff991db11f1294c1fa46d15ea8c7bad4}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_output\_height@{\_output\_height}}
+\index{\_output\_height@{\_output\_height}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_height}{\_output\_height}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+output\+\_\+height}
+
+
+
+Definition at line 39 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a9fc491e55aa53a2668c6a3112c07b20a}\label{classlg_1_1_maxpooling_a9fc491e55aa53a2668c6a3112c07b20a}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_output\_size@{\_output\_size}}
+\index{\_output\_size@{\_output\_size}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_size}{\_output\_size}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+output\+\_\+size}
+
+
+
+Definition at line 40 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_ac56dee9ae37f9eae0fb1c220e8562e70}\label{classlg_1_1_maxpooling_ac56dee9ae37f9eae0fb1c220e8562e70}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_output\_width@{\_output\_width}}
+\index{\_output\_width@{\_output\_width}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_width}{\_output\_width}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+output\+\_\+width}
+
+
+
+Definition at line 38 of file Maxpooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_maxpooling_a46b259e57eb290b6271b8372a83affdd}\label{classlg_1_1_maxpooling_a46b259e57eb290b6271b8372a83affdd}} 
+\index{lg::Maxpooling@{lg::Maxpooling}!\_stride@{\_stride}}
+\index{\_stride@{\_stride}!lg::Maxpooling@{lg::Maxpooling}}
+\doxysubsubsection{\texorpdfstring{\_stride}{\_stride}}
+{\footnotesize\ttfamily int lg\+::\+Maxpooling\+::\+\_\+stride}
+
+
+
+Definition at line 37 of file Maxpooling.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_maxpooling_8hpp}{Maxpooling.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_maxpooling_8cpp}{Maxpooling.\+cpp}}\end{DoxyCompactItemize}

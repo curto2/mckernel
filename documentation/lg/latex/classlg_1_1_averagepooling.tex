@@ -1,0 +1,350 @@
+\hypertarget{classlg_1_1_averagepooling}{}\doxysection{lg\+::Averagepooling Class Reference}
+\label{classlg_1_1_averagepooling}\index{lg::Averagepooling@{lg::Averagepooling}}
+
+
+{\ttfamily \#include $<$Averagepooling.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::Averagepooling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classlg_1_1_averagepooling__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::Averagepooling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classlg_1_1_averagepooling__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_averagepooling_af979d17e224546d3dd539f78e5ad9c50}{Averagepooling}} (const int filter\+\_\+size, const int stride)
+\item 
+\mbox{\hyperlink{classlg_1_1_averagepooling_a152a945e8d4cc2fe95299210500c4bc0}{Averagepooling}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_averagepooling_a2114a3dcfb47cefd9c469dd08636627b}{initialize}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_averagepooling_af228291ab4c5fb136e9fe304d46d6282}{save}} (\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{classlg_1_1_averagepooling_a43fd40cc610f6622e145b176763fe81f}{run}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs, const bool training)
+\item 
+void \mbox{\hyperlink{classlg_1_1_averagepooling_a436556d0dde713aba93478f5e6417777}{backprop}} (std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&inputs)
+\item 
+void \mbox{\hyperlink{classlg_1_1_averagepooling_a1b4c55cce46ca20ec7a1d305058061df}{print}} ()
+\item 
+const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} \mbox{\hyperlink{classlg_1_1_averagepooling_af7aa3ae2cb3249b8067089bd5281f82a}{get\+\_\+type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ \mbox{\hyperlink{classlg_1_1_averagepooling_a9a15621a69a60b9bc3e17374e39ab218}{make}} (const int filter\+\_\+size, const int stride)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a76273b3b258f8f3950ddca65cae04c83}{\+\_\+input\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a1b430bcbab202a4335148c38327fafe7}{\+\_\+input\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a62d0abe6a1bca053cc46753e8d4af4aa}{\+\_\+input\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_aa03814148400f70142d65de6cd834c89}{\+\_\+filter\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a0d411017e0868674e965eb79f37d167f}{\+\_\+stride}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a0ad8cbec60755f262d845fdefc95c0f9}{\+\_\+output\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a8dc03560094f8306d1a4536c92133680}{\+\_\+output\+\_\+height}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_ad203a929d086c71054483ed66635f067}{\+\_\+output\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classlg_1_1_averagepooling_a0c9e30cbafe52f55e1a4691756437b85}{\+\_\+input\+\_\+size}}
+\item 
+\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \mbox{\hyperlink{classlg_1_1_averagepooling_a20099dd9ba3ab433bb0a837b7359557c}{\+\_\+average\+\_\+in}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Averagepooling.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_af979d17e224546d3dd539f78e5ad9c50}\label{classlg_1_1_averagepooling_af979d17e224546d3dd539f78e5ad9c50}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!Averagepooling@{Averagepooling}}
+\index{Averagepooling@{Averagepooling}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{Averagepooling()}{Averagepooling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+Averagepooling\+::\+Averagepooling (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{stride }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Averagepooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a152a945e8d4cc2fe95299210500c4bc0}\label{classlg_1_1_averagepooling_a152a945e8d4cc2fe95299210500c4bc0}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!Averagepooling@{Averagepooling}}
+\index{Averagepooling@{Averagepooling}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{Averagepooling()}{Averagepooling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+Averagepooling\+::\+Averagepooling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Averagepooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_averagepooling_a152a945e8d4cc2fe95299210500c4bc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a436556d0dde713aba93478f5e6417777}\label{classlg_1_1_averagepooling_a436556d0dde713aba93478f5e6417777}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!backprop@{backprop}}
+\index{backprop@{backprop}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{backprop()}{backprop()}}
+{\footnotesize\ttfamily void lg\+::\+Averagepooling\+::backprop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_af93dcbef9d46d9225e7bd343057bc54f}{lg\+::\+Operation}}.
+
+
+
+Definition at line 237 of file Averagepooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classlg_1_1_averagepooling_a436556d0dde713aba93478f5e6417777_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_af7aa3ae2cb3249b8067089bd5281f82a}\label{classlg_1_1_averagepooling_af7aa3ae2cb3249b8067089bd5281f82a}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlg_1_1_operation_a204bb2a8c1903febe08ea909f1684f4a}{Operation\+::\+Type}} lg\+::\+Averagepooling\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_ab8e6bfb008563515b664e0563409a6a8}{lg\+::\+Operation}}.
+
+
+
+Definition at line 286 of file Averagepooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a2114a3dcfb47cefd9c469dd08636627b}\label{classlg_1_1_averagepooling_a2114a3dcfb47cefd9c469dd08636627b}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!initialize@{initialize}}
+\index{initialize@{initialize}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void lg\+::\+Averagepooling\+::initialize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_aadf38ca2e6fd62d94f3bfcd0eb56d0ac}{lg\+::\+Operation}}.
+
+
+
+Definition at line 84 of file Averagepooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classlg_1_1_averagepooling_a2114a3dcfb47cefd9c469dd08636627b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a9a15621a69a60b9bc3e17374e39ab218}\label{classlg_1_1_averagepooling_a9a15621a69a60b9bc3e17374e39ab218}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!make@{make}}
+\index{make@{make}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $>$ lg\+::\+Averagepooling\+::make (\begin{DoxyParamCaption}\item[{const int}]{filter\+\_\+size,  }\item[{const int}]{stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 22 of file Averagepooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a1b4c55cce46ca20ec7a1d305058061df}\label{classlg_1_1_averagepooling_a1b4c55cce46ca20ec7a1d305058061df}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!print@{print}}
+\index{print@{print}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void lg\+::\+Averagepooling\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_a47cf58168864d91b5546c7f0f78c0850}{lg\+::\+Operation}}.
+
+
+
+Definition at line 292 of file Averagepooling.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a43fd40cc610f6622e145b176763fe81f}\label{classlg_1_1_averagepooling_a43fd40cc610f6622e145b176763fe81f}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!run@{run}}
+\index{run@{run}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void lg\+::\+Averagepooling\+::run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classlg_1_1_operation}{Operation}} $\ast$ $>$ \&}]{inputs,  }\item[{const bool}]{training }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation_afeffd08eb6dcf9358f6cf57d24af5dc3}{lg\+::\+Operation}}.
+
+
+
+Definition at line 138 of file Averagepooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classlg_1_1_averagepooling_a43fd40cc610f6622e145b176763fe81f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_af228291ab4c5fb136e9fe304d46d6282}\label{classlg_1_1_averagepooling_af228291ab4c5fb136e9fe304d46d6282}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!save@{save}}
+\index{save@{save}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void lg\+::\+Averagepooling\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_i_o_data}{lg\+::\+I\+O\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_operation}{lg\+::\+Operation}}.
+
+
+
+Definition at line 126 of file Averagepooling.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_averagepooling_af228291ab4c5fb136e9fe304d46d6282_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a20099dd9ba3ab433bb0a837b7359557c}\label{classlg_1_1_averagepooling_a20099dd9ba3ab433bb0a837b7359557c}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_average\_in@{\_average\_in}}
+\index{\_average\_in@{\_average\_in}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_average\_in}{\_average\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} lg\+::\+Averagepooling\+::\+\_\+average\+\_\+in}
+
+
+
+Definition at line 46 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_aa03814148400f70142d65de6cd834c89}\label{classlg_1_1_averagepooling_aa03814148400f70142d65de6cd834c89}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_filter\_size@{\_filter\_size}}
+\index{\_filter\_size@{\_filter\_size}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_filter\_size}{\_filter\_size}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+filter\+\_\+size}
+
+
+
+Definition at line 36 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a62d0abe6a1bca053cc46753e8d4af4aa}\label{classlg_1_1_averagepooling_a62d0abe6a1bca053cc46753e8d4af4aa}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_input\_count@{\_input\_count}}
+\index{\_input\_count@{\_input\_count}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_count}{\_input\_count}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+input\+\_\+count}
+
+
+
+Definition at line 35 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a1b430bcbab202a4335148c38327fafe7}\label{classlg_1_1_averagepooling_a1b430bcbab202a4335148c38327fafe7}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_input\_height@{\_input\_height}}
+\index{\_input\_height@{\_input\_height}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_height}{\_input\_height}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+input\+\_\+height}
+
+
+
+Definition at line 34 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a0c9e30cbafe52f55e1a4691756437b85}\label{classlg_1_1_averagepooling_a0c9e30cbafe52f55e1a4691756437b85}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_input\_size@{\_input\_size}}
+\index{\_input\_size@{\_input\_size}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_size}{\_input\_size}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+input\+\_\+size}
+
+
+
+Definition at line 41 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a76273b3b258f8f3950ddca65cae04c83}\label{classlg_1_1_averagepooling_a76273b3b258f8f3950ddca65cae04c83}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_input\_width@{\_input\_width}}
+\index{\_input\_width@{\_input\_width}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_input\_width}{\_input\_width}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+input\+\_\+width}
+
+
+
+Definition at line 33 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a8dc03560094f8306d1a4536c92133680}\label{classlg_1_1_averagepooling_a8dc03560094f8306d1a4536c92133680}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_output\_height@{\_output\_height}}
+\index{\_output\_height@{\_output\_height}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_height}{\_output\_height}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+output\+\_\+height}
+
+
+
+Definition at line 39 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_ad203a929d086c71054483ed66635f067}\label{classlg_1_1_averagepooling_ad203a929d086c71054483ed66635f067}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_output\_size@{\_output\_size}}
+\index{\_output\_size@{\_output\_size}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_size}{\_output\_size}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+output\+\_\+size}
+
+
+
+Definition at line 40 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a0ad8cbec60755f262d845fdefc95c0f9}\label{classlg_1_1_averagepooling_a0ad8cbec60755f262d845fdefc95c0f9}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_output\_width@{\_output\_width}}
+\index{\_output\_width@{\_output\_width}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_output\_width}{\_output\_width}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+output\+\_\+width}
+
+
+
+Definition at line 38 of file Averagepooling.\+hpp.
+
+\mbox{\Hypertarget{classlg_1_1_averagepooling_a0d411017e0868674e965eb79f37d167f}\label{classlg_1_1_averagepooling_a0d411017e0868674e965eb79f37d167f}} 
+\index{lg::Averagepooling@{lg::Averagepooling}!\_stride@{\_stride}}
+\index{\_stride@{\_stride}!lg::Averagepooling@{lg::Averagepooling}}
+\doxysubsubsection{\texorpdfstring{\_stride}{\_stride}}
+{\footnotesize\ttfamily int lg\+::\+Averagepooling\+::\+\_\+stride}
+
+
+
+Definition at line 37 of file Averagepooling.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_averagepooling_8hpp}{Averagepooling.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_averagepooling_8cpp}{Averagepooling.\+cpp}}\end{DoxyCompactItemize}

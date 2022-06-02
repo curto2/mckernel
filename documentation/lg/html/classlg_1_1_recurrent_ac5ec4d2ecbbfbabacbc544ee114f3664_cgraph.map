@@ -1,0 +1,9 @@
+<map id="lg::Recurrent::backprop" name="lg::Recurrent::backprop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,179,133"/>
+<area shape="rect" id="node2" href="$classlg_1_1_linear.html#a75c71cfb2ed4cc62330940f9f7a8a615" title=" " alt="" coords="227,5,377,32"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tanh.html#ad6d6ecce8f18515f33b9273f8cf96b21" title=" " alt="" coords="231,56,373,83"/>
+<area shape="rect" id="node5" href="$classlg_1_1_tensor.html#a9435567e5204d9edc2a74294f927d265" title=" " alt="" coords="248,107,356,133"/>
+<area shape="rect" id="node6" href="$classlg_1_1_tensor.html#a5cb21df8753a3edb34d275b3f08f2232" title=" " alt="" coords="239,157,365,184"/>
+<area shape="rect" id="node7" href="$classlg_1_1_tensor.html#ad64c07c6cbaca60d06cd91b56b3c7b19" title=" " alt="" coords="247,208,357,235"/>
+<area shape="rect" id="node4" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="425,56,544,83"/>
+</map>

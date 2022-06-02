@@ -1,0 +1,105 @@
+\hypertarget{classlg_1_1_d_f_a___optimizer}{}\doxysection{lg\+::D\+F\+A\+\_\+\+Optimizer Class Reference}
+\label{classlg_1_1_d_f_a___optimizer}\index{lg::DFA\_Optimizer@{lg::DFA\_Optimizer}}
+
+
+{\ttfamily \#include $<$D\+F\+A\+\_\+\+Optimizer.\+hpp$>$}
+
+
+
+Inheritance diagram for lg\+::D\+F\+A\+\_\+\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classlg_1_1_d_f_a___optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lg\+::D\+F\+A\+\_\+\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classlg_1_1_d_f_a___optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlg_1_1_d_f_a___optimizer_a05ad553f5266eec5f1ebc7f4af499e59}{D\+F\+A\+\_\+\+Optimizer}} ()
+\item 
+\mbox{\hyperlink{classlg_1_1_d_f_a___optimizer_a43840a6f93e7cfb6389d31b3c25488f9}{D\+F\+A\+\_\+\+Optimizer}} (const int batch\+\_\+size, const double learningrate, const double momentum, const \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{Cost\+::\+Cost\+Type}} cost\+\_\+function=\mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76ad913a43ba24d17f8651aae283768dc1b}{Cost\+::\+Squared\+Error}})
+\item 
+void \mbox{\hyperlink{classlg_1_1_d_f_a___optimizer_abb7a6bac552681ba5dbeb5c66db7b487}{fit}} (\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} \&net, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&inputs, \mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&targets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file D\+F\+A\+\_\+\+Optimizer.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlg_1_1_d_f_a___optimizer_a05ad553f5266eec5f1ebc7f4af499e59}\label{classlg_1_1_d_f_a___optimizer_a05ad553f5266eec5f1ebc7f4af499e59}} 
+\index{lg::DFA\_Optimizer@{lg::DFA\_Optimizer}!DFA\_Optimizer@{DFA\_Optimizer}}
+\index{DFA\_Optimizer@{DFA\_Optimizer}!lg::DFA\_Optimizer@{lg::DFA\_Optimizer}}
+\doxysubsubsection{\texorpdfstring{DFA\_Optimizer()}{DFA\_Optimizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lg\+::\+D\+F\+A\+\_\+\+Optimizer\+::\+D\+F\+A\+\_\+\+Optimizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file D\+F\+A\+\_\+\+Optimizer.\+cpp.
+
+\mbox{\Hypertarget{classlg_1_1_d_f_a___optimizer_a43840a6f93e7cfb6389d31b3c25488f9}\label{classlg_1_1_d_f_a___optimizer_a43840a6f93e7cfb6389d31b3c25488f9}} 
+\index{lg::DFA\_Optimizer@{lg::DFA\_Optimizer}!DFA\_Optimizer@{DFA\_Optimizer}}
+\index{DFA\_Optimizer@{DFA\_Optimizer}!lg::DFA\_Optimizer@{lg::DFA\_Optimizer}}
+\doxysubsubsection{\texorpdfstring{DFA\_Optimizer()}{DFA\_Optimizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lg\+::\+D\+F\+A\+\_\+\+Optimizer\+::\+D\+F\+A\+\_\+\+Optimizer (\begin{DoxyParamCaption}\item[{const int}]{batch\+\_\+size,  }\item[{const double}]{learningrate,  }\item[{const double}]{momentum,  }\item[{const \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76}{Cost\+::\+Cost\+Type}}}]{cost\+\_\+function = {\ttfamily \mbox{\hyperlink{classlg_1_1_cost_acced4bdd5fe2608b09fd054071e66a76ad913a43ba24d17f8651aae283768dc1b}{Cost\+::\+Squared\+Error}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file D\+F\+A\+\_\+\+Optimizer.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classlg_1_1_d_f_a___optimizer_a43840a6f93e7cfb6389d31b3c25488f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlg_1_1_d_f_a___optimizer_abb7a6bac552681ba5dbeb5c66db7b487}\label{classlg_1_1_d_f_a___optimizer_abb7a6bac552681ba5dbeb5c66db7b487}} 
+\index{lg::DFA\_Optimizer@{lg::DFA\_Optimizer}!fit@{fit}}
+\index{fit@{fit}!lg::DFA\_Optimizer@{lg::DFA\_Optimizer}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily void lg\+::\+D\+F\+A\+\_\+\+Optimizer\+::fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlg_1_1_neural___network}{Neural\+\_\+\+Network}} \&}]{net,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{inputs,  }\item[{\mbox{\hyperlink{namespacelg_a6373cd7c1bb0e4a0d32b096159496806}{Tensor\+\_\+float}} \&}]{targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classlg_1_1_optimizer_afae0925869b0f7a25d1243ff50522c88}{lg\+::\+Optimizer}}.
+
+
+
+Definition at line 93 of file D\+F\+A\+\_\+\+Optimizer.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlg_1_1_d_f_a___optimizer_abb7a6bac552681ba5dbeb5c66db7b487_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_d_f_a___optimizer_8hpp}{D\+F\+A\+\_\+\+Optimizer.\+hpp}}\item 
+lg/src/deep\+\_\+learning/\mbox{\hyperlink{_d_f_a___optimizer_8cpp}{D\+F\+A\+\_\+\+Optimizer.\+cpp}}\end{DoxyCompactItemize}

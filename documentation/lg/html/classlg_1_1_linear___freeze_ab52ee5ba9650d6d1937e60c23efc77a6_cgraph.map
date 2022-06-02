@@ -1,0 +1,15 @@
+<map id="lg::Linear_Freeze::gradient_check" name="lg::Linear_Freeze::gradient_check">
+<area shape="rect" id="node1" title=" " alt="" coords="5,267,145,308"/>
+<area shape="rect" id="node2" href="$classlg_1_1_linear___freeze.html#ab7f6b6d44bc26db7c72bb96615b297cb" title=" " alt="" coords="201,5,347,47"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tensor.html#ad1e9f63e03d75d255660e69fad104d4d" title="INDEXING." alt="" coords="221,71,327,98"/>
+<area shape="rect" id="node4" href="$classlg_1_1_tensor.html#a9435567e5204d9edc2a74294f927d265" title=" " alt="" coords="220,122,328,149"/>
+<area shape="rect" id="node5" href="$classlg_1_1_cost.html#a257ad161b425645f97fb5eb5751e6ea5" title="Calculate deltas." alt="" coords="207,173,341,199"/>
+<area shape="rect" id="node6" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="426,274,545,301"/>
+<area shape="rect" id="node7" href="$classlg_1_1_cost.html#a12ca6b5b6131831246fc2844113c78bc" title="Calculate errors." alt="" coords="209,274,339,301"/>
+<area shape="rect" id="node8" href="$classlg_1_1_tensor.html#a3d4bd6ecfb08ce24f37b32b07f5b16ea" title=" " alt="" coords="207,325,341,351"/>
+<area shape="rect" id="node9" href="$classlg_1_1_linear___freeze.html#afbd5667fdcdce5e53881c0224688d722" title=" " alt="" coords="204,376,344,417"/>
+<area shape="rect" id="node10" href="$classlg_1_1_linear___freeze.html#ac74c857489011ef574b6bd2dbe894853" title=" " alt="" coords="204,441,344,483"/>
+<area shape="rect" id="node12" href="$classlg_1_1_linear___freeze.html#a7fc832dc881a72ef3a7c8e9e6d08dfd7" title=" " alt="" coords="193,507,355,534"/>
+<area shape="rect" id="node13" href="$classlg_1_1_tensor.html#a194fc20cbd586946c26138108e411f75" title=" " alt="" coords="210,558,338,585"/>
+<area shape="rect" id="node11" href="$namespacelg.html#ac3c94e68ec3e515c366c5384b711e4d5" title=" " alt="" coords="403,441,568,483"/>
+</map>

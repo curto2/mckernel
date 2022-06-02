@@ -1,0 +1,7 @@
+<map id="Bitmap::copyToRegion" name="Bitmap::copyToRegion">
+<area shape="rect" id="node1" title="Resize bitmap content to the specified dimensions" alt="" coords="5,81,172,108"/>
+<area shape="rect" id="node2" href="$class_bitmap.html#a2b1522af9e663a20fb1860e20e7c0551" title="Get number of color channels." alt="" coords="220,5,379,32"/>
+<area shape="rect" id="node3" href="$class_bitmap.html#aa5ae6d3773cbe88c55cd5859127509d8" title="Get bitmap data." alt="" coords="235,56,364,83"/>
+<area shape="rect" id="node4" href="$class_bitmap.html#a15ae9ed5516dd92c42f3fe8a57104549" title="Get bitmap height." alt="" coords="229,107,370,133"/>
+<area shape="rect" id="node5" href="$class_bitmap.html#a051a04d89370efcbf6b6afc630d83034" title="Get bitmap with." alt="" coords="231,157,367,184"/>
+</map>

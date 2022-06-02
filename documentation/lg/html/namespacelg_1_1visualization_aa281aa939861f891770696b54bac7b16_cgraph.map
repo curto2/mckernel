@@ -1,0 +1,11 @@
+<map id="lg::visualization::save_vec" name="lg::visualization::save_vec">
+<area shape="rect" id="node1" title="Save vector to image using a specific width and height for the image." alt="" coords="5,89,139,131"/>
+<area shape="rect" id="node2" href="$namespacelg_1_1visualization.html#aaf36342441658116d83210c24b6a2651" title="Find the minimum and maximum value in a vector of numbers." alt="" coords="189,5,323,47"/>
+<area shape="rect" id="node3" href="$classlg_1_1_tensor.html#a07798188b6cc21916986d6fd7c58791d" title=" " alt="" coords="187,71,325,98"/>
+<area shape="rect" id="node4" href="$class_bitmap.html#a5aeabd3034b7bd42557e370ea44aa5d1" title="Save bitmap to file." alt="" coords="202,122,310,149"/>
+<area shape="rect" id="node9" href="$classlg_1_1_tensor.html#a2037c387b1f91c91e604b16b4ade3177" title=" " alt="" coords="197,173,315,199"/>
+<area shape="rect" id="node5" href="$_bitmap_8cpp.html#a8df1f51c89a62d6c613a1bf9d5307f06" title="TOOLS." alt="" coords="381,46,488,73"/>
+<area shape="rect" id="node6" href="$stb__image__write_8h.html#adb12037a58d9e12e7a58c479b8e0ab8e" title=" " alt="" coords="373,97,496,123"/>
+<area shape="rect" id="node7" href="$stb__image__write_8h.html#aace2f6525144ac808cec21600cfe4498" title=" " alt="" coords="376,147,493,174"/>
+<area shape="rect" id="node8" href="$stb__image__write_8h.html#a3ae29b478d6da0d99705825591f6d20b" title=" " alt="" coords="377,198,492,225"/>
+</map>
