@@ -27,7 +27,7 @@ McKernel is written entirely in C++ with no additional prerequisites than a mini
 Citation
 --------------------------------------------------------
 
-J. de Curtò, I. de Zarzà, Hong Yan and Carlos T. Calafate. On the applicability of the Hadamard as an input modulator for problems of classification. Software Impacts. 2022.
+J. de Curtò, I. de Zarzà, Hong Yan and Carlos T. Calafate. [On the applicability of the Hadamard as an input modulator for problems of classification](https://doi.org/10.1016/j.simpa.2022.100325). [Software Impacts](https://www.journals.elsevier.com/software-impacts). 2022.
 
 --------------------------------------------------------
 Change Log
