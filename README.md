@@ -19,7 +19,7 @@ friendly Fast Walsh Hadamard that achieves compelling speed is provided, as well
 implementation of the method for research and practical purposes alike.
 
 <p align="center">
-<img src="mckernel_de_curto_and_de_zarza.gif" width="1270">
+<img src="mckernel_de_curto_and_de_zarza.gif" width="800">
 </p>
 
 --------------------------------------------------------
