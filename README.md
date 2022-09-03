@@ -33,6 +33,8 @@ Citation
 
 J. de Curtò, I. de Zarzà, Hong Yan and Carlos T. Calafate. [On the applicability of the Hadamard as an input modulator for problems of classification](https://doi.org/10.1016/j.simpa.2022.100325). [Software Impacts](https://www.journals.elsevier.com/software-impacts). 2022.
 
+J. D. Curtó, I. C. Zarza, Feng Yang, Alex Smola, Fernando de la Torre, Chong Wah Ngo, Luc van Gool. [McKernel: A Library for Approximate Kernel Expansions in Log-linear Time](https://arxiv.org/pdf/1702.08159.pdf). 2017. 
+
 --------------------------------------------------------
 Change Log
 --------------------------------------------------------
@@ -67,11 +69,11 @@ Documentation (automatically generated with Doxygen)
 --------------------------------------------------------
 Acknowledgements
 --------------------------------------------------------
-The authors are with the [Research Group on Unmanned Aerial Vehicles](https://grc.webs.upv.es/members/default.html) at Universitat Politècnica de València, the [Department of Electrical Engineering](https://www.ee.cityu.edu.hk/) at City University of Hong Kong and with the [Centre for Intelligent Multidimensional Data Analysis](https://www.innocimda.com/), a private research center at City University of Hong Kong. 
+The authors are with the [Research Group on Unmanned Aerial Vehicles](https://grc.webs.upv.es/members/default.html) at Universitat Politècnica de València, the [Department of Electrical Engineering](https://www.ee.cityu.edu.hk/) at City University of Hong Kong, the [Centre for Intelligent Multidimensional Data Analysis](https://www.innocimda.com/), a private research center at City University of Hong Kong and with Universitat Oberta de Catalunya. 
 
 This work is supported by HK Innovation and Technology Commission (InnoHK Project CIMDA) and HK Research Grants Council (Project CityU 11204821).
 
 --------------------------------------------------------
 Contact
 --------------------------------------------------------
-Code is mantained by J. de Curtò (decurto@doctor.upv.es) and I. de Zarzà (dezarza@doctor.upv.es); doctoral students in Computer Science at the aforementioned institution.
+Code is mantained by J. de Curtò (decurto@uoc.edu) and I. de Zarzà (dezarza@uoc.edu).
